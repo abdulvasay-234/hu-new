@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+@mixin container($max-width: $container-width) {
+  width: min(calc(100% - 2rem), $max-width);
+  margin-inline: auto;
+}
+
+@mixin focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(94, 135, 247, 0.35);
+}
+
+@mixin media-up($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

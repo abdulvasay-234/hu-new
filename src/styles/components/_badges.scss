@@ -1,0 +1,27 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 1.75rem;
+  padding: 0.32rem 0.72rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(47, 99, 228, 0.08);
+  color: var(--color-primary-500);
+  border: 1px solid transparent;
+}
+
+.badge--community { background: rgba(47, 99, 228, 0.08); color: var(--color-primary-500); }
+.badge--upcoming { background: rgba(245, 108, 0, 0.1); color: #b05900; }
+.badge--flagship { background: rgba(17, 24, 39, 0.08); color: var(--color-text); }
+.badge--open-source { background: rgba(25, 163, 74, 0.12); color: var(--color-success-500); }
+.badge--ai { background: rgba(122, 92, 255, 0.12); color: #5b43d6; }
+.badge--workshop { background: rgba(14, 165, 233, 0.12); color: #0369a1; }
+.badge--meetup { background: rgba(236, 72, 153, 0.12); color: #be185d; }
+.badge--hackathon { background: rgba(88, 80, 236, 0.12); color: #4f46e5; }
+.badge--new { background: rgba(20, 184, 166, 0.12); color: #0f766e; }
+.badge--featured { background: rgba(250, 204, 21, 0.16); color: #946200; }

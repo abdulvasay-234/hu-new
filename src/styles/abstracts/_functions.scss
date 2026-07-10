@@ -1,0 +1,7 @@
+@function rem($value) {
+  @return ($value / 16) * 1rem;
+}
+
+@function space($value) {
+  @return rem($value);
+}

@@ -1,0 +1,361 @@
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --color-background: #090d14;
+  --color-surface: #11161d;
+  --color-surface-2: #171e28;
+  --color-border: #253040;
+  --color-text: #f7fafc;
+  --color-text-muted: #c6d0dd;
+}
+
+html[data-theme='dark'] body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+html[data-theme='dark'] .site-main {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(47, 99, 228, 0.16), transparent 36%),
+    radial-gradient(circle at 92% 6%, rgba(245, 108, 0, 0.08), transparent 30%),
+    linear-gradient(180deg, #0a1019 0%, #090d14 100%);
+}
+
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .accordion,
+html[data-theme='dark'] .tabs,
+html[data-theme='dark'] .modal__content,
+html[data-theme='dark'] .empty-state,
+html[data-theme='dark'] .pagination,
+html[data-theme='dark'] .stat,
+html[data-theme='dark'] .site-footer,
+html[data-theme='dark'] .final-cta__newsletter,
+html[data-theme='dark'] .site-footer__newsletter,
+html[data-theme='dark'] .site-footer__cta,
+html[data-theme='dark'] .site-footer__meta {
+  border-color: rgba(61, 78, 101, 0.9);
+  background: linear-gradient(180deg, rgba(20, 29, 42, 0.96), rgba(13, 20, 30, 0.94));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme='dark'] .button--secondary,
+html[data-theme='dark'] .button--ghost,
+html[data-theme='dark'] .theme-toggle,
+html[data-theme='dark'] .tag,
+html[data-theme='dark'] .badge,
+html[data-theme='dark'] .tabs__trigger,
+html[data-theme='dark'] .social-icon {
+  border-color: rgba(61, 78, 101, 0.9);
+  background: rgba(22, 31, 45, 0.9);
+  color: var(--color-text);
+}
+
+html[data-theme='dark'] .hero,
+html[data-theme='dark'] .manifesto,
+html[data-theme='dark'] .experiences,
+html[data-theme='dark'] .community-action,
+html[data-theme='dark'] .partners,
+html[data-theme='dark'] .final-cta,
+html[data-theme='dark'] .proof-band,
+html[data-theme='dark'] .photo-marquee__viewport {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(47, 99, 228, 0.15), transparent 34%),
+    radial-gradient(circle at 88% 12%, rgba(245, 108, 0, 0.08), transparent 26%),
+    linear-gradient(180deg, rgba(12, 19, 30, 0.96), rgba(9, 13, 20, 0.98));
+  border-color: rgba(53, 70, 92, 0.9);
+}
+
+html[data-theme='dark'] :is(
+  .hero-highlight,
+  .hero-visual__frame,
+  .hero-visual__card,
+  .manifesto__copy,
+  .manifesto__panel,
+  .manifesto-feature,
+  .experience-feature,
+  .experience-card,
+  .community-action__cta,
+  .community-impact,
+  .community-stories__featured,
+  .community-stories__grid,
+  .partner-card,
+  .final-cta__panel
+) {
+  border-color: rgba(56, 73, 96, 0.94);
+  background: linear-gradient(180deg, rgba(20, 29, 42, 0.96), rgba(13, 20, 30, 0.94));
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme='dark'] .hero__backdrop,
+html[data-theme='dark'] .manifesto::before,
+html[data-theme='dark'] .community-action::before,
+html[data-theme='dark'] .final-cta__panel::before {
+  opacity: 0.12;
+}
+
+html[data-theme='dark'] .hero-visual__meta span,
+html[data-theme='dark'] .obw-audience li,
+html[data-theme='dark'] .obw-register__meta span {
+  background: rgba(20, 29, 42, 0.88);
+  border-color: rgba(61, 78, 101, 0.9);
+  color: var(--color-text);
+}
+
+html[data-theme='dark'] .manifesto__text--lead {
+  color: #e8eff8;
+}
+
+html[data-theme='dark'] .site-nav__link--highlight {
+  color: #f5f9ff;
+  border-color: rgba(113, 150, 250, 0.62);
+  background:
+    radial-gradient(circle at 18% 14%, rgba(147, 175, 255, 0.2), transparent 44%),
+    linear-gradient(135deg, rgba(47, 99, 228, 0.4), rgba(245, 108, 0, 0.34));
+  box-shadow: 0 0.6rem 1.35rem rgba(9, 22, 48, 0.55);
+}
+
+html[data-theme='dark'] .site-nav__link--highlight:hover,
+html[data-theme='dark'] .site-nav__link--highlight:focus-visible {
+  color: #ffffff;
+  border-color: rgba(148, 181, 255, 0.82);
+  background:
+    radial-gradient(circle at 20% 14%, rgba(175, 196, 255, 0.24), transparent 44%),
+    linear-gradient(135deg, rgba(47, 99, 228, 0.54), rgba(245, 108, 0, 0.42));
+  box-shadow: 0 0.8rem 1.6rem rgba(9, 22, 48, 0.62);
+}
+
+html[data-theme='dark'] .site-nav__link--highlight[aria-current='page'] {
+  color: #ffffff;
+  border-color: rgba(167, 197, 255, 0.9);
+  background:
+    radial-gradient(circle at 20% 14%, rgba(187, 207, 255, 0.26), transparent 44%),
+    linear-gradient(135deg, rgba(47, 99, 228, 0.62), rgba(245, 108, 0, 0.48));
+  box-shadow: 0 0.95rem 1.75rem rgba(9, 22, 48, 0.68);
+}
+
+html[data-theme='dark'] .manifesto__projects-heading {
+  color: #ecf3ff;
+}
+
+html[data-theme='dark'] .manifesto__projects-eyebrow {
+  color: #7ea5ff;
+}
+
+html[data-theme='dark'] .manifesto__panel {
+  border-color: rgba(78, 112, 164, 0.62);
+  background:
+    radial-gradient(circle at 84% 10%, rgba(47, 99, 228, 0.22), transparent 40%),
+    linear-gradient(180deg, rgba(10, 20, 36, 0.95), rgba(7, 14, 27, 0.94));
+}
+
+html[data-theme='dark'] .manifesto__panel-label {
+  color: #5f8fff;
+}
+
+html[data-theme='dark'] .manifesto__principle {
+  border-color: rgba(85, 110, 146, 0.7);
+  background: linear-gradient(180deg, rgba(230, 238, 251, 0.14), rgba(200, 216, 242, 0.11));
+}
+
+html[data-theme='dark'] .manifesto__principle:hover {
+  border-color: rgba(130, 160, 220, 0.74);
+  background: linear-gradient(180deg, rgba(235, 244, 255, 0.2), rgba(205, 222, 248, 0.14));
+  box-shadow: 0 10px 22px rgba(4, 10, 20, 0.38);
+}
+
+html[data-theme='dark'] .manifesto__principle-index {
+  color: #f3f7ff;
+  box-shadow: 0 0.45rem 1rem rgba(36, 88, 210, 0.36);
+}
+
+html[data-theme='dark'] .manifesto__principle-text {
+  color: #f3f8ff;
+}
+
+html[data-theme='dark'] .manifesto-feature__media {
+  border-color: rgba(67, 88, 116, 0.88);
+}
+
+html[data-theme='dark'] .manifesto-feature__builder-photo {
+  border-color: rgba(10, 17, 27, 0.9);
+}
+
+html[data-theme='dark'] .manifesto-feature__meta {
+  border-top-color: rgba(70, 91, 120, 0.66);
+  color: #b9c8dc;
+}
+
+html[data-theme='dark'] .manifesto-feature__builder {
+  color: #e8eff8;
+}
+
+html[data-theme='dark'] .manifesto-feature__links a {
+  border-color: rgba(70, 91, 120, 0.84);
+  background: rgba(17, 28, 42, 0.84);
+  color: #dce7f5;
+}
+
+html[data-theme='dark'] .manifesto-feature__links a:hover,
+html[data-theme='dark'] .manifesto-feature__links a:focus-visible {
+  border-color: rgba(120, 157, 255, 0.78);
+  background: rgba(47, 99, 228, 0.2);
+}
+
+html[data-theme='dark'] .experience-feature__meta,
+html[data-theme='dark'] .experience-card__meta {
+  border-top-color: rgba(70, 91, 120, 0.58);
+}
+
+html[data-theme='dark'] .site-footer__newsletter-input,
+html[data-theme='dark'] .final-cta__newsletter-input,
+html[data-theme='dark'] input,
+html[data-theme='dark'] textarea,
+html[data-theme='dark'] select {
+  background: rgba(17, 24, 36, 0.95);
+  border-color: rgba(61, 78, 101, 0.9);
+  color: var(--color-text);
+}
+
+html[data-theme='dark'] .community-impact-report__card {
+  border-color: rgba(68, 92, 124, 0.72);
+  background: rgba(12, 21, 33, 0.45);
+  box-shadow: none;
+}
+
+html[data-theme='dark'] .community-impact-report__value {
+  color: #8db2ff;
+}
+
+html[data-theme='dark'] .community-impact-report__card p,
+html[data-theme='dark'] .community-impact-report__footnote {
+  color: #b8c7da;
+}
+
+html[data-theme='dark'] .community-impact-report__footnote {
+  border-top-color: rgba(65, 86, 113, 0.72);
+}
+
+html[data-theme='dark'] .partners__logo-name {
+  color: #e8eef8;
+}
+
+html[data-theme='dark'] .partners__logo-category {
+  background: rgba(61, 78, 101, 0.52);
+  color: #c8d4e5;
+}
+
+html[data-theme='dark'] .partners__category {
+  border-color: rgba(83, 112, 150, 0.52);
+  background: rgba(14, 22, 35, 0.62);
+  color: #d6e2f0;
+}
+
+html[data-theme='dark'] .partners__category:hover,
+html[data-theme='dark'] .partners__category:focus-visible,
+html[data-theme='dark'] .partners__category.is-active {
+  border-color: rgba(120, 157, 255, 0.66);
+  background: rgba(47, 99, 228, 0.22);
+  color: #e6efff;
+}
+
+html[data-theme='dark'] .partners__logo-mark {
+  border-color: rgba(65, 86, 113, 0.85);
+  background: rgba(17, 27, 40, 0.8);
+}
+
+html[data-theme='dark'] .partners__logo-card {
+  border-color: rgba(65, 86, 113, 0.88);
+  background: linear-gradient(180deg, rgba(13, 23, 35, 0.92), rgba(10, 18, 29, 0.9));
+  box-shadow: none;
+}
+
+html[data-theme='dark'] .partners__callout {
+  border-color: rgba(83, 112, 150, 0.72);
+  background:
+    radial-gradient(circle at 12% -28%, rgba(47, 99, 228, 0.26), transparent 38%),
+    radial-gradient(circle at 88% -44%, rgba(245, 108, 0, 0.14), transparent 44%),
+    linear-gradient(180deg, rgba(12, 20, 31, 0.96), rgba(10, 17, 27, 0.92));
+  box-shadow: none;
+}
+
+html[data-theme='dark'] .partners__callout-header .section-header__eyebrow {
+  border-color: rgba(120, 157, 255, 0.42);
+  background: rgba(47, 99, 228, 0.2);
+}
+
+html[data-theme='dark'] .partners__callout-signals .badge {
+  border-color: rgba(61, 78, 101, 0.86);
+  background: rgba(17, 27, 40, 0.78);
+}
+
+html[data-theme='dark'] .partners__actions .button--primary {
+  box-shadow: 0 10px 20px rgba(47, 99, 228, 0.28);
+}
+
+html[data-theme='dark'] .obw-page .site-main {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(91, 60, 196, 0.18), transparent 36%),
+    radial-gradient(circle at 92% 6%, rgba(255, 95, 31, 0.12), transparent 28%),
+    linear-gradient(180deg, #090d14 0%, #090d14 100%);
+}
+
+html[data-theme='dark'] :is(
+  .obw-hero__visual,
+  .obw-hero__media,
+  .obw-highlight,
+  .obw-about__panel,
+  .obw-roadstop,
+  .obw-community-card,
+  .obw-campus-partner,
+  .obw-builder,
+  .obw-showcase-card,
+  .obw-cohost,
+  .obw-countdown__item,
+  .obw-register .final-cta__panel
+) {
+  border-color: rgba(53, 70, 92, 0.92);
+  background: linear-gradient(180deg, rgba(15, 24, 37, 0.96), rgba(10, 17, 27, 0.95));
+  color: var(--color-text);
+}
+
+html[data-theme='dark'] .obw-highlight::before {
+  background: linear-gradient(90deg, rgba(124, 94, 224, 0.95), rgba(255, 122, 66, 0.95));
+}
+
+html[data-theme='dark'] .obw-roadmap__line {
+  background: linear-gradient(180deg, rgba(91, 60, 196, 0.62), rgba(255, 95, 31, 0.54));
+}
+
+html[data-theme='dark'] .obw-faq .accordion__item {
+  border-color: rgba(56, 77, 103, 0.9);
+  background: linear-gradient(180deg, rgba(14, 24, 38, 0.98), rgba(9, 16, 27, 0.97));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme='dark'] .obw-faq .accordion__trigger {
+  color: #e7eef8;
+}
+
+html[data-theme='dark'] .obw-faq .accordion__trigger:hover,
+html[data-theme='dark'] .obw-faq .accordion__trigger:focus-visible {
+  background: rgba(91, 60, 196, 0.16);
+}
+
+html[data-theme='dark'] .obw-faq .accordion__panel {
+  color: #b8c7d9;
+}
+
+html[data-theme='dark'] .obw-hero__brandline {
+  border-color: rgba(74, 97, 126, 0.8);
+  background: linear-gradient(135deg, rgba(17, 28, 43, 0.92), rgba(11, 18, 29, 0.9));
+  color: #a8bacf;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+html[data-theme='dark'] .obw-hero__brandline span {
+  color: #9db1c9;
+}
+
+html[data-theme='dark'] .obw-hero__logo {
+  border-radius: 0.6rem;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.32));
+}

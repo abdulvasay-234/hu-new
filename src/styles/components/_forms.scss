@@ -1,0 +1,169 @@
+@use '../abstracts/index' as *;
+
+.form,
+.form-group,
+.form-field {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.form-group {
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-label,
+.form-legend {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.form-help,
+.form-note {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.form-control,
+.form-select,
+.form-textarea,
+.form-input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-text);
+  font: inherit;
+  transition: border-color var(--motion-base) ease, box-shadow var(--motion-base) ease, background-color var(--motion-base) ease;
+}
+
+.form-textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.form-control:focus-visible,
+.form-select:focus-visible,
+.form-textarea:focus-visible,
+.form-input:focus-visible {
+  outline: none;
+  border-color: rgba(47, 99, 228, 0.56);
+  box-shadow: 0 0 0 0.16rem rgba(47, 99, 228, 0.18);
+}
+
+.form-field.is-success .form-control,
+.form-field.is-success .form-select,
+.form-field.is-success .form-textarea,
+.form-field.is-success .form-input {
+  border-color: rgba(25, 163, 74, 0.55);
+}
+
+.form-field.is-error .form-control,
+.form-field.is-error .form-select,
+.form-field.is-error .form-textarea,
+.form-field.is-error .form-input {
+  border-color: rgba(200, 30, 30, 0.65);
+}
+
+.form-message {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.form-message--success { color: var(--color-success-500); }
+.form-message--error { color: var(--color-error-500); }
+
+.form-choice,
+.form-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.form-choice input,
+.form-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-choice__indicator {
+  display: inline-grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: var(--color-surface);
+  transition: background-color var(--motion-base) ease, border-color var(--motion-base) ease, box-shadow var(--motion-base) ease;
+}
+
+.form-choice--checkbox .form-choice__indicator {
+  border-radius: 0.35rem;
+}
+
+.form-choice--radio .form-choice__indicator {
+  border-radius: 999px;
+}
+
+.form-choice input:focus-visible + .form-choice__indicator,
+.form-toggle input:focus-visible + .form-toggle__track {
+  box-shadow: 0 0 0 0.16rem rgba(47, 99, 228, 0.18);
+}
+
+.form-choice input:checked + .form-choice__indicator {
+  border-color: var(--color-primary-500);
+  background: linear-gradient(135deg, var(--color-primary-500), #4f8cff);
+}
+
+.form-choice input:checked + .form-choice__indicator::after {
+  content: '';
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: inherit;
+  background: var(--color-neutral-0);
+}
+
+.form-toggle__track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 2.75rem;
+  height: 1.55rem;
+  padding: 0.12rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.34);
+  transition: background-color var(--motion-base) ease, box-shadow var(--motion-base) ease;
+}
+
+.form-toggle__track::after {
+  content: '';
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 999px;
+  background: var(--color-neutral-0);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--motion-base) ease;
+}
+
+.form-toggle input:checked + .form-toggle__track {
+  background: linear-gradient(135deg, var(--color-primary-500), #4f8cff);
+}
+
+.form-toggle input:checked + .form-toggle__track::after {
+  transform: translateX(1.16rem);
+}
+
+@include media-up(md) {
+  .form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

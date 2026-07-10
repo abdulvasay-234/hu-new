@@ -1,0 +1,32 @@
+.empty-state {
+	display: grid;
+	justify-items: center;
+	text-align: center;
+	gap: 0.75rem;
+	padding: clamp(1.5rem, 4vw, 2.5rem);
+	border: 1px dashed rgba(148, 163, 184, 0.3);
+	border-radius: var(--radius-xl);
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.empty-state__icon {
+	display: inline-grid;
+	place-items: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 999px;
+	background: rgba(47, 99, 228, 0.08);
+	color: var(--color-primary-500);
+}
+
+.empty-state__title {
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.empty-state__text {
+	max-width: 32rem;
+	color: var(--color-text-muted);
+	line-height: 1.7;
+}

@@ -1,0 +1,19 @@
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 0.875rem 1rem;
+  transition: border-color var(--motion-base) ease, box-shadow var(--motion-base) ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(94, 135, 247, 0.18);
+  outline: none;
+}

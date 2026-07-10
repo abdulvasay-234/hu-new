@@ -1,0 +1,208 @@
+html.has-js [data-animate],
+html.has-js .u-animate-fade-up,
+html.has-js .u-animate-fade-down,
+html.has-js .u-animate-fade-left,
+html.has-js .u-animate-fade-right,
+html.has-js .u-animate-scale,
+html.has-js .u-animate-zoom {
+	opacity: 0;
+	will-change: transform, opacity;
+	transition:
+		opacity var(--motion-slow) ease,
+		transform var(--motion-slow) ease;
+}
+
+html.has-js [data-animate='fade-up'],
+html.has-js .u-animate-fade-up { transform: translate3d(0, 1.125rem, 0); }
+
+html.has-js [data-animate='fade-down'],
+html.has-js .u-animate-fade-down { transform: translate3d(0, -1.125rem, 0); }
+
+html.has-js [data-animate='fade-left'],
+html.has-js .u-animate-fade-left { transform: translate3d(1.125rem, 0, 0); }
+
+html.has-js [data-animate='fade-right'],
+html.has-js .u-animate-fade-right { transform: translate3d(-1.125rem, 0, 0); }
+
+html.has-js [data-animate='scale'],
+html.has-js .u-animate-scale { transform: scale(0.97); }
+
+html.has-js [data-animate='zoom'],
+html.has-js .u-animate-zoom { transform: scale(0.92); }
+
+html.has-js [data-animate].is-revealed,
+html.has-js .u-animate-in {
+	opacity: 1;
+	transform: none;
+}
+
+html.has-js [data-stagger] > *,
+html.has-js .u-stagger > * {
+	opacity: 0;
+	transform: translate3d(0, 1rem, 0);
+	transition:
+		opacity var(--motion-slow) ease,
+		transform var(--motion-slow) ease;
+	transition-delay: calc(var(--stagger-index, 0) * 70ms);
+	will-change: transform, opacity;
+}
+
+html.has-js [data-stagger].is-revealed > *,
+html.has-js .u-stagger.is-revealed > * {
+	opacity: 1;
+	transform: none;
+}
+
+.u-hover-lift,
+[data-hover='lift'] {
+	transition: transform var(--motion-base) ease, box-shadow var(--motion-base) ease;
+	will-change: transform;
+}
+
+.u-hover-lift:hover,
+.u-hover-lift:focus-within,
+[data-hover='lift']:hover,
+[data-hover='lift']:focus-within {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-md);
+}
+
+.u-card-hover,
+[data-hover='card'] {
+	transition: transform var(--motion-base) ease, border-color var(--motion-base) ease, box-shadow var(--motion-base) ease;
+	will-change: transform;
+}
+
+.u-card-hover:hover,
+.u-card-hover:focus-within,
+[data-hover='card']:hover,
+[data-hover='card']:focus-within {
+	transform: translateY(-4px);
+	border-color: rgba(47, 99, 228, 0.18);
+	box-shadow: var(--shadow-md);
+}
+
+.u-button-hover,
+[data-hover='button'],
+[data-hover='cta'] {
+	transition: transform var(--motion-base) ease, box-shadow var(--motion-base) ease, filter var(--motion-base) ease;
+	will-change: transform;
+}
+
+.u-button-hover:hover,
+.u-button-hover:focus-visible,
+[data-hover='button']:hover,
+[data-hover='button']:focus-visible,
+[data-hover='cta']:hover,
+[data-hover='cta']:focus-visible {
+	transform: translateY(-1px);
+	box-shadow: var(--shadow-sm);
+	filter: saturate(1.02);
+}
+
+[data-hover='logo'],
+[data-hover='icon'] {
+	transition: transform var(--motion-base) ease, color var(--motion-base) ease, opacity var(--motion-base) ease;
+}
+
+[data-hover='logo']:hover,
+[data-hover='logo']:focus-visible,
+[data-hover='icon']:hover,
+[data-hover='icon']:focus-visible {
+	transform: translateY(-2px) scale(1.02);
+	outline: none;
+}
+
+[data-hover='media'] img,
+[data-hover='gallery'] img {
+	transition: transform var(--motion-base) ease, filter var(--motion-base) ease;
+	will-change: transform;
+}
+
+[data-hover='media']:hover img,
+[data-hover='media']:focus-within img,
+[data-hover='gallery']:hover img,
+[data-hover='gallery']:focus-within img {
+	transform: scale(1.03);
+	filter: saturate(1.03);
+}
+
+[data-float] {
+	animation: float-idle var(--float-duration, 6s) ease-in-out infinite;
+	will-change: transform;
+}
+
+[data-float='reverse'] {
+	animation-name: float-idle-reverse;
+}
+
+html.has-js img[data-reveal-image] {
+	opacity: 0;
+	transform: scale(1.01);
+	filter: blur(6px);
+	transition:
+		opacity var(--motion-slow) ease,
+		transform var(--motion-slow) ease,
+		filter var(--motion-slow) ease;
+}
+
+html.has-js img[data-reveal-image].is-loaded {
+	opacity: 1;
+	transform: none;
+	filter: none;
+}
+
+body.is-page-entering .site-shell {
+	opacity: 0;
+	transform: translate3d(0, 0.625rem, 0);
+}
+
+body.is-page-ready .site-shell {
+	opacity: 1;
+	transform: none;
+	transition:
+		opacity 420ms ease,
+		transform 420ms ease;
+}
+
+@keyframes float-idle {
+	0%,
+	100% { transform: translate3d(0, 0, 0); }
+	50% { transform: translate3d(0, -0.5rem, 0); }
+}
+
+@keyframes float-idle-reverse {
+	0%,
+	100% { transform: translate3d(0, 0, 0); }
+	50% { transform: translate3d(0, 0.5rem, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html.has-js [data-animate],
+	html.has-js .u-animate-fade-up,
+	html.has-js .u-animate-fade-down,
+	html.has-js .u-animate-fade-left,
+	html.has-js .u-animate-fade-right,
+	html.has-js .u-animate-scale,
+	html.has-js .u-animate-zoom,
+	html.has-js [data-stagger] > *,
+	html.has-js .u-stagger > *,
+	html.has-js img[data-reveal-image],
+	.u-hover-lift,
+	.u-card-hover,
+	.u-button-hover,
+	[data-hover],
+	[data-float],
+	body.is-page-ready .site-shell {
+		opacity: 1;
+		transform: none;
+		filter: none;
+		transition: none;
+		animation: none;
+	}
+
+	html.has-js [data-animate].is-revealed,
+	html.has-js [data-stagger].is-revealed > * {
+		opacity: 1;
+	}
+}

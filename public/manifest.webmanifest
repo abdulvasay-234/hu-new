@@ -1,0 +1,17 @@
+{
+  "name": "HackUnion v2",
+  "short_name": "HackUnion",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090D14",
+  "theme_color": "#090D14",
+  "icons": [
+    {
+      "src": "./favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

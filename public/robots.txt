@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vasay.github.io/HU-New/sitemap.xml

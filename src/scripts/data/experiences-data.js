@@ -1,0 +1,63 @@
+export const experiencesData = [
+  {
+    featured: true,
+    slug: 'builders-guild',
+    category: 'Flagship Experience',
+    title: 'Builders Guild',
+    tagline: 'A year-round circle for serious builders.',
+    description: 'Builders Guild gives HackUnion members an ongoing space to meet peers, trade feedback, and stay close to real work between experiences.',
+    audience: 'For developers, designers, founders, AI engineers, and creators who want continuity and accountability.',
+    highlights: ['Peer-led circles', 'Project reviews', 'Shared shipping'],
+    status: 'Year Round',
+    ctaLabel: 'View Builders Guild',
+    href: '#final-cta',
+    tone: 'cyan',
+    visualLabel: 'Flagship room',
+    image: './Images/2024_06_08_08_34_IMG_6163.JPG'
+  },
+  {
+    slug: 'community-meetups',
+    category: 'Community',
+    title: 'Community Meetups',
+    tagline: 'Low-lift gatherings with high-signal people.',
+    description: 'Meetups are designed for builders who want to connect quickly, share ideas, and find the next collaborator or conversation that matters.',
+    audience: 'For members who want to stay close to the community and meet people in the same building rhythm.',
+    highlights: ['Local chapters', 'Open introductions', 'Live conversations'],
+    status: 'Registration Open',
+    ctaLabel: 'Explore Meetups',
+    href: '#final-cta',
+    tone: 'amber',
+    visualLabel: 'Local energy',
+    image: './Images/2024_06_08_08_39_IMG_6186.JPG'
+  },
+  {
+    slug: 'hackathons',
+    category: 'Build',
+    title: 'Hackathons',
+    tagline: 'Focused sprints that turn ideas into proof.',
+    description: 'Hackathons create short, intense windows for teams and solo builders to create, test, and show what they can ship under pressure.',
+    audience: 'For people who want momentum, teams, and a clear public outcome.',
+    highlights: ['Team formation', 'Mentors', 'Demo moments'],
+    status: 'Upcoming',
+    ctaLabel: 'See Hackathons',
+    href: '#final-cta',
+    tone: 'violet',
+    visualLabel: 'Sprint mode',
+    image: './Images/2024_06_08_08_43_IMG_6197.JPG'
+  },
+  {
+    slug: 'open-build-week',
+    category: 'Collaboration',
+    title: 'Open Build Week',
+    tagline: 'A week of open building, sharing, and contribution.',
+    description: 'Open Build Week brings the community into a shared rhythm of making, posting progress, and helping each other move forward.',
+    audience: 'For contributors who like public progress and open collaboration.',
+    highlights: ['Open sessions', 'Public sharing', 'Community demos'],
+    status: 'Coming Soon',
+    ctaLabel: 'Learn More',
+    href: '#final-cta',
+    tone: 'green',
+    visualLabel: 'Open week',
+    image: './Images/2024_06_08_08_46_IMG_6214.JPG'
+  }
+];
