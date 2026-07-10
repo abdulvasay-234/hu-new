@@ -127,7 +127,10 @@
               <span class="nav-toggle__line"></span>
               <span class="nav-toggle__line"></span>
             </span>
-            <span class="nav-toggle__label">Menu</span>
+            <span class="nav-toggle__label">
+              <span class="nav-toggle__label-menu">Menu</span>
+              <span class="nav-toggle__label-close" aria-hidden="true">Close</span>
+            </span>
           </button>
         </div>
       </header>
@@ -888,54 +891,6 @@
         </div>
       </footer>
     </div>
-
-    <script>
-      (function () {
-        var navToggle = document.querySelector('[data-nav-toggle]');
-        var siteNav = document.querySelector('[data-site-nav]');
-        var header = document.querySelector('[data-site-header]');
-        if (!navToggle || !siteNav) return;
-
-        var isMobile = function () {
-          return window.matchMedia('(max-width: 1023px)').matches;
-        };
-
-        var setOpen = function (open) {
-          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-          navToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-          if (open) {
-            siteNav.setAttribute('data-open', 'true');
-            document.body.classList.add('is-nav-locked');
-            if (header) header.classList.add('is-menu-open');
-          } else {
-            siteNav.removeAttribute('data-open');
-            document.body.classList.remove('is-nav-locked');
-            if (header) header.classList.remove('is-menu-open');
-          }
-        };
-
-        navToggle.addEventListener('click', function () {
-          if (!isMobile()) return;
-          setOpen(navToggle.getAttribute('aria-expanded') !== 'true');
-        });
-
-        siteNav.addEventListener('click', function (event) {
-          if (!isMobile()) return;
-          var target = event.target;
-          if (target && target.closest && target.closest('a[href]')) setOpen(false);
-        });
-
-        document.addEventListener('keydown', function (event) {
-          if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
-            setOpen(false);
-          }
-        });
-
-        window.addEventListener('resize', function () {
-          if (!isMobile()) setOpen(false);
-        });
-      })();
-    </script>
 
     <script>
       (function () {

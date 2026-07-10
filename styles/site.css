@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-primary-500: #2f63e4;
   --color-secondary-500: #2f8e7f;
@@ -1258,6 +1259,8 @@ html[data-theme=dark] .site-nav[data-open] {
 
 .nav-toggle {
   display: inline-flex;
+  position: relative;
+  z-index: 90;
   align-items: center;
   gap: 0.75rem;
   justify-self: end;
@@ -1296,10 +1299,33 @@ html[data-theme=dark] .site-nav[data-open] {
 }
 
 .nav-toggle__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.nav-toggle__label-close {
+  display: none;
+}
+
+.site-header.is-menu-open .nav-toggle__label-menu {
+  display: none;
+}
+
+.site-header.is-menu-open .nav-toggle__label-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.site-header.is-menu-open .nav-toggle__label-close::before {
+  content: "×";
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .theme-toggle {

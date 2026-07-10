@@ -109,6 +109,8 @@
 
 .nav-toggle {
   display: inline-flex;
+  position: relative;
+  z-index: 90;
   align-items: center;
   gap: 0.75rem;
   justify-self: end;
@@ -147,10 +149,33 @@
 }
 
 .nav-toggle__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.nav-toggle__label-close {
+  display: none;
+}
+
+.site-header.is-menu-open .nav-toggle__label-menu {
+  display: none;
+}
+
+.site-header.is-menu-open .nav-toggle__label-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.site-header.is-menu-open .nav-toggle__label-close::before {
+  content: '\00d7';
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .theme-toggle {
