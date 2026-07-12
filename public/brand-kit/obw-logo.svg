@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6250 6250" role="img" aria-labelledby="obwLogoTitle obwLogoDesc">
+  <title id="obwLogoTitle">Open Build Week Logo</title>
+  <desc id="obwLogoDesc">Official Open Build Week logo asset wrapped in SVG format.</desc>
+  <image href="../images/obw-logo.png" width="6250" height="6250" preserveAspectRatio="xMidYMid meet" />
+</svg>

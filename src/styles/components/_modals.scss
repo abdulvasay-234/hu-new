@@ -53,3 +53,36 @@
 .modal--video .modal__dialog {
   width: min(100%, 62rem);
 }
+
+.community-links-modal__dialog {
+  width: min(100%, 30rem);
+}
+
+.community-links-modal__body {
+  gap: 0.9rem;
+}
+
+.community-links-modal__body p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.community-links-modal__actions {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.community-links-modal__actions .button {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+@media (max-width: 430px) {
+  .community-links-modal__dialog {
+    padding: 1rem;
+  }
+
+  .community-links-modal__actions .button {
+    justify-content: center;
+  }
+}

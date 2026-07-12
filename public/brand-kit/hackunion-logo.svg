@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6250 6250" role="img" aria-labelledby="huLogoTitle huLogoDesc">
+  <title id="huLogoTitle">HackUnion Logo</title>
+  <desc id="huLogoDesc">Official HackUnion logo asset wrapped in SVG format.</desc>
+  <image href="../images/hackunion-logo.png" width="6250" height="6250" preserveAspectRatio="xMidYMid meet" />
+</svg>

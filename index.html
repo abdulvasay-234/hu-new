@@ -57,7 +57,7 @@
                 </span>
                 <span class="theme-toggle__text" data-theme-toggle-text>Dark mode</span>
               </button>
-              <a class="button button--primary" href="#final-cta">Join Community</a>
+              <a class="button button--primary" href="#community-links-modal" data-modal-open="#community-links-modal" aria-controls="community-links-modal">Join Community</a>
             </div>
           </nav>
           <div class="site-header__actions">
@@ -68,7 +68,7 @@
               </span>
               <span class="theme-toggle__text" data-theme-toggle-text>Dark mode</span>
             </button>
-            <a class="button button--primary site-header__cta" href="#final-cta">Join Community</a>
+            <a class="button button--primary site-header__cta" href="#community-links-modal" data-modal-open="#community-links-modal" aria-controls="community-links-modal">Join Community</a>
           </div>
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu" data-nav-toggle>
             <span class="nav-toggle__box" aria-hidden="true">
@@ -93,7 +93,7 @@
               <h1 id="hero-title" class="hero__title">Build faster with people who ship.</h1>
               <p class="hero__text">HackUnion is where developers, designers, AI engineers, founders, and open source contributors turn ideas into shipped products, visible portfolios, and long-term momentum.</p>
               <div class="hero__actions">
-                <a class="button button--primary" href="#final-cta">Join the Community <span data-lucide="arrow-right"></span></a>
+                <a class="button button--primary" href="#community-links-modal" data-modal-open="#community-links-modal" aria-controls="community-links-modal">Join the Community <span data-lucide="arrow-right"></span></a>
                 <a class="button button--secondary" href="#experiences">Explore Experiences</a>
               </div>
             </div>
@@ -219,7 +219,7 @@
               </div>
 
               <div class="manifesto__actions">
-                <a class="button button--primary" href="#final-cta">Join the Community</a>
+                <a class="button button--primary" href="#community-links-modal" data-modal-open="#community-links-modal" aria-controls="community-links-modal">Join the Community</a>
                 <a class="button button--secondary" href="#experiences">Explore Experiences</a>
               </div>
             </div>
@@ -478,7 +478,7 @@
               </div>
 
               <div class="final-cta__actions" aria-label="Primary actions">
-                <a class="button button--primary final-cta__button-primary" href="#final-cta-email">Join the Community</a>
+                <a class="button button--primary final-cta__button-primary" href="#community-links-modal" data-modal-open="#community-links-modal" aria-controls="community-links-modal">Join the Community</a>
                 <a class="button button--secondary" href="/experiences">Explore Experiences</a>
               </div>
 
@@ -501,6 +501,39 @@
           </div>
         </section>
       </main>
+
+      <div class="modal" id="community-links-modal" data-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="community-links-title">
+        <div class="modal__overlay" data-modal-overlay></div>
+        <div class="modal__dialog community-links-modal__dialog">
+          <div class="modal__header">
+            <h2 id="community-links-title">Join HackUnion Community</h2>
+            <button class="button button--ghost modal__close" type="button" data-modal-close aria-label="Close community links popup">
+              <span data-lucide="x"></span>
+            </button>
+          </div>
+          <div class="modal__body community-links-modal__body">
+            <p>Pick your platform and connect with the HackUnion community.</p>
+            <div class="community-links-modal__actions">
+              <a class="button button--secondary" href="https://chat.whatsapp.com/" target="_blank" rel="noreferrer noopener">
+                <span data-lucide="message-circle" aria-hidden="true"></span>
+                <span>WhatsApp</span>
+              </a>
+              <a class="button button--secondary" href="https://discord.gg/" target="_blank" rel="noreferrer noopener">
+                <span data-lucide="messages-square" aria-hidden="true"></span>
+                <span>Discord</span>
+              </a>
+              <a class="button button--secondary" href="https://www.linkedin.com/company/hackunion/" target="_blank" rel="noreferrer noopener">
+                <span data-lucide="linkedin" aria-hidden="true"></span>
+                <span>LinkedIn</span>
+              </a>
+              <a class="button button--secondary" href="https://www.instagram.com/hackunion/" target="_blank" rel="noreferrer noopener">
+                <span data-lucide="instagram" aria-hidden="true"></span>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <footer class="site-footer" data-site-footer>
         <div class="container site-footer__inner">

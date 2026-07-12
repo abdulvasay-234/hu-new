@@ -19,6 +19,7 @@ import { initPartnersEcosystem } from './modules/partners-ecosystem.js';
 import { initFinalCta } from './modules/final-cta.js';
 import { initHero } from './modules/hero.js';
 import { initOpenBuildWeek } from './modules/open-build-week.js';
+import { initBrandKit } from './modules/brand-kit.js';
 import { createIcons, icons } from '../../node_modules/lucide/dist/esm/lucide.js';
 import { setPageMetadata } from './services/seo.js';
 import { siteConfig } from './data/site-config.js';
@@ -93,6 +94,7 @@ const bootstrap = () => {
   initAnimations(page);
   initHero();
   initOpenBuildWeek();
+  initBrandKit();
 
   const settleInitialPosition = () => {
     scrollToHashTarget();
