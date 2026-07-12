@@ -910,6 +910,10 @@
             return;
           }
 
+          var shouldUseFallback = function () {
+            return !document.documentElement.classList.contains('has-js');
+          };
+
           var setNavigationState = function (isOpen) {
             navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
@@ -927,13 +931,17 @@
           };
 
           navToggle.addEventListener('click', function () {
+            if (!shouldUseFallback()) {
+              return;
+            }
+
             var isOpen = navToggle.getAttribute('aria-expanded') === 'true';
             setNavigationState(!isOpen);
           });
 
           siteNav.addEventListener('click', function (event) {
             var target = event.target;
-            if (!mobileMedia.matches || !(target instanceof HTMLElement)) {
+            if (!shouldUseFallback() || !mobileMedia.matches || !(target instanceof HTMLElement)) {
               return;
             }
 
@@ -943,6 +951,10 @@
           });
 
           document.addEventListener('keydown', function (event) {
+            if (!shouldUseFallback()) {
+              return;
+            }
+
             if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
               setNavigationState(false);
               navToggle.focus();
@@ -950,6 +962,10 @@
           });
 
           var closeOnDesktop = function (event) {
+            if (!shouldUseFallback()) {
+              return;
+            }
+
             if (!event.matches) {
               setNavigationState(false);
             }
