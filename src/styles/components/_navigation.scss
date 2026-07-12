@@ -166,6 +166,10 @@
   display: none;
 }
 
+.site-header.is-menu-open .nav-toggle__box {
+  display: none;
+}
+
 .site-header.is-menu-open .nav-toggle__label-close {
   display: inline-flex;
   align-items: center;
