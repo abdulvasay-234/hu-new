@@ -1516,6 +1516,72 @@ html[data-theme=dark] .theme-toggle__moon {
     display: none;
   }
 }
+@media (max-width: 1023px) {
+  .site-nav__list {
+    width: 100%;
+    gap: 0.8rem;
+  }
+  .site-nav__list li {
+    width: 100%;
+  }
+  .site-nav__list a {
+    width: fit-content;
+    max-width: 100%;
+    min-height: 2.95rem;
+    padding: 0.62rem 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.42);
+    border-radius: 1.1rem;
+    background: radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.7), transparent 42%), linear-gradient(135deg, rgba(47, 99, 228, 0.08), rgba(245, 108, 0, 0.08));
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  }
+  .site-nav__list a::after {
+    left: 0.8rem;
+    width: calc(100% - 1.6rem);
+    bottom: 0.36rem;
+  }
+  .site-nav__list a:hover,
+  .site-nav__list a:focus-visible {
+    border-color: rgba(47, 99, 228, 0.46);
+    box-shadow: 0 10px 22px rgba(47, 99, 228, 0.16);
+  }
+  .site-nav__list a[aria-current=page] {
+    border-color: rgba(47, 99, 228, 0.56);
+    box-shadow: 0 12px 24px rgba(47, 99, 228, 0.2);
+  }
+  .site-nav__link--highlight {
+    border-width: 1.5px;
+  }
+  .site-nav__mobile-actions {
+    margin-top: 1.4rem;
+    padding-top: 1.2rem;
+    border-top-color: rgba(148, 163, 184, 0.28);
+  }
+  .site-nav__mobile-actions .button,
+  .site-nav__mobile-actions .theme-toggle {
+    width: 100%;
+    justify-content: center;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+  }
+  .site-nav__mobile-actions .button--primary {
+    border-color: rgba(47, 99, 228, 0.34);
+  }
+  html[data-theme=dark] .site-nav__list a {
+    border-color: rgba(99, 115, 139, 0.62);
+    background: radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.14), transparent 44%), linear-gradient(135deg, rgba(47, 99, 228, 0.2), rgba(245, 108, 0, 0.16));
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.32);
+  }
+  html[data-theme=dark] .site-nav__list a:hover,
+  html[data-theme=dark] .site-nav__list a:focus-visible,
+  html[data-theme=dark] .site-nav__list a[aria-current=page] {
+    border-color: rgba(99, 145, 255, 0.78);
+  }
+  html[data-theme=dark] .site-nav__mobile-actions .button,
+  html[data-theme=dark] .site-nav__mobile-actions .theme-toggle {
+    border-color: rgba(99, 115, 139, 0.62);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.34);
+  }
+}
 @media (max-width: 1280px) {
   .theme-toggle {
     gap: 0.45rem;
