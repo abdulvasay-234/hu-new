@@ -218,11 +218,22 @@ body.is-nav-locked {
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
+.site-header.is-menu-open {
+  z-index: 120;
+  background: #f7f9fd;
+  backdrop-filter: none;
+}
+
 html[data-theme=dark] .site-header.is-scrolled,
 html[data-theme=dark] .site-header.is-menu-open {
   background: rgba(9, 13, 20, 0.72);
   border-bottom-color: rgba(37, 48, 64, 0.8);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme=dark] .site-header.is-menu-open {
+  background: #0b111b;
+  backdrop-filter: none;
 }
 
 .site-header.is-hidden {
@@ -339,6 +350,7 @@ html[data-theme=dark] .site-nav {
 .site-nav[data-open] {
   background-color: #f7f9fd;
   background-image: none;
+  z-index: 110;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -1260,7 +1272,7 @@ html[data-theme=dark] .site-nav[data-open] {
 .nav-toggle {
   display: inline-flex;
   position: relative;
-  z-index: 90;
+  z-index: 130;
   align-items: center;
   gap: 0.75rem;
   justify-self: end;
