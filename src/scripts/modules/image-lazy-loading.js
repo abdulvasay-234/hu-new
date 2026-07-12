@@ -7,7 +7,16 @@ export const initLazyLoading = () => {
 
   const applySource = (image) => {
     const nextSrc = image.dataset.src;
-    if (nextSrc && image.src !== nextSrc) {
+    if (!nextSrc) {
+      return;
+    }
+
+    const currentSrc = image.getAttribute('src');
+
+    // Keep already-resolved build-time src values (e.g. Vite asset URLs) intact.
+    // Only apply data-src when src is missing or a tiny placeholder/data URI.
+    const canReplaceSrc = !currentSrc || currentSrc.startsWith('data:');
+    if (canReplaceSrc && image.src !== nextSrc) {
       image.src = nextSrc;
     }
   };
