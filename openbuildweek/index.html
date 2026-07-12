@@ -894,6 +894,81 @@
 
     <script>
       (function () {
+        var MOBILE_BREAKPOINT = '(max-width: 1023px)';
+
+        var initNavigationFallback = function () {
+          if (document.documentElement.classList.contains('has-js')) {
+            return;
+          }
+
+          var header = document.querySelector('[data-site-header]');
+          var navToggle = document.querySelector('[data-nav-toggle]');
+          var siteNav = document.querySelector('[data-site-nav]');
+          var mobileMedia = window.matchMedia(MOBILE_BREAKPOINT);
+
+          if (!navToggle || !siteNav) {
+            return;
+          }
+
+          var setNavigationState = function (isOpen) {
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+
+            if (isOpen) {
+              siteNav.setAttribute('data-open', 'true');
+              document.body.classList.add('is-nav-locked');
+              if (header) header.classList.add('is-menu-open');
+              return;
+            }
+
+            siteNav.removeAttribute('data-open');
+            document.body.classList.remove('is-nav-locked');
+            if (header) header.classList.remove('is-menu-open');
+          };
+
+          navToggle.addEventListener('click', function () {
+            var isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            setNavigationState(!isOpen);
+          });
+
+          siteNav.addEventListener('click', function (event) {
+            var target = event.target;
+            if (!mobileMedia.matches || !(target instanceof HTMLElement)) {
+              return;
+            }
+
+            if (target.closest('a[href]')) {
+              setNavigationState(false);
+            }
+          });
+
+          document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+              setNavigationState(false);
+              navToggle.focus();
+            }
+          });
+
+          var closeOnDesktop = function (event) {
+            if (!event.matches) {
+              setNavigationState(false);
+            }
+          };
+
+          if (mobileMedia.addEventListener) {
+            mobileMedia.addEventListener('change', closeOnDesktop);
+          } else if (mobileMedia.addListener) {
+            mobileMedia.addListener(closeOnDesktop);
+          }
+        };
+
+        // Wait briefly so the module bootstrap can claim control when available.
+        window.setTimeout(initNavigationFallback, 250);
+      })();
+    </script>
+
+    <script>
+      (function () {
         var STORAGE_KEY = 'hackunion-theme';
         var root = document.documentElement;
 
