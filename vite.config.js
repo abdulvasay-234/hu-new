@@ -12,7 +12,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         openbuildweek: resolve(__dirname, 'openbuildweek/index.html'),
         obw: resolve(__dirname, 'obw/index.html'),
-        coc: resolve(__dirname, 'coc/index.html')
+        coc: resolve(__dirname, 'coc/index.html'),
+        organizers: resolve(__dirname, 'organizers/index.html')
       }
     }
   }

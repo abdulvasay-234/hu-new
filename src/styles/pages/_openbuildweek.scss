@@ -111,6 +111,7 @@
 .obw-hero .hero__eyebrow,
 .obw-about .section-header__eyebrow,
 .obw-experts .section-header__eyebrow,
+.obw-partner-hub .section-header__eyebrow,
 .obw-community .section-header__eyebrow,
 .obw-builders .section-header__eyebrow,
 .obw-timeline .section-header__eyebrow,
@@ -455,6 +456,11 @@
   align-items: start;
 }
 
+#experts-panel-speakers .obw-experts__grid {
+  grid-template-columns: minmax(16.5rem, 22rem);
+  justify-content: start;
+}
+
 .obw-expert-card {
   display: grid;
   align-content: start;
@@ -464,6 +470,70 @@
   background: rgba(255, 255, 255, 0.94);
   width: 100%;
   margin-inline: 0;
+}
+
+.obw-expert-card--featured-speaker {
+  position: relative;
+  border-color: rgba(91, 60, 196, 0.42);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(91, 60, 196, 0.15), transparent 36%),
+    radial-gradient(circle at 92% 90%, rgba(255, 95, 31, 0.12), transparent 34%),
+    rgba(255, 255, 255, 0.98);
+  box-shadow: 0 14px 30px rgba(91, 60, 196, 0.14);
+}
+
+.obw-expert-card--featured-speaker::after {
+  content: 'Featured Speaker';
+  position: absolute;
+  top: 0.78rem;
+  right: 0.78rem;
+  padding: 0.28rem 0.62rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: linear-gradient(135deg, rgba(72, 47, 159, 0.98), rgba(39, 23, 98, 0.98));
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 20px rgba(46, 30, 112, 0.48);
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.obw-expert-card--featured-speaker .obw-expert-card__badge {
+  border-color: rgba(91, 60, 196, 0.36);
+  background: rgba(91, 60, 196, 0.12);
+  color: #3f2a88;
+}
+
+.obw-expert-card--featured-speaker .obw-expert-card__profession {
+  color: #4a31a1;
+}
+
+.obw-expert-card--featured-speaker .obw-expert-card__talk-title {
+  color: #4a31a1;
+}
+
+.obw-expert-card--featured-speaker .obw-expert-card__talk-date {
+  color: #5b4f85;
+}
+
+.obw-expert-card--featured-speaker .obw-expert-card__talk-date time {
+  color: #4a31a1;
+}
+
+.obw-expert-card--featured-speaker .obw-expert-card__socials a {
+  border-color: rgba(91, 60, 196, 0.38);
+  color: #4a31a1;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.obw-expert-card--featured-speaker .obw-expert-card__socials a:hover,
+.obw-expert-card--featured-speaker .obw-expert-card__socials a:focus-visible {
+  border-color: rgba(91, 60, 196, 0.62);
+  background: rgba(239, 234, 255, 0.95);
 }
 
 .obw-expert-card__photo {
@@ -502,6 +572,24 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--obw-orange);
+}
+
+.obw-expert-card__talk-title {
+  margin: -0.1rem 0 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #5b3cc4;
+}
+
+.obw-expert-card__talk-date {
+  margin: -0.2rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.obw-expert-card__talk-date time {
+  font-weight: 700;
+  color: #8c3513;
 }
 
 .obw-expert-card__bio {
@@ -565,6 +653,18 @@ html[data-theme='dark'] .obw-page .obw-expert-card__profession {
   color: #ffb994;
 }
 
+html[data-theme='dark'] .obw-page .obw-expert-card__talk-title {
+  color: #d3c8ff;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card__talk-date {
+  color: #c8bbeb;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card__talk-date time {
+  color: #ffd1ba;
+}
+
 html[data-theme='dark'] .obw-page .obw-expert-card__socials a {
   border-color: rgba(255, 150, 108, 0.44);
   color: #ffbe9c;
@@ -576,6 +676,170 @@ html[data-theme='dark'] .obw-page .obw-expert-card__socials a:focus-visible {
   border-color: rgba(255, 132, 76, 0.74);
   background: rgba(255, 95, 31, 0.26);
   color: #ffe1d1;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker {
+  border-color: rgba(139, 116, 255, 0.6);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(139, 116, 255, 0.24), transparent 38%),
+    radial-gradient(circle at 92% 90%, rgba(255, 145, 99, 0.18), transparent 34%),
+    rgba(33, 21, 58, 0.88);
+  box-shadow: 0 14px 32px rgba(16, 10, 31, 0.42);
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker::after {
+  border-color: rgba(220, 209, 255, 0.76);
+  background: linear-gradient(135deg, rgba(141, 117, 255, 0.98), rgba(89, 62, 194, 0.98));
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(18, 9, 41, 0.55);
+  box-shadow: 0 8px 22px rgba(29, 16, 66, 0.52);
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__badge {
+  border-color: rgba(181, 166, 255, 0.5);
+  background: rgba(139, 116, 255, 0.2);
+  color: #ece7ff;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__profession {
+  color: #d3c8ff;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__talk-title {
+  color: #ece7ff;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__talk-date {
+  color: #d2c9f1;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__talk-date time {
+  color: #f0e9ff;
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__socials a {
+  border-color: rgba(181, 166, 255, 0.5);
+  color: #e6deff;
+  background: rgba(59, 39, 102, 0.58);
+}
+
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__socials a:hover,
+html[data-theme='dark'] .obw-page .obw-expert-card--featured-speaker .obw-expert-card__socials a:focus-visible {
+  border-color: rgba(205, 194, 255, 0.72);
+  background: rgba(123, 98, 220, 0.34);
+  color: #f2edff;
+}
+
+.obw-partner-hub__tabs {
+  margin-top: 1rem;
+  gap: 0.8rem;
+}
+
+.obw-partner-hub__tabs .tabs__list {
+  gap: 0.65rem;
+}
+
+.obw-partner-hub__tabs .tabs__button {
+  border-color: rgba(91, 60, 196, 0.3);
+  color: #35257a;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.obw-partner-hub__tabs .tabs__button:hover,
+.obw-partner-hub__tabs .tabs__button:focus-visible,
+.obw-partner-hub__tabs .tabs__button[aria-selected='true'] {
+  border-color: rgba(91, 60, 196, 0.5);
+  background: rgba(241, 237, 255, 0.96);
+  color: #261a5a;
+}
+
+.obw-partner-hub__panel {
+  padding: clamp(0.9rem, 2vw, 1.2rem);
+  border-color: rgba(91, 60, 196, 0.2);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(91, 60, 196, 0.09), transparent 32%),
+    radial-gradient(circle at 90% 90%, rgba(255, 95, 31, 0.07), transparent 30%),
+    rgba(255, 255, 255, 0.95);
+}
+
+.obw-partner-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.9rem;
+}
+
+.obw-partner-card {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+  justify-items: center;
+  padding: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+
+.obw-partner-card__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 4.1rem;
+  padding: 0.4rem 0.5rem;
+  aspect-ratio: 16 / 7;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(91, 60, 196, 0.38);
+  background:
+    linear-gradient(160deg, rgba(91, 60, 196, 0.18), rgba(255, 95, 31, 0.2)),
+    #ffffff;
+  color: #201650;
+  font-weight: 900;
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.obw-partner-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.obw-partner-card__type {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6a4db4;
+}
+
+html[data-theme='dark'] .obw-page .obw-partner-hub__tabs .tabs__button {
+  border-color: rgba(170, 150, 255, 0.42);
+  color: #c7b8ff;
+  background: rgba(35, 27, 67, 0.64);
+}
+
+html[data-theme='dark'] .obw-page .obw-partner-hub__tabs .tabs__button:hover,
+html[data-theme='dark'] .obw-page .obw-partner-hub__tabs .tabs__button:focus-visible,
+html[data-theme='dark'] .obw-page .obw-partner-hub__tabs .tabs__button[aria-selected='true'] {
+  border-color: rgba(170, 150, 255, 0.6);
+  color: #e4dcff;
+  background: rgba(91, 60, 196, 0.28);
+}
+
+html[data-theme='dark'] .obw-page .obw-partner-card__logo {
+  border-color: rgba(170, 150, 255, 0.62);
+  color: #f8f4ff;
+  background:
+    linear-gradient(160deg, rgba(91, 60, 196, 0.5), rgba(255, 95, 31, 0.34)),
+    rgba(24, 18, 40, 0.86);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme='dark'] .obw-page .obw-partner-card__type {
+  color: #c9bbff;
 }
 
 .obw-community-card,
@@ -794,6 +1058,10 @@ html[data-theme='dark'] .obw-page .obw-expert-card__socials a:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  #experts-panel-speakers .obw-experts__grid {
+    grid-template-columns: minmax(16rem, 22rem);
+  }
+
   .obw-showcase__grid,
   .obw-cohosts__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -830,6 +1098,10 @@ html[data-theme='dark'] .obw-page .obw-expert-card__socials a:focus-visible {
   .obw-showcase__grid,
   .obw-cohosts__grid,
   .obw-experts__grid {
+    grid-template-columns: 1fr;
+  }
+
+  #experts-panel-speakers .obw-experts__grid {
     grid-template-columns: 1fr;
   }
 

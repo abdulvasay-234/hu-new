@@ -19,3 +19,4 @@ export * from './community-in-action.js';
 export * from './partners-ecosystem.js';
 export * from './final-cta.js';
 export * from './open-build-week.js';
+export * from './organizers.js';
