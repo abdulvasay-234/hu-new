@@ -6106,6 +6106,7 @@ html.has-js .partners__logo-item {
 
 .obw-hero .hero__eyebrow,
 .obw-about .section-header__eyebrow,
+.obw-experts .section-header__eyebrow,
 .obw-community .section-header__eyebrow,
 .obw-builders .section-header__eyebrow,
 .obw-timeline .section-header__eyebrow,
@@ -6305,8 +6306,31 @@ html.has-js .partners__logo-item {
   width: 3px;
   border-radius: 999px;
   background: linear-gradient(180deg, rgba(91, 60, 196, 0.55), rgba(255, 95, 31, 0.45));
+  overflow: hidden;
 }
 
+.obw-roadmap__line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 7px;
+  height: 5.6rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 95, 31, 0), rgba(255, 140, 74, 0.92), rgba(143, 118, 255, 0.9), rgba(91, 60, 196, 0));
+  box-shadow: 0 0 12px rgba(255, 120, 56, 0.55), 0 0 20px rgba(132, 106, 250, 0.42);
+  filter: blur(0.45px);
+  animation: obw-roadmap-line-glow 2.6s linear infinite;
+}
+
+@keyframes obw-roadmap-line-glow {
+  from {
+    transform: translateY(-120%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
 .obw-roadstop {
   position: relative;
   display: grid;
@@ -6374,6 +6398,165 @@ html.has-js .partners__logo-item {
 
 .obw-community__grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.obw-experts__tabs {
+  margin-top: 1rem;
+  gap: 0.8rem;
+}
+
+.obw-experts__tabs .tabs__list {
+  gap: 0.65rem;
+}
+
+.obw-experts__tabs .tabs__button {
+  border-color: rgba(255, 95, 31, 0.34);
+  color: #8c3513;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.obw-experts__tabs .tabs__button:hover,
+.obw-experts__tabs .tabs__button:focus-visible,
+.obw-experts__tabs .tabs__button[aria-selected=true] {
+  background: linear-gradient(180deg, rgba(255, 240, 232, 0.94), rgba(255, 230, 214, 0.78));
+  border-color: rgba(255, 95, 31, 0.52);
+  color: #6e2a10;
+}
+
+.obw-experts__panel {
+  padding: clamp(0.9rem, 2vw, 1.2rem);
+  border-color: rgba(91, 60, 196, 0.2);
+  background: radial-gradient(circle at 10% 10%, rgba(91, 60, 196, 0.08), transparent 30%), radial-gradient(circle at 90% 90%, rgba(255, 95, 31, 0.07), transparent 30%), rgba(255, 255, 255, 0.95);
+}
+
+.obw-experts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.obw-expert-card {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: rgba(255, 255, 255, 0.94);
+  width: 100%;
+  margin-inline: 0;
+}
+
+.obw-expert-card__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  margin: 0 0 0.15rem;
+}
+
+.obw-expert-card__badge {
+  margin: 0;
+  width: fit-content;
+  padding: 0.32rem 0.58rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 95, 31, 0.35);
+  background: var(--obw-orange-soft);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #8c3513;
+}
+
+.obw-expert-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.obw-expert-card__profession {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--obw-orange);
+}
+
+.obw-expert-card__bio {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.obw-expert-card__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.obw-expert-card__socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 95, 31, 0.34);
+  background: rgba(255, 255, 255, 0.9);
+  color: #8c3513;
+  transition: border-color var(--motion-base) ease, transform var(--motion-base) ease, background-color var(--motion-base) ease;
+}
+
+.obw-expert-card__socials a:hover,
+.obw-expert-card__socials a:focus-visible {
+  border-color: rgba(255, 95, 31, 0.6);
+  background: rgba(255, 240, 232, 0.95);
+  transform: translateY(-1px);
+}
+
+.obw-expert-card__socials [data-lucide] {
+  width: 1rem;
+  height: 1rem;
+}
+
+html[data-theme=dark] .obw-page .obw-experts__tabs .tabs__button {
+  border-color: rgba(255, 150, 108, 0.44);
+  color: #ffb994;
+  background: rgba(46, 24, 13, 0.64);
+}
+
+html[data-theme=dark] .obw-page .obw-experts__tabs .tabs__button:hover,
+html[data-theme=dark] .obw-page .obw-experts__tabs .tabs__button:focus-visible,
+html[data-theme=dark] .obw-page .obw-experts__tabs .tabs__button[aria-selected=true] {
+  border-color: rgba(255, 132, 76, 0.68);
+  background: rgba(255, 95, 31, 0.2);
+  color: #ffd3bc;
+}
+
+html[data-theme=dark] .obw-page .obw-expert-card__badge {
+  border-color: rgba(255, 147, 103, 0.46);
+  background: rgba(255, 95, 31, 0.18);
+  color: #ffd1ba;
+}
+
+html[data-theme=dark] .obw-page .obw-expert-card__profession {
+  color: #ffb994;
+}
+
+html[data-theme=dark] .obw-page .obw-expert-card__socials a {
+  border-color: rgba(255, 150, 108, 0.44);
+  color: #ffbe9c;
+  background: rgba(46, 24, 13, 0.58);
+}
+
+html[data-theme=dark] .obw-page .obw-expert-card__socials a:hover,
+html[data-theme=dark] .obw-page .obw-expert-card__socials a:focus-visible {
+  border-color: rgba(255, 132, 76, 0.74);
+  background: rgba(255, 95, 31, 0.26);
+  color: #ffe1d1;
 }
 
 .obw-community-card,
@@ -6579,7 +6762,8 @@ html.has-js .partners__logo-item {
   }
   .obw-community__grid,
   .obw-builders__list,
-  .obw-campus-partners__grid {
+  .obw-campus-partners__grid,
+  .obw-experts__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .obw-showcase__grid,
@@ -6611,7 +6795,8 @@ html.has-js .partners__logo-item {
   }
   .obw-community__grid,
   .obw-showcase__grid,
-  .obw-cohosts__grid {
+  .obw-cohosts__grid,
+  .obw-experts__grid {
     grid-template-columns: 1fr;
   }
   .obw-roadmap {
@@ -6669,7 +6854,8 @@ html.has-js .partners__logo-item {
   .obw-page .button,
   .obw-page .hero-visual__frame,
   .obw-page .hero-visual__card,
-  .obw-page .obw-hero__media img {
+  .obw-page .obw-hero__media img,
+  .obw-roadmap__line::after {
     animation: none;
     transition: none;
   }
