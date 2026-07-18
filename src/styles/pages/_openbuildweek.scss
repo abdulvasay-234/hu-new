@@ -456,6 +456,14 @@
   align-items: start;
 }
 
+#community-champions .obw-experts__grid {
+  align-items: stretch;
+}
+
+#community-champions .obw-expert-card {
+  height: 100%;
+}
+
 #experts-panel-speakers .obw-experts__grid {
   grid-template-columns: minmax(16.5rem, 22rem);
   justify-content: start;
@@ -853,6 +861,22 @@ html[data-theme='dark'] .obw-page .obw-partner-card__type {
 
 .obw-community-card {
   padding: 1rem;
+}
+
+#community-champions .obw-community-card {
+  text-align: center;
+  border-color: rgba(91, 60, 196, 0.36);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(91, 60, 196, 0.1), transparent 34%),
+    radial-gradient(circle at 90% 88%, rgba(255, 95, 31, 0.08), transparent 36%),
+    rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 22px rgba(91, 60, 196, 0.14);
+}
+
+#community-champions .obw-community-card p {
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 500;
 }
 
 .obw-community-card p {
