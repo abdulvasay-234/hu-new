@@ -45,7 +45,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/company/hackunion/',
+      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
       github: 'https://github.com/vasay/HU-New',
       x: 'https://x.com/hackunion',
       email: 'mailto:hello@hackunion.dev?subject=Contact%20Alina%20Abreeq'
@@ -69,7 +69,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/company/hackunion/',
+      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
       github: 'https://github.com/vasay/HU-New',
       email: 'mailto:hello@hackunion.dev?subject=Contact%20Arfina%20Javeed'
     }
@@ -92,7 +92,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/company/hackunion/',
+      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
       github: 'https://github.com/vasay/HU-New',
       x: 'https://x.com/hackunion'
     }
@@ -115,7 +115,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/company/hackunion/',
+      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
       github: 'https://github.com/vasay/HU-New',
       email: 'mailto:hello@hackunion.dev?subject=Contact%20Dawood'
     }
