@@ -1,8 +1,7 @@
 export const primaryNavigation = [
   { label: 'Home', href: './' },
   { label: 'Events', href: './#experiences' },
-  { label: 'OpenBuild Week', href: './openbuildweek/', featured: true },
-  { label: 'Certificates', href: './certificates/' }
+  { label: 'OpenBuild Week', href: './openbuildweek/', featured: true }
 ];
 
 export const footerNavigation = [

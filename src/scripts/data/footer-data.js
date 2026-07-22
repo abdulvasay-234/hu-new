@@ -2,7 +2,6 @@ export const footerNavigation = [
   { label: 'Home', href: './' },
   { label: 'About', href: '#manifesto' },
   { label: 'Code of Conduct', href: './coc/' },
-  { label: 'Certificates', href: './certificates/' },
   { label: 'Brand Kit', href: './brand-kit/' },
   { label: 'Organizers', href: './organizers/' },
   { label: 'Socials', href: './socials/' },

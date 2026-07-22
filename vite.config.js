@@ -15,7 +15,7 @@ export default defineConfig({
         coc: resolve(__dirname, 'coc/index.html'),
         organizers: resolve(__dirname, 'organizers/index.html'),
         socials: resolve(__dirname, 'socials/index.html'),
-        certificates: resolve(__dirname, 'certificates/index.html')
+        // certificates: resolve(__dirname, 'certificates/index.html')
       }
     }
   }
