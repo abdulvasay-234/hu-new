@@ -1,0 +1,12 @@
+{
+  "participants": [
+    { "name": "Aarav Reddy", "certificateId": "HU-BG04-AARA0001" },
+    { "name": "Farhan Shaik", "certificateId": "HU-BG04-FARH0002" },
+    { "name": "Ishita Verma", "certificateId": "HU-BG04-ISHI0003" },
+    { "name": "Meera Nair", "certificateId": "HU-BG04-MEER0004" },
+    { "name": "Nikhil Gupta", "certificateId": "HU-BG04-NIKH0005" },
+    { "name": "Pranav Joshi", "certificateId": "HU-BG04-PRAN0006" },
+    { "name": "Ritika Sharma", "certificateId": "HU-BG04-RITI0007" },
+    { "name": "Sana Khan", "certificateId": "HU-BG04-SANA0008" }
+  ]
+}

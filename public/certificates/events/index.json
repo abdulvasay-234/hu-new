@@ -1,0 +1,119 @@
+{
+  "events": [
+    {
+      "id": "obw-2026",
+      "eventName": "OpenBuild Week 2026",
+      "eventDate": "18 Jul 2026",
+      "venue": "Lords Skill Academy, Hyderabad",
+      "organizer": "HackUnion",
+      "certificateType": "Participation",
+      "issueDate": "22 Jul 2026",
+      "idPrefix": "HU-OBW26",
+      "certificateCountLabel": "1,248 certificates",
+      "archiveImage": "/images/hu-event-1.jpg",
+      "verificationBaseUrl": "https://hackunion.in/certificates/verify",
+      "participantsPath": "./events/obw-2026/participants.json",
+      "participantsByCampus": {
+        "Lords Skill Academy": "./events/obw-2026/campuses/lsa.json",
+        "MALLA REDDY VISHWAVIDYAPEETH - TECHNICAL CAMPUS": "./events/obw-2026/campuses/malla.json",
+        "Lords Institute of Engineering & Technolog": "./events/obw-2026/campuses/liet.json",
+        "Vidya Jyothi Institute of Technology (VJIT)": "./events/obw-2026/campuses/vjit.json",
+        "Vardhaman College of Engineering": "./events/obw-2026/campuses/vardhaman.json",
+        "Grand Finale Hackathon": "./events/obw-2026/campuses/grand-finale.json"
+      },
+      "campuses": [
+        "Lords Skill Academy",
+        "MALLA REDDY VISHWAVIDYAPEETH - TECHNICAL CAMPUS",
+        "Lords Institute of Engineering & Technolog",
+        "Vidya Jyothi Institute of Technology (VJIT)",
+        "Vardhaman College of Engineering",
+        "Grand Finale Hackathon"
+      ],
+      "template": {
+        "width": 1654,
+        "height": 1169,
+        "backgroundImage": "/certificates/templates/HU.png",
+        "backgroundOverlayOpacity": 0,
+        "drawFrame": false,
+        "drawAccentBar": false,
+        "drawWatermark": false,
+        "headline": "Certificate of Participation",
+        "subtitle": "This is proudly presented to",
+        "signatureName": "HackUnion Organizing Team",
+        "palette": {
+          "backgroundA": "#ebfafd",
+          "backgroundB": "#fff4e9",
+          "surface": "#ffffff",
+          "border": "#d5e2f3",
+          "accent": "#11b8ce",
+          "text": "#111827",
+          "muted": "#60708a"
+        }
+      }
+    },
+    {
+      "id": "guild-4",
+      "eventName": "Builders Guild #4",
+      "eventDate": "02 Jun 2026",
+      "venue": "HackUnion Community Hub, Hyderabad",
+      "organizer": "HackUnion",
+      "certificateType": "Builder Completion",
+      "issueDate": "06 Jun 2026",
+      "idPrefix": "HU-BG04",
+      "certificateCountLabel": "382 certificates",
+      "archiveImage": "/images/hu-event-2.jpg",
+      "verificationBaseUrl": "https://hackunion.in/certificates/verify",
+      "participantsPath": "./events/guild-4/participants.json",
+      "template": {
+        "width": 1280,
+        "height": 900,
+        "backgroundImage": "/certificates/templates/HU.png",
+        "backgroundOverlayOpacity": 0,
+        "headline": "Certificate of Builder Completion",
+        "subtitle": "Awarded with recognition to",
+        "signatureName": "HackUnion Builders Guild",
+        "palette": {
+          "backgroundA": "#f0fcff",
+          "backgroundB": "#fff7ee",
+          "surface": "#ffffff",
+          "border": "#d6e8ef",
+          "accent": "#0ea5c6",
+          "text": "#0f172a",
+          "muted": "#5b6f8e"
+        }
+      }
+    },
+    {
+      "id": "meetup-12",
+      "eventName": "Community Meetup #12",
+      "eventDate": "28 Apr 2026",
+      "venue": "T-Hub Innovation Campus, Hyderabad",
+      "organizer": "HackUnion",
+      "certificateType": "Attendance",
+      "issueDate": "30 Apr 2026",
+      "idPrefix": "HU-CM12",
+      "certificateCountLabel": "196 certificates",
+      "archiveImage": "/images/hu-event-3.jpg",
+      "verificationBaseUrl": "https://hackunion.in/certificates/verify",
+      "participantsPath": "./events/meetup-12/participants.json",
+      "template": {
+        "width": 1280,
+        "height": 900,
+        "backgroundImage": "/certificates/templates/HU.png",
+        "backgroundOverlayOpacity": 0,
+        "headline": "Certificate of Attendance",
+        "subtitle": "Presented to",
+        "signatureName": "HackUnion Community Leads",
+        "palette": {
+          "backgroundA": "#edfafe",
+          "backgroundB": "#fff3e7",
+          "surface": "#ffffff",
+          "border": "#d7e6f3",
+          "accent": "#14b8a6",
+          "text": "#0b1220",
+          "muted": "#62748f"
+        }
+      }
+    }
+  ]
+}

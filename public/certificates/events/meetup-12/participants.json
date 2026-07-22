@@ -1,0 +1,12 @@
+{
+  "participants": [
+    { "name": "Aayush Jain", "certificateId": "HU-CM12-AAYU0001" },
+    { "name": "Bhavana Rao", "certificateId": "HU-CM12-BHAV0002" },
+    { "name": "Devansh Kulkarni", "certificateId": "HU-CM12-DEVA0003" },
+    { "name": "Hiba Ahmed", "certificateId": "HU-CM12-HIBA0004" },
+    { "name": "Manasvi Patel", "certificateId": "HU-CM12-MANA0005" },
+    { "name": "Neha R", "certificateId": "HU-CM12-NEHA0006" },
+    { "name": "Rohit Kumar", "certificateId": "HU-CM12-ROHI0007" },
+    { "name": "Sreeja N", "certificateId": "HU-CM12-SREE0008" }
+  ]
+}
