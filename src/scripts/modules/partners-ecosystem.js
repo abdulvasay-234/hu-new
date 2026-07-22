@@ -16,34 +16,13 @@ const renderCategory = (category, index, isActive = false) => `
   </button>
 `;
 
-const buildLogoInlineSvg = (logo) => {
-  const logoId = logo.shortLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-
-  return `
-    <svg class="partners__logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 132" role="img" aria-label="${logo.name} logo mark">
-      <defs>
-        <linearGradient id="logoPanel-${logoId}" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#ffffff" />
-          <stop offset="100%" stop-color="#eef2ff" />
-        </linearGradient>
-      </defs>
-      <rect x="6" y="6" width="408" height="120" rx="22" fill="url(#logoPanel-${logoId})" />
-      <rect x="20" y="22" width="88" height="88" rx="20" fill="${logo.brandColor}" />
-      <text x="64" y="75" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="27" font-weight="700">${logo.shortLabel}</text>
-      <path d="M136 48h178" stroke="#cbd5e1" stroke-width="11" stroke-linecap="round" />
-      <path d="M136 74h228" stroke="#94a3b8" stroke-width="9" stroke-linecap="round" />
-      <path d="M136 96h144" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" />
-    </svg>
-  `;
-};
-
 const renderLogoCard = (logo, index) => {
   return `
     <li class="partners__logo-item" style="--partner-delay: ${index * 80}ms" data-partner-category="${logo.category}">
       <article class="partners__logo-card" aria-label="${logo.name} in ${logo.category}">
         <span class="partners__logo-category">${logo.category}</span>
         <div class="partners__logo-visual" aria-hidden="true">
-          ${buildLogoInlineSvg(logo)}
+          <img class="partners__logo-mark" src="${logo.logoPath}" alt="${logo.alt || `${logo.name} logo`}" loading="lazy" decoding="async" />
         </div>
         <strong class="partners__logo-name">${logo.name}</strong>
       </article>

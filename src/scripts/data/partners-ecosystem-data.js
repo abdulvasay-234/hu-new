@@ -1,93 +1,92 @@
 export const partnerCategories = [
   'Academic Partners',
   'Technology Partners',
-  'Community Partners',
-  'Ecosystem Supporters'
+  'Community Partners'
 ];
 
 export const partnerLogos = [
   {
+    name: 'Lords Skill Academy (LSA)',
+    category: 'Academic Partners',
+    logoPath: '/images/logos/e-lsa.png',
+    alt: 'Lords Skill Academy logo'
+  },
+  {
+    name: 'Lords Institute of Engineering and Technology',
+    category: 'Academic Partners',
+    logoPath: '/images/logos/e-liet.png',
+    alt: 'Lords Institute of Engineering and Technology logo'
+  },
+  {
     name: 'GitHub',
-    shortLabel: 'GH',
     category: 'Technology Partners',
-    brandColor: '#111827',
+    logoPath: '/images/logos/com-github.png',
     alt: 'GitHub logo'
   },
   {
-    name: 'Interledger Foundation',
-    shortLabel: 'ILF',
-    category: 'Ecosystem Supporters',
-    brandColor: '#2563eb',
-    alt: 'Interledger Foundation logo'
-  },
-  {
-    name: 'Red Bull',
-    shortLabel: 'RB',
-    category: 'Technology Partners',
-    brandColor: '#dc2626',
-    alt: 'Red Bull logo'
-  },
-  {
     name: 'NexigenceAI',
-    shortLabel: 'NXA',
     category: 'Technology Partners',
-    brandColor: '#0f766e',
+    logoPath: '/images/logos/com-nexigenceai.png',
     alt: 'NexigenceAI logo'
   },
   {
     name: 'GreateHire',
-    shortLabel: 'GHR',
     category: 'Technology Partners',
-    brandColor: '#7c3aed',
+    logoPath: '/images/logos/com-greathire.png',
     alt: 'GreateHire logo'
   },
   {
-    name: 'Lords Skill Academy (LSA)',
-    shortLabel: 'LSA',
-    category: 'Academic Partners',
-    brandColor: '#f56c00',
-    alt: 'Lords Skill Academy logo'
+    name: 'Interledger Foundation',
+    category: 'Technology Partners',
+    logoPath: '/images/logos/com-interledgerfoundation.png',
+    alt: 'Interledger Foundation logo'
   },
   {
-    name: 'Lords Institute',
-    shortLabel: 'LI',
-    category: 'Academic Partners',
-    brandColor: '#0284c7',
-    alt: 'Lords Institute logo'
-  },
-  {
-    name: 'Open Source Community Hub',
-    shortLabel: 'OSCH',
+    name: 'CodeQuest',
     category: 'Community Partners',
-    brandColor: '#4f46e5',
-    alt: 'Open Source Community Hub logo'
+    logoPath: '/images/logos/c-codequest.png',
+    alt: 'CodeQuest logo'
   },
   {
-    name: 'Builders Circle India',
-    shortLabel: 'BCI',
+    name: 'Code With Harry',
     category: 'Community Partners',
-    brandColor: '#be123c',
-    alt: 'Builders Circle India logo'
+    logoPath: '/images/logos/c-cwh.png',
+    alt: 'Code With Harry logo'
   },
   {
-    name: 'Campus Developer Network',
-    shortLabel: 'CDN',
+    name: 'DevQueens',
     category: 'Community Partners',
-    brandColor: '#0891b2',
-    alt: 'Campus Developer Network logo'
+    logoPath: '/images/logos/c-devqueens.png',
+    alt: 'DevQueens logo'
   },
   {
-    name: 'Future Founders Collective',
-    shortLabel: 'FFC',
-    category: 'Ecosystem Supporters',
-    brandColor: '#16a34a',
-    alt: 'Future Founders Collective logo'
-  },
-  {
-    name: 'More Communities Joining',
-    shortLabel: 'MORE',
+    name: 'EDAM',
     category: 'Community Partners',
-    brandColor: '#0ea5e9',
-    alt: 'More Communities Joining logo'
+    logoPath: '/images/logos/c-edam.png',
+    alt: 'EDAM logo'
+  },
+  {
+    name: 'GDG LIET',
+    category: 'Community Partners',
+    logoPath: '/images/logos/c-gdg-liet.png',
+    alt: 'GDG LIET logo'
+  },
+  {
+    name: 'GDG MLRIT',
+    category: 'Community Partners',
+    logoPath: '/images/logos/c-gdg-mlrit.png',
+    alt: 'GDG MLRIT logo'
+  },
+  {
+    name: 'Hackerabad',
+    category: 'Community Partners',
+    logoPath: '/images/logos/c-hackerabad.png',
+    alt: 'Hackerabad logo'
+  },
+  {
+    name: 'ICS',
+    category: 'Community Partners',
+    logoPath: '/images/logos/c-ics.png',
+    alt: 'ICS logo'
   }
 ];
