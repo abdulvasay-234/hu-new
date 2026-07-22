@@ -3,6 +3,7 @@ import { showToast } from './toasts.js';
 const EVENTS_INDEX_PATH = './events/index.json';
 const MAX_SUGGESTIONS = 8;
 const templateImageCache = new Map();
+const CERTIFICATE_WATERMARK_URL = 'https://hackunion.in/certificate';
 
 const resolveCertificatePath = (rawPath) => {
   if (!rawPath) {
@@ -184,7 +185,32 @@ export const initCertificates = () => {
     selectedParticipant: null,
     activeSuggestions: [],
     activeSuggestionIndex: -1,
-    previewScale: 1
+    previewScale: 1,
+    certWatermarkBounds: null
+  };
+
+  const openWatermarkLink = () => {
+    window.open(CERTIFICATE_WATERMARK_URL, '_blank', 'noopener,noreferrer');
+  };
+
+  const isPointInWatermark = (x, y) => {
+    const bounds = state.certWatermarkBounds;
+    if (!bounds) {
+      return false;
+    }
+
+    return x >= bounds.left && x <= bounds.right && y >= bounds.top && y <= bounds.bottom;
+  };
+
+  const getCanvasPoint = (event, element, intrinsicWidth, intrinsicHeight) => {
+    const rect = element.getBoundingClientRect();
+    if (!rect.width || !rect.height) {
+      return null;
+    }
+
+    const x = (event.clientX - rect.left) * (intrinsicWidth / rect.width);
+    const y = (event.clientY - rect.top) * (intrinsicHeight / rect.height);
+    return { x, y };
   };
 
   const actionButtons = [actionPreview, actionDownload];
@@ -303,20 +329,34 @@ export const initCertificates = () => {
 
     // Keep the rendered content minimal: only participant name over the background.
     const nameX = Number(layout.nameX) || (width / 2);
-    const nameY = Number(layout.nameY) || (height / 2);
-    const certIdX = Number(layout.certIdX) || (width - 90);
+    const nameY = (Number(layout.nameY) || (height / 2)) - 2;
+    const certIdX = Number(layout.certIdX) || (width / 2);
     const certIdY = Number(layout.certIdY) || (height - 36);
+    const certIdOpacity = Number(layout.certIdOpacity);
+    const effectiveCertIdOpacity = !Number.isNaN(certIdOpacity) ? Math.max(0.08, Math.min(1, certIdOpacity)) : 0.35;
 
-    context.textAlign = 'right';
+    context.save();
+    context.globalAlpha = effectiveCertIdOpacity;
+    context.textAlign = 'center';
     context.textBaseline = 'bottom';
     context.fillStyle = textStyles.meta || palette.text;
-    context.font = textStyles.certIdFont || '600 28px "Poppins", "Segoe UI", sans-serif';
+    context.font = textStyles.certIdFont || '600 24px "Poppins", "Segoe UI", sans-serif';
     context.fillText(participant.certificateId, certIdX, certIdY);
+    const certIdMetrics = context.measureText(participant.certificateId);
+    const certIdAscent = certIdMetrics.actualBoundingBoxAscent || 22;
+    const certIdDescent = certIdMetrics.actualBoundingBoxDescent || 8;
+    state.certWatermarkBounds = {
+      left: certIdX - (certIdMetrics.width / 2),
+      right: certIdX + (certIdMetrics.width / 2),
+      top: certIdY - certIdAscent,
+      bottom: certIdY + certIdDescent
+    };
+    context.restore();
 
     context.textAlign = 'center';
     context.textBaseline = 'middle';
     context.fillStyle = textStyles.primary || palette.text;
-    context.font = textStyles.nameFont || '400 84px "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive';
+    context.font = textStyles.nameFont || '400 76px "Arial", "Helvetica", sans-serif';
     context.fillText(participant.name, nameX, nameY);
 
     modalImage.src = canvas.toDataURL('image/png');
@@ -834,6 +874,34 @@ export const initCertificates = () => {
 
   actionDownload.addEventListener('click', () => {
     downloadPdf();
+  });
+
+  canvas.addEventListener('click', (event) => {
+    const point = getCanvasPoint(event, canvas, canvas.width, canvas.height);
+    if (!point || !isPointInWatermark(point.x, point.y)) {
+      return;
+    }
+
+    openWatermarkLink();
+  });
+
+  canvas.addEventListener('mousemove', (event) => {
+    const point = getCanvasPoint(event, canvas, canvas.width, canvas.height);
+    canvas.style.cursor = point && isPointInWatermark(point.x, point.y) ? 'pointer' : 'default';
+  });
+
+  modalImage.addEventListener('click', (event) => {
+    const point = getCanvasPoint(event, modalImage, canvas.width, canvas.height);
+    if (!point || !isPointInWatermark(point.x, point.y)) {
+      return;
+    }
+
+    openWatermarkLink();
+  });
+
+  modalImage.addEventListener('mousemove', (event) => {
+    const point = getCanvasPoint(event, modalImage, canvas.width, canvas.height);
+    modalImage.style.cursor = point && isPointInWatermark(point.x, point.y) ? 'pointer' : 'default';
   });
 
   const bootstrap = async () => {
