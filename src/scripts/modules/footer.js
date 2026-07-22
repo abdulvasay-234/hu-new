@@ -32,7 +32,7 @@ export const initFooter = () => {
         return;
       }
 
-      newsletterStatus.textContent = 'Newsletter delivery is not connected yet. Use hello@hackunion.dev for updates until launch wiring is complete.';
+      newsletterStatus.textContent = 'Newsletter delivery is not connected yet. Use hackunion17@gmail.com for updates until launch wiring is complete.';
       newsletterStatus.classList.add('is-success');
     });
   }

@@ -48,7 +48,7 @@ export const organizers = [
       linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
       github: 'https://github.com/vasay/HU-New',
       x: 'https://x.com/hackunion',
-      email: 'mailto:hello@hackunion.dev?subject=Contact%20Alina%20Abreeq'
+      email: 'mailto:hackunion17@gmail.com?subject=Contact%20Alina%20Abreeq'
     }
   },
   {
@@ -71,7 +71,7 @@ export const organizers = [
     links: {
       linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
       github: 'https://github.com/vasay/HU-New',
-      email: 'mailto:hello@hackunion.dev?subject=Contact%20Arfina%20Javeed'
+      email: 'mailto:hackunion17@gmail.com?subject=Contact%20Arfina%20Javeed'
     }
   },
   {
@@ -117,7 +117,7 @@ export const organizers = [
     links: {
       linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
       github: 'https://github.com/vasay/HU-New',
-      email: 'mailto:hello@hackunion.dev?subject=Contact%20Dawood'
+      email: 'mailto:hackunion17@gmail.com?subject=Contact%20Dawood'
     }
   }
 ];
