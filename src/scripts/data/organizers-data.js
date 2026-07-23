@@ -31,7 +31,7 @@ export const organizers = [
     id: 'alina-abreeq',
     name: 'Alina Abreeq',
     role: 'Community Programs Lead',
-    image: '../Images/Mentors/Alina%20Abreeq.jpg',
+    image: '/Images/Mentors/Alina%20Abreeq.jpg',
     imageAlt: 'Alina Abreeq, HackUnion Community Programs Lead',
     shortBio: 'Leads student-focused programs and community onboarding, helping new builders find momentum quickly.',
     fullBio: 'Alina leads community programs at HackUnion with a focus on onboarding, event quality, and inclusive builder experiences. She works closely with volunteers, campus chapters, and mentors to ensure every participant receives practical support and clear next steps after each event.',
@@ -45,7 +45,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
+      linkedin: 'https://www.linkedin.com/company/hackunion-in/',
       github: 'https://github.com/vasay/HU-New',
       x: 'https://x.com/hackunion',
       email: 'mailto:hackunion17@gmail.com?subject=Contact%20Alina%20Abreeq'
@@ -55,7 +55,7 @@ export const organizers = [
     id: 'arfina-javeed',
     name: 'Arfina Javeed',
     role: 'Developer Relations Organizer',
-    image: '../Images/Mentors/Arfina%20Javeed.png',
+    image: '/Images/Mentors/Arfina%20Javeed.png',
     imageAlt: 'Arfina Javeed, HackUnion Developer Relations Organizer',
     shortBio: 'Supports builder growth through workshops, technical mentoring, and high-signal learning tracks.',
     fullBio: 'Arfina works at the intersection of developer education and community growth. She helps design technical sessions, supports mentors, and improves how participants move from learning to shipping real projects within HackUnion programs.',
@@ -69,7 +69,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
+      linkedin: 'https://www.linkedin.com/company/hackunion-in/',
       github: 'https://github.com/vasay/HU-New',
       email: 'mailto:hackunion17@gmail.com?subject=Contact%20Arfina%20Javeed'
     }
@@ -78,7 +78,7 @@ export const organizers = [
     id: 'ashish-malla',
     name: 'Ashish Malla',
     role: 'Partnerships and Operations Organizer',
-    image: '../Images/Mentors/Ashish%20Malla.jpg',
+    image: '/Images/Mentors/Ashish%20Malla.jpg',
     imageAlt: 'Ashish Malla, HackUnion Partnerships and Operations Organizer',
     shortBio: 'Coordinates partner relationships and event operations to keep community experiences reliable and scalable.',
     fullBio: 'Ashish supports HackUnion partnerships, operations, and cross-team execution. He works with partner communities and collaborators to ensure programs are well-coordinated, participant-friendly, and aligned with HackUnion standards.',
@@ -92,7 +92,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
+      linkedin: 'https://www.linkedin.com/company/hackunion-in/',
       github: 'https://github.com/vasay/HU-New',
       x: 'https://x.com/hackunion'
     }
@@ -101,7 +101,7 @@ export const organizers = [
     id: 'dawood',
     name: 'Dawood',
     role: 'Design and Community Experience Organizer',
-    image: '../Images/Mentors/Dawood.jpg',
+    image: '/Images/Mentors/Dawood.jpg',
     imageAlt: 'Dawood, HackUnion Design and Community Experience Organizer',
     shortBio: 'Shapes communication and design touchpoints that make HackUnion experiences clear, inclusive, and trusted.',
     fullBio: 'Dawood focuses on design, communication, and participant experience across HackUnion initiatives. He contributes to event narratives, visual consistency, and community-facing touchpoints that help members trust what they see and where they participate.',
@@ -115,7 +115,7 @@ export const organizers = [
     memberSince: 'Placeholder',
     location: 'Placeholder',
     links: {
-      linkedin: 'https://www.linkedin.com/in/afnanabdulvasay/',
+      linkedin: 'https://www.linkedin.com/company/hackunion-in/',
       github: 'https://github.com/vasay/HU-New',
       email: 'mailto:hackunion17@gmail.com?subject=Contact%20Dawood'
     }

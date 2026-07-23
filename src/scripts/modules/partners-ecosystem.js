@@ -4,6 +4,28 @@ import { partnerCategories, partnerLogos } from '../data/partners-ecosystem-data
 
 const ALL_LOGOS_FILTER = 'all';
 
+const categoryOrder = new Map(partnerCategories.map((category, index) => [category, index]));
+
+const sortPartnerLogos = (logos) => {
+  return [...logos].sort((first, second) => {
+    const firstCategoryIndex = categoryOrder.get(first.category) ?? Number.MAX_SAFE_INTEGER;
+    const secondCategoryIndex = categoryOrder.get(second.category) ?? Number.MAX_SAFE_INTEGER;
+
+    if (firstCategoryIndex !== secondCategoryIndex) {
+      return firstCategoryIndex - secondCategoryIndex;
+    }
+
+    return first.name.localeCompare(second.name, undefined, { sensitivity: 'base' });
+  });
+};
+
+const getPartnerTone = (category = '') => {
+  if (category === 'Technology Partners') return 'technology';
+  if (category === 'Academic Partners') return 'academic';
+  if (category === 'Community Partners') return 'community';
+  return 'default';
+};
+
 const renderCategory = (category, index, isActive = false) => `
   <button
     type="button"
@@ -17,10 +39,12 @@ const renderCategory = (category, index, isActive = false) => `
 `;
 
 const renderLogoCard = (logo, index) => {
+  const tone = getPartnerTone(logo.category);
+
   return `
     <li class="partners__logo-item" style="--partner-delay: ${index * 80}ms" data-partner-category="${logo.category}">
       <article class="partners__logo-card" aria-label="${logo.name} in ${logo.category}">
-        <span class="partners__logo-category">${logo.category}</span>
+        <span class="partners__logo-category" data-partner-tone="${tone}">${logo.category}</span>
         <div class="partners__logo-visual" aria-hidden="true">
           <img class="partners__logo-mark" src="${logo.logoPath}" alt="${logo.alt || `${logo.name} logo`}" loading="lazy" decoding="async" />
         </div>
@@ -39,6 +63,7 @@ export const initPartnersEcosystem = () => {
 
   const categoryTarget = section.querySelector('[data-partner-categories]');
   const logoGridTarget = section.querySelector('[data-partner-logo-grid]');
+  const orderedPartnerLogos = sortPartnerLogos(partnerLogos);
 
   if (categoryTarget) {
     const categoryFilters = [ALL_LOGOS_FILTER, ...partnerCategories];
@@ -53,7 +78,7 @@ export const initPartnersEcosystem = () => {
   }
 
   if (logoGridTarget) {
-    logoGridTarget.innerHTML = partnerLogos
+    logoGridTarget.innerHTML = orderedPartnerLogos
       .map((logo, index) => renderLogoCard(logo, index))
       .join('');
   }

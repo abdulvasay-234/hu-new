@@ -9,6 +9,7 @@ const updateCountdownNode = (countdown, distance) => {
   const days = Math.floor(distance / DAY);
   const hours = Math.floor((distance % DAY) / HOUR);
   const minutes = Math.floor((distance % HOUR) / MINUTE);
+  const eventLabel = countdown.dataset.eventLabel || 'OpenBuild Week event';
 
   const daysNode = countdown.querySelector('[data-obw-days]');
   const hoursNode = countdown.querySelector('[data-obw-hours]');
@@ -21,8 +22,8 @@ const updateCountdownNode = (countdown, distance) => {
 
   if (statusNode) {
     statusNode.textContent = distance <= 0
-      ? 'Open Build Week is live now. Registration is open.'
-      : `Open Build Week starts in ${days} days, ${hours} hours, and ${minutes} minutes.`;
+      ? `${eventLabel} is live now. Registration is open.`
+      : `Next ${eventLabel} starts in ${days} days, ${hours} hours, and ${minutes} minutes.`;
   }
 };
 

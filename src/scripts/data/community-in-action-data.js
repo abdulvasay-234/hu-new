@@ -12,7 +12,7 @@ export const communityGalleryItems = [
     alt: 'HackUnion builders talking around a whiteboard during a meetup',
     tone: 'blue',
     span: 'wide',
-    image: './Images/2024_06_08_08_34_IMG_6163.JPG'
+    image: './Images/2SP00449.jpg'
   },
   {
     title: 'Workshops',
@@ -20,7 +20,7 @@ export const communityGalleryItems = [
     alt: 'Builders working through a workshop exercise on laptops',
     tone: 'amber',
     span: 'portrait',
-    image: './Images/2024_06_08_08_39_IMG_6186.JPG'
+    image: './Images/2SP00450.jpg'
   },
   {
     title: 'Hackathons',
@@ -28,7 +28,7 @@ export const communityGalleryItems = [
     alt: 'A HackUnion hackathon team presenting code on a screen',
     tone: 'cyan',
     span: 'tall',
-    image: './Images/2024_06_08_08_43_IMG_6197.JPG'
+    image: './Images/2SP00479.jpg'
   },
   {
     title: 'Builder Sessions',
@@ -36,7 +36,7 @@ export const communityGalleryItems = [
     alt: 'Two HackUnion members pairing on a laptop during a builder session',
     tone: 'teal',
     span: 'square',
-    image: './Images/2024_06_08_08_46_IMG_6214.JPG'
+    image: './Images/2SP00513.jpg'
   },
   {
     title: 'Team Collaboration',
@@ -44,7 +44,7 @@ export const communityGalleryItems = [
     alt: 'A small team collaborating around a table at a community event',
     tone: 'blue',
     span: 'portrait',
-    image: './Images/2024_06_08_08_58_IMG_6234.JPG'
+    image: './Images/2SP00516.jpg'
   },
   {
     title: 'Speaker Sessions',
@@ -52,7 +52,7 @@ export const communityGalleryItems = [
     alt: 'A speaker presenting to the HackUnion community',
     tone: 'amber',
     span: 'wide',
-    image: './Images/2024_06_08_08_34_IMG_6163.JPG'
+    image: './Images/2SP00449.jpg'
   },
   {
     title: 'Networking',
@@ -60,7 +60,7 @@ export const communityGalleryItems = [
     alt: 'HackUnion members networking after a talk',
     tone: 'cyan',
     span: 'square',
-    image: './Images/2024_06_08_08_39_IMG_6186.JPG'
+    image: './Images/2SP00450.jpg'
   },
   {
     title: 'Volunteers',
@@ -68,7 +68,7 @@ export const communityGalleryItems = [
     alt: 'HackUnion volunteers setting up event materials before a meetup',
     tone: 'teal',
     span: 'tall',
-    image: './Images/2024_06_08_08_43_IMG_6197.JPG'
+    image: './Images/2SP00479.jpg'
   },
   {
     title: 'Project Demos',
@@ -76,7 +76,7 @@ export const communityGalleryItems = [
     alt: 'A builder demoing a project to the HackUnion audience',
     tone: 'blue',
     span: 'wide',
-    image: './Images/2024_06_08_08_58_IMG_6234.JPG'
+    image: './Images/2SP00516.jpg'
   },
   {
     title: 'Community Moments',
@@ -84,7 +84,7 @@ export const communityGalleryItems = [
     alt: 'HackUnion builders celebrating together after an event',
     tone: 'amber',
     span: 'square',
-    image: './Images/2024_06_08_08_58_IMG_6234.JPG'
+    image: './Images/2SP00516.jpg'
   }
 ];
 
@@ -123,7 +123,7 @@ export const communityStories = [
     category: 'Joined first hackathon',
     story: 'I came to one event, joined a team the same night, and left with a working prototype plus people I still build with every week.',
     outcome: 'Shipped a first public demo and kept collaborating afterward.',
-    image: './Images/2024_06_08_08_34_IMG_6163.JPG'
+    image: './Images/2SP00449.jpg'
   },
   {
     name: 'Marcus Lee',
@@ -131,7 +131,7 @@ export const communityStories = [
     category: 'Found collaborators',
     story: 'A workshop breakout turned into a project group. We kept the momentum, met twice more, and shipped a small open-source tool.',
     outcome: 'Turned a room conversation into a real repo.',
-    image: './Images/2024_06_08_08_39_IMG_6186.JPG'
+    image: './Images/2SP00450.jpg'
   },
   {
     name: 'Priya Menon',
@@ -139,15 +139,15 @@ export const communityStories = [
     category: 'Gave first tech talk',
     story: 'After a few meetups I finally volunteered to speak. The room made the moment feel natural, and now I present more often.',
     outcome: 'Grew confidence through repeat participation.',
-    image: './Images/2024_06_08_08_43_IMG_6197.JPG'
+    image: './Images/2SP00479.jpg'
   },
   {
     name: 'Omar Hassan',
     role: 'Student Builder',
     category: 'Built first open-source project',
-    story: 'Open Build Week gave me structure, feedback, and a reason to keep shipping after class. That changed how I work.',
+    story: 'OpenBuild Week gave me structure, feedback, and a reason to keep shipping after class. That changed how I work.',
     outcome: 'Built an open-source habit that stuck.',
-    image: './Images/2024_06_08_08_58_IMG_6234.JPG'
+    image: './Images/2SP00516.jpg'
   }
 ];
 

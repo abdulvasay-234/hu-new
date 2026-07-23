@@ -13,7 +13,7 @@ export const experiencesData = [
     href: '#final-cta',
     tone: 'cyan',
     visualLabel: 'Flagship room',
-    image: './Images/2024_06_08_08_34_IMG_6163.JPG'
+    image: './Images/2SP00449.jpg'
   },
   {
     slug: 'community-meetups',
@@ -28,7 +28,7 @@ export const experiencesData = [
     href: '#final-cta',
     tone: 'amber',
     visualLabel: 'Local energy',
-    image: './Images/2024_06_08_08_39_IMG_6186.JPG'
+    image: './Images/2SP00450.jpg'
   },
   {
     slug: 'hackathons',
@@ -43,14 +43,14 @@ export const experiencesData = [
     href: '#final-cta',
     tone: 'violet',
     visualLabel: 'Sprint mode',
-    image: './Images/2024_06_08_08_43_IMG_6197.JPG'
+    image: './Images/2SP00479.jpg'
   },
   {
     slug: 'open-build-week',
     category: 'Collaboration',
-    title: 'Open Build Week',
+    title: 'OpenBuild Week',
     tagline: 'A week of open building, sharing, and contribution.',
-    description: 'Open Build Week brings the community into a shared rhythm of making, posting progress, and helping each other move forward.',
+    description: 'OpenBuild Week brings the community into a shared rhythm of making, posting progress, and helping each other move forward.',
     audience: 'For contributors who like public progress and open collaboration.',
     highlights: ['Open sessions', 'Public sharing', 'Community demos'],
     status: 'Coming Soon',
@@ -58,6 +58,6 @@ export const experiencesData = [
     href: '#final-cta',
     tone: 'green',
     visualLabel: 'Open week',
-    image: './Images/2024_06_08_08_46_IMG_6214.JPG'
+    image: './Images/2SP00513.jpg'
   }
 ];

@@ -232,7 +232,7 @@ Available modifiers: `badge--community`, `badge--upcoming`, `badge--flagship`, `
 ```html
 <div class="social-icons" aria-label="Social links">
   <a class="social-icons__link" href="https://github.com" aria-label="GitHub"><span data-lucide="github"></span></a>
-  <a class="social-icons__link" href="https://linkedin.com" aria-label="LinkedIn"><span data-lucide="linkedin"></span></a>
+  <a class="social-icons__link" href="https://www.linkedin.com/company/hackunion-in/" aria-label="LinkedIn"><span data-lucide="linkedin"></span></a>
 </div>
 ```
 

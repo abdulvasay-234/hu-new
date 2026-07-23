@@ -2970,6 +2970,44 @@ html[data-theme=dark] .theme-toggle__moon {
   padding: 2rem 0;
 }
 
+.proof-band__inner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.85rem, 1.6vw, 1.5rem);
+}
+
+.proof-band__card {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: clamp(0.7rem, 1vw, 1rem);
+  padding: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.proof-band__card .section-header__eyebrow {
+  font-size: clamp(0.76rem, 0.3vw + 0.66rem, 0.92rem);
+  letter-spacing: 0.11em;
+}
+
+.proof-band__card .section-header__title {
+  max-width: 100%;
+  font-size: clamp(1.9rem, 2vw + 0.3rem, 3.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+@media (max-width: 1520px) {
+  .proof-band__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .proof-band__card .section-header__title {
+    font-size: clamp(1.75rem, 8vw, 2.45rem);
+  }
+}
 .feature-grid {
   display: grid;
   gap: 1.5rem;
@@ -3284,6 +3322,12 @@ html[data-theme=dark] .partners__actions .button--primary {
 
 html[data-theme=dark] .obw-page .site-main {
   background: radial-gradient(circle at 8% 8%, rgba(91, 60, 196, 0.18), transparent 36%), radial-gradient(circle at 92% 6%, rgba(255, 95, 31, 0.12), transparent 28%), linear-gradient(180deg, #090d14 0%, #090d14 100%);
+}
+
+html[data-theme=dark] .obw-countdown__status {
+  border-color: rgba(125, 154, 255, 0.44);
+  background: linear-gradient(90deg, rgba(91, 60, 196, 0.3), rgba(0, 202, 255, 0.16));
+  color: #e5ecff;
 }
 
 html[data-theme=dark] :is(.obw-hero__visual,
@@ -5541,6 +5585,24 @@ html.has-js .partners__logo-item {
   box-shadow: 0 0 0 0.18rem rgba(47, 99, 228, 0.22);
 }
 
+.partners__category[data-partner-filter='Technology Partners'] {
+  border-color: rgba(59, 130, 246, 0.34);
+  color: #1d4ed8;
+  background: rgba(239, 246, 255, 0.92);
+}
+
+.partners__category[data-partner-filter='Academic Partners'] {
+  border-color: rgba(245, 108, 0, 0.34);
+  color: #b45309;
+  background: rgba(255, 247, 237, 0.92);
+}
+
+.partners__category[data-partner-filter='Community Partners'] {
+  border-color: rgba(22, 163, 74, 0.34);
+  color: #166534;
+  background: rgba(240, 253, 244, 0.92);
+}
+
 .partners__logo-category {
   justify-self: start;
   font-size: 0.66rem;
@@ -5552,6 +5614,21 @@ html.has-js .partners__logo-item {
   padding: 0.2rem 0.42rem;
   border-radius: var(--radius-pill);
   background: rgba(148, 163, 184, 0.12);
+}
+
+.partners__logo-category[data-partner-tone='technology'] {
+  background: rgba(59, 130, 246, 0.14);
+  color: #1d4ed8;
+}
+
+.partners__logo-category[data-partner-tone='academic'] {
+  background: rgba(245, 108, 0, 0.14);
+  color: #b45309;
+}
+
+.partners__logo-category[data-partner-tone='community'] {
+  background: rgba(22, 163, 74, 0.14);
+  color: #166534;
 }
 
 .partners__logo-visual {
@@ -6102,6 +6179,15 @@ html.has-js .partners__logo-item {
   object-fit: contain;
 }
 
+.obw-brand-word {
+  display: inline;
+  color: inherit;
+}
+
+.obw-brand-word__build {
+  color: var(--obw-orange);
+}
+
 .obw-hero .hero__text {
   max-width: 56ch;
   color: var(--color-text-muted);
@@ -6160,8 +6246,27 @@ html.has-js .partners__logo-item {
 }
 
 .obw-countdown__status {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
+  position: relative;
+  margin: 0;
+  padding: 0.7rem 0.85rem 0.7rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(91, 60, 196, 0.26);
+  background: linear-gradient(90deg, rgba(91, 60, 196, 0.12), rgba(0, 202, 255, 0.08));
+  color: #2f2a55;
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.obw-countdown__status::before {
+  content: "";
+  position: absolute;
+  left: 0.56rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 0.2rem;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(180deg, #5b3cc4, #00caff);
 }
 
 .obw-hero__visual {
@@ -6449,8 +6554,8 @@ html.has-js .partners__logo-item {
 }
 
 #experts-panel-speakers .obw-experts__grid {
-  grid-template-columns: minmax(16.5rem, 22rem);
-  justify-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+  align-items: stretch;
 }
 
 .obw-expert-card {
@@ -6464,11 +6569,25 @@ html.has-js .partners__logo-item {
   margin-inline: 0;
 }
 
+#experts-panel-speakers .obw-expert-card {
+  height: 100%;
+}
+
 .obw-expert-card--featured-speaker {
   position: relative;
+  align-self: stretch;
   border-color: rgba(91, 60, 196, 0.42);
   background: radial-gradient(circle at 10% 8%, rgba(91, 60, 196, 0.15), transparent 36%), radial-gradient(circle at 92% 90%, rgba(255, 95, 31, 0.12), transparent 34%), rgba(255, 255, 255, 0.98);
   box-shadow: 0 14px 30px rgba(91, 60, 196, 0.14);
+}
+
+#experts-panel-all .obw-expert-card--featured-speaker {
+  height: 100%;
+}
+
+#experts-panel-all .obw-expert-card--featured-speaker .obw-expert-card__socials {
+  margin-top: auto;
+  padding-top: 0.35rem;
 }
 
 .obw-expert-card--featured-speaker::after {
@@ -6591,6 +6710,11 @@ html.has-js .partners__logo-item {
   align-items: center;
   gap: 0.45rem;
   margin-top: 0.35rem;
+}
+
+#experts-panel-speakers .obw-expert-card__socials {
+  margin-top: auto;
+  padding-top: 0.35rem;
 }
 
 .obw-expert-card__socials a {
@@ -6780,6 +6904,15 @@ html[data-theme=dark] .obw-page .obw-expert-card--featured-speaker .obw-expert-c
   letter-spacing: 0.08em;
   text-transform: uppercase;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.obw-partner-card__logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 2.8rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .obw-partner-card h3 {
@@ -7042,7 +7175,7 @@ html[data-theme=dark] .obw-page .obw-partner-card__type {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   #experts-panel-speakers .obw-experts__grid {
-    grid-template-columns: minmax(16rem, 22rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .obw-showcase__grid,
   .obw-cohosts__grid {

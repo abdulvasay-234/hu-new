@@ -1,3 +1,43 @@
 .proof-band {
   padding: 2rem 0;
 }
+
+.proof-band__inner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.85rem, 1.6vw, 1.5rem);
+}
+
+.proof-band__card {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: clamp(0.7rem, 1vw, 1rem);
+  padding: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.proof-band__card .section-header__eyebrow {
+  font-size: clamp(0.76rem, 0.3vw + 0.66rem, 0.92rem);
+  letter-spacing: 0.11em;
+}
+
+.proof-band__card .section-header__title {
+  max-width: 100%;
+  font-size: clamp(1.9rem, 2vw + 0.3rem, 3.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+@media (max-width: 1520px) {
+  .proof-band__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .proof-band__card .section-header__title {
+    font-size: clamp(1.75rem, 8vw, 2.45rem);
+  }
+}

@@ -34,7 +34,7 @@ const getPageMetadata = () => {
 
   return {
     title: seoTitle ?? 'HackUnion v2',
-    description: seoDescription ?? 'HackUnion v2 is a builder-first technology community for developers, designers, AI engineers, founders, and open source contributors.',
+    description: seoDescription ?? 'HackUnion is a builder-first technology community for developers, designers, AI engineers, founders, and open source contributors.',
     image: seoImage ?? siteConfig.socialImage,
     url: seoUrl ?? siteConfig.url
   };
