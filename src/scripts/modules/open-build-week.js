@@ -22,7 +22,7 @@ const updateCountdownNode = (countdown, distance) => {
 
   if (statusNode) {
     statusNode.textContent = distance <= 0
-      ? `${eventLabel} is live now. Registration is open.`
+      ? 'OBW event happening at VJIT campus'
       : `Next ${eventLabel} starts in ${days} days, ${hours} hours, and ${minutes} minutes.`;
   }
 };
