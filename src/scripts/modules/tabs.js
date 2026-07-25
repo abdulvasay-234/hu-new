@@ -3,8 +3,29 @@ export const initTabs = (root = document) => {
     const triggers = Array.from(tabs.querySelectorAll('[role="tab"]'));
     const panels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
 
+    const preloadPanelImages = (panel) => {
+      if (!panel) {
+        return;
+      }
+
+      panel.querySelectorAll('img').forEach((image) => {
+        if (image.loading === 'lazy') {
+          image.loading = 'eager';
+        }
+
+        if (image.complete) {
+          return;
+        }
+
+        if (typeof image.decode === 'function') {
+          image.decode().catch(() => {});
+        }
+      });
+    };
+
     const activate = (trigger) => {
       const targetId = trigger.getAttribute('aria-controls');
+      const targetPanel = panels.find((panel) => panel.id === targetId);
 
       triggers.forEach((item) => {
         const isActive = item === trigger;
@@ -15,6 +36,8 @@ export const initTabs = (root = document) => {
       panels.forEach((panel) => {
         panel.hidden = panel.id !== targetId;
       });
+
+      preloadPanelImages(targetPanel);
     };
 
     triggers.forEach((trigger, index) => {

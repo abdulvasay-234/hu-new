@@ -77,6 +77,10 @@
   line-height: 0.95;
 }
 
+.obw-page .obw-brand-word__build {
+  color: var(--obw-orange);
+}
+
 .obw-hero__brandline {
   display: flex;
   align-items: center;
@@ -464,9 +468,8 @@
   height: 100%;
 }
 
-#experts-panel-speakers .obw-experts__grid {
-  grid-template-columns: minmax(16.5rem, 22rem);
-  justify-content: start;
+#experts-panel-speakers [data-stagger] > * {
+  transition-delay: 0ms;
 }
 
 .obw-expert-card {
@@ -1082,10 +1085,6 @@ html[data-theme='dark'] .obw-page .obw-partner-card__type {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  #experts-panel-speakers .obw-experts__grid {
-    grid-template-columns: minmax(16rem, 22rem);
-  }
-
   .obw-showcase__grid,
   .obw-cohosts__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1122,10 +1121,6 @@ html[data-theme='dark'] .obw-page .obw-partner-card__type {
   .obw-showcase__grid,
   .obw-cohosts__grid,
   .obw-experts__grid {
-    grid-template-columns: 1fr;
-  }
-
-  #experts-panel-speakers .obw-experts__grid {
     grid-template-columns: 1fr;
   }
 
