@@ -121,12 +121,17 @@
 }
 
 .brand-kit-logo-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 18.5rem));
+  gap: 0.85rem;
+  justify-content: center;
 }
 
 .brand-kit-logo-card {
-  padding: 0.85rem;
-  gap: 0.9rem;
+  padding: 0.72rem;
+  gap: 0.72rem;
+  max-width: 18.5rem;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .brand-kit-logo-card__preview {
@@ -139,13 +144,14 @@
     linear-gradient(-45deg, transparent 75%, #f5f8ff 75%);
   background-size: 1rem 1rem;
   background-position: 0 0, 0 0.5rem, 0.5rem -0.5rem, -0.5rem 0;
-  padding: clamp(1rem, 2.8vw, 1.8rem);
+  padding: clamp(0.7rem, 1.8vw, 1rem);
 }
 
 .brand-kit-logo-card__preview img {
   display: block;
-  width: 100%;
-  max-width: min(100%, 22rem);
+  width: auto;
+  max-width: min(100%, 15rem);
+  max-height: 7.4rem;
   margin-inline: auto;
   height: auto;
   object-fit: contain;
@@ -153,8 +159,18 @@
 
 .brand-kit-logo-card__body {
   display: grid;
-  gap: 0.7rem;
-  padding: 0.2rem 0.3rem 0.5rem;
+  gap: 0.5rem;
+  padding: 0.1rem 0.2rem 0.35rem;
+}
+
+.brand-kit-logo-card__body h3 {
+  font-size: 1.02rem;
+  line-height: 1.28;
+}
+
+.brand-kit-logo-card__body p {
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .brand-kit-logo-card__body h3,
@@ -175,11 +191,27 @@
 .brand-kit-logo-card__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.42rem;
 }
 
 .brand-kit-logo-card__actions .button {
-  flex: 1 1 11rem;
+  flex: 0 0 auto;
+  min-height: 2.25rem;
+  padding: 0.46rem 0.86rem;
+  font-size: 0.9rem;
+}
+
+.brand-kit-logo-card__actions .button {
+  background: var(--brand-kit-obw-accent);
+  border-color: var(--brand-kit-obw-accent);
+  color: #ffffff;
+}
+
+.brand-kit-logo-card__actions .button:hover,
+.brand-kit-logo-card__actions .button:focus-visible {
+  background: #e84e12;
+  border-color: #e84e12;
+  color: #ffffff;
 }
 
 .brand-kit-color-grid {
