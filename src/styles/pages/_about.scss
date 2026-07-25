@@ -1,1 +1,523 @@
-/* Reserved for future about page styles. */
+@use '../abstracts/index' as *;
+
+.about-page {
+	--about-blue: #2f63e4;
+	--about-indigo: #5b3cc4;
+	--about-orange: #f56c00;
+	--about-mint: #2f8e7f;
+}
+
+.about-page .site-main {
+	background:
+		radial-gradient(circle at 8% 8%, rgba(47, 99, 228, 0.12), transparent 33%),
+		radial-gradient(circle at 92% 6%, rgba(245, 108, 0, 0.1), transparent 28%),
+		linear-gradient(180deg, #ffffff 0%, #ffffff 36%, #ffffff 100%);
+}
+
+.about-page .section {
+	padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.about-hero {
+	position: relative;
+	overflow: clip;
+}
+
+.about-hero::before,
+.about-hero::after {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+	filter: blur(2px);
+}
+
+.about-hero::before {
+	width: clamp(14rem, 30vw, 22rem);
+	aspect-ratio: 1;
+	left: clamp(-7rem, -11vw, -2rem);
+	top: clamp(-5rem, -8vw, -1.5rem);
+	background: radial-gradient(circle, rgba(47, 99, 228, 0.2), transparent 72%);
+}
+
+.about-hero::after {
+	width: clamp(14rem, 28vw, 20rem);
+	aspect-ratio: 1;
+	right: clamp(-7rem, -10vw, -2rem);
+	bottom: clamp(-8rem, -12vw, -2rem);
+	background: radial-gradient(circle, rgba(245, 108, 0, 0.14), transparent 72%);
+}
+
+.about-hero__inner {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	align-items: start;
+	gap: clamp(1.3rem, 3vw, 2.1rem);
+}
+
+.about-hero__content .hero__title {
+	max-width: 14ch;
+	font-size: clamp(2.1rem, 5vw, 4.3rem);
+}
+
+.about-hero__content .hero__text {
+	max-width: 60ch;
+}
+
+.about-hero__actions {
+	margin-top: 1.2rem;
+}
+
+.about-hero__actions .button {
+	min-width: 12rem;
+}
+
+.about-hero__visual {
+	overflow: hidden;
+	display: grid;
+	gap: 0.85rem;
+	border-radius: calc(var(--radius-xl) + 0.2rem);
+	border: 1px solid rgba(47, 99, 228, 0.22);
+	background:
+		linear-gradient(160deg, rgba(47, 99, 228, 0.07), rgba(255, 255, 255, 0.92)),
+		var(--color-surface);
+	padding: 0.8rem;
+}
+
+.about-hero__visual img {
+	width: 100%;
+	height: clamp(14rem, 36vw, 22rem);
+	border-radius: calc(var(--radius-xl) - 0.2rem);
+	object-fit: cover;
+	display: block;
+}
+
+.about-hero__visual-caption {
+	display: grid;
+	gap: 0.35rem;
+	padding: 0.35rem 0.2rem 0.1rem;
+}
+
+.about-hero__visual-caption span {
+	font-size: 0.75rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: var(--about-blue);
+}
+
+.about-hero__visual-caption p {
+	margin: 0;
+	color: var(--color-text-muted);
+}
+
+.about-who__inner {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: clamp(1.1rem, 3vw, 2rem);
+	align-items: start;
+}
+
+.about-who__content {
+	display: grid;
+	gap: 0.9rem;
+}
+
+.about-who__content p {
+	margin: 0;
+	color: var(--color-text-muted);
+}
+
+.about-who__visual {
+	padding: 0.8rem;
+	display: grid;
+	gap: 0.85rem;
+}
+
+.about-who__visual img {
+	width: 100%;
+	height: clamp(14rem, 32vw, 20rem);
+	object-fit: cover;
+	border-radius: var(--radius-xl);
+	display: block;
+}
+
+.about-who__tags {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.about-who__tags li {
+	padding: 0.38rem 0.7rem;
+	border-radius: var(--radius-pill);
+	border: 1px solid rgba(47, 99, 228, 0.22);
+	background: rgba(47, 99, 228, 0.06);
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: var(--about-blue);
+}
+
+.about-story .section-header {
+	margin-bottom: 1rem;
+}
+
+.about-story__lead {
+	padding: clamp(1rem, 2.5vw, 1.55rem);
+	border: 1px solid rgba(47, 99, 228, 0.18);
+	background:
+		linear-gradient(180deg, rgba(47, 99, 228, 0.05), rgba(255, 255, 255, 0.95)),
+		var(--color-surface);
+}
+
+.about-story__lead p,
+.about-story__lead h3 {
+	margin: 0;
+}
+
+.about-story__lead {
+	display: grid;
+	gap: 0.8rem;
+}
+
+.about-story__lead h3 {
+	font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+.about-story__timeline {
+	margin: 1rem 0 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0.9rem;
+}
+
+.about-story__timeline .card {
+	padding: 0.95rem;
+	display: grid;
+	gap: 0.45rem;
+}
+
+.about-story__year {
+	font-size: 0.76rem;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: var(--about-indigo);
+}
+
+.about-story__timeline h3,
+.about-story__timeline p {
+	margin: 0;
+}
+
+.about-story__timeline p {
+	color: var(--color-text-muted);
+}
+
+.about-mission__grid {
+	display: grid;
+	gap: 0.95rem;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-mission__card {
+	padding: clamp(1rem, 2.5vw, 1.5rem);
+	display: grid;
+	gap: 0.62rem;
+}
+
+.about-mission__card p {
+	margin: 0;
+}
+
+.about-mission__label {
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+.about-mission__card--mission {
+	border-color: rgba(47, 99, 228, 0.24);
+	background: rgba(47, 99, 228, 0.04);
+}
+
+.about-mission__card--mission .about-mission__label {
+	color: var(--about-blue);
+}
+
+.about-mission__card--vision {
+	border-color: rgba(91, 60, 196, 0.24);
+	background: rgba(91, 60, 196, 0.04);
+}
+
+.about-mission__card--vision .about-mission__label {
+	color: var(--about-indigo);
+}
+
+.about-values__grid {
+	display: grid;
+	gap: 0.9rem;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.about-values__card {
+	padding: 0.95rem;
+	display: grid;
+	gap: 0.5rem;
+}
+
+.about-values__icon {
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 999px;
+	display: grid;
+	place-items: center;
+	border: 1px solid rgba(47, 99, 228, 0.24);
+	background: rgba(47, 99, 228, 0.08);
+	color: var(--about-blue);
+}
+
+.about-values__card h3,
+.about-values__card p {
+	margin: 0;
+}
+
+.about-values__card p {
+	color: var(--color-text-muted);
+}
+
+.about-journey__rail {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(9, minmax(0, auto));
+	gap: 0.6rem;
+	align-items: center;
+}
+
+.about-journey__step {
+	min-height: 100%;
+	padding: 0.85rem;
+	display: grid;
+	gap: 0.45rem;
+	max-width: 14rem;
+}
+
+.about-journey__glyph {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 999px;
+	border: 1px solid rgba(47, 99, 228, 0.24);
+	background: rgba(47, 99, 228, 0.08);
+	color: var(--about-blue);
+	display: grid;
+	place-items: center;
+}
+
+.about-journey__step h3,
+.about-journey__step p {
+	margin: 0;
+}
+
+.about-journey__step p {
+	color: var(--color-text-muted);
+	font-size: 0.9rem;
+}
+
+.about-journey__connector {
+	color: rgba(47, 99, 228, 0.5);
+	display: grid;
+	place-items: center;
+}
+
+.about-leadership .section-header {
+	margin-bottom: 1rem;
+}
+
+.about-leadership__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.9rem;
+}
+
+.about-leadership__card {
+	position: relative;
+	padding: 1rem;
+	display: grid;
+	gap: 0.5rem;
+}
+
+.about-leadership__card--founder {
+	border-color: rgba(245, 108, 0, 0.3);
+	background: rgba(245, 108, 0, 0.04);
+}
+
+.about-leadership__badge {
+	width: fit-content;
+}
+
+.about-leadership__photo {
+	width: 4.7rem;
+	height: 4.7rem;
+	border-radius: 999px;
+	object-fit: cover;
+	display: block;
+	border: 2px solid rgba(47, 99, 228, 0.2);
+}
+
+.about-leadership__card h3,
+.about-leadership__card p {
+	margin: 0;
+}
+
+.about-leadership__role {
+	font-size: 0.82rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--about-blue);
+}
+
+.about-leadership__card p {
+	color: var(--color-text-muted);
+}
+
+.about-leadership__links {
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.about-leadership__links a {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 999px;
+	border: 1px solid rgba(47, 99, 228, 0.2);
+	color: var(--about-blue);
+	display: grid;
+	place-items: center;
+}
+
+.about-leadership__links a:hover,
+.about-leadership__links a:focus-visible {
+	border-color: rgba(47, 99, 228, 0.4);
+	background: rgba(47, 99, 228, 0.08);
+}
+
+.about-join {
+	padding-bottom: clamp(2rem, 5vw, 3.2rem);
+}
+
+.about-join__card {
+	border-color: rgba(47, 99, 228, 0.22);
+	background:
+		radial-gradient(circle at 8% 12%, rgba(47, 99, 228, 0.15), transparent 34%),
+		radial-gradient(circle at 92% 85%, rgba(245, 108, 0, 0.14), transparent 30%),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.98));
+	padding: clamp(1.1rem, 3vw, 1.8rem);
+	text-align: center;
+}
+
+.about-join__actions {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+}
+
+.about-join__actions .button {
+	min-width: 11.8rem;
+}
+
+@media (max-width: 1199px) {
+	.about-values__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.about-story__timeline {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.about-leadership__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.about-journey__rail {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 0.8rem;
+	}
+
+	.about-journey__connector {
+		display: none;
+	}
+
+	.about-journey__step {
+		max-width: none;
+	}
+}
+
+@media (max-width: 1023px) {
+	.about-hero__inner,
+	.about-who__inner,
+	.about-mission__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.about-hero__visual img,
+	.about-who__visual img {
+		height: clamp(12rem, 56vw, 18rem);
+	}
+}
+
+@media (max-width: 767px) {
+	.about-values__grid,
+	.about-leadership__grid,
+	.about-story__timeline,
+	.about-journey__rail {
+		grid-template-columns: 1fr;
+	}
+
+	.about-journey__step {
+		max-width: none;
+	}
+
+	.about-hero__actions {
+		display: grid;
+		gap: 0.6rem;
+	}
+
+	.about-hero__actions .button,
+	.about-join__actions .button {
+		width: 100%;
+	}
+
+	.about-join__actions {
+		display: grid;
+	}
+}
+
+html[data-theme='dark'] .about-page .site-main {
+	background:
+		radial-gradient(circle at 10% 10%, rgba(91, 60, 196, 0.22), transparent 36%),
+		radial-gradient(circle at 88% 8%, rgba(245, 108, 0, 0.15), transparent 30%),
+		linear-gradient(180deg, #0b111a, #0a1018);
+}
+
+html[data-theme='dark'] .about-page .about-who__tags li {
+	border-color: rgba(102, 145, 255, 0.38);
+	background: rgba(47, 99, 228, 0.22);
+	color: #d8e5ff;
+}
+
+html[data-theme='dark'] .about-page .about-hero__visual,
+html[data-theme='dark'] .about-page .about-story__lead,
+html[data-theme='dark'] .about-page .about-join__card {
+	border-color: rgba(76, 96, 124, 0.9);
+}
