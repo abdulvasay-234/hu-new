@@ -3,6 +3,23 @@ export const initTabs = (root = document) => {
     const triggers = Array.from(tabs.querySelectorAll('[role="tab"]'));
     const panels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
 
+    const revealPanelAnimations = (panel) => {
+      if (!panel) {
+        return;
+      }
+
+      panel.querySelectorAll('[data-animate]').forEach((element) => {
+        element.classList.add('is-revealed');
+      });
+
+      panel.querySelectorAll('[data-stagger]').forEach((group) => {
+        Array.from(group.children).forEach((child, index) => {
+          child.style.setProperty('--stagger-index', String(index));
+        });
+        group.classList.add('is-revealed');
+      });
+    };
+
     const preloadPanelImages = (panel) => {
       if (!panel) {
         return;
@@ -38,6 +55,7 @@ export const initTabs = (root = document) => {
       });
 
       preloadPanelImages(targetPanel);
+      revealPanelAnimations(targetPanel);
     };
 
     triggers.forEach((trigger, index) => {
