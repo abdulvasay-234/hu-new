@@ -6701,6 +6701,12 @@ html[data-theme=dark] .about-page .about-join__card {
   color: var(--color-text-muted);
 }
 
+.obw-countdown__venue {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .obw-hero__visual {
   position: relative;
   display: grid;
