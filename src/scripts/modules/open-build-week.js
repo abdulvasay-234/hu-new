@@ -21,9 +21,7 @@ const updateCountdownNode = (countdown, distance) => {
   if (minutesNode) minutesNode.textContent = format(minutes);
 
   if (statusNode) {
-    statusNode.textContent = distance <= 0
-      ? 'OBW event happening at VJIT campus'
-      : `Next ${eventLabel} starts in ${days} days, ${hours} hours, and ${minutes} minutes.`;
+    statusNode.textContent = 'Next event at Lords Institute of Engineering & Technology';
   }
 };
 
