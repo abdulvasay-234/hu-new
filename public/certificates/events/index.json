@@ -49,6 +49,11 @@
           "text": "#111827",
           "muted": "#60708a"
         }
+      },
+      "templateByCampus": {
+        "Vardhaman College of Engineering": {
+          "backgroundImage": "/certificates/templates/vardhaman-certificate.png"
+        }
       }
     },
     {

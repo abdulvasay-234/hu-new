@@ -1,3 +1,33 @@
 {
-  "participants": []
+  "participants": [
+    { "name": "SIDDAMSHETTY SAI TEJA", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0001" },
+    { "name": "Bayolla Sai keerthan", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0002" },
+    { "name": "V.Basva Raj", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0003" },
+    { "name": "KOMATIREDDY BHAVANI", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0004" },
+    { "name": "MOHAMMED MAAZ ARFAAT", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0005" },
+    { "name": "B Shivasai Vivek", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0006" },
+    { "name": "Anushka Sugandhi", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0007" },
+    { "name": "Dubala Siddartha", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0008" },
+    { "name": "Neeli ManiRaj", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0009" },
+    { "name": "Vakkala Sunil", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0010" },
+    { "name": "JAYARAPU GOUTHAMI", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0011" },
+    { "name": "K.Varshitha", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0012" },
+    { "name": "Madaramoni Lahari", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0013" },
+    { "name": "M.Nikhitha", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0014" },
+    { "name": "A.Jyothika", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0015" },
+    { "name": "Vardhan Vanga", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0016" },
+    { "name": "Deekshitha Kakkireni", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0017" },
+    { "name": "SHAIK SAMEER", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0018" },
+    { "name": "Nenavath Swapna", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0019" },
+    { "name": "Gaini Vinay Kumar", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0020" },
+    { "name": "kavali sai manoj kumar", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0021" },
+    { "name": "Boinipelli Rakshith Rao", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0022" },
+    { "name": "Baikani Akshitha", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0023" },
+    { "name": "sahasrara dugyala", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0024" },
+    { "name": "B Gayathri", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0025" },
+    { "name": "Yendapally Advitha Reddy", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0026" },
+    { "name": "Aniket Samanta", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0027" },
+    { "name": "Darapuneni Jyoshnasri", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0028" },
+    { "name": "Ayman Nijamuddeen", "campus": "Vardhaman College of Engineering", "certificateId": "HU-OBW26-VARD0029" }
+  ]
 }

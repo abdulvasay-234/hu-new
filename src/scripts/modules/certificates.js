@@ -125,6 +125,39 @@ const loadTemplateImage = async (src) => {
   return loader;
 };
 
+const resolveTemplateConfig = (eventConfig, participant) => {
+  const baseTemplate = eventConfig?.template || {};
+  const campusTemplateMap = eventConfig?.templateByCampus;
+  const campusName = participant?.campus;
+
+  if (!campusName || !campusTemplateMap || typeof campusTemplateMap !== 'object') {
+    return baseTemplate;
+  }
+
+  const campusTemplate = campusTemplateMap[campusName];
+
+  if (!campusTemplate || typeof campusTemplate !== 'object') {
+    return baseTemplate;
+  }
+
+  return {
+    ...baseTemplate,
+    ...campusTemplate,
+    palette: {
+      ...(baseTemplate.palette || {}),
+      ...(campusTemplate.palette || {})
+    },
+    layout: {
+      ...(baseTemplate.layout || {}),
+      ...(campusTemplate.layout || {})
+    },
+    textStyles: {
+      ...(baseTemplate.textStyles || {}),
+      ...(campusTemplate.textStyles || {})
+    }
+  };
+};
+
 export const initCertificates = () => {
   const portal = document.querySelector('[data-certificates-portal]');
 
@@ -275,7 +308,7 @@ export const initCertificates = () => {
   };
 
   const drawCertificate = async (eventConfig, participant) => {
-    const template = eventConfig.template;
+    const template = resolveTemplateConfig(eventConfig, participant);
     const palette = template.palette;
     const width = Number(template.width) || 1280;
     const height = Number(template.height) || 900;
