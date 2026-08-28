@@ -669,7 +669,7 @@
 	letter-spacing: 0.16em;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #1d4ed8;
+	color: var(--color-accent-500);
 }
 
 .blog-article__kicker {
@@ -1380,7 +1380,7 @@ html[data-theme='dark'] .blog-author__socials a:focus-visible {
 }
 
 html[data-theme='dark'] .blog-article__eyebrow {
-	color: #8fc6ff;
+	color: var(--color-accent-500);
 }
 
 html[data-theme='dark'] .blog-article__reading-time {
