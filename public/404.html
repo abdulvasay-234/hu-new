@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=./" />
+    <meta name="description" content="The page you are looking for does not exist on HackUnion." />
     <title>Page Not Found | HackUnion</title>
     <link rel="stylesheet" href="./styles/site.css" />
   </head>
@@ -12,18 +12,34 @@
       <div class="container container--wide final-cta__container">
         <div class="card final-cta__panel">
           <div class="section-header section-header--center final-cta__header">
-            <p class="section-header__eyebrow">Redirecting</p>
-            <h1 class="section-header__title">That page does not exist yet.</h1>
-            <p class="section-header__text">You are being redirected to the HackUnion homepage. If that does not happen automatically, use the link below.</p>
+            <p class="section-header__eyebrow">404</p>
+            <h1 class="section-header__title">That page does not exist.</h1>
+            <p class="section-header__text" id="not-found-message">Use one of the links below to continue browsing HackUnion.</p>
           </div>
           <div class="final-cta__actions" aria-label="404 recovery actions">
-            <a class="button button--primary final-cta__button-primary" href="./">Go to Homepage</a>
+            <a class="button button--primary final-cta__button-primary" id="not-found-home-link" href="./">Go to Homepage</a>
+            <a class="button button--secondary" id="not-found-blogs-link" href="./blogs/">Browse Blogs</a>
           </div>
         </div>
       </div>
     </main>
     <script>
-      window.location.replace('./');
+      (function () {
+        var path = window.location.pathname || '/';
+        var projectSegment = '/HU-New/';
+        var rootPath = path.indexOf(projectSegment) >= 0 ? projectSegment : '/';
+
+        var homeLink = document.getElementById('not-found-home-link');
+        var blogsLink = document.getElementById('not-found-blogs-link');
+        var message = document.getElementById('not-found-message');
+
+        if (homeLink) homeLink.setAttribute('href', rootPath);
+        if (blogsLink) blogsLink.setAttribute('href', rootPath + 'blogs/');
+
+        if (message && path.indexOf('/blogs/') >= 0) {
+          message.textContent = 'This blog article could not be found. It may have moved or the URL may be incorrect.';
+        }
+      })();
     </script>
   </body>
   </html>

@@ -1,0 +1,83 @@
+{
+  "id": "2.0",
+  "edition": "2.0",
+  "year": 2026,
+  "slug": "2.0",
+  "title": "GitHub Copilot Dev Days 2.0",
+  "status": "current",
+  "date": "2026-09-20",
+  "dateLabel": "September 20, 2026",
+  "venue": "Campus Edition",
+  "location": "Hyderabad",
+  "description": "The current Dev Days edition focused on practical GitHub Copilot workflows, team-based building, and real development output.",
+  "coverImage": "Images/gallery/2SP00513.webp",
+  "coverImageAlt": "Developers and students collaborating during a live HackUnion session",
+  "eventUrl": "copilot-dev-days/2.0/",
+  "registrationUrl": "socials/",
+  "speakers": [],
+  "highlights": [
+    "Builder-first Copilot onboarding",
+    "Prompt-to-code live labs",
+    "AI-assisted debugging workflows",
+    "Collaborative build sessions"
+  ],
+  "inside": [
+    "Developer Talks",
+    "Hands-on Workshops",
+    "Live Demonstrations",
+    "Building Sessions",
+    "Guided Labs",
+    "Community Networking",
+    "Technical Discussions"
+  ],
+  "community": [
+    {
+      "title": "Workflow Playbooks",
+      "description": "Participants practiced repeatable AI-assisted development workflows for ideation, coding, and review.",
+      "linkLabel": "Read related insights",
+      "linkHref": "blogs/"
+    },
+    {
+      "title": "Rapid Prototype Sprints",
+      "description": "Student teams built and iterated on projects through guided prompt engineering and implementation loops.",
+      "linkLabel": "See community updates",
+      "linkHref": "socials/"
+    },
+    {
+      "title": "Peer Learning Moments",
+      "description": "Developers shared solutions and debugging strategies in collaborative sessions.",
+      "linkLabel": "Join HackUnion",
+      "linkHref": "socials/"
+    }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "thumbnail": "Images/gallery/2SP00513.webp",
+      "src": "Images/gallery/2SP00513.webp",
+      "alt": "Developers collaborating during GitHub Copilot Dev Days"
+    },
+    {
+      "type": "image",
+      "thumbnail": "Images/gallery/2SP00516.webp",
+      "src": "Images/gallery/2SP00516.webp",
+      "alt": "HackUnion participants in a builder-focused Dev Days session"
+    },
+    {
+      "type": "image",
+      "thumbnail": "Images/gallery/2SP00496.webp",
+      "src": "Images/gallery/2SP00496.webp",
+      "alt": "Students exploring practical coding workflows"
+    }
+  ],
+  "testimonials": [],
+  "blogs": {
+    "slugs": [
+      "building-the-next-generation-of-builders",
+      "from-tutorials-to-real-systems"
+    ],
+    "tags": ["Building", "Technology", "Tutorials"],
+    "category": "Technology"
+  },
+  "certificateEventSlug": "copilot-dev-days-2-0"
+}

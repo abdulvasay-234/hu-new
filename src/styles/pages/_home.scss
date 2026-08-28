@@ -57,13 +57,13 @@
 	gap: 1rem;
 	padding: 0.95rem;
 	width: max-content;
-	animation: photo-marquee-scroll 45s linear infinite;
+	animation: photo-marquee-scroll 88s linear infinite;
 	will-change: transform;
 }
 
 .photo-marquee__track--reverse {
 	animation-name: photo-marquee-scroll-reverse;
-	animation-duration: 40s;
+	animation-duration: 82s;
 }
 
 .photo-marquee__track img {
@@ -85,6 +85,10 @@
 .photo-marquee__track img:nth-child(4n + 4) { --photo-tilt: 0.8deg; }
 
 .photo-marquee__track:hover {
+	animation-play-state: paused;
+}
+
+.photo-marquee__track.is-paused {
 	animation-play-state: paused;
 }
 
@@ -134,11 +138,11 @@
 
 @media (max-width: 767px) {
 	.photo-marquee__track {
-		animation-duration: 34s;
+		animation-duration: 62s;
 	}
 
 	.photo-marquee__track--reverse {
-		animation-duration: 30s;
+		animation-duration: 56s;
 	}
 
 	.manifesto__actions {

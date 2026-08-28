@@ -1,0 +1,167 @@
+{
+  "generatedAt": "2026-08-28T11:06:24.973Z",
+  "featuredSlug": "building-the-next-generation-of-builders",
+  "categories": [
+    "Technology",
+    "Building",
+    "Open Source",
+    "Community",
+    "Events",
+    "Tutorials",
+    "Announcements",
+    "Career",
+    "Stories"
+  ],
+  "posts": [
+    {
+      "slug": "building-the-next-generation-of-builders",
+      "title": "Building the Next Generation of Builders",
+      "excerpt": "How HackUnion designs practical ecosystems where students and developers learn by shipping real products together.",
+      "category": "Stories",
+      "tags": [
+        "Community",
+        "Building",
+        "Technology",
+        "Lessons"
+      ],
+      "coverImage": "Images/gallery/2SP00516.webp",
+      "coverImageAlt": "HackUnion builders collaborating in a live product sprint",
+      "coverImagePosition": "center",
+      "author": {
+        "name": "Abdul Vasay",
+        "image": "Images/champions/vasay-GitHub.png"
+      },
+      "publishedDateISO": "2026-08-10T00:00:00.000Z",
+      "publishedDateLabel": "Aug 10, 2026",
+      "updatedDateISO": "2026-08-14T00:00:00.000Z",
+      "updatedDateLabel": "Aug 14, 2026",
+      "readingTime": "2 min read",
+      "featured": true
+    },
+    {
+      "slug": "open-source-first-community-learning",
+      "title": "Open Source First: How Community Learning Becomes Career Capital",
+      "excerpt": "A practical look at how open source collaboration inside HackUnion creates real technical depth and career signal.",
+      "category": "Open Source",
+      "tags": [
+        "Open Source",
+        "Career",
+        "Community",
+        "Building"
+      ],
+      "coverImage": "Images/gallery/2SP00496.webp",
+      "coverImageAlt": "Developers reviewing open source pull requests",
+      "coverImagePosition": "center",
+      "author": {
+        "name": "Sana Khan",
+        "image": "Images/champions/hafsa-liet.png"
+      },
+      "publishedDateISO": "2026-07-28T00:00:00.000Z",
+      "publishedDateLabel": "Jul 28, 2026",
+      "updatedDateISO": "2026-08-02T00:00:00.000Z",
+      "updatedDateLabel": "Aug 2, 2026",
+      "readingTime": "1 min read",
+      "featured": false
+    },
+    {
+      "slug": "event-to-product-what-openbuild-week-teaches",
+      "title": "Event to Product: What OpenBuild Week Teaches About Shipping",
+      "excerpt": "OpenBuild Week is not just an event cycle. It is a product shipping simulator for early-stage builders.",
+      "category": "Events",
+      "tags": [
+        "Events",
+        "Building",
+        "Product",
+        "Stories"
+      ],
+      "coverImage": "Images/gallery/2SP00513.webp",
+      "coverImageAlt": "HackUnion OpenBuild Week participants pitching projects",
+      "coverImagePosition": "center",
+      "author": {
+        "name": "Rohan Iyer",
+        "image": "Images/champions/ashish-sreenidhi.png"
+      },
+      "publishedDateISO": "2026-07-10T00:00:00.000Z",
+      "publishedDateLabel": "Jul 10, 2026",
+      "updatedDateISO": "2026-07-12T00:00:00.000Z",
+      "updatedDateLabel": "Jul 12, 2026",
+      "readingTime": "1 min read",
+      "featured": false
+    },
+    {
+      "slug": "from-tutorials-to-real-systems",
+      "title": "From Tutorials to Real Systems",
+      "excerpt": "A framework for moving from tutorial dependency to independent system thinking as a builder.",
+      "category": "Technology",
+      "tags": [
+        "Technology",
+        "Tutorials",
+        "Building",
+        "Career"
+      ],
+      "coverImage": "Images/gallery/2SP00446.webp",
+      "coverImageAlt": "Students sketching architecture and data flows",
+      "coverImagePosition": "center",
+      "author": {
+        "name": "Neha Verma",
+        "image": "Images/champions/vineel-ILF.png"
+      },
+      "publishedDateISO": "2026-06-18T00:00:00.000Z",
+      "publishedDateLabel": "Jun 18, 2026",
+      "updatedDateISO": "2026-06-20T00:00:00.000Z",
+      "updatedDateLabel": "Jun 20, 2026",
+      "readingTime": "1 min read",
+      "featured": false
+    },
+    {
+      "slug": "building-career-proof-through-public-work",
+      "title": "Building Career Proof Through Public Work",
+      "excerpt": "Why public artifacts, not just claims, are becoming the core signal for modern technical careers.",
+      "category": "Career",
+      "tags": [
+        "Career",
+        "Stories",
+        "Community",
+        "Building"
+      ],
+      "coverImage": "Images/gallery/2SP00516.webp",
+      "coverImageAlt": "HackUnion member presenting project outcomes",
+      "coverImagePosition": "50% 38%",
+      "author": {
+        "name": "Abdul Vasay",
+        "image": "Images/champions/vasay-GitHub.png"
+      },
+      "publishedDateISO": "2026-05-30T00:00:00.000Z",
+      "publishedDateLabel": "May 30, 2026",
+      "updatedDateISO": "2026-06-03T00:00:00.000Z",
+      "updatedDateLabel": "Jun 3, 2026",
+      "readingTime": "1 min read",
+      "featured": false
+    },
+    {
+      "slug": "hackunion-community-playbook-2026",
+      "title": "HackUnion Community Playbook 2026",
+      "excerpt": "The operational playbook behind HackUnion chapters, events, and contributor momentum in 2026.",
+      "category": "Announcements",
+      "tags": [
+        "Announcements",
+        "Community",
+        "Events",
+        "Building"
+      ],
+      "coverImage": "Images/gallery/2SP00479.webp",
+      "coverImageAlt": "HackUnion organizers planning a community roadmap",
+      "coverImagePosition": "center",
+      "author": {
+        "name": "Team HackUnion",
+        "image": "Images/champions/sarma-vjit.png"
+      },
+      "publishedDateISO": "2026-05-12T00:00:00.000Z",
+      "publishedDateLabel": "May 12, 2026",
+      "updatedDateISO": "2026-05-22T00:00:00.000Z",
+      "updatedDateLabel": "May 22, 2026",
+      "readingTime": "1 min read",
+      "featured": false
+    }
+  ]
+}

@@ -97,11 +97,31 @@
   box-shadow: var(--shadow-md);
 }
 
-.certificates-hero__visual img {
+.certificates-image-holder {
+  --cert-image-ratio: 16 / 10;
+  --cert-image-position: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: var(--cert-image-ratio);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(14, 165, 198, 0.12), transparent 35%),
+    radial-gradient(circle at 88% 88%, rgba(255, 122, 24, 0.1), transparent 38%),
+    #ffffff;
+}
+
+.certificates-image-holder > img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--cert-image-position);
+}
+
+.certificates-image-holder--hero {
+  --cert-image-ratio: 64 / 42;
 }
 
 .certificates-search {

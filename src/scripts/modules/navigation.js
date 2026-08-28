@@ -167,6 +167,22 @@ export const initNavigation = () => {
       });
     }
 
+    if (!currentLink && currentPath.includes('/blogs/')) {
+      currentLink = links.find((link) => {
+        const text = link.textContent?.toLowerCase() ?? '';
+        const href = link.getAttribute('href') ?? '';
+        return text.includes('blog') || href.includes('blogs');
+      });
+    }
+
+    if (!currentLink && currentPath.includes('/copilot-dev-days/')) {
+      currentLink = links.find((link) => {
+        const text = link.textContent?.toLowerCase() ?? '';
+        const href = link.getAttribute('href') ?? '';
+        return text.includes('copilot dev days') || href.includes('copilot-dev-days');
+      });
+    }
+
     if (!currentLink && (currentPath === '/' || currentPath.endsWith('/HU-New/'))) {
       currentLink = links.find((link) => {
         const href = link.getAttribute('href') ?? '';

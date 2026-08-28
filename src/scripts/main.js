@@ -22,6 +22,8 @@ import { initOpenBuildWeek } from './modules/open-build-week.js';
 import { initBrandKit } from './modules/brand-kit.js';
 import { initOrganizers } from './modules/organizers.js';
 import { initCertificates } from './modules/certificates.js';
+import { initBlogs } from './modules/blogs.js';
+import { initCopilotDevDays } from './modules/copilot-dev-days.js';
 import { createIcons, icons } from '../../node_modules/lucide/dist/esm/lucide.js';
 import { setPageMetadata } from './services/seo.js';
 import { siteConfig } from './data/site-config.js';
@@ -91,14 +93,16 @@ const bootstrap = () => {
   initPartnersEcosystem();
   initFinalCta();
   createIcons({ icons });
-  initLazyLoading();
   initGallery();
+  initLazyLoading();
   initCounter();
   initAnimations(page);
   initHero();
   initOpenBuildWeek();
   initBrandKit();
   initCertificates();
+  initBlogs();
+  initCopilotDevDays();
 
   const settleInitialPosition = () => {
     scrollToHashTarget();

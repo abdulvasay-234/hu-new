@@ -1,0 +1,46 @@
+{
+  "authors": {
+    "abdul-vasay": {
+      "name": "Abdul Vasay",
+      "image": "Images/champions/vasay-GitHub.png",
+      "bio": "Founder of HackUnion. Abdul focuses on community systems, practical learning, and product execution culture.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/afnanabdulvasay/",
+        "github": "https://github.com/vasay",
+        "x": "https://x.com"
+      }
+    },
+    "sana-khan": {
+      "name": "Sana Khan",
+      "image": "Images/champions/hafsa-liet.png",
+      "bio": "Community Programs Lead at HackUnion, focused on collaborative learning and contributor onboarding.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/hackunion-in/"
+      }
+    },
+    "rohan-iyer": {
+      "name": "Rohan Iyer",
+      "image": "Images/champions/ashish-sreenidhi.png",
+      "bio": "Operations Lead at HackUnion. Rohan designs delivery systems for events, projects, and demo days.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/hackunion-in/"
+      }
+    },
+    "neha-verma": {
+      "name": "Neha Verma",
+      "image": "Images/champions/vineel-ILF.png",
+      "bio": "Programs Lead at HackUnion. Neha mentors builders on project architecture and implementation planning.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/hackunion-in/"
+      }
+    },
+    "team-hackunion": {
+      "name": "Team HackUnion",
+      "image": "Images/champions/sarma-vjit.png",
+      "bio": "Core organizing team coordinating chapters, partnerships, and builder programs across HackUnion.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/hackunion-in/"
+      }
+    }
+  }
+}

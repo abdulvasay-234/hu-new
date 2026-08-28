@@ -1,5 +1,6 @@
 export const footerNavigation = [
   { label: 'Home', href: './' },
+  { label: 'Blogs', href: './blogs/' },
   { label: 'About', href: './about/' },
   { label: 'Code of Conduct', href: './coc/' },
   { label: 'Certificates', href: './certificates/' },

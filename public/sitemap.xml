@@ -4,7 +4,22 @@
     <loc>https://vasay.github.io/HU-New/</loc>
   </url>
   <url>
+    <loc>https://vasay.github.io/HU-New/about/</loc>
+  </url>
+  <url>
     <loc>https://vasay.github.io/HU-New/openbuildweek/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/copilot-dev-days/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/copilot-dev-days/1.0/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/copilot-dev-days/2.0/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/obw/</loc>
   </url>
   <url>
     <loc>https://vasay.github.io/HU-New/brand-kit/</loc>
@@ -13,9 +28,42 @@
     <loc>https://vasay.github.io/HU-New/organizers/</loc>
   </url>
   <url>
-    <loc>https://hackunion.in/socials</loc>
+    <loc>https://vasay.github.io/HU-New/socials/</loc>
   </url>
   <url>
-    <loc>https://hackunion.in/certificates</loc>
+    <loc>https://vasay.github.io/HU-New/certificates/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/certificate/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/coc/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/blogs/</loc>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/blogs/building-the-next-generation-of-builders/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/blogs/open-source-first-community-learning/</loc>
+    <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/blogs/event-to-product-what-openbuild-week-teaches/</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/blogs/from-tutorials-to-real-systems/</loc>
+    <lastmod>2026-06-20</lastmod>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/blogs/building-career-proof-through-public-work/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://vasay.github.io/HU-New/blogs/hackunion-community-playbook-2026/</loc>
+    <lastmod>2026-05-22</lastmod>
   </url>
 </urlset>

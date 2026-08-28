@@ -1,0 +1,67 @@
+{
+  "id": "1.0",
+  "edition": "1.0",
+  "year": 2025,
+  "slug": "1.0",
+  "title": "GitHub Copilot Dev Days 1.0",
+  "status": "previous",
+  "date": "2025-11-16",
+  "dateLabel": "November 16, 2025",
+  "venue": "Campus Edition",
+  "location": "Hyderabad",
+  "description": "The first Dev Days edition introduced the HackUnion community to practical AI-assisted development with GitHub Copilot.",
+  "coverImage": "Images/gallery/2SP00479.webp",
+  "coverImageAlt": "Builders attending an early HackUnion experience",
+  "eventUrl": "copilot-dev-days/1.0/",
+  "registrationUrl": "socials/",
+  "speakers": [],
+  "highlights": [
+    "Foundational Copilot workflows",
+    "Hands-on introduction labs",
+    "Community-first build culture"
+  ],
+  "inside": [
+    "Developer Talks",
+    "Hands-on Workshops",
+    "Live Demonstrations",
+    "Community Networking"
+  ],
+  "community": [
+    {
+      "title": "First Cohort Momentum",
+      "description": "Dev Days 1.0 created a baseline for practical AI-assisted coding inside HackUnion.",
+      "linkLabel": "Explore blog stories",
+      "linkHref": "blogs/"
+    },
+    {
+      "title": "Builder Confidence",
+      "description": "Participants moved from observing tools to actively building with guided support.",
+      "linkLabel": "Join upcoming editions",
+      "linkHref": "copilot-dev-days/"
+    }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "thumbnail": "Images/gallery/2SP00479.webp",
+      "src": "Images/gallery/2SP00479.webp",
+      "alt": "Participants at Dev Days 1.0"
+    },
+    {
+      "type": "image",
+      "thumbnail": "Images/gallery/2SP00446.webp",
+      "src": "Images/gallery/2SP00446.webp",
+      "alt": "Students during hands-on guided learning sessions"
+    }
+  ],
+  "testimonials": [],
+  "blogs": {
+    "slugs": [
+      "event-to-product-what-openbuild-week-teaches",
+      "building-career-proof-through-public-work"
+    ],
+    "tags": ["Events", "Building"],
+    "category": "Events"
+  },
+  "certificateEventSlug": "copilot-dev-days-1-0"
+}

@@ -85,8 +85,14 @@
       </header>
 
       <main id="main-content" class="site-main">
-        <section class="hero section" aria-labelledby="hero-title">
+        <section class="hero hero--landscape section" aria-labelledby="hero-title">
           <div class="hero__backdrop" aria-hidden="true"></div>
+          <figure class="hero__visual hero__visual--landscape" role="img" aria-label="HackUnion community members collaborating during a live build session">
+            <img
+              src="./Images/hero-section.jpg"
+              alt="HackUnion community members collaborating during a live build session"
+            />
+          </figure>
           <div class="container container--wide hero__inner">
             <div class="hero__content stack stack--lg">
               <p class="eyebrow hero__eyebrow">Builder-first technology community</p>
@@ -97,64 +103,22 @@
                 <a class="button button--secondary" href="#experiences">Explore Experiences</a>
               </div>
             </div>
-            <aside class="hero__visual" aria-label="HackUnion visual composition">
-              <figure class="hero-visual__frame hero-visual__frame--primary" role="img" aria-label="HackUnion event photography frame ready for real community images">
-                <div class="hero-visual__photo">
-                  <img data-src="./Images/hero-img.jpg" src="./Images/hero-img.jpg" alt="HackUnion community members collaborating during a live build session" />
-                </div>
-                <figcaption class="hero-visual__caption">
-                  <span class="hero-visual__caption-kicker">Community moments</span>
-                  <span class="hero-visual__caption-text">Real builders, real collaboration, real momentum.</span>
-                </figcaption>
-              </figure>
-
-              <article class="card hero-visual__card hero-visual__card--top">
-                <span class="badge">Live ecosystem</span>
-                <h2>People who build, meet, and ship together.</h2>
-                <p>Designed to hold community stories, live event imagery, and the energy of a builder-first network.</p>
-              </article>
-
-            </aside>
           </div>
         </section>
 
-        <section class="photo-marquee section section--compact" aria-label="HackUnion impact photo stream">
+        <section
+          class="photo-marquee section section--compact"
+          aria-label="HackUnion impact photo stream"
+          data-photo-marquee
+          data-gallery-base-path="./Images/gallery/"
+          data-gallery-alt-prefix="HackUnion gallery moment"
+        >
           <div class="photo-marquee__viewport" data-animate>
             <div class="photo-marquee__lane">
-              <div class="photo-marquee__track">
-                <img src="./Images/2SP00449.jpg" alt="HackUnion builders collaborating" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00450.jpg" alt="HackUnion meetup moment" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="HackUnion hackathon team" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00513.jpg" alt="HackUnion workshop session" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00516.jpg" alt="HackUnion demo day" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="HackUnion community gathering" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00516.jpg" alt="HackUnion project presentation" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00449.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00450.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00513.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00516.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00516.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-              </div>
+              <div class="photo-marquee__track"></div>
             </div>
             <div class="photo-marquee__lane">
-              <div class="photo-marquee__track photo-marquee__track--reverse">
-                <img src="./Images/2SP00516.jpg" alt="HackUnion project presentation" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="HackUnion community gathering" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00516.jpg" alt="HackUnion demo day" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00513.jpg" alt="HackUnion workshop session" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="HackUnion hackathon team" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00450.jpg" alt="HackUnion meetup moment" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00449.jpg" alt="HackUnion builders collaborating" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00516.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00516.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00513.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00479.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00450.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="./Images/2SP00449.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-              </div>
+              <div class="photo-marquee__track photo-marquee__track--reverse"></div>
             </div>
           </div>
         </section>
@@ -232,8 +196,8 @@
             <div class="manifesto__features" aria-label="HackUnion community projects">
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/2SP00449.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00516.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00446.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Build Real Projects</h3>
                 <p>Turn ideas into visible work with people who want to ship, not just brainstorm.</p>
@@ -255,8 +219,8 @@
 
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/2SP00450.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/2SP00479.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00496.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00479.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Learn by Building</h3>
                 <p>Grow faster by making things, sharing progress, and learning from the work itself.</p>
@@ -278,8 +242,8 @@
 
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/2SP00513.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00513.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00516.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Open Source Collaboration</h3>
                 <p>Contribute publicly and create work that helps both the community and your craft.</p>
@@ -301,8 +265,8 @@
 
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/2SP00449.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/2SP00450.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00446.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00496.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Meet Incredible Builders</h3>
                 <p>Connect with people who care about quality, momentum, and real collaboration.</p>
@@ -324,8 +288,8 @@
 
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/2SP00479.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/2SP00513.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00479.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00513.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Lead &amp; Contribute</h3>
                 <p>Take ownership, support others, and help shape what the community becomes next.</p>
@@ -347,8 +311,8 @@
 
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/2SP00450.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00516.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00496.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Grow Your Career</h3>
                 <p>Build proof, relationships, and momentum that carry into real opportunities.</p>
@@ -586,6 +550,7 @@
                   <li><a href="#experiences">Community Meetups</a></li>
                   <li><a href="#experiences">Hackathons</a></li>
                   <li><a href="#experiences">OpenBuild Week</a></li>
+                  <li><a href="./copilot-dev-days/">GitHub Copilot Dev Days</a></li>
                 </ul>
               </section>
 

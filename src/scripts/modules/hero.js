@@ -1,7 +1,33 @@
 import { gsap } from 'gsap';
 import { prefersReducedMotion } from '../utils/media-query.js';
+import { galleryImageFileNames } from '../data/gallery-images-data.js';
+
+const getHeroImagePath = (basePath, fileName) => `${basePath}${encodeURIComponent(fileName)}`;
+
+const hydrateHeroGalleryImages = () => {
+  const heroImages = document.querySelectorAll('[data-hero-gallery-image]');
+
+  heroImages.forEach((image, elementIndex) => {
+    const basePath = image.dataset.heroBasePath || './Images/gallery/';
+    const fallbackIndex = Number.parseInt(image.dataset.heroImageIndex ?? `${elementIndex}`, 10);
+    const normalizedIndex = Number.isNaN(fallbackIndex)
+      ? 0
+      : ((fallbackIndex % galleryImageFileNames.length) + galleryImageFileNames.length) % galleryImageFileNames.length;
+    const fileName = galleryImageFileNames[normalizedIndex];
+
+    if (!fileName) {
+      return;
+    }
+
+    const nextSrc = getHeroImagePath(basePath, fileName);
+    image.src = nextSrc;
+    image.dataset.src = nextSrc;
+  });
+};
 
 export const initHero = () => {
+  hydrateHeroGalleryImages();
+
   const hero = document.querySelector('.hero');
 
   if (!hero || prefersReducedMotion()) {

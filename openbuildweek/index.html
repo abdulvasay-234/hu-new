@@ -174,8 +174,11 @@
             <aside class="obw-hero__visual" aria-label="OpenBuild Week photography and highlights">
               <figure class="obw-hero__media" role="img" aria-label="OpenBuild Week hero photography placeholder">
                   <img
-                    data-src="../Images/hero-obw.jpg"
-                    src="../Images/hero-obw.jpg"
+                    data-hero-gallery-image
+                    data-hero-base-path="../Images/gallery/"
+                    data-hero-image-index="9"
+                    data-src="../Images/gallery/2SP00513.webp"
+                    src="../Images/gallery/2SP00513.webp"
                   alt="Crowd of builders collaborating during an OpenBuild Week session"
                 />
               </figure>
@@ -201,43 +204,19 @@
           </div>
         </section>
 
-        <section class="photo-marquee obw-photo-marquee section section--compact" aria-label="OpenBuild Week photo stream">
+        <section
+          class="photo-marquee obw-photo-marquee section section--compact"
+          aria-label="OpenBuild Week photo stream"
+          data-photo-marquee
+          data-gallery-base-path="../Images/gallery/"
+          data-gallery-alt-prefix="OpenBuild Week gallery moment"
+        >
           <div class="photo-marquee__viewport" data-animate>
             <div class="photo-marquee__lane">
-              <div class="photo-marquee__track">
-                <img src="../Images/2SP00449.jpg" alt="OpenBuild Week collaboration moment" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00450.jpg" alt="OpenBuild Week community meetup" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00479.jpg" alt="OpenBuild Week hackathon sprint" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00513.jpg" alt="OpenBuild Week workshop table" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00516.jpg" alt="OpenBuild Week live demo" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00530.jpg" alt="OpenBuild Week networking" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00565.jpg" alt="OpenBuild Week closing showcase" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00449.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00450.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00479.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00513.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00516.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00530.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00565.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-              </div>
+              <div class="photo-marquee__track"></div>
             </div>
             <div class="photo-marquee__lane">
-              <div class="photo-marquee__track photo-marquee__track--reverse">
-                <img src="../Images/2SP00565.jpg" alt="OpenBuild Week closing showcase" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00530.jpg" alt="OpenBuild Week networking" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00516.jpg" alt="OpenBuild Week live demo" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00513.jpg" alt="OpenBuild Week workshop table" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00479.jpg" alt="OpenBuild Week hackathon sprint" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00450.jpg" alt="OpenBuild Week community meetup" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00449.jpg" alt="OpenBuild Week collaboration moment" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00565.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00530.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00516.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00513.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00479.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00450.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <img src="../Images/2SP00449.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-              </div>
+              <div class="photo-marquee__track photo-marquee__track--reverse"></div>
             </div>
           </div>
         </section>
@@ -605,8 +584,8 @@
             <div class="manifesto__features" aria-label="Student projects built during OpenBuild Week">
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="../Images/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="../Images/2SP00449.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="../Images/gallery/2SP00516.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="../Images/gallery/2SP00446.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Campus Event Navigator</h3>
                 <p>An AI-assisted campus event and workshop discovery app with team formation support and live updates.</p>
@@ -628,8 +607,8 @@
 
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="../Images/2SP00450.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="../Images/2SP00479.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="../Images/gallery/2SP00496.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="../Images/gallery/2SP00479.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>SkillSwap Network</h3>
                 <p>A peer-to-peer platform where students exchange tech skills through focused practice sessions.</p>
@@ -651,8 +630,8 @@
 
               <article class="card manifesto-feature" data-animate>
                 <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="../Images/2SP00513.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="../Images/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__project-image" src="../Images/gallery/2SP00513.webp" alt="" loading="lazy" decoding="async" />
+                  <img class="manifesto-feature__builder-photo" src="../Images/gallery/2SP00516.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <h3>Open Source Launchpad</h3>
                 <p>A contribution onboarding board that helps first-time contributors discover issues and mentors.</p>
@@ -1546,6 +1525,7 @@
                   <li><a href="#experience-timeline">Roadmap</a></li>
                   <li><a href="#faq">FAQ</a></li>
                   <li><a href="../about/">About</a></li>
+                  <li><a href="../blogs/">Blogs</a></li>
                   <li><a href="../certificates/">Certificates</a></li>
                   <li><a href="../socials/">Socials</a></li>
                   <li><a href="../organizers/">Organizers</a></li>

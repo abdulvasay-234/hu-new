@@ -1,0 +1,135 @@
+{
+  "id": "copilot-dev-days",
+  "title": "GitHub Copilot Dev Days",
+  "eyebrow": "HACKUNION FLAGSHIP EXPERIENCE",
+  "tagline": "A hands-on developer experience where builders learn, experiment, and build with GitHub Copilot.",
+  "partnership": "Microsoft x GitHub x HackUnion",
+  "currentEditionId": "2.0",
+  "hero": {
+    "primaryCta": {
+      "label": "Explore Dev Days 2.0",
+      "href": "copilot-dev-days/2.0/"
+    },
+    "secondaryCta": {
+      "label": "View Previous Edition",
+      "href": "copilot-dev-days/1.0/"
+    },
+    "visualBullets": [
+      "Prompt-driven development",
+      "Live coding with AI assist",
+      "Builder workflow labs",
+      "Editorial technical debriefs"
+    ]
+  },
+  "about": {
+    "title": "What is GitHub Copilot Dev Days?",
+    "description": "GitHub Copilot Dev Days is a practical developer experience by HackUnion where students and developers learn modern AI-powered workflows, experiment with real coding use-cases, and build working outputs with peers and mentors.",
+    "pillars": [
+      "Learn",
+      "Experiment",
+      "Build",
+      "Collaborate"
+    ]
+  },
+  "experienceSteps": [
+    {
+      "id": "01",
+      "title": "Learn",
+      "description": "Understand modern development workflows and GitHub Copilot through practical foundations."
+    },
+    {
+      "id": "02",
+      "title": "Experiment",
+      "description": "Explore Copilot through live demonstrations and guided activities."
+    },
+    {
+      "id": "03",
+      "title": "Build",
+      "description": "Use the tools to create real projects and solve meaningful problems."
+    },
+    {
+      "id": "04",
+      "title": "Collaborate",
+      "description": "Connect with developers, students, mentors, and the wider builder community."
+    }
+  ],
+  "insideItems": [
+    "Developer Talks",
+    "Hands-on Workshops",
+    "Live Demonstrations",
+    "Building Sessions",
+    "Guided Labs",
+    "Community Networking",
+    "Technical Discussions"
+  ],
+  "communityShowcase": [
+    {
+      "title": "Projects and Demos",
+      "description": "Builders convert concepts into working prototypes, tools, and product experiments.",
+      "linkLabel": "Explore community stories",
+      "linkHref": "blogs/"
+    },
+    {
+      "title": "Learning Outcomes",
+      "description": "Participants strengthen practical prompting, debugging, and delivery workflows with AI-assisted coding.",
+      "linkLabel": "Read learning insights",
+      "linkHref": "blogs/"
+    },
+    {
+      "title": "Community Moments",
+      "description": "Dev Days creates peer learning loops between students, contributors, mentors, and organizers.",
+      "linkLabel": "See ecosystem updates",
+      "linkHref": "socials/"
+    }
+  ],
+  "partnershipSection": {
+    "title": "Built with the Developer Ecosystem",
+    "description": "GitHub Copilot Dev Days is built by HackUnion with support from the broader developer ecosystem including Microsoft and GitHub. The experience remains community-led and builder-first.",
+    "partners": [
+      "Microsoft",
+      "GitHub",
+      "HackUnion"
+    ]
+  },
+  "blogFilters": {
+    "categories": ["Events", "Technology", "Stories"],
+    "tags": ["Building", "Events", "Technology"],
+    "eventSlug": "copilot-dev-days",
+    "edition": "2.0",
+    "fallbackSlugs": [
+      "building-the-next-generation-of-builders",
+      "event-to-product-what-openbuild-week-teaches",
+      "from-tutorials-to-real-systems"
+    ]
+  },
+  "finalCta": {
+    "title": "Build the Future with Us",
+    "description": "Join upcoming GitHub Copilot Dev Days experiences and the wider HackUnion ecosystem to keep building in public.",
+    "primary": {
+      "label": "Explore Dev Days 2.0",
+      "href": "copilot-dev-days/2.0/"
+    },
+    "secondary": {
+      "label": "Join HackUnion",
+      "href": "socials/"
+    }
+  },
+  "editions": [
+    {
+      "id": "2.0",
+      "edition": "Dev Days 2.0",
+      "year": 2026,
+      "status": "current",
+      "slug": "2.0",
+      "dataPath": "content/copilot-dev-days/editions/2.0.json"
+    },
+    {
+      "id": "1.0",
+      "edition": "Dev Days 1.0",
+      "year": 2025,
+      "status": "previous",
+      "slug": "1.0",
+      "dataPath": "content/copilot-dev-days/editions/1.0.json"
+    }
+  ]
+}
