@@ -57,13 +57,13 @@
 	gap: 1rem;
 	padding: 0.95rem;
 	width: max-content;
-	animation: photo-marquee-scroll 88s linear infinite;
+	animation: photo-marquee-scroll 120s linear infinite;
 	will-change: transform;
 }
 
 .photo-marquee__track--reverse {
 	animation-name: photo-marquee-scroll-reverse;
-	animation-duration: 82s;
+	animation-duration: 112s;
 }
 
 .photo-marquee__track img {
@@ -138,11 +138,11 @@
 
 @media (max-width: 767px) {
 	.photo-marquee__track {
-		animation-duration: 62s;
+		animation-duration: 84s;
 	}
 
 	.photo-marquee__track--reverse {
-		animation-duration: 56s;
+		animation-duration: 78s;
 	}
 
 	.manifesto__actions {

@@ -2,6 +2,7 @@ import { galleryImageFileNames } from '../data/gallery-images-data.js';
 
 const getImagePath = (basePath, fileName) => `${basePath}${encodeURIComponent(fileName)}`;
 const LAZY_PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"%3E%3C/svg%3E';
+const EAGER_IMAGE_COUNT_PER_TRACK = 4;
 
 const populateTrack = (track, fileNames, { basePath, altPrefix }) => {
   const doubledFileNames = [...fileNames, ...fileNames];
@@ -12,11 +13,19 @@ const populateTrack = (track, fileNames, { basePath, altPrefix }) => {
     const image = document.createElement('img');
     const isDuplicatedCopy = index >= fileNames.length;
     const resolvedSrc = getImagePath(basePath, fileName);
+    const shouldLoadEagerly = !isDuplicatedCopy && index < EAGER_IMAGE_COUNT_PER_TRACK;
 
-    image.src = LAZY_PLACEHOLDER;
-    image.dataset.src = resolvedSrc;
-    image.dataset.lazy = 'true';
-    image.loading = 'lazy';
+    if (shouldLoadEagerly) {
+      image.src = resolvedSrc;
+      image.loading = 'eager';
+      image.fetchPriority = index < 2 ? 'high' : 'auto';
+    } else {
+      image.src = LAZY_PLACEHOLDER;
+      image.dataset.src = resolvedSrc;
+      image.dataset.lazy = 'true';
+      image.loading = 'lazy';
+    }
+
     image.decoding = 'async';
 
     if (isDuplicatedCopy) {
