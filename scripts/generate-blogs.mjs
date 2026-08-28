@@ -12,7 +12,7 @@ const sitemapFile = path.join(projectRoot, 'public', 'sitemap.xml');
 const site = {
   title: 'HackUnion',
   description: 'A builder-first technology community for developers, designers, AI engineers, founders, and open source contributors.',
-  baseUrl: 'https://vasay.github.io/HU-New/'
+  baseUrl: 'https://hackunion.in/'
 };
 
 const defaultCategories = [
