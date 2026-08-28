@@ -2,7 +2,7 @@
 slug: event-to-product-what-openbuild-week-teaches
 title: "Event to Product: What OpenBuild Week Teaches About Shipping"
 excerpt: OpenBuild Week is not just an event cycle. It is a product shipping simulator for early-stage builders.
-coverImage: Images/gallery/2SP00513.webp
+coverImage: Images/gallery/2SP00513.jpg
 coverImageAlt: HackUnion OpenBuild Week participants pitching projects
 authorId: rohan-iyer
 publishedDate: 2026-07-10

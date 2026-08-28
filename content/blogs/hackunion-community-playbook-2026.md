@@ -2,7 +2,7 @@
 slug: hackunion-community-playbook-2026
 title: HackUnion Community Playbook 2026
 excerpt: The operational playbook behind HackUnion chapters, events, and contributor momentum in 2026.
-coverImage: Images/gallery/2SP00479.webp
+coverImage: Images/gallery/2SP00479.jpg
 coverImageAlt: HackUnion organizers planning a community roadmap
 authorId: team-hackunion
 publishedDate: 2026-05-12

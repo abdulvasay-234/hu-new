@@ -20,7 +20,7 @@ Example IDs:
 slug: your-clean-slug
 title: "Post title"
 excerpt: Short summary used in cards and SEO.
-coverImage: Images/gallery/example.webp
+coverImage: Images/gallery/example.jpg
 coverImageAlt: Describe the image for accessibility
 authorId: team-hackunion
 publishedDate: 2026-08-28

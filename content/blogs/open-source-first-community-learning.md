@@ -2,7 +2,7 @@
 slug: open-source-first-community-learning
 title: "Open Source First: How Community Learning Becomes Career Capital"
 excerpt: A practical look at how open source collaboration inside HackUnion creates real technical depth and career signal.
-coverImage: Images/gallery/2SP00496.webp
+coverImage: Images/gallery/2SP00496.jpg
 coverImageAlt: Developers reviewing open source pull requests
 authorId: sana-khan
 publishedDate: 2026-07-28

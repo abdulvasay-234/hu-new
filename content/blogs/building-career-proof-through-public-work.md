@@ -2,7 +2,7 @@
 slug: building-career-proof-through-public-work
 title: Building Career Proof Through Public Work
 excerpt: Why public artifacts, not just claims, are becoming the core signal for modern technical careers.
-coverImage: Images/gallery/2SP00516.webp
+coverImage: Images/gallery/2SP00516.jpg
 coverImageAlt: HackUnion member presenting project outcomes
 coverImagePosition: 50% 38%
 authorId: abdul-vasay

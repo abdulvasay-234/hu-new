@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T11:06:24.973Z",
+  "generatedAt": "2026-08-28T11:36:35.200Z",
   "featuredSlug": "building-the-next-generation-of-builders",
   "categories": [
     "Technology",
@@ -24,7 +24,7 @@
         "Technology",
         "Lessons"
       ],
-      "coverImage": "Images/gallery/2SP00516.webp",
+      "coverImage": "Images/gallery/2SP00516.jpg",
       "coverImageAlt": "HackUnion builders collaborating in a live product sprint",
       "coverImagePosition": "center",
       "author": {
@@ -49,7 +49,7 @@
         "Community",
         "Building"
       ],
-      "coverImage": "Images/gallery/2SP00496.webp",
+      "coverImage": "Images/gallery/2SP00496.jpg",
       "coverImageAlt": "Developers reviewing open source pull requests",
       "coverImagePosition": "center",
       "author": {
@@ -74,7 +74,7 @@
         "Product",
         "Stories"
       ],
-      "coverImage": "Images/gallery/2SP00513.webp",
+      "coverImage": "Images/gallery/2SP00513.jpg",
       "coverImageAlt": "HackUnion OpenBuild Week participants pitching projects",
       "coverImagePosition": "center",
       "author": {
@@ -99,7 +99,7 @@
         "Building",
         "Career"
       ],
-      "coverImage": "Images/gallery/2SP00446.webp",
+      "coverImage": "Images/gallery/2SP00446.jpg",
       "coverImageAlt": "Students sketching architecture and data flows",
       "coverImagePosition": "center",
       "author": {
@@ -124,7 +124,7 @@
         "Community",
         "Building"
       ],
-      "coverImage": "Images/gallery/2SP00516.webp",
+      "coverImage": "Images/gallery/2SP00516.jpg",
       "coverImageAlt": "HackUnion member presenting project outcomes",
       "coverImagePosition": "50% 38%",
       "author": {
@@ -149,7 +149,7 @@
         "Events",
         "Building"
       ],
-      "coverImage": "Images/gallery/2SP00479.webp",
+      "coverImage": "Images/gallery/2SP00479.jpg",
       "coverImageAlt": "HackUnion organizers planning a community roadmap",
       "coverImagePosition": "center",
       "author": {

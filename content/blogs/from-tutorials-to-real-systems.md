@@ -2,7 +2,7 @@
 slug: from-tutorials-to-real-systems
 title: From Tutorials to Real Systems
 excerpt: A framework for moving from tutorial dependency to independent system thinking as a builder.
-coverImage: Images/gallery/2SP00446.webp
+coverImage: Images/gallery/2SP00446.jpg
 coverImageAlt: Students sketching architecture and data flows
 authorId: neha-verma
 publishedDate: 2026-06-18

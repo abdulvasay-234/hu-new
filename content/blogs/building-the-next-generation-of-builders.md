@@ -2,7 +2,7 @@
 slug: building-the-next-generation-of-builders
 title: Building the Next Generation of Builders
 excerpt: How HackUnion designs practical ecosystems where students and developers learn by shipping real products together.
-coverImage: Images/gallery/2SP00516.webp
+coverImage: Images/gallery/2SP00516.jpg
 coverImageAlt: HackUnion builders collaborating in a live product sprint
 authorId: abdul-vasay
 publishedDate: 2026-08-10
