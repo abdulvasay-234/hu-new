@@ -63,8 +63,14 @@ export default defineConfig({
         coc: resolve(__dirname, 'coc/index.html'),
         organizers: resolve(__dirname, 'organizers/index.html'),
         socials: resolve(__dirname, 'socials/index.html'),
+        brandKit: resolve(__dirname, 'brand-kit/index.html'),
         certificate: resolve(__dirname, 'certificate/index.html'),
         certificates: resolve(__dirname, 'certificates/index.html'),
+        discord: resolve(__dirname, 'discord/index.html'),
+        github: resolve(__dirname, 'github/index.html'),
+        linkedin: resolve(__dirname, 'linkedin/index.html'),
+        instagram: resolve(__dirname, 'instagram/index.html'),
+        youtube: resolve(__dirname, 'youtube/index.html'),
         blogs: resolve(__dirname, 'blogs/index.html'),
         ...getBlogInputs()
       }

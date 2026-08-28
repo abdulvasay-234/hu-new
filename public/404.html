@@ -23,11 +23,160 @@
         </div>
       </div>
     </main>
+
+    <footer class="site-footer" data-site-footer>
+      <div class="container site-footer__inner">
+        <div class="site-footer__top">
+          <div class="site-footer__brand-column">
+            <a class="brand site-footer__brand-link" href="./" aria-label="HackUnion home">
+              <img class="brand__logo" src="./Images/HackUnion-Logo.png" alt="HackUnion logo" width="88" height="88" />
+              <span class="brand__lockup">
+                <span class="brand__text">HackUnion</span>
+                <span class="brand__meta">Builder-first technology community</span>
+              </span>
+            </a>
+            <p class="site-footer__description">HackUnion brings developers, designers, founders, AI engineers, and creators together to build real projects, learn in public, and keep momentum alive.</p>
+            <div class="site-footer__socials" aria-label="HackUnion social links">
+              <a class="site-footer__social-link" href="https://github.com/vasay/HU-New" target="_blank" rel="noreferrer" aria-label="HackUnion on GitHub">
+                <span data-lucide="github"></span>
+              </a>
+              <a class="site-footer__social-link" href="https://www.linkedin.com/company/hackunion-in/" target="_blank" rel="noreferrer" aria-label="HackUnion on LinkedIn">
+                <span data-lucide="linkedin"></span>
+              </a>
+              <a class="site-footer__social-link" href="https://x.com" target="_blank" rel="noreferrer" aria-label="HackUnion on X">
+                <span data-lucide="twitter"></span>
+              </a>
+              <a class="site-footer__social-link" href="mailto:hackunion17@gmail.com" aria-label="Email HackUnion">
+                <span data-lucide="mail"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="site-footer__links-grid">
+            <section class="site-footer__column" aria-labelledby="footer-nav-title">
+              <h2 id="footer-nav-title" class="site-footer__title">Navigation</h2>
+              <nav class="site-footer__nav" aria-label="Footer navigation">
+                <ul class="site-footer__list" data-footer-links>
+                  <li><a href="./">Home</a></li>
+                  <li><a href="./#manifesto">About</a></li>
+                  <li><a href="./certificates/">Certificates</a></li>
+                  <li><a href="./socials/">Socials</a></li>
+                  <li><a href="./#community">Community</a></li>
+                  <li><a href="./#final-cta">Contact</a></li>
+                </ul>
+              </nav>
+            </section>
+
+            <section class="site-footer__column" aria-labelledby="footer-experiences-title">
+              <h2 id="footer-experiences-title" class="site-footer__title">Experiences</h2>
+              <ul class="site-footer__list">
+                <li><a href="./#experiences">Builders Guild</a></li>
+                <li><a href="./#experiences">Community Meetups</a></li>
+                <li><a href="./#experiences">Hackathons</a></li>
+                <li><a href="./#experiences">OpenBuild Week</a></li>
+                <li><a href="./copilot-dev-days/">GitHub Copilot Dev Days</a></li>
+              </ul>
+            </section>
+
+            <section class="site-footer__column" aria-labelledby="footer-resources-title">
+              <h2 id="footer-resources-title" class="site-footer__title">Resources</h2>
+              <ul class="site-footer__list">
+                <li><a href="./#community">Builder Stories</a></li>
+                <li><a href="./#partners">Partner Ecosystem</a></li>
+                <li><a href="./certificates/">Certificates</a></li>
+                <li><a href="https://github.com/vasay/HU-New" target="_blank" rel="noreferrer">GitHub Repository</a></li>
+                <li><a href="./#final-cta">Newsletter</a></li>
+              </ul>
+            </section>
+
+            <section class="site-footer__column" aria-labelledby="footer-contact-title">
+              <h2 id="footer-contact-title" class="site-footer__title">Contact</h2>
+              <ul class="site-footer__list site-footer__list--contact">
+                <li><a href="mailto:hackunion17@gmail.com">hackunion17@gmail.com</a></li>
+                <li><a href="./#partners">Partner with HackUnion</a></li>
+                <li><a href="./#community">Volunteer with the Community</a></li>
+                <li><a href="./#final-cta">Request Updates</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <div class="site-footer__middle">
+          <form class="site-footer__newsletter" data-footer-newsletter-form aria-label="Subscribe to HackUnion newsletter" novalidate>
+            <div class="site-footer__newsletter-copy">
+              <h2 class="site-footer__title">Builder updates in your inbox</h2>
+              <p class="site-footer__newsletter-text">Receive event announcements, builder stories, project launches, and community updates.</p>
+            </div>
+            <div class="site-footer__newsletter-row">
+              <label class="site-footer__newsletter-label" for="footer-email">Email address</label>
+              <div class="site-footer__newsletter-controls">
+                <input id="footer-email" name="email" class="site-footer__newsletter-input" type="email" inputmode="email" autocomplete="email" placeholder="you@domain.com" required />
+                <button class="button button--primary" type="submit">Subscribe</button>
+              </div>
+              <p class="site-footer__newsletter-note">Privacy-first. No spam, only high-signal HackUnion updates.</p>
+              <p class="site-footer__newsletter-status" data-footer-newsletter-status aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="site-footer__utilities">
+            <button class="theme-toggle button button--ghost site-footer__theme-toggle" type="button" aria-label="Activate dark theme" aria-pressed="false" data-theme-toggle>
+              <span class="theme-toggle__glyph" aria-hidden="true">
+                <span class="theme-toggle__sun"></span>
+                <span class="theme-toggle__moon"></span>
+              </span>
+              <span class="theme-toggle__text" data-theme-toggle-text>Dark mode</span>
+            </button>
+            <a class="button button--secondary site-footer__repo-link" href="https://github.com/vasay/HU-New" target="_blank" rel="noreferrer">
+              <span data-lucide="github" aria-hidden="true"></span>
+              <span>View Repository</span>
+            </a>
+            <button class="button button--ghost site-footer__back-to-top" type="button" data-back-to-top aria-label="Back to top">
+              <span data-lucide="arrow-up"></span>
+              <span>Back to Top</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p class="site-footer__copyright">&copy; <span data-footer-year></span> HackUnion. All rights reserved.</p>
+          <nav class="site-footer__legal" aria-label="Legal links">
+            <ul class="site-footer__legal-list">
+              <li><a href="./#final-cta">Privacy</a></li>
+              <li><a href="./#final-cta">Terms</a></li>
+              <li><a href="./#community">Code of Conduct</a></li>
+            </ul>
+          </nav>
+          <p class="site-footer__signature">Built with love by HackUnion.</p>
+        </div>
+      </div>
+    </footer>
+
     <script>
       (function () {
         var path = window.location.pathname || '/';
         var projectSegment = '/HU-New/';
         var rootPath = path.indexOf(projectSegment) >= 0 ? projectSegment : '/';
+
+        var toRootHref = function (href) {
+          if (!href || href === './') {
+            return rootPath;
+          }
+
+          if (href.indexOf('./#') === 0) {
+            return rootPath + href.slice(2);
+          }
+
+          if (href.indexOf('./') === 0) {
+            return rootPath + href.slice(2);
+          }
+
+          return href;
+        };
+
+        var stylesheet = document.querySelector('link[href="./styles/site.css"]');
+        if (stylesheet) {
+          stylesheet.setAttribute('href', rootPath + 'styles/site.css');
+        }
 
         var homeLink = document.getElementById('not-found-home-link');
         var blogsLink = document.getElementById('not-found-blogs-link');
@@ -35,6 +184,19 @@
 
         if (homeLink) homeLink.setAttribute('href', rootPath);
         if (blogsLink) blogsLink.setAttribute('href', rootPath + 'blogs/');
+
+        var footer = document.querySelector('[data-site-footer]');
+        if (footer) {
+          var logo = footer.querySelector('img.brand__logo[src^="./"]');
+          if (logo) {
+            logo.setAttribute('src', rootPath + logo.getAttribute('src').slice(2));
+          }
+
+          var links = footer.querySelectorAll('a[href^="./"]');
+          links.forEach(function (link) {
+            link.setAttribute('href', toRootHref(link.getAttribute('href')));
+          });
+        }
 
         if (message && path.indexOf('/blogs/') >= 0) {
           message.textContent = 'This blog article could not be found. It may have moved or the URL may be incorrect.';

@@ -11334,6 +11334,8 @@ html[data-theme=dark] .brand-kit-page .brand-kit-usage-card--incorrect {
   border-radius: calc(var(--radius-xl) + 0.25rem);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 252, 254, 0.92));
   box-shadow: var(--shadow-md);
+  display: grid;
+  place-items: center;
 }
 
 .certificates-image-holder {
@@ -11358,6 +11360,16 @@ html[data-theme=dark] .brand-kit-page .brand-kit-usage-card--incorrect {
 
 .certificates-image-holder--hero {
   --cert-image-ratio: 64 / 42;
+  width: min(100%, 42rem);
+  margin-inline: auto;
+}
+
+.certificates-image-holder--hero > img {
+  width: 96%;
+  height: 96%;
+  object-fit: contain;
+  object-position: center;
+  margin-inline: auto;
 }
 
 .certificates-search {

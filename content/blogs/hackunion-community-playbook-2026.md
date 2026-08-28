@@ -7,7 +7,7 @@ coverImageAlt: Interledger concept visual for cross-border connected payments
 coverImageFit: contain
 authorId: rayeesa-mahmood
 publishedDate: 2026-08-05
-updatedDate: 2026-08-05
+updatedDate: 2026-08-20
 category: Technology
 tags:
   - Interledger
