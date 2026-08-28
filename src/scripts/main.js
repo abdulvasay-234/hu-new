@@ -13,6 +13,8 @@ import { initModal } from './modules/modal.js';
 import { initGallery } from './modules/gallery.js';
 import { initCounter } from './modules/counter.js';
 import { initManifesto } from './modules/manifesto.js';
+import { initWhyHackUnion } from './modules/why-hackunion.js';
+import { initProjects } from './modules/projects.js';
 import { initExperiences } from './modules/experiences.js';
 import { initCommunityInAction } from './modules/community-in-action.js';
 import { initPartnersEcosystem } from './modules/partners-ecosystem.js';
@@ -87,7 +89,9 @@ const bootstrap = () => {
   initAccordion();
   initOrganizers();
   initModal();
+  initWhyHackUnion();
   initManifesto();
+  initProjects();
   initExperiences();
   initCommunityInAction();
   initPartnersEcosystem();

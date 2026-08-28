@@ -15,16 +15,16 @@ const site = {
   baseUrl: 'https://hackunion.in/'
 };
 
+const fallbackSocialImage = 'assets/og/hackunion-default.webp';
+
 const defaultCategories = [
-  'Technology',
-  'Building',
-  'Open Source',
+  'Builder Stories',
   'Community',
-  'Events',
-  'Tutorials',
-  'Announcements',
-  'Career',
-  'Stories'
+  'Career & Growth',
+  'Events & Experiences',
+  'Build & Ship',
+  'Open Source',
+  'AI & Technology'
 ];
 
 const staticSitemapRoutes = [
@@ -38,6 +38,15 @@ const staticSitemapRoutes = [
   'brand-kit/',
   'organizers/',
   'socials/',
+  'projects/',
+  'projects/shiplog-studio/',
+  'projects/mentor-match-ai/',
+  'projects/obw-cli/',
+  'projects/builder-ops-console/',
+  'projects/campus-checkin-mobile/',
+  'projects/lablink-sensor-kit/',
+  'projects/community-resource-map/',
+  'projects/issue-to-pr-assistant/',
   'certificates/',
   'certificate/',
   'coc/',
@@ -127,11 +136,15 @@ const readBlogPosts = () => {
     const readingTime = source.readingTime || estimateReadingTime(source.markdownContent);
 
     return {
+      id: source.id,
       slug: source.slug,
       title: source.title,
       excerpt: source.excerpt,
+      seoTitle: source.seoTitle,
+      metaDescription: source.metaDescription,
       category: source.category,
       tags: source.tags,
+      comingSoon: source.comingSoon,
       featured: source.featured,
       readingTime,
       contentHtml,
@@ -373,6 +386,12 @@ const renderRelatedCards = (related) => related.map((post) => `
 </article>
 `).join('');
 
+const renderComingSoon = (post) => `
+<section class="blog-coming-soon card" aria-labelledby="coming-soon-title">
+  <h2 id="coming-soon-title">Article coming soon</h2>
+  <p>${post.title} is scheduled for publication. Check back soon for the full article.</p>
+</section>`;
+
 const renderMobileNextLink = (post) => {
   if (!post) {
     return '<p class="blog-nav-link blog-nav-link--disabled">No next article yet.</p>';
@@ -383,7 +402,7 @@ const renderMobileNextLink = (post) => {
 
 const renderIndexHtml = () => {
   const title = 'HackUnion Blogs | Stories, Ideas & Insights';
-  const description = 'Stories, ideas, tutorials, and lessons from technology, building, community, open source, events, and projects across HackUnion.';
+  const description = 'Stories from builders, lessons from the community, practical guides, and ideas shaping technology.';
   const canonical = toCanonical('blogs/');
 
   return `<!doctype html>
@@ -429,45 +448,10 @@ const renderIndexHtml = () => {
           <div class="hero__backdrop" aria-hidden="true"></div>
           <div class="container container--wide blogs-hero__inner">
             <div class="stack stack--lg" data-animate="fade-up">
-              <p class="eyebrow hero__eyebrow">HackUnion Blogs</p>
-              <h1 id="blogs-hero-title" class="hero__title">Stories, Ideas &amp; Insights from HackUnion</h1>
-              <p class="hero__text">The HackUnion blog explores technology, building, community, open source, events, projects, and practical lessons from builders across the ecosystem.</p>
+              <p class="eyebrow hero__eyebrow">BLOG</p>
+              <h1 id="blogs-hero-title" class="hero__title">Stories, ideas &amp; insights from HackUnion.</h1>
+              <p class="hero__text">Stories from builders, lessons from the community, practical guides, and ideas shaping technology.</p>
             </div>
-          </div>
-        </section>
-
-        <section class="section section--compact blogs-discovery" aria-labelledby="blog-discovery-title">
-          <div class="container container--wide">
-            <div class="section-header" data-animate="fade-up">
-              <p class="section-header__eyebrow">Discover</p>
-              <h2 id="blog-discovery-title" class="section-header__title">Find your next read</h2>
-            </div>
-
-            <form class="blogs-controls card" role="search" aria-label="Search HackUnion blogs" data-animate="fade-up">
-              <div class="blogs-controls__field blogs-controls__field--search">
-                <label class="blogs-controls__search-label" for="blog-search-input">Search posts</label>
-                <input id="blog-search-input" class="blogs-controls__search" type="search" placeholder="Search by title, excerpt, category, or tag" data-blog-search />
-              </div>
-
-              <div class="blogs-controls__field blogs-controls__field--sort">
-                <label class="blogs-controls__sort-label" for="blog-sort-select">Sort by</label>
-                <select id="blog-sort-select" class="blogs-controls__sort" data-blog-sort>
-                  <option value="latest">Latest</option>
-                  <option value="oldest">Oldest</option>
-                  <option value="relevant">Most Relevant</option>
-                </select>
-              </div>
-
-              <div class="blogs-controls__categories" data-blog-categories role="group" aria-label="Filter by category"></div>
-              <div class="blogs-controls__themes" data-blog-theme-controls role="group" aria-label="Choose visual style">
-                <p class="blogs-controls__themes-label">Visual Style</p>
-                <div class="blogs-controls__themes-buttons">
-                  <button class="blogs-controls__theme-chip is-active" type="button" data-blog-theme="tech">Tech Grid</button>
-                  <button class="blogs-controls__theme-chip" type="button" data-blog-theme="editorial">Editorial Flux</button>
-                </div>
-              </div>
-              <p class="blogs-controls__result" data-blog-result-text aria-live="polite"></p>
-            </form>
           </div>
         </section>
 
@@ -475,30 +459,36 @@ const renderIndexHtml = () => {
           <div class="container container--wide">
             <div class="section-header" data-animate="fade-up">
               <p class="section-header__eyebrow">Featured</p>
-              <h2 id="blogs-featured-title" class="section-header__title">Latest featured article</h2>
+              <h2 id="blogs-featured-title" class="section-header__title">Interledger Technology: Rethinking the Future of Global Payments</h2>
             </div>
             <div data-blog-featured></div>
           </div>
         </section>
 
-        <section class="blogs-divider" aria-hidden="true">
+        <section class="section section--compact blogs-discovery" aria-label="Search and filter blog articles">
           <div class="container container--wide">
-            <div class="blogs-divider__line" data-animate="fade-up">
-              <span class="blogs-divider__label">Live Feed</span>
-            </div>
+            <form class="blogs-controls card" role="search" aria-label="Search HackUnion blogs" data-animate="fade-up">
+              <div class="blogs-controls__field blogs-controls__field--search">
+                <label class="blogs-controls__search-label" for="blog-search-input">Search articles</label>
+                <input id="blog-search-input" class="blogs-controls__search" type="search" placeholder="Search articles..." data-blog-search />
+              </div>
+
+              <div class="blogs-controls__categories" data-blog-categories role="group" aria-label="Filter by category"></div>
+              <p class="blogs-controls__result" data-blog-result-text aria-live="polite"></p>
+            </form>
           </div>
         </section>
 
         <section class="section blogs-grid-section" aria-labelledby="blogs-grid-title">
           <div class="container container--wide">
             <div class="section-header" data-animate="fade-up">
-              <p class="section-header__eyebrow">All posts</p>
-              <h2 id="blogs-grid-title" class="section-header__title">Stories from the ecosystem</h2>
+              <p class="section-header__eyebrow">Latest Stories</p>
+              <h2 id="blogs-grid-title" class="section-header__title">Latest stories</h2>
             </div>
             <div class="blogs-grid" data-blog-grid data-stagger></div>
             <div class="blogs-empty card" data-blog-empty hidden>
-              <h3>No articles match your filters.</h3>
-              <p>Try a different search term, category, or tag.</p>
+              <h3>No articles found.</h3>
+              <p>Try a different search or category.</p>
             </div>
           </div>
         </section>
@@ -513,10 +503,11 @@ const renderIndexHtml = () => {
 };
 
 const renderArticleHtml = (post, context) => {
-  const title = `${post.title} | HackUnion Blog`;
+  const title = post.seoTitle || `${post.title} | HackUnion Blog`;
+  const description = post.metaDescription || post.excerpt;
   const canonicalPath = `blogs/${post.slug}/`;
   const canonical = toCanonical(canonicalPath);
-  const ogImage = toCanonical(post.coverImage);
+  const ogImage = toCanonical(post.coverImage || fallbackSocialImage);
   const prevLink = context.previous
     ? `<a class="blog-nav-link" href="../${context.previous.slug}/"><span>Previous Article</span><strong>${context.previous.title}</strong></a>`
     : '<span class="blog-nav-link blog-nav-link--disabled" aria-disabled="true"><span>Previous Article</span><strong>None</strong></span>';
@@ -528,7 +519,7 @@ const renderArticleHtml = (post, context) => {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
-    description: post.excerpt,
+    description,
     image: [ogImage],
     author: {
       '@type': 'Person',
@@ -567,14 +558,15 @@ const renderArticleHtml = (post, context) => {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="${post.excerpt}" />
+    <meta name="description" content="${description}" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="${canonical}" />
     <meta property="og:title" content="${title}" />
-    <meta property="og:description" content="${post.excerpt}" />
+    <meta property="og:description" content="${description}" />
     <meta property="og:image" content="${ogImage}" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="HackUnion" />
     <meta property="article:published_time" content="${post.publishedDateISO}" />
     <meta property="article:modified_time" content="${post.updatedDateISO}" />
     <meta property="article:author" content="${post.author.name}" />
@@ -582,7 +574,7 @@ const renderArticleHtml = (post, context) => {
     ${post.tags.map((tag) => `<meta property="article:tag" content="${tag}" />`).join('\n    ')}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${title}" />
-    <meta name="twitter:description" content="${post.excerpt}" />
+    <meta name="twitter:description" content="${description}" />
     <meta name="twitter:image" content="${ogImage}" />
     <link rel="stylesheet" href="../../styles/site.css" />
     <link rel="manifest" href="../../manifest.webmanifest" />
@@ -597,7 +589,7 @@ const renderArticleHtml = (post, context) => {
     class="blogs-page blogs-page--article"
     data-page="blogs-article"
     data-seo-title="${title}"
-    data-seo-description="${post.excerpt}"
+    data-seo-description="${description}"
     data-seo-image="${ogImage}"
     data-seo-url="${canonical}"
   >
@@ -631,6 +623,8 @@ const renderArticleHtml = (post, context) => {
             </aside>
 
             <div class="blog-article__content">
+              <a class="blog-back-link" href="../" aria-label="Back to blogs">Back to Blogs</a>
+
               <header class="blog-article__header" data-animate="fade-up">
                 <p class="blog-article__eyebrow">HackUnion Engineering Journal</p>
                 <div class="blog-article__kicker">
@@ -655,9 +649,9 @@ const renderArticleHtml = (post, context) => {
                 <img src="../../${post.coverImage}" alt="${post.coverImageAlt}" loading="eager" decoding="async" />
               </figure>
 
-              <div class="blog-prose" data-animate="fade-up">
-                ${post.contentHtml}
-              </div>
+              ${post.comingSoon
+    ? renderComingSoon(post)
+    : `<div class="blog-prose" data-animate="fade-up">\n                ${post.contentHtml}\n              </div>`}
 
               <nav class="blog-article__mobile-next" aria-label="Next article">
                 ${renderMobileNextLink(context.previous || context.next)}
@@ -748,6 +742,7 @@ const render = () => {
     featuredSlug: featured.slug,
     categories,
     posts: posts.map((post) => ({
+      id: post.id,
       slug: post.slug,
       title: post.title,
       excerpt: post.excerpt,
@@ -766,6 +761,7 @@ const render = () => {
       updatedDateISO: post.updatedDateISO,
       updatedDateLabel: post.updatedDateLabel,
       readingTime: post.readingTime,
+      comingSoon: post.comingSoon,
       featured: post.featured
     }))
   };

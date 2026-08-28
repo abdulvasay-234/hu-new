@@ -16,7 +16,7 @@ tags:
   - HackUnion
   - Cross-Border Payments
   - Fintech
-featured: false
+featured: true
 ---
 # Interledger Technology: Rethinking the Future of Global Payments
 

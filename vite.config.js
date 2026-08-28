@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import fs from 'node:fs';
 
 const blogRoot = resolve(__dirname, 'blogs');
+const projectsRoot = resolve(__dirname, 'projects');
 const gallerySourceDir = resolve(__dirname, 'Images', 'gallery');
 
 const getBlogInputs = () => {
@@ -26,6 +27,38 @@ const getBlogInputs = () => {
     }
 
     entries[`blog-${slug}`] = blogEntry;
+  }
+
+  return entries;
+};
+
+const getProjectInputs = () => {
+  if (!fs.existsSync(projectsRoot)) {
+    return {};
+  }
+
+  const entries = {};
+  const rootEntry = resolve(projectsRoot, 'index.html');
+
+  if (fs.existsSync(rootEntry)) {
+    entries.projects = rootEntry;
+  }
+
+  const children = fs.readdirSync(projectsRoot, { withFileTypes: true });
+
+  for (const child of children) {
+    if (!child.isDirectory()) {
+      continue;
+    }
+
+    const slug = child.name;
+    const projectEntry = resolve(projectsRoot, slug, 'index.html');
+
+    if (!fs.existsSync(projectEntry)) {
+      continue;
+    }
+
+    entries[`project-${slug}`] = projectEntry;
   }
 
   return entries;
@@ -72,7 +105,8 @@ export default defineConfig({
         instagram: resolve(__dirname, 'instagram/index.html'),
         youtube: resolve(__dirname, 'youtube/index.html'),
         blogs: resolve(__dirname, 'blogs/index.html'),
-        ...getBlogInputs()
+        ...getBlogInputs(),
+        ...getProjectInputs()
       }
     }
   }

@@ -123,58 +123,41 @@
           </div>
         </section>
 
-        <section class="proof-band section section--compact" aria-label="Trust indicators">
-          <div class="container container--wide proof-band__inner grid grid--4" data-animate>
-            <article class="card proof-band__card">
-              <p class="section-header__eyebrow">Builder-first</p>
-              <h2 class="section-header__title">A community designed around work that ships.</h2>
-            </article>
-            <article class="card proof-band__card">
-              <p class="section-header__eyebrow">Collaborative</p>
-              <h2 class="section-header__title">People who build together, learn together, and grow together.</h2>
-            </article>
-            <article class="card proof-band__card">
-              <p class="section-header__eyebrow">Opportunity-rich</p>
-              <h2 class="section-header__title">Events, workshops, projects, and partnerships that create momentum.</h2>
-            </article>
-            <article class="card proof-band__card">
-              <p class="section-header__eyebrow">Trustworthy</p>
-              <h2 class="section-header__title">A premium experience for builders, sponsors, and ecosystem partners.</h2>
-            </article>
-          </div>
-        </section>
-
         <section id="manifesto" class="section manifesto" aria-labelledby="manifesto-title" data-manifesto-section>
           <div class="container container--wide manifesto__inner">
             <div class="manifesto__copy">
               <div class="manifesto__split">
                 <div class="manifesto__intro stack stack--sm">
-                  <p class="eyebrow manifesto__eyebrow">Builder manifesto</p>
+                  <p class="eyebrow manifesto__eyebrow">BUILDER MANIFESTO</p>
                   <h2 id="manifesto-title" class="manifesto__title">Built for people who ship together.</h2>
                   <p class="manifesto__text manifesto__text--lead">HackUnion is where developers, designers, founders, AI engineers, and creators build in public through real experiences, real projects, and open collaboration.</p>
-                  <p class="manifesto__text manifesto__text--support">Members join to work alongside people who care about craft, share progress early, and keep shipping long after the event ends.</p>
+
+                  <div class="manifesto__meta" aria-hidden="true">
+                    <span>MANIFESTO // 01</span>
+                    <span>BUILDER-FIRST</span>
+                  </div>
                 </div>
 
                 <div class="manifesto__panel card">
-                  <p class="manifesto__panel-label">Five principles</p>
+                  <p class="manifesto__panel-label">FIVE PRINCIPLES</p>
                   <ol class="manifesto__principles" aria-label="HackUnion principles">
-                    <li class="manifesto__principle">
+                    <li class="manifesto__principle" tabindex="0">
                       <span class="manifesto__principle-index">01</span>
                       <span class="manifesto__principle-text">Build in public.</span>
                     </li>
-                    <li class="manifesto__principle">
+                    <li class="manifesto__principle" tabindex="0">
                       <span class="manifesto__principle-index">02</span>
                       <span class="manifesto__principle-text">Learn by doing.</span>
                     </li>
-                    <li class="manifesto__principle">
+                    <li class="manifesto__principle" tabindex="0">
                       <span class="manifesto__principle-index">03</span>
                       <span class="manifesto__principle-text">Share the work early.</span>
                     </li>
-                    <li class="manifesto__principle">
+                    <li class="manifesto__principle" tabindex="0">
                       <span class="manifesto__principle-index">04</span>
                       <span class="manifesto__principle-text">Collaborate openly.</span>
                     </li>
-                    <li class="manifesto__principle">
+                    <li class="manifesto__principle" tabindex="0">
                       <span class="manifesto__principle-index">05</span>
                       <span class="manifesto__principle-text">Ship what matters.</span>
                     </li>
@@ -182,239 +165,111 @@
                 </div>
               </div>
 
-              <div class="manifesto__actions">
-                <a class="button button--primary" href="#community-links-modal" data-modal-open="#community-links-modal" aria-controls="community-links-modal">Join the Community</a>
-                <a class="button button--secondary" href="#experiences">Explore Experiences</a>
+              <div class="manifesto__workflow" aria-label="HackUnion builder workflow">
+                <ol class="manifesto__workflow-track" aria-label="Builder workflow stages">
+                  <li class="manifesto__workflow-stage" tabindex="0">
+                    <span class="manifesto__workflow-index">01</span>
+                    <span class="manifesto__workflow-name">IDEA</span>
+                  </li>
+                  <li class="manifesto__workflow-stage" tabindex="0">
+                    <span class="manifesto__workflow-index">02</span>
+                    <span class="manifesto__workflow-name">BUILD</span>
+                  </li>
+                  <li class="manifesto__workflow-stage" tabindex="0">
+                    <span class="manifesto__workflow-index">03</span>
+                    <span class="manifesto__workflow-name">LEARN</span>
+                  </li>
+                  <li class="manifesto__workflow-stage" tabindex="0">
+                    <span class="manifesto__workflow-index">04</span>
+                    <span class="manifesto__workflow-name">SHARE</span>
+                  </li>
+                  <li class="manifesto__workflow-stage" tabindex="0">
+                    <span class="manifesto__workflow-index">05</span>
+                    <span class="manifesto__workflow-name">COLLABORATE</span>
+                  </li>
+                  <li class="manifesto__workflow-stage" tabindex="0">
+                    <span class="manifesto__workflow-index">06</span>
+                    <span class="manifesto__workflow-name">SHIP</span>
+                  </li>
+                </ol>
               </div>
             </div>
 
-            <div class="manifesto__projects-header" data-animate>
-              <p class="manifesto__projects-eyebrow">Projects</p>
-              <h3 class="manifesto__projects-heading">Projects built by HackUnion community members.</h3>
-            </div>
+            <div class="projects-showcase" id="projects" data-projects-section>
+              <header class="section-header projects-showcase__header" data-animate>
+                <p class="section-header__eyebrow">Built by the community</p>
+                <h3 class="section-header__title">Things We&apos;ve Built</h3>
+                <p class="section-header__text">Real projects, experiments, tools, and ideas built by HackUnion builders.</p>
+              </header>
 
-            <div class="manifesto__features" aria-label="HackUnion community projects">
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00446.jpg" alt="" loading="lazy" decoding="async" />
-                </div>
-                <h3>Build Real Projects</h3>
-                <p>Turn ideas into visible work with people who want to ship, not just brainstorm.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Aarav Mehta</span>
-                  <time datetime="2026-06-12">Built on Jun 12, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/aaravmehta/ship-log" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Build Real Projects">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/company/hackunion-in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for Aarav Mehta">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </article>
+              <nav class="projects-showcase__filters" aria-label="Project categories" data-project-filters></nav>
 
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00496.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00479.jpg" alt="" loading="lazy" decoding="async" />
-                </div>
-                <h3>Learn by Building</h3>
-                <p>Grow faster by making things, sharing progress, and learning from the work itself.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Sana Khan</span>
-                  <time datetime="2026-05-29">Built on May 29, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/sanakhan/learning-in-public" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Learn by Building">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/company/hackunion-in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for Sana Khan">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </article>
-
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00513.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
-                </div>
-                <h3>Open Source Collaboration</h3>
-                <p>Contribute publicly and create work that helps both the community and your craft.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Rohan Iyer</span>
-                  <time datetime="2026-04-18">Built on Apr 18, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/rohaniyer/community-cli" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Open Source Collaboration">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/company/hackunion-in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for Rohan Iyer">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </article>
-
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00446.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00496.jpg" alt="" loading="lazy" decoding="async" />
-                </div>
-                <h3>Meet Incredible Builders</h3>
-                <p>Connect with people who care about quality, momentum, and real collaboration.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Neha Verma</span>
-                  <time datetime="2026-03-07">Built on Mar 7, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/nehaverma/collab-graph" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Meet Incredible Builders">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/company/hackunion-in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for Neha Verma">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </article>
-
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00479.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00513.jpg" alt="" loading="lazy" decoding="async" />
-                </div>
-                <h3>Lead &amp; Contribute</h3>
-                <p>Take ownership, support others, and help shape what the community becomes next.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Devansh Rao</span>
-                  <time datetime="2026-02-19">Built on Feb 19, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/devanshrao/mentor-space" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Lead and Contribute">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/company/hackunion-in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for Devansh Rao">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </article>
-
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="./Images/gallery/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="./Images/gallery/2SP00496.jpg" alt="" loading="lazy" decoding="async" />
-                </div>
-                <h3>Grow Your Career</h3>
-                <p>Build proof, relationships, and momentum that carry into real opportunities.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Isha Nair</span>
-                  <time datetime="2026-01-30">Built on Jan 30, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/ishanair/portfolio-lab" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Grow Your Career">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/company/hackunion-in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile for Isha Nair">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </article>
+              <div class="projects-showcase__grid" data-project-grid data-stagger aria-label="HackUnion community project showcase"></div>
             </div>
           </div>
         </section>
 
         <section id="experiences" class="section experiences" aria-label="HackUnion experiences" data-experiences-section>
           <div class="container container--wide experiences__inner">
-            <article class="card experience-feature experiences__featured" data-experience-featured aria-labelledby="builders-guild-title"></article>
+            <header class="section-header experiences__header" data-animate>
+              <p class="section-header__eyebrow">Experience formats</p>
+              <h2 class="section-header__title">How We Build Together</h2>
+              <p class="section-header__text">From hackathons and focused hack days to open building and community meetups, HackUnion creates different ways for builders to learn, collaborate, and ship.</p>
+            </header>
 
-            <div class="experiences__grid" data-experience-grid aria-label="Additional HackUnion experiences"></div>
+            <div class="experiences__grid" data-experience-grid aria-label="HackUnion experience formats"></div>
+
+            <div class="experiences__actions" data-animate>
+              <a class="button button--primary experiences__explore-all" href="/events" aria-label="Explore all HackUnion events">
+                <span>Explore All Events</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </section>
 
         <section id="community" class="section community-action" aria-labelledby="community-title" aria-describedby="community-intro" data-community-action-section>
           <div class="container container--wide community-action__inner">
             <div class="section-header community-action__header" data-animate>
-              <p class="section-header__eyebrow">Built in public</p>
-              <h2 id="community-title" class="section-header__title">Every build leaves a trace.</h2>
-              <p id="community-intro" class="section-header__text">Every meetup, hackathon, workshop, and shipped project at HackUnion creates measurable impact. These HackUnion community impact statistics track students mentored, projects shipped, events delivered, and partnerships activated through consistent public collaboration.</p>
+              <p class="section-header__eyebrow">BUILT IN NUMBERS</p>
+              <h2 id="community-title" class="section-header__title">Real work. Real people. Real momentum.</h2>
+              <p id="community-intro" class="section-header__text">A growing community turning ideas into projects, events, and opportunities.</p>
             </div>
 
-            <section class="community-impact-report" aria-label="HackUnion community impact report" data-animate>
-              <div class="community-impact-report__group" aria-label="Founders and core team impact">
-                <h3 class="community-impact-report__group-title">Founder and Core Team Impact</h3>
+            <section class="community-impact-report" aria-label="HackUnion proof of work metrics" data-animate>
+              <div class="community-impact-report__stats" role="list" aria-label="HackUnion impact by the numbers">
+                <article class="community-impact-report__card" role="listitem">
+                  <p class="community-impact-report__value" data-counter-target="1500" data-counter-suffix="+" data-counter-duration="1400">1500+</p>
+                  <h3 class="community-impact-report__label">Builders Reached</h3>
+                  <p class="community-impact-report__detail">Across workshops and community programs.</p>
+                </article>
 
-                <div class="community-impact-report__grid community-impact-report__grid--three">
-                  <article class="community-impact-report__card">
-                    <p class="community-impact-report__value" data-counter-target="1500" data-counter-suffix="+">1500+</p>
-                    <h4 class="community-impact-report__label">Students Impacted</h4>
-                    <p class="community-impact-report__detail">Through workshops, mentorship, and community initiatives</p>
-                  </article>
+                <article class="community-impact-report__card" role="listitem">
+                  <p class="community-impact-report__value" data-counter-target="60" data-counter-suffix="+" data-counter-duration="1100">60+</p>
+                  <h3 class="community-impact-report__label">Sessions</h3>
+                  <p class="community-impact-report__detail">Workshops, hackathons, and tech sessions.</p>
+                </article>
 
-                  <article class="community-impact-report__card">
-                    <p class="community-impact-report__value" data-counter-target="15" data-counter-suffix="+">15+</p>
-                    <h4 class="community-impact-report__label">Projects Built Under Founder Mentorship</h4>
-                    <p class="community-impact-report__detail">Across AI, web engineering, and open-source domains</p>
-                  </article>
+                <article class="community-impact-report__card" role="listitem">
+                  <p class="community-impact-report__value" data-counter-target="15" data-counter-suffix="+" data-counter-duration="1000">15+</p>
+                  <h3 class="community-impact-report__label">Projects Built</h3>
+                  <p class="community-impact-report__detail">Built through public, hands-on collaboration.</p>
+                </article>
 
-                  <article class="community-impact-report__card">
-                    <p class="community-impact-report__value" data-counter-target="10" data-counter-suffix="+">10+</p>
-                    <h4 class="community-impact-report__label">Mentored Events</h4>
-                    <p class="community-impact-report__detail">Led by HackUnion founding members and collaborators</p>
-                  </article>
+                <article class="community-impact-report__card" role="listitem">
+                  <p class="community-impact-report__value" data-counter-target="15" data-counter-suffix="+" data-counter-duration="1000">15+</p>
+                  <h3 class="community-impact-report__label">Partnerships</h3>
+                  <p class="community-impact-report__detail">Industry and community collaborators onboarded.</p>
+                </article>
 
-                  <article class="community-impact-report__card community-impact-report__card--wide">
-                    <p class="community-impact-report__value" data-counter-target="60" data-counter-suffix="+">60+</p>
-                    <h4 class="community-impact-report__label">Workshops, Hackathons, and Tech Sessions</h4>
-                    <p class="community-impact-report__detail">Organized and supported by the founding team</p>
-                  </article>
-
-                  <article class="community-impact-report__card community-impact-report__card--wide">
-                    <p class="community-impact-report__value" data-counter-target="15" data-counter-suffix="+">15+</p>
-                    <h4 class="community-impact-report__label">Industry and Community Partnerships</h4>
-                    <p class="community-impact-report__detail">Collaborations with communities, campuses, and organizations</p>
-                  </article>
-                </div>
+                <article class="community-impact-report__card" role="listitem">
+                  <p class="community-impact-report__value" data-counter-target="10" data-counter-suffix="+" data-counter-duration="950">10+</p>
+                  <h3 class="community-impact-report__label">Events</h3>
+                  <p class="community-impact-report__detail">Community experiences delivered with builders.</p>
+                </article>
               </div>
 
-              <div class="community-impact-report__group" aria-labelledby="community-impact-launch-title">
-                <h3 id="community-impact-launch-title" class="community-impact-report__group-title">HackUnion Since Launch</h3>
-
-                <div class="community-impact-report__grid community-impact-report__grid--two">
-                  <article class="community-impact-report__card community-impact-report__card--centered">
-                    <h4 class="community-impact-report__label">Growing Early-Member Community</h4>
-                    <p class="community-impact-report__detail">An active builder base with consistent participation</p>
-                  </article>
-
-                  <article class="community-impact-report__card community-impact-report__card--centered">
-                    <h4 class="community-impact-report__label">Workshops and Meetups</h4>
-                    <p class="community-impact-report__detail">Programs initiated for practical skill building</p>
-                  </article>
-
-                  <article class="community-impact-report__card community-impact-report__card--centered">
-                    <h4 class="community-impact-report__label">OpenBuild Week</h4>
-                    <p class="community-impact-report__detail">Flagship build sprint now in active motion</p>
-                  </article>
-
-                  <article class="community-impact-report__card community-impact-report__card--centered">
-                    <h4 class="community-impact-report__label">GitHub Copilot Dev Days</h4>
-                    <p class="community-impact-report__detail">Special sessions in the upcoming event pipeline</p>
-                  </article>
-                </div>
-              </div>
-
-              <p class="community-impact-report__footnote">Impact data reflects contributions from HackUnion founders and the core team through community initiatives prior to and after launch.</p>
+              <a class="community-impact-report__link" href="/projects" aria-label="See HackUnion projects">See what we&apos;ve built <span aria-hidden="true">→</span></a>
             </section>
           </div>
         </section>
@@ -433,38 +288,6 @@
           </div>
         </section>
 
-        <section id="final-cta" class="section final-cta" aria-labelledby="final-cta-title" data-final-cta-section>
-          <div class="container container--wide final-cta__container">
-            <div class="card final-cta__panel" data-animate>
-              <div class="section-header section-header--center final-cta__header">
-                <p class="section-header__eyebrow">Next Chapter</p>
-                <h2 id="final-cta-title" class="section-header__title">Bring your next build where momentum is shared.</h2>
-                <p class="section-header__text">Developers, designers, founders, AI engineers, and creators come to HackUnion to build together, ship publicly, and keep growing through real collaboration.</p>
-              </div>
-
-              <div class="final-cta__actions" aria-label="Primary actions">
-                <a class="button button--primary final-cta__button-primary" href="#community-links-modal" data-modal-open="#community-links-modal" aria-controls="community-links-modal">Join the Community</a>
-                <a class="button button--secondary" href="/experiences">Explore Experiences</a>
-              </div>
-
-              <nav class="final-cta__secondary-actions" aria-label="Additional actions">
-                <a class="final-cta__text-link" href="#community">Become a Volunteer</a>
-                <a class="final-cta__text-link" href="#partners">Partner With Us</a>
-                <a class="final-cta__text-link" href="#final-cta-email">Contact Us</a>
-              </nav>
-
-              <form class="final-cta__newsletter" data-final-cta-form aria-label="Subscribe to HackUnion updates" novalidate>
-                <label class="final-cta__newsletter-label" for="final-cta-email">Get builder updates</label>
-                <div class="final-cta__newsletter-row">
-                  <input id="final-cta-email" name="email" class="final-cta__newsletter-input" type="email" inputmode="email" autocomplete="email" placeholder="you@domain.com" required />
-                  <button class="button button--primary" type="submit">Subscribe</button>
-                </div>
-                <p class="final-cta__newsletter-note">Receive community updates, event announcements, builder stories, and project launches. We respect your privacy.</p>
-                <p class="final-cta__newsletter-status" data-final-cta-status aria-live="polite"></p>
-              </form>
-            </div>
-          </div>
-        </section>
       </main>
 
       <div class="modal" id="community-links-modal" data-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="community-links-title">

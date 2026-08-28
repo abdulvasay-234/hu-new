@@ -144,6 +144,7 @@ const resolveAuthor = ({ data, fileName, authorsById, strictAssets }) => {
     const name = String(fromRegistry.name || '').trim();
     const image = cleanAssetPath(fromRegistry.image || '');
     const bio = String(fromRegistry.bio || '').trim();
+    const type = String(fromRegistry.type || '').trim();
 
     if (!name || !image || !bio) {
       throw new Error(`Author registry entry is incomplete for ${authorId}`);
@@ -154,6 +155,7 @@ const resolveAuthor = ({ data, fileName, authorsById, strictAssets }) => {
     return {
       id: authorId,
       name,
+      type,
       image,
       bio,
       socials: resolveSocialLinks(fromRegistry.socials || {})
@@ -163,6 +165,7 @@ const resolveAuthor = ({ data, fileName, authorsById, strictAssets }) => {
   const name = String(data.author || '').trim();
   const image = cleanAssetPath(data.authorImage || '');
   const bio = String(data.authorBio || 'HackUnion contributor and builder.').trim();
+  const type = String(data.authorType || '').trim();
 
   if (!name || !image) {
     throw new Error(`Provide authorId or inline author + authorImage in ${fileName}`);
@@ -173,6 +176,7 @@ const resolveAuthor = ({ data, fileName, authorsById, strictAssets }) => {
   return {
     id: null,
     name,
+    type,
     image,
     bio,
     socials: resolveSocialLinks(data.authorSocials || {})
@@ -205,29 +209,36 @@ export const getValidatedBlogSources = ({ strictAssets = true } = {}) => {
     }
     seenSlugs.add(slug);
 
+    const id = String(data.id || '').trim() || slug;
     const title = String(data.title || '').trim();
     const excerpt = String(data.excerpt || '').trim();
+    const seoTitle = String(data.seoTitle || '').trim();
+    const metaDescription = String(data.metaDescription || '').trim();
     const category = String(data.category || '').trim();
     const coverImage = cleanAssetPath(data.coverImage || '');
     const coverImageAlt = String(data.coverImageAlt || title).trim();
     const coverImagePosition = normalizeObjectPosition(data.coverImagePosition, 'coverImagePosition', fileName);
     const coverImageFit = normalizeObjectFit(data.coverImageFit, 'coverImageFit', fileName);
     const tags = toArray(data.tags);
+    const comingSoon = Boolean(data.comingSoon);
 
     if (!title || !excerpt || !category) {
       throw new Error(`Missing one of required fields (title, excerpt, category) in ${fileName}`);
     }
 
-    if (!content || !content.trim()) {
-      throw new Error(`Content body is empty in ${fileName}`);
-    }
+    const hasBodyContent = Boolean(content && content.trim());
+    if (!comingSoon) {
+      if (!hasBodyContent) {
+        throw new Error(`Content body is empty in ${fileName}`);
+      }
 
-    if (!/^#\s+.+/m.test(content)) {
-      throw new Error(`Content must include at least one H1 heading in ${fileName}`);
-    }
+      if (!/^#\s+.+/m.test(content)) {
+        throw new Error(`Content must include at least one H1 heading in ${fileName}`);
+      }
 
-    if (!/^##\s+.+/m.test(content)) {
-      throw new Error(`Content must include at least one H2 heading in ${fileName}`);
+      if (!/^##\s+.+/m.test(content)) {
+        throw new Error(`Content must include at least one H2 heading in ${fileName}`);
+      }
     }
 
     if (!tags.length) {
@@ -247,11 +258,15 @@ export const getValidatedBlogSources = ({ strictAssets = true } = {}) => {
 
     posts.push({
       fileName,
+      id,
       slug,
       title,
       excerpt,
+      seoTitle,
+      metaDescription,
       category,
       tags,
+      comingSoon,
       featured: Boolean(data.featured),
       readingTime: data.readingTime ? String(data.readingTime).trim() : '',
       markdownContent: content,

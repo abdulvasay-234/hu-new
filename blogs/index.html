@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Stories, ideas, tutorials, and lessons from technology, building, community, open source, events, and projects across HackUnion." />
+    <meta name="description" content="Stories from builders, lessons from the community, practical guides, and ideas shaping technology." />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://hackunion.in/blogs/" />
     <meta property="og:title" content="HackUnion Blogs | Stories, Ideas & Insights" />
-    <meta property="og:description" content="Stories, ideas, tutorials, and lessons from technology, building, community, open source, events, and projects across HackUnion." />
+    <meta property="og:description" content="Stories from builders, lessons from the community, practical guides, and ideas shaping technology." />
     <meta property="og:image" content="https://hackunion.in/og/hackunion-home.svg" />
     <meta property="og:url" content="https://hackunion.in/blogs/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="HackUnion Blogs | Stories, Ideas & Insights" />
-    <meta name="twitter:description" content="Stories, ideas, tutorials, and lessons from technology, building, community, open source, events, and projects across HackUnion." />
+    <meta name="twitter:description" content="Stories from builders, lessons from the community, practical guides, and ideas shaping technology." />
     <meta name="twitter:image" content="https://hackunion.in/og/hackunion-home.svg" />
     <link rel="stylesheet" href="../styles/site.css" />
     <link rel="manifest" href="../manifest.webmanifest" />
@@ -26,7 +26,7 @@
     class="blogs-page"
     data-page="blogs-index"
     data-seo-title="HackUnion Blogs | Stories, Ideas & Insights"
-    data-seo-description="Stories, ideas, tutorials, and lessons from technology, building, community, open source, events, and projects across HackUnion."
+    data-seo-description="Stories from builders, lessons from the community, practical guides, and ideas shaping technology."
     data-seo-image="https://hackunion.in/og/hackunion-home.svg"
     data-seo-url="https://hackunion.in/blogs/"
     data-blog-index-path="../data/blogs-index.json"
@@ -95,45 +95,10 @@
           <div class="hero__backdrop" aria-hidden="true"></div>
           <div class="container container--wide blogs-hero__inner">
             <div class="stack stack--lg" data-animate="fade-up">
-              <p class="eyebrow hero__eyebrow">HackUnion Blogs</p>
-              <h1 id="blogs-hero-title" class="hero__title">Stories, Ideas &amp; Insights from HackUnion</h1>
-              <p class="hero__text">The HackUnion blog explores technology, building, community, open source, events, projects, and practical lessons from builders across the ecosystem.</p>
+              <p class="eyebrow hero__eyebrow">BLOG</p>
+              <h1 id="blogs-hero-title" class="hero__title">Stories, ideas &amp; insights from HackUnion.</h1>
+              <p class="hero__text">Stories from builders, lessons from the community, practical guides, and ideas shaping technology.</p>
             </div>
-          </div>
-        </section>
-
-        <section class="section section--compact blogs-discovery" aria-labelledby="blog-discovery-title">
-          <div class="container container--wide">
-            <div class="section-header" data-animate="fade-up">
-              <p class="section-header__eyebrow">Discover</p>
-              <h2 id="blog-discovery-title" class="section-header__title">Find your next read</h2>
-            </div>
-
-            <form class="blogs-controls card" role="search" aria-label="Search HackUnion blogs" data-animate="fade-up">
-              <div class="blogs-controls__field blogs-controls__field--search">
-                <label class="blogs-controls__search-label" for="blog-search-input">Search posts</label>
-                <input id="blog-search-input" class="blogs-controls__search" type="search" placeholder="Search by title, excerpt, category, or tag" data-blog-search />
-              </div>
-
-              <div class="blogs-controls__field blogs-controls__field--sort">
-                <label class="blogs-controls__sort-label" for="blog-sort-select">Sort by</label>
-                <select id="blog-sort-select" class="blogs-controls__sort" data-blog-sort>
-                  <option value="latest">Latest</option>
-                  <option value="oldest">Oldest</option>
-                  <option value="relevant">Most Relevant</option>
-                </select>
-              </div>
-
-              <div class="blogs-controls__categories" data-blog-categories role="group" aria-label="Filter by category"></div>
-              <div class="blogs-controls__themes" data-blog-theme-controls role="group" aria-label="Choose visual style">
-                <p class="blogs-controls__themes-label">Visual Style</p>
-                <div class="blogs-controls__themes-buttons">
-                  <button class="blogs-controls__theme-chip is-active" type="button" data-blog-theme="tech">Tech Grid</button>
-                  <button class="blogs-controls__theme-chip" type="button" data-blog-theme="editorial">Editorial Flux</button>
-                </div>
-              </div>
-              <p class="blogs-controls__result" data-blog-result-text aria-live="polite"></p>
-            </form>
           </div>
         </section>
 
@@ -141,30 +106,36 @@
           <div class="container container--wide">
             <div class="section-header" data-animate="fade-up">
               <p class="section-header__eyebrow">Featured</p>
-              <h2 id="blogs-featured-title" class="section-header__title">Latest featured article</h2>
+              <h2 id="blogs-featured-title" class="section-header__title">Interledger Technology: Rethinking the Future of Global Payments</h2>
             </div>
             <div data-blog-featured></div>
           </div>
         </section>
 
-        <section class="blogs-divider" aria-hidden="true">
+        <section class="section section--compact blogs-discovery" aria-label="Search and filter blog articles">
           <div class="container container--wide">
-            <div class="blogs-divider__line" data-animate="fade-up">
-              <span class="blogs-divider__label">Live Feed</span>
-            </div>
+            <form class="blogs-controls card" role="search" aria-label="Search HackUnion blogs" data-animate="fade-up">
+              <div class="blogs-controls__field blogs-controls__field--search">
+                <label class="blogs-controls__search-label" for="blog-search-input">Search articles</label>
+                <input id="blog-search-input" class="blogs-controls__search" type="search" placeholder="Search articles..." data-blog-search />
+              </div>
+
+              <div class="blogs-controls__categories" data-blog-categories role="group" aria-label="Filter by category"></div>
+              <p class="blogs-controls__result" data-blog-result-text aria-live="polite"></p>
+            </form>
           </div>
         </section>
 
         <section class="section blogs-grid-section" aria-labelledby="blogs-grid-title">
           <div class="container container--wide">
             <div class="section-header" data-animate="fade-up">
-              <p class="section-header__eyebrow">All posts</p>
-              <h2 id="blogs-grid-title" class="section-header__title">Stories from the ecosystem</h2>
+              <p class="section-header__eyebrow">Latest Stories</p>
+              <h2 id="blogs-grid-title" class="section-header__title">Latest stories</h2>
             </div>
             <div class="blogs-grid" data-blog-grid data-stagger></div>
             <div class="blogs-empty card" data-blog-empty hidden>
-              <h3>No articles match your filters.</h3>
-              <p>Try a different search term, category, or tag.</p>
+              <h3>No articles found.</h3>
+              <p>Try a different search or category.</p>
             </div>
           </div>
         </section>

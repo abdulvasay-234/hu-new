@@ -2,6 +2,7 @@
   "authors": {
     "abdul-vasay": {
       "name": "Abdul Vasay",
+      "type": "Founder",
       "image": "Images/champions/vasay-GitHub.png",
       "bio": "Founder of HackUnion. Abdul focuses on community systems, practical learning, and product execution culture.",
       "socials": {
@@ -36,6 +37,7 @@
     },
     "team-hackunion": {
       "name": "Team HackUnion",
+      "type": "Organization",
       "image": "Images/champions/sarma-vjit.png",
       "bio": "Core organizing team coordinating chapters, partnerships, and builder programs across HackUnion.",
       "socials": {

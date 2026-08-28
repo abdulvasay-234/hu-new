@@ -2,6 +2,13 @@ import { createObserver } from './intersection-observer.js';
 import { prefersReducedMotion } from '../utils/media-query.js';
 import { experiencesData } from '../data/experiences-data.js';
 
+const escapeHtml = (value) => String(value ?? '')
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
 const toneClassMap = {
   cyan: 'experience-card--cyan',
   amber: 'experience-card--amber',
@@ -9,93 +16,27 @@ const toneClassMap = {
   green: 'experience-card--green'
 };
 
-const statusClassMap = {
-  'Year Round': 'is-year-round',
-  'Registration Open': 'is-open',
-  Upcoming: 'is-upcoming',
-  'Coming Soon': 'is-soon'
-};
-
-const renderHighlights = (highlights) => highlights
-  .map((item) => `<li><span data-lucide="circle-check-big" aria-hidden="true"></span><span>${item}</span></li>`)
-  .join('');
-
-const renderFeaturedExperience = (experience) => `
-  <div class="experience-feature__layout">
-    <div class="experience-feature__visual experience-feature__visual--${experience.tone}" aria-hidden="true">
-      <img class="experience-feature__visual-image" data-src="${experience.image}" src="${experience.image}" alt="" loading="lazy" decoding="async" />
-      <div class="experience-feature__visual-grid"></div>
-      <div class="experience-feature__visual-orbit experience-feature__visual-orbit--one"></div>
-      <div class="experience-feature__visual-orbit experience-feature__visual-orbit--two"></div>
-      <div class="experience-feature__visual-copy">
-        <span class="experience-feature__visual-label">${experience.visualLabel}</span>
-        <span class="experience-feature__visual-title">${experience.title}</span>
-      </div>
-    </div>
-
-    <div class="experience-feature__content">
-      <div class="experience-feature__badges">
-        <span class="badge">${experience.category}</span>
-        <span class="experience-status ${statusClassMap[experience.status] ?? ''}">${experience.status}</span>
-      </div>
-      <h3 id="builders-guild-title">${experience.title}</h3>
-      <p class="experience-feature__tagline">${experience.tagline}</p>
-      <p class="experience-feature__description">${experience.description}</p>
-
-      <div class="experience-feature__meta">
-        <div>
-          <span class="experience-feature__meta-label">Audience</span>
-          <p>${experience.audience}</p>
-        </div>
-        <div>
-          <span class="experience-feature__meta-label">Highlights</span>
-          <ul class="experience-feature__highlights">${renderHighlights(experience.highlights)}</ul>
-        </div>
-      </div>
-
-      <div class="experience-feature__actions">
-        <a class="button button--primary experience-card__cta" href="${experience.href}" aria-label="${experience.ctaLabel} for ${experience.title}">
-          <span>${experience.ctaLabel}</span>
-          <span class="experience-card__cta-icon" aria-hidden="true" data-lucide="arrow-right"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-`;
-
 const renderExperienceCard = (experience, index) => `
-  <article class="card experience-card ${toneClassMap[experience.tone] ?? ''}" style="--experience-delay: ${index * 80}ms" aria-labelledby="${experience.slug}-title">
-    <div class="experience-card__media" aria-hidden="true">
-      <img class="experience-card__media-image" data-src="${experience.image}" src="${experience.image}" alt="" loading="lazy" decoding="async" />
+  <article class="card experience-card ${toneClassMap[experience.tone] ?? ''} ${experience.isFlagship ? 'experience-card--flagship' : ''}" style="--experience-delay: ${index * 80}ms" aria-labelledby="${escapeHtml(experience.slug)}-title">
+    <div class="experience-card__media">
+      <img class="experience-card__media-image" data-src="${escapeHtml(experience.image)}" src="${escapeHtml(experience.image)}" alt="${escapeHtml(experience.imageAlt || `${experience.title} visual`)}" loading="lazy" decoding="async" />
       <div class="experience-card__media-fill"></div>
       <div class="experience-card__media-copy">
-        <span class="experience-card__media-label">${experience.visualLabel}</span>
-        <span class="experience-card__media-title">${experience.title}</span>
+        <span class="experience-card__media-label">${escapeHtml(experience.visualLabel)}</span>
+        <span class="experience-card__media-title">${escapeHtml(experience.title)}</span>
       </div>
     </div>
 
     <div class="experience-card__body">
       <div class="experience-card__badges">
-        <span class="badge">${experience.category}</span>
-        <span class="experience-status ${statusClassMap[experience.status] ?? ''}">${experience.status}</span>
+        <span class="badge">${escapeHtml(experience.category)}</span>
+        ${experience.isFlagship ? '<span class="experience-status is-open">FLAGSHIP</span>' : ''}
       </div>
-      <h3 id="${experience.slug}-title">${experience.title}</h3>
-      <p class="experience-card__tagline">${experience.tagline}</p>
-      <p class="experience-card__description">${experience.description}</p>
+      <h3 id="${escapeHtml(experience.slug)}-title">${escapeHtml(experience.title)}</h3>
+      <p class="experience-card__description">${escapeHtml(experience.description)}</p>
 
-      <div class="experience-card__meta">
-        <div>
-          <span class="experience-card__meta-label">Audience</span>
-          <p>${experience.audience}</p>
-        </div>
-        <div>
-          <span class="experience-card__meta-label">Highlights</span>
-          <ul class="experience-card__highlights">${renderHighlights(experience.highlights.slice(0, 2))}</ul>
-        </div>
-      </div>
-
-      <a class="button button--secondary experience-card__cta" href="${experience.href}" aria-label="${experience.ctaLabel} for ${experience.title}">
-        <span>${experience.ctaLabel}</span>
+      <a class="button button--secondary experience-card__cta" href="${escapeHtml(experience.href)}" aria-label="${escapeHtml(experience.ctaLabel)} for ${escapeHtml(experience.title)}">
+        <span>${escapeHtml(experience.ctaLabel)}</span>
         <span class="experience-card__cta-icon" aria-hidden="true" data-lucide="arrow-right"></span>
       </a>
     </div>
@@ -109,16 +50,11 @@ export const initExperiences = () => {
     return;
   }
 
-  const featuredTarget = section.querySelector('[data-experience-featured]');
   const gridTarget = section.querySelector('[data-experience-grid]');
-  const [featuredExperience, ...otherExperiences] = experiencesData;
-
-  if (featuredTarget && featuredExperience) {
-    featuredTarget.innerHTML = renderFeaturedExperience(featuredExperience);
-  }
+  const visibleExperiences = experiencesData.filter((experience) => experience.showOnHomepage !== false);
 
   if (gridTarget) {
-    gridTarget.innerHTML = otherExperiences
+    gridTarget.innerHTML = visibleExperiences
       .map((experience, index) => renderExperienceCard(experience, index))
       .join('');
   }

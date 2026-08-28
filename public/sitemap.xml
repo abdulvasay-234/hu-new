@@ -31,6 +31,33 @@
     <loc>https://hackunion.in/socials/</loc>
   </url>
   <url>
+    <loc>https://hackunion.in/projects/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/shiplog-studio/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/mentor-match-ai/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/obw-cli/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/builder-ops-console/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/campus-checkin-mobile/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/lablink-sensor-kit/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/community-resource-map/</loc>
+  </url>
+  <url>
+    <loc>https://hackunion.in/projects/issue-to-pr-assistant/</loc>
+  </url>
+  <url>
     <loc>https://hackunion.in/certificates/</loc>
   </url>
   <url>
@@ -43,27 +70,47 @@
     <loc>https://hackunion.in/blogs/</loc>
   </url>
   <url>
-    <loc>https://hackunion.in/blogs/building-the-next-generation-of-builders/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://hackunion.in/blogs/why-i-started-hackunion/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/what-is-hackunion/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/why-students-should-build-before-graduating/</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/why-builder-first-community/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/what-nobody-tells-you-about-organizing-tech-events/</loc>
+    <lastmod>2026-08-21</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/how-to-get-most-out-of-a-hackathon/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/your-github-is-more-than-a-repository/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/building-in-public-why-showing-your-work-matters/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/how-to-start-contributing-to-open-source/</loc>
+    <lastmod>2026-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://hackunion.in/blogs/openbuild-week-explained/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://hackunion.in/blogs/interledger-technology-rethinking-the-future-of-global-payments/</loc>
     <lastmod>2026-08-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hackunion.in/blogs/open-source-first-community-learning/</loc>
-    <lastmod>2026-08-02</lastmod>
-  </url>
-  <url>
-    <loc>https://hackunion.in/blogs/event-to-product-what-openbuild-week-teaches/</loc>
-    <lastmod>2026-07-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hackunion.in/blogs/from-tutorials-to-real-systems/</loc>
-    <lastmod>2026-06-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hackunion.in/blogs/building-career-proof-through-public-work/</loc>
-    <lastmod>2026-06-03</lastmod>
   </url>
 </urlset>

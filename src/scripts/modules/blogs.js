@@ -26,34 +26,62 @@ const renderIcons = () => {
   createIcons({ icons });
 };
 
-const scorePost = (post, query) => {
-  if (!query) {
-    return 0;
+const FEATURED_POST_SLUG = 'interledger-technology-rethinking-the-future-of-global-payments';
+
+const categoryFilters = [
+  {
+    label: 'All',
+    key: '',
+    match: () => true
+  },
+  {
+    label: 'Builder Stories',
+    key: 'builder-stories',
+    match: (post) => post.category.toLowerCase() === 'builder stories'
+      || post.category.toLowerCase() === 'stories'
+      || post.tags.some((tag) => tag.toLowerCase().includes('stories'))
+  },
+  {
+    label: 'Build & Ship',
+    key: 'build-ship',
+    match: (post) => post.category.toLowerCase() === 'build & ship'
+      || post.category.toLowerCase() === 'building'
+      || post.tags.some((tag) => ['building', 'product', 'shipping'].includes(tag.toLowerCase()))
+  },
+  {
+    label: 'AI & Technology',
+    key: 'ai-technology',
+    match: (post) => post.category.toLowerCase() === 'ai & technology'
+      || post.category.toLowerCase() === 'technology'
+      || post.tags.some((tag) => ['technology', 'ai', 'interledger', 'fintech', 'open payments'].includes(tag.toLowerCase()))
+  },
+  {
+    label: 'Open Source',
+    key: 'open-source',
+    match: (post) => post.category.toLowerCase() === 'open source'
+      || post.tags.some((tag) => tag.toLowerCase() === 'open source')
+  },
+  {
+    label: 'Community',
+    key: 'community',
+    match: (post) => post.category.toLowerCase() === 'community'
+      || post.tags.some((tag) => tag.toLowerCase() === 'community')
+  },
+  {
+    label: 'Events & Experiences',
+    key: 'events-experiences',
+    match: (post) => post.category.toLowerCase() === 'events & experiences'
+      || post.category.toLowerCase() === 'events'
+      || post.tags.some((tag) => ['events', 'experiences'].includes(tag.toLowerCase()))
+  },
+  {
+    label: 'Career & Growth',
+    key: 'career-growth',
+    match: (post) => post.category.toLowerCase() === 'career & growth'
+      || post.category.toLowerCase() === 'career'
+      || post.tags.some((tag) => ['career', 'growth', 'lessons'].includes(tag.toLowerCase()))
   }
-
-  const normalizedQuery = query.toLowerCase().trim();
-  if (!normalizedQuery) {
-    return 0;
-  }
-
-  let score = 0;
-  const inTitle = post.title.toLowerCase();
-  const inExcerpt = post.excerpt.toLowerCase();
-  const inCategory = post.category.toLowerCase();
-  const tags = post.tags.map((tag) => tag.toLowerCase());
-
-  if (inTitle.includes(normalizedQuery)) score += 60;
-  if (inExcerpt.includes(normalizedQuery)) score += 25;
-  if (inCategory.includes(normalizedQuery)) score += 30;
-
-  for (const tag of tags) {
-    if (tag.includes(normalizedQuery)) {
-      score += 15;
-    }
-  }
-
-  return score;
-};
+];
 
 const matchesQuery = (post, query) => {
   if (!query) {
@@ -67,6 +95,7 @@ const matchesQuery = (post, query) => {
 
   return [
     post.title,
+    post.author.name,
     post.excerpt,
     post.category,
     post.tags.join(' ')
@@ -84,6 +113,7 @@ const renderFeatured = (post, rootPath) => {
     <img src="${buildAssetUrl(rootPath, post.coverImage)}" alt="${escapeHtml(post.coverImageAlt)}" loading="eager" decoding="async" />
   </a>
   <div class="blog-featured-card__body">
+    <p class="blog-featured-card__kicker">Featured</p>
     <p class="blog-chip">${escapeHtml(post.category)}</p>
     <h3><a href="./${post.slug}/">${escapeHtml(post.title)}</a></h3>
     <p>${escapeHtml(post.excerpt)}</p>
@@ -94,7 +124,7 @@ const renderFeatured = (post, rootPath) => {
         <p class="blog-meta__author-detail">${escapeHtml(post.publishedDateLabel)} · ${escapeHtml(post.readingTime)}</p>
       </div>
     </div>
-    <a class="button button--primary blog-featured-card__cta" href="./${post.slug}/">Read Article <span data-lucide="arrow-right"></span></a>
+    <a class="button button--primary blog-featured-card__cta" href="./${post.slug}/">Read article <span data-lucide="arrow-right"></span></a>
   </div>
 </article>`;
 };
@@ -108,13 +138,12 @@ const renderGridCard = (post, rootPath) => `
     <p class="blog-chip">${escapeHtml(post.category)}</p>
     <h3><a href="./${post.slug}/">${escapeHtml(post.title)}</a></h3>
     <p>${escapeHtml(post.excerpt)}</p>
-    <div class="blog-grid-card__tags">${post.tags.map((tag) => `<a class="blog-tag" href="?tag=${encodeURIComponent(tag)}">${escapeHtml(tag)}</a>`).join('')}</div>
     <div class="blog-meta blog-meta--compact">
       <span>${escapeHtml(post.author.name)}</span>
       <span>${escapeHtml(post.publishedDateLabel)}</span>
       <span>${escapeHtml(post.readingTime)}</span>
     </div>
-    <a class="blog-grid-card__read-more" href="./${post.slug}/">Read More</a>
+    <a class="blog-grid-card__read-more" href="./${post.slug}/">Read article</a>
   </div>
 </article>`;
 
@@ -125,12 +154,10 @@ const initBlogsIndex = async () => {
   const grid = document.querySelector('[data-blog-grid]');
   const emptyState = document.querySelector('[data-blog-empty]');
   const searchInput = document.querySelector('[data-blog-search]');
-  const sortSelect = document.querySelector('[data-blog-sort]');
   const categoriesWrap = document.querySelector('[data-blog-categories]');
-  const themeControls = document.querySelector('[data-blog-theme-controls]');
   const resultText = document.querySelector('[data-blog-result-text]');
 
-  if (!dataPath || !featuredSlot || !grid || !searchInput || !sortSelect || !categoriesWrap || !resultText) {
+  if (!dataPath || !featuredSlot || !grid || !searchInput || !categoriesWrap || !resultText) {
     return;
   }
 
@@ -150,49 +177,20 @@ const initBlogsIndex = async () => {
 
   const url = new URL(window.location.href);
   let activeQuery = (url.searchParams.get('q') || '').trim();
-  let activeCategory = (url.searchParams.get('category') || '').trim();
+  let activeCategory = (url.searchParams.get('category') || '').trim().toLowerCase();
   let activeTag = (url.searchParams.get('tag') || '').trim();
-  let activeSort = (url.searchParams.get('sort') || 'latest').trim().toLowerCase();
-  let activeTheme = (url.searchParams.get('theme') || 'tech').trim().toLowerCase();
-
-  if (!['latest', 'oldest', 'relevant'].includes(activeSort)) {
-    activeSort = 'latest';
-  }
-
-  if (!['tech', 'editorial'].includes(activeTheme)) {
-    activeTheme = 'tech';
-  }
 
   searchInput.value = activeQuery;
-  sortSelect.value = activeSort;
 
-  const categories = payload.categories || [];
-
-  const applyTheme = () => {
-    document.body.dataset.blogVisualTheme = activeTheme;
-
-    if (!themeControls) {
-      return;
-    }
-
-    const buttons = themeControls.querySelectorAll('[data-blog-theme]');
-    buttons.forEach((button) => {
-      if (!(button instanceof HTMLElement)) {
-        return;
-      }
-
-      const isActive = (button.dataset.blogTheme || '') === activeTheme;
-      button.classList.toggle('is-active', isActive);
-      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-    });
-  };
+  if (!categoryFilters.some((filter) => filter.key === activeCategory)) {
+    activeCategory = '';
+  }
 
   const renderCategoryButtons = () => {
-    const categoryButtons = [`<button class="blogs-controls__chip${activeCategory ? '' : ' is-active'}" type="button" data-blog-category="">All</button>`]
-      .concat(categories.map((category) => {
-        const isActive = activeCategory.toLowerCase() === category.toLowerCase();
-        return `<button class="blogs-controls__chip${isActive ? ' is-active' : ''}" type="button" data-blog-category="${escapeHtml(category)}">${escapeHtml(category)}</button>`;
-      }));
+    const categoryButtons = categoryFilters.map((filter) => {
+      const isActive = activeCategory === filter.key;
+      return `<button class="blogs-controls__chip${isActive ? ' is-active' : ''}" type="button" data-blog-category="${escapeHtml(filter.key)}">${escapeHtml(filter.label)}</button>`;
+    });
 
     categoriesWrap.innerHTML = categoryButtons.join('');
   };
@@ -209,57 +207,43 @@ const initBlogsIndex = async () => {
     if (activeTag) nextUrl.searchParams.set('tag', activeTag);
     else nextUrl.searchParams.delete('tag');
 
-    if (activeSort !== 'latest') nextUrl.searchParams.set('sort', activeSort);
-    else nextUrl.searchParams.delete('sort');
-
-    if (activeTheme !== 'tech') nextUrl.searchParams.set('theme', activeTheme);
-    else nextUrl.searchParams.delete('theme');
+    nextUrl.searchParams.delete('sort');
+    nextUrl.searchParams.delete('theme');
 
     window.history.replaceState({}, '', nextUrl);
-  };
-
-  const sortPosts = (posts) => {
-    if (activeSort === 'oldest') {
-      return [...posts].sort((a, b) => toTimestamp(a.publishedDateISO) - toTimestamp(b.publishedDateISO));
-    }
-
-    if (activeSort === 'relevant') {
-      const queryForScore = activeQuery || activeTag || activeCategory;
-      return [...posts].sort((a, b) => {
-        const scoreDiff = scorePost(b, queryForScore) - scorePost(a, queryForScore);
-        if (scoreDiff !== 0) {
-          return scoreDiff;
-        }
-
-        return toTimestamp(b.publishedDateISO) - toTimestamp(a.publishedDateISO);
-      });
-    }
-
-    return [...posts].sort((a, b) => toTimestamp(b.publishedDateISO) - toTimestamp(a.publishedDateISO));
   };
 
   const applyFilters = () => {
     let posts = payload.posts || [];
 
+    posts = [...posts].sort((a, b) => toTimestamp(b.publishedDateISO) - toTimestamp(a.publishedDateISO));
+
     posts = posts.filter((post) => matchesQuery(post, activeQuery));
 
     if (activeCategory) {
-      posts = posts.filter((post) => post.category.toLowerCase() === activeCategory.toLowerCase());
+      const selectedFilter = categoryFilters.find((filter) => filter.key === activeCategory);
+      posts = selectedFilter ? posts.filter((post) => selectedFilter.match(post)) : posts;
     }
 
     if (activeTag) {
       posts = posts.filter((post) => post.tags.some((tag) => tag.toLowerCase() === activeTag.toLowerCase()));
     }
 
-    return sortPosts(posts);
+    const hasActiveFilters = Boolean(activeQuery || activeCategory || activeTag);
+    if (!hasActiveFilters) {
+      posts = posts.filter((post) => post.slug !== FEATURED_POST_SLUG);
+    }
+
+    return posts;
   };
 
   const render = () => {
     renderCategoryButtons();
-    applyTheme();
     updateSearchParams();
 
-    const featuredPost = payload.posts.find((post) => post.slug === payload.featuredSlug) || payload.posts[0];
+    const featuredPost = payload.posts.find((post) => post.slug === FEATURED_POST_SLUG)
+      || payload.posts.find((post) => post.slug === payload.featuredSlug)
+      || payload.posts[0];
     featuredSlot.innerHTML = renderFeatured(featuredPost, rootPath);
 
     const filteredPosts = applyFilters();
@@ -269,6 +253,30 @@ const initBlogsIndex = async () => {
     if (!filteredPosts.length) {
       grid.innerHTML = '';
       if (emptyState) {
+        const hasActiveFilters = Boolean(activeQuery || activeTag || activeCategory);
+
+        if (!hasActiveFilters && (payload.posts || []).length) {
+          resultText.textContent = 'Showing featured article';
+          emptyState.setAttribute('hidden', 'hidden');
+          emptyState.classList.add('hidden');
+          return;
+        }
+
+        const hasSearch = Boolean(activeQuery || activeTag);
+        const isCategoryOnly = Boolean(activeCategory && !hasSearch);
+        const heading = isCategoryOnly ? 'No articles in this category yet.' : 'No articles found.';
+        const detail = isCategoryOnly ? 'Check back soon for new stories in this category.' : 'Try a different search or category.';
+        const headingNode = emptyState.querySelector('h3');
+        const detailNode = emptyState.querySelector('p');
+
+        if (headingNode) {
+          headingNode.textContent = heading;
+        }
+
+        if (detailNode) {
+          detailNode.textContent = detail;
+        }
+
         emptyState.removeAttribute('hidden');
         emptyState.classList.remove('hidden');
       }
@@ -289,11 +297,6 @@ const initBlogsIndex = async () => {
     render();
   });
 
-  sortSelect.addEventListener('change', (event) => {
-    activeSort = event.target.value;
-    render();
-  });
-
   categoriesWrap.addEventListener('click', (event) => {
     const target = event.target;
     if (!(target instanceof HTMLElement)) {
@@ -305,44 +308,7 @@ const initBlogsIndex = async () => {
       return;
     }
 
-    activeCategory = button.dataset.blogCategory || '';
-    render();
-  });
-
-  themeControls?.addEventListener('click', (event) => {
-    const target = event.target;
-    if (!(target instanceof HTMLElement)) {
-      return;
-    }
-
-    const button = target.closest('[data-blog-theme]');
-    if (!(button instanceof HTMLElement)) {
-      return;
-    }
-
-    const nextTheme = (button.dataset.blogTheme || '').toLowerCase();
-    if (!['tech', 'editorial'].includes(nextTheme)) {
-      return;
-    }
-
-    activeTheme = nextTheme;
-    render();
-  });
-
-  grid.addEventListener('click', (event) => {
-    const target = event.target;
-    if (!(target instanceof HTMLElement)) {
-      return;
-    }
-
-    const tagLink = target.closest('.blog-tag');
-    if (!(tagLink instanceof HTMLAnchorElement)) {
-      return;
-    }
-
-    event.preventDefault();
-    const url = new URL(tagLink.href);
-    activeTag = url.searchParams.get('tag') || '';
+    activeCategory = (button.dataset.blogCategory || '').toLowerCase();
     render();
   });
 
