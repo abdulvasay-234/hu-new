@@ -139,6 +139,7 @@ const readBlogPosts = () => {
       coverImage: cleanAssetPath(source.coverImage),
       coverImageAlt: source.coverImageAlt,
       coverImagePosition: source.coverImagePosition,
+      coverImageFit: source.coverImageFit,
       author: source.author,
       publishedDateISO: source.publishedDateISO,
       updatedDateISO: source.updatedDateISO,
@@ -637,7 +638,7 @@ const renderArticleHtml = (post, context) => {
                 <div class="blog-article__tags" aria-label="Article tags">${renderTagLinks(post.tags, '../')}</div>
               </header>
 
-              <figure class="blog-article__cover blog-image-holder card" data-animate="zoom" style="--blog-image-position: ${post.coverImagePosition};">
+              <figure class="blog-article__cover blog-image-holder card" data-animate="zoom" style="--blog-image-position: ${post.coverImagePosition}; --blog-image-fit: ${post.coverImageFit};">
                 <img src="../../${post.coverImage}" alt="${post.coverImageAlt}" loading="eager" decoding="async" />
               </figure>
 
@@ -742,6 +743,7 @@ const render = () => {
       coverImage: post.coverImage,
       coverImageAlt: post.coverImageAlt,
       coverImagePosition: post.coverImagePosition,
+      coverImageFit: post.coverImageFit,
       author: {
         name: post.author.name,
         image: post.author.image

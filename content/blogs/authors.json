@@ -41,6 +41,14 @@
       "socials": {
         "linkedin": "https://www.linkedin.com/company/hackunion-in/"
       }
+    },
+    "rayeesa-mahmood": {
+      "name": "Rayeesa Mahmood",
+      "image": "Images/Mentors/Rayeesa Mahmood.png",
+      "bio": "Builder and community contributor focused on practical technology adoption and collaborative learning at HackUnion.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/rayeesa-mahmood/"
+      }
     }
   }
 }

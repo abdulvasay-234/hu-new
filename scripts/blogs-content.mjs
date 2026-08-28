@@ -39,6 +39,21 @@ const normalizeObjectPosition = (value, fieldName, fileName) => {
   return normalized;
 };
 
+const normalizeObjectFit = (value, fieldName, fileName) => {
+  const fallback = 'cover';
+  if (value === undefined || value === null || String(value).trim() === '') {
+    return fallback;
+  }
+
+  const normalized = String(value).trim().toLowerCase();
+  const allowed = new Set(['cover', 'contain', 'fill', 'none', 'scale-down']);
+  if (!allowed.has(normalized)) {
+    throw new Error(`Invalid ${fieldName} in ${fileName}: ${value}`);
+  }
+
+  return normalized;
+};
+
 const normalizeDateISO = (value, fieldName, fileName) => {
   if (!value) {
     throw new Error(`Missing ${fieldName} in ${fileName}`);
@@ -196,6 +211,7 @@ export const getValidatedBlogSources = ({ strictAssets = true } = {}) => {
     const coverImage = cleanAssetPath(data.coverImage || '');
     const coverImageAlt = String(data.coverImageAlt || title).trim();
     const coverImagePosition = normalizeObjectPosition(data.coverImagePosition, 'coverImagePosition', fileName);
+    const coverImageFit = normalizeObjectFit(data.coverImageFit, 'coverImageFit', fileName);
     const tags = toArray(data.tags);
 
     if (!title || !excerpt || !category) {
@@ -242,6 +258,7 @@ export const getValidatedBlogSources = ({ strictAssets = true } = {}) => {
       coverImage,
       coverImageAlt,
       coverImagePosition,
+      coverImageFit,
       author,
       publishedDateISO,
       updatedDateISO,

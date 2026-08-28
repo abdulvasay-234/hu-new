@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T12:07:20.085Z",
+  "generatedAt": "2026-08-28T18:43:27.197Z",
   "featuredSlug": "building-the-next-generation-of-builders",
   "categories": [
     "Technology",
@@ -27,6 +27,7 @@
       "coverImage": "Images/gallery/2SP00516.jpg",
       "coverImageAlt": "HackUnion builders collaborating in a live product sprint",
       "coverImagePosition": "center",
+      "coverImageFit": "cover",
       "author": {
         "name": "Abdul Vasay",
         "image": "Images/champions/vasay-GitHub.png"
@@ -37,6 +38,34 @@
       "updatedDateLabel": "Aug 14, 2026",
       "readingTime": "2 min read",
       "featured": true
+    },
+    {
+      "slug": "interledger-technology-rethinking-the-future-of-global-payments",
+      "title": "Interledger Technology: Rethinking the Future of Global Payments",
+      "excerpt": "Interledger and Open Payments can connect fragmented systems to make cross-border money movement interoperable, secure, and borderless.",
+      "category": "Technology",
+      "tags": [
+        "Interledger",
+        "Open Payments",
+        "Interledger Foundation",
+        "HackUnion",
+        "Cross-Border Payments",
+        "Fintech"
+      ],
+      "coverImage": "Images/blogs/blog-1/cover-img.jpg",
+      "coverImageAlt": "Interledger concept visual for cross-border connected payments",
+      "coverImagePosition": "center",
+      "coverImageFit": "contain",
+      "author": {
+        "name": "Rayeesa Mahmood",
+        "image": "Images/Mentors/Rayeesa Mahmood.png"
+      },
+      "publishedDateISO": "2026-08-05T00:00:00.000Z",
+      "publishedDateLabel": "Aug 5, 2026",
+      "updatedDateISO": "2026-08-05T00:00:00.000Z",
+      "updatedDateLabel": "Aug 5, 2026",
+      "readingTime": "2 min read",
+      "featured": false
     },
     {
       "slug": "open-source-first-community-learning",
@@ -52,6 +81,7 @@
       "coverImage": "Images/gallery/2SP00496.jpg",
       "coverImageAlt": "Developers reviewing open source pull requests",
       "coverImagePosition": "center",
+      "coverImageFit": "cover",
       "author": {
         "name": "Sana Khan",
         "image": "Images/champions/hafsa-liet.png"
@@ -77,6 +107,7 @@
       "coverImage": "Images/gallery/2SP00513.jpg",
       "coverImageAlt": "HackUnion OpenBuild Week participants pitching projects",
       "coverImagePosition": "center",
+      "coverImageFit": "cover",
       "author": {
         "name": "Rohan Iyer",
         "image": "Images/champions/ashish-sreenidhi.png"
@@ -102,6 +133,7 @@
       "coverImage": "Images/gallery/2SP00446.jpg",
       "coverImageAlt": "Students sketching architecture and data flows",
       "coverImagePosition": "center",
+      "coverImageFit": "cover",
       "author": {
         "name": "Neha Verma",
         "image": "Images/champions/vineel-ILF.png"
@@ -127,6 +159,7 @@
       "coverImage": "Images/gallery/2SP00516.jpg",
       "coverImageAlt": "HackUnion member presenting project outcomes",
       "coverImagePosition": "50% 38%",
+      "coverImageFit": "cover",
       "author": {
         "name": "Abdul Vasay",
         "image": "Images/champions/vasay-GitHub.png"
@@ -135,31 +168,6 @@
       "publishedDateLabel": "May 30, 2026",
       "updatedDateISO": "2026-06-03T00:00:00.000Z",
       "updatedDateLabel": "Jun 3, 2026",
-      "readingTime": "1 min read",
-      "featured": false
-    },
-    {
-      "slug": "hackunion-community-playbook-2026",
-      "title": "HackUnion Community Playbook 2026",
-      "excerpt": "The operational playbook behind HackUnion chapters, events, and contributor momentum in 2026.",
-      "category": "Announcements",
-      "tags": [
-        "Announcements",
-        "Community",
-        "Events",
-        "Building"
-      ],
-      "coverImage": "Images/gallery/2SP00479.jpg",
-      "coverImageAlt": "HackUnion organizers planning a community roadmap",
-      "coverImagePosition": "center",
-      "author": {
-        "name": "Team HackUnion",
-        "image": "Images/champions/sarma-vjit.png"
-      },
-      "publishedDateISO": "2026-05-12T00:00:00.000Z",
-      "publishedDateLabel": "May 12, 2026",
-      "updatedDateISO": "2026-05-22T00:00:00.000Z",
-      "updatedDateLabel": "May 22, 2026",
       "readingTime": "1 min read",
       "featured": false
     }
