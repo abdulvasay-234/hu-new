@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import fs from 'node:fs';
 
 const blogRoot = resolve(__dirname, 'blogs');
+const gallerySourceDir = resolve(__dirname, 'Images', 'gallery');
 
 const getBlogInputs = () => {
   if (!fs.existsSync(blogRoot)) {
@@ -32,6 +33,21 @@ const getBlogInputs = () => {
 
 export default defineConfig({
   base: './',
+  plugins: [
+    {
+      name: 'copy-gallery-runtime-assets',
+      closeBundle() {
+        const outGalleryDir = resolve(__dirname, 'dist', 'Images', 'gallery');
+
+        if (!fs.existsSync(gallerySourceDir)) {
+          return;
+        }
+
+        fs.mkdirSync(outGalleryDir, { recursive: true });
+        fs.cpSync(gallerySourceDir, outGalleryDir, { recursive: true });
+      }
+    }
+  ],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
