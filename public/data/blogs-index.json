@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T18:43:27.197Z",
+  "generatedAt": "2026-08-28T18:51:34.996Z",
   "featuredSlug": "building-the-next-generation-of-builders",
   "categories": [
     "Technology",
@@ -52,7 +52,7 @@
         "Cross-Border Payments",
         "Fintech"
       ],
-      "coverImage": "Images/blogs/blog-1/cover-img.jpg",
+      "coverImage": "Images/gallery/interledger-cover-img.jpg",
       "coverImageAlt": "Interledger concept visual for cross-border connected payments",
       "coverImagePosition": "center",
       "coverImageFit": "contain",
