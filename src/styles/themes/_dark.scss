@@ -373,11 +373,6 @@ html[data-theme='dark'] .partners__logo-name {
   color: #e8eef8;
 }
 
-html[data-theme='dark'] .partners__logo-category {
-  background: rgba(61, 78, 101, 0.52);
-  color: #c8d4e5;
-}
-
 html[data-theme='dark'] .partners__category {
   border-color: rgba(83, 112, 150, 0.52);
   background: rgba(14, 22, 35, 0.62);
@@ -392,7 +387,7 @@ html[data-theme='dark'] .partners__category.is-active {
   color: #e6efff;
 }
 
-html[data-theme='dark'] .partners__logo-mark {
+html[data-theme='dark'] .partners__logo-visual {
   border-color: rgba(65, 86, 113, 0.85);
   background: rgba(17, 27, 40, 0.8);
 }
@@ -401,6 +396,24 @@ html[data-theme='dark'] .partners__logo-card {
   border-color: rgba(65, 86, 113, 0.88);
   background: linear-gradient(180deg, rgba(13, 23, 35, 0.92), rgba(10, 18, 29, 0.9));
   box-shadow: none;
+}
+
+html[data-theme='dark'] .partners__rail-control {
+  border-color: rgba(83, 112, 150, 0.7);
+  background: rgba(12, 21, 34, 0.9);
+  color: #d6e2f0;
+  box-shadow: none;
+}
+
+html[data-theme='dark'] .partners__rail-control:hover,
+html[data-theme='dark'] .partners__rail-control:focus-visible {
+  border-color: rgba(120, 157, 255, 0.68);
+  background: rgba(17, 27, 40, 0.96);
+  color: #e6efff;
+}
+
+html[data-theme='dark'] .partners__rail-fade {
+  background: linear-gradient(90deg, rgba(10, 18, 29, 0), rgba(10, 18, 29, 0.94));
 }
 
 html[data-theme='dark'] .partners__callout {

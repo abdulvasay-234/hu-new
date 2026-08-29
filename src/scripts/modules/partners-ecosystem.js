@@ -19,13 +19,6 @@ const sortPartnerLogos = (logos) => {
   });
 };
 
-const getPartnerTone = (category = '') => {
-  if (category === 'Technology Partners') return 'technology';
-  if (category === 'Academic Partners') return 'academic';
-  if (category === 'Community Partners') return 'community';
-  return 'default';
-};
-
 const renderCategory = (category, index, isActive = false) => `
   <button
     type="button"
@@ -34,24 +27,81 @@ const renderCategory = (category, index, isActive = false) => `
     data-partner-filter="${category}"
     aria-pressed="${isActive ? 'true' : 'false'}"
   >
-    ${category}
+    ${category === ALL_LOGOS_FILTER ? 'ALL' : category.toUpperCase()}
   </button>
 `;
 
-const renderLogoCard = (logo, index) => {
-  const tone = getPartnerTone(logo.category);
+const renderPartnerCard = (logo) => {
+  const logoUrl = typeof logo.url === 'string' ? logo.url.trim() : '';
+  const cardTag = logoUrl ? 'a' : 'article';
+  const cardAttributes = logoUrl
+    ? `class="partners__logo-card partners__logo-card-link" href="${logoUrl}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${logo.name}"`
+    : `class="partners__logo-card" aria-label="${logo.name} in ${logo.category}"`;
 
   return `
-    <li class="partners__logo-item" style="--partner-delay: ${index * 80}ms" data-partner-category="${logo.category}">
-      <article class="partners__logo-card" aria-label="${logo.name} in ${logo.category}">
-        <span class="partners__logo-category" data-partner-tone="${tone}">${logo.category}</span>
+    <li class="partners__logo-item">
+      <${cardTag} ${cardAttributes}>
         <div class="partners__logo-visual" aria-hidden="true">
           <img class="partners__logo-mark" src="${logo.logoPath}" alt="${logo.alt || `${logo.name} logo`}" loading="lazy" decoding="async" />
         </div>
         <strong class="partners__logo-name">${logo.name}</strong>
-      </article>
+      </${cardTag}>
     </li>
   `;
+};
+
+const renderCategoryGroup = (category, logos, index) => {
+  const railId = `partners-rail-${category.toLowerCase().replace(/\s+/g, '-')}`;
+
+  return `
+    <section class="partners__group" style="--partner-delay: ${index * 110}ms" data-partner-category-group="${category}" aria-labelledby="${railId}-label">
+      <h3 id="${railId}-label" class="partners__group-title">${category}</h3>
+      <div class="partners__rail" data-partner-rail>
+        <button
+          type="button"
+          class="partners__rail-control partners__rail-control--left"
+          data-partner-rail-control="left"
+          aria-label="Scroll ${category.toLowerCase()} left"
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+        <div class="partners__rail-viewport" data-partner-rail-viewport tabindex="0" aria-label="${category} partner rail">
+          <ul id="${railId}" class="partners__rail-track" aria-label="${category}">
+            ${logos.map((logo) => renderPartnerCard(logo)).join('')}
+          </ul>
+        </div>
+        <button
+          type="button"
+          class="partners__rail-control partners__rail-control--right"
+          data-partner-rail-control="right"
+          aria-label="Scroll ${category.toLowerCase()} right"
+        >
+          <span aria-hidden="true">→</span>
+        </button>
+        <span class="partners__rail-fade" aria-hidden="true"></span>
+      </div>
+    </section>
+  `;
+};
+
+const getGroupedLogos = (logos) => {
+  const groupedLogos = new Map(partnerCategories.map((category) => [category, []]));
+
+  logos.forEach((logo) => {
+    if (!groupedLogos.has(logo.category)) {
+      groupedLogos.set(logo.category, []);
+    }
+
+    groupedLogos.get(logo.category)?.push(logo);
+  });
+
+  partnerCategories.forEach((category) => {
+    const categoryLogos = groupedLogos.get(category) || [];
+    categoryLogos.sort((first, second) => first.name.localeCompare(second.name, undefined, { sensitivity: 'base' }));
+    groupedLogos.set(category, categoryLogos);
+  });
+
+  return groupedLogos;
 };
 
 export const initPartnersEcosystem = () => {
@@ -64,6 +114,7 @@ export const initPartnersEcosystem = () => {
   const categoryTarget = section.querySelector('[data-partner-categories]');
   const logoGridTarget = section.querySelector('[data-partner-logo-grid]');
   const orderedPartnerLogos = sortPartnerLogos(partnerLogos);
+  const groupedLogos = getGroupedLogos(orderedPartnerLogos);
 
   if (categoryTarget) {
     const categoryFilters = [ALL_LOGOS_FILTER, ...partnerCategories];
@@ -78,13 +129,14 @@ export const initPartnersEcosystem = () => {
   }
 
   if (logoGridTarget) {
-    logoGridTarget.innerHTML = orderedPartnerLogos
-      .map((logo, index) => renderLogoCard(logo, index))
+    logoGridTarget.innerHTML = partnerCategories
+      .map((category, index) => renderCategoryGroup(category, groupedLogos.get(category) || [], index))
       .join('');
   }
 
   const categoryButtons = Array.from(section.querySelectorAll('[data-partner-filter]'));
-  const logoItems = Array.from(section.querySelectorAll('.partners__logo-item'));
+  const categoryGroups = Array.from(section.querySelectorAll('[data-partner-category-group]'));
+  const railElements = Array.from(section.querySelectorAll('[data-partner-rail]'));
 
   const setFilter = (filterValue) => {
     const normalizedFilter = filterValue || ALL_LOGOS_FILTER;
@@ -95,13 +147,84 @@ export const initPartnersEcosystem = () => {
       button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
 
-    logoItems.forEach((item) => {
-      const itemCategory = item.dataset.partnerCategory;
-      const showItem = normalizedFilter === ALL_LOGOS_FILTER || itemCategory === normalizedFilter;
+    categoryGroups.forEach((group) => {
+      const groupCategory = group.dataset.partnerCategoryGroup;
+      const showGroup = normalizedFilter === ALL_LOGOS_FILTER || groupCategory === normalizedFilter;
 
-      item.hidden = !showItem;
+      group.classList.toggle('is-filtered-out', !showGroup);
+      group.setAttribute('aria-hidden', showGroup ? 'false' : 'true');
     });
   };
+
+  const setupRail = (railElement) => {
+    const viewport = railElement.querySelector('[data-partner-rail-viewport]');
+    const leftControl = railElement.querySelector('[data-partner-rail-control="left"]');
+    const rightControl = railElement.querySelector('[data-partner-rail-control="right"]');
+
+    if (!viewport || !leftControl || !rightControl) {
+      return;
+    }
+
+    const updateRailState = () => {
+      const maxScrollLeft = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+      const hasOverflow = maxScrollLeft > 1;
+      const nearStart = viewport.scrollLeft <= 2;
+      const nearEnd = viewport.scrollLeft >= maxScrollLeft - 2;
+
+      railElement.classList.toggle('is-overflowing', hasOverflow);
+      railElement.classList.toggle('is-at-start', nearStart);
+      railElement.classList.toggle('is-at-end', nearEnd);
+
+      leftControl.disabled = !hasOverflow || nearStart;
+      rightControl.disabled = !hasOverflow || nearEnd;
+    };
+
+    const scrollRail = (direction) => {
+      const delta = Math.round(viewport.clientWidth * 0.8) * direction;
+
+      viewport.scrollBy({
+        left: delta,
+        behavior: prefersReducedMotion() ? 'auto' : 'smooth'
+      });
+    };
+
+    leftControl.addEventListener('click', () => {
+      scrollRail(-1);
+    });
+
+    rightControl.addEventListener('click', () => {
+      scrollRail(1);
+    });
+
+    viewport.addEventListener('scroll', updateRailState, { passive: true });
+
+    viewport.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        scrollRail(-1);
+      }
+
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        scrollRail(1);
+      }
+
+      if (event.key === 'Home') {
+        event.preventDefault();
+        viewport.scrollTo({ left: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+      }
+
+      if (event.key === 'End') {
+        event.preventDefault();
+        viewport.scrollTo({ left: viewport.scrollWidth, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+      }
+    });
+
+    window.addEventListener('resize', updateRailState);
+    updateRailState();
+  };
+
+  railElements.forEach(setupRail);
 
   categoryButtons.forEach((button) => {
     button.addEventListener('click', () => {

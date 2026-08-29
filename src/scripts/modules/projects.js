@@ -24,6 +24,33 @@ const getInitials = (title = '') => title
   .map((chunk) => chunk.charAt(0).toUpperCase())
   .join('');
 
+const hashText = (value = '') => {
+  let hash = 0;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash = ((hash << 5) - hash) + value.charCodeAt(index);
+    hash |= 0;
+  }
+
+  return Math.abs(hash);
+};
+
+const getProjectVisualThemeStyle = (project, fallbackIndex = 0) => {
+  const seed = project?.slug ? hashText(project.slug) : fallbackIndex;
+  const hue = seed % 360;
+  const deepHue = (hue + 214) % 360;
+  const textHue = (hue + 22) % 360;
+  const glowAlpha = 0.2 + ((seed % 7) * 0.015);
+  const gridAlpha = 0.14 + ((seed % 5) * 0.01);
+
+  return [
+    `--project-visual-glow: hsla(${hue}, 88%, 62%, ${glowAlpha.toFixed(3)})`,
+    `--project-visual-deep: hsla(${deepHue}, 46%, 11%, 0.9)`,
+    `--project-visual-grid: hsla(${hue}, 72%, 78%, ${gridAlpha.toFixed(3)})`,
+    `--project-visual-text-soft: hsla(${textHue}, 100%, 94%, 0.9)`
+  ].join('; ');
+};
+
 const formatDate = (value) => {
   const date = new Date(value);
 
@@ -56,15 +83,9 @@ const buildProjectLinks = (project, baseLabel = 'View project') => {
   return links;
 };
 
-const renderProjectVisual = (project, loading = 'lazy') => {
-  if (project.image) {
-    return `
-      <img class="project-card__image" src="${escapeHtml(project.image)}" alt="${escapeHtml(project.imageAlt || project.title)}" loading="${loading}" decoding="async" />
-    `;
-  }
-
+const renderProjectVisual = (project, themeStyle = '', ariaLabel = `Generated visual for ${project.title}`) => {
   return `
-    <div class="project-card__image-fallback" role="img" aria-label="Generated visual for ${escapeHtml(project.title)}">
+    <div class="project-card__image-fallback" role="img" aria-label="${escapeHtml(ariaLabel)}" style="${escapeHtml(themeStyle)}">
       <span class="project-card__fallback-grid" aria-hidden="true"></span>
       <span class="project-card__fallback-initials">${escapeHtml(getInitials(project.title))}</span>
       <span class="project-card__fallback-category">${escapeHtml(project.category)}</span>
@@ -93,11 +114,12 @@ const renderProjectCard = (project, index) => {
   const actions = buildProjectLinks(project, 'Case Study');
   const overlayAction = actions[0] ?? { label: 'Details', href: project.caseStudyUrl || '#', icon: 'arrow-up-right', external: !project.caseStudyUrl };
   const cardClasses = ['card', 'project-card'];
+  const themeStyle = getProjectVisualThemeStyle(project, index);
 
   return `
     <article class="${cardClasses.join(' ')}" data-project-card data-project-filter="${escapeHtml(project.filter || 'all')}" aria-labelledby="${escapeHtml(project.slug)}-title">
       <a class="project-card__visual" href="${escapeHtml(project.caseStudyUrl || '#')}" aria-label="View project: ${escapeHtml(project.title)}">
-        ${renderProjectVisual(project, index < 2 ? 'eager' : 'lazy')}
+        ${renderProjectVisual(project, themeStyle)}
         <span class="project-card__visual-frame" aria-hidden="true"></span>
         <span class="project-card__index" aria-hidden="true">P-${escapeHtml(String(index + 1).padStart(2, '0'))}</span>
         <span class="project-card__status" aria-label="Status: ${escapeHtml(project.status)}">
@@ -229,6 +251,7 @@ const initProjectDetailPage = (detailNode) => {
   }
 
   const relatedProjects = projectsData.filter((item) => (project.relatedProjectIds || []).includes(item.id)).slice(0, 3);
+  const detailThemeStyle = getProjectVisualThemeStyle(project, 0);
   const screenshotItems = project.screenshots?.length
     ? project.screenshots
     : [{ image: '../../Images/gallery/2SP00516.jpg', alt: `${project.title} preview` }];
@@ -254,7 +277,7 @@ const initProjectDetailPage = (detailNode) => {
     <section class="section section--compact" aria-label="Project cover">
       <div class="container container--wide">
         <div class="project-detail__cover card">
-          ${project.image ? `<img src="../../${escapeHtml(project.image.replace(/^\.\//, ''))}" alt="${escapeHtml(project.imageAlt || project.title)}" loading="eager" decoding="async" />` : `<div class="project-card__image-fallback" role="img" aria-label="Generated visual for ${escapeHtml(project.title)}"><span class="project-card__fallback-grid" aria-hidden="true"></span><span class="project-card__fallback-initials">${escapeHtml(getInitials(project.title))}</span><span class="project-card__fallback-category">${escapeHtml(project.category)}</span><span class="project-card__fallback-meta">${escapeHtml(project.status)} · ${escapeHtml(formatDate(project.date))}</span></div>`}
+          ${renderProjectVisual(project, detailThemeStyle, `Generated cover visual for ${project.title}`)}
         </div>
       </div>
     </section>
