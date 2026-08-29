@@ -42,7 +42,20 @@ export const initHero = () => {
   const visual = hero.querySelector('.hero__visual');
   const floatingCards = hero.querySelectorAll('.hero-visual__frame, .hero-visual__card');
 
-  const timeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  // Fallback: keep hero visuals visible even if an animation sequence is interrupted.
+  const ensureVisualVisible = () => {
+    if (!visual) {
+      return;
+    }
+
+    gsap.set(visual, { autoAlpha: 1, y: 0, clearProps: 'transform,opacity,visibility' });
+  };
+
+  const timeline = gsap.timeline({
+    defaults: { ease: 'power3.out' },
+    onComplete: ensureVisualVisible,
+    onInterrupt: ensureVisualVisible
+  });
 
   timeline
     .from(eyebrow, { autoAlpha: 0, y: 12, duration: 0.45 })
@@ -51,6 +64,8 @@ export const initHero = () => {
     .from(actions, { autoAlpha: 0, y: 14, duration: 0.45 }, '-=0.3')
     .from(highlights, { autoAlpha: 0, y: 12, duration: 0.45, stagger: 0.08 }, '-=0.25')
     .from(visual, { autoAlpha: 0, y: 24, duration: 0.8 }, '-=0.7');
+
+  window.setTimeout(ensureVisualVisible, 700);
 
   floatingCards.forEach((card, index) => {
     gsap.to(card, {

@@ -1,6 +1,12 @@
 let createIconsFn;
 let iconSet;
 
+const toPascalCase = (value) => String(value)
+  .split('-')
+  .filter(Boolean)
+  .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+  .join('');
+
 const loadIconRenderer = async () => {
   if (createIconsFn && iconSet) {
     return;
@@ -12,7 +18,9 @@ const loadIconRenderer = async () => {
   ]);
 
   createIconsFn = createIcons;
-  iconSet = lucideIcons;
+  iconSet = Object.fromEntries(
+    Object.entries(lucideIcons).map(([name, icon]) => [toPascalCase(name), icon])
+  );
 };
 
 export const renderLucideIcons = async () => {

@@ -140,139 +140,201 @@
         <section class="hero section obw-hero" aria-labelledby="hero-title">
           <div class="container container--wide hero__inner">
             <div class="hero__content stack stack--lg">
-              <p class="obw-hero__brandline">
-                <img class="obw-hero__logo" src="../Images/OBW-Logo.png" alt="OpenBuild Week logo" width="160" height="64" />
-                <span>Flagship HackUnion builder initiative</span>
-              </p>
-              <p class="eyebrow hero__eyebrow">HackUnion flagship initiative</p>
+              <p class="eyebrow hero__eyebrow">HACKUNION FLAGSHIP INITIATIVE</p>
               <h1 id="hero-title" class="hero__title"><span class="obw-brand-word">Open<span class="obw-brand-word__build">Build</span> Week</span></h1>
-              <p class="hero__text">Next event countdown for OpenBuild Week. Stay ready and join the campus build sprint on time.</p>
-              <div class="hero__actions">
-                <a class="button button--primary" href="#obw-stop2-modal" data-modal-open="#obw-stop2-modal" aria-haspopup="dialog" aria-controls="obw-stop2-modal">Register for OpenBuild Week <span data-lucide="arrow-right"></span></a>
-                <a class="button button--secondary" href="#experience-timeline">Explore the Week Plan</a>
+              <p class="obw-hero__positioning">Build. Learn. Explore. Ship.</p>
+              <p class="hero__text">A multi-campus builder experience by HackUnion where students, developers and creators come together to learn, experiment and ship.</p>
+              <p class="obw-hero__open-payments">This edition explores Open Payments &mdash; open, interoperable payment infrastructure and what builders can create with it.</p>
+              <div class="obw-hero__support" aria-label="Supported by Interledger Foundation">
+                <p class="obw-hero__support-label">WITH SUPPORT FROM</p>
+                <a class="obw-hero__support-org" href="https://interledger.org/" target="_blank" rel="noreferrer" aria-label="Visit Interledger Foundation website">
+                  <img src="../Images/Logos/com-ilf.svg" alt="Interledger Foundation logo" width="24" height="24" loading="lazy" decoding="async" />
+                </a>
               </div>
-
-              <div class="obw-countdown" data-obw-countdown data-target-date="2026-09-03T09:30:00+05:30" data-event-label="Lords Institute of Engineering &amp; Technology campus event" aria-live="polite" aria-label="Countdown to next OpenBuild Week event at Lords Institute of Engineering &amp; Technology">
-                <ul class="obw-countdown__list">
-                  <li class="obw-countdown__item">
-                    <span class="obw-countdown__value" data-obw-days>00</span>
-                    <span class="obw-countdown__label">Days</span>
-                  </li>
-                  <li class="obw-countdown__item">
-                    <span class="obw-countdown__value" data-obw-hours>00</span>
-                    <span class="obw-countdown__label">Hours</span>
-                  </li>
-                  <li class="obw-countdown__item">
-                    <span class="obw-countdown__value" data-obw-minutes>00</span>
-                    <span class="obw-countdown__label">Minutes</span>
-                  </li>
-                </ul>
-                <p class="obw-countdown__status" data-obw-countdown-status>Next event starts soon.</p>
+              <div class="hero__actions">
+                <a class="button button--primary" href="#obw-stop6-modal" data-modal-open="#obw-stop6-modal" aria-haspopup="dialog" aria-controls="obw-stop6-modal" data-obw-register-link>Register for OpenBuild Week <span data-lucide="arrow-right"></span></a>
+                <a class="button button--secondary" href="#experience-timeline">Explore the Week Plan <span data-lucide="arrow-right"></span></a>
               </div>
             </div>
 
-            <aside class="obw-hero__visual" aria-label="OpenBuild Week photography and highlights">
-              <figure class="obw-hero__media" role="img" aria-label="OpenBuild Week hero photography placeholder">
-                  <img
-                    data-hero-gallery-image
-                    data-hero-base-path="../Images/gallery/"
-                    data-hero-image-index="9"
-                    data-src="../Images/gallery/2SP00513.jpg"
-                    src="../Images/gallery/2SP00513.jpg"
-                  alt="Crowd of builders collaborating during an OpenBuild Week session"
-                />
-              </figure>
-              <div class="obw-highlight-grid" data-stagger>
-                <article class="card obw-highlight">
-                  <h3>Workshops + Hackathons</h3>
-                  <p>Hands-on tracks designed for real output and practical momentum.</p>
+            <aside class="obw-hero__visual hero__visual" aria-label="OpenBuild Week visual system">
+              <div class="obw-network" role="img" aria-label="Connected OpenBuild Week system showing build, learn, explore, and ship nodes">
+                <div class="obw-network__core">
+                  <span class="obw-network__core-icon" data-lucide="code-xml" aria-hidden="true"></span>
+                  <p class="obw-network__core-title">OPENBUILD <span>WEEK</span></p>
+                  <p class="obw-network__core-subtitle">OPEN PAYMENTS x OPEN BUILDING</p>
+                </div>
+
+                <article class="obw-node obw-node--build" tabindex="0" aria-label="Build node">
+                  <span class="obw-node__icon" data-lucide="box"></span>
+                  <p class="obw-node__title">BUILD</p>
+                  <p class="obw-node__text">Build real projects.</p>
                 </article>
-                <article class="card obw-highlight">
-                  <h3>Community-Led Sessions</h3>
-                  <p>Meetups and open rooms led by active builders and contributors.</p>
+
+                <article class="obw-node obw-node--explore" tabindex="0" aria-label="Explore node">
+                  <span class="obw-node__icon" data-lucide="search"></span>
+                  <p class="obw-node__title">EXPLORE</p>
+                  <p class="obw-node__text">Explore open technology.</p>
                 </article>
-                <article class="card obw-highlight">
-                  <h3>Open Source Focus</h3>
-                  <p>Ship public contributions with mentors and collaborators.</p>
+
+                <article class="obw-node obw-node--learn" tabindex="0" aria-label="Learn node">
+                  <span class="obw-node__icon" data-lucide="graduation-cap"></span>
+                  <p class="obw-node__title">LEARN</p>
+                  <p class="obw-node__text">Learn from experts.</p>
                 </article>
-                <article class="card obw-highlight">
-                  <h3>Future-Ready Themes</h3>
-                  <p>AI, security, cloud, web, tools, careers, and innovation in one week.</p>
+
+                <article class="obw-node obw-node--ship" tabindex="0" aria-label="Ship node">
+                  <span class="obw-node__icon" data-lucide="rocket"></span>
+                  <p class="obw-node__title">SHIP</p>
+                  <p class="obw-node__text">Showcase what you build.</p>
                 </article>
+
+                <span class="obw-network__connector obw-network__connector--build" aria-hidden="true"></span>
+                <span class="obw-network__connector obw-network__connector--learn" aria-hidden="true"></span>
+                <span class="obw-network__connector obw-network__connector--explore" aria-hidden="true"></span>
+                <span class="obw-network__connector obw-network__connector--ship" aria-hidden="true"></span>
+                <span class="obw-network__spark obw-network__spark--one" aria-hidden="true"></span>
+                <span class="obw-network__spark obw-network__spark--two" aria-hidden="true"></span>
               </div>
             </aside>
           </div>
+
+          <div class="container container--wide obw-hero__story-wrap">
+            <div class="obw-hero__story-strip" aria-label="OpenBuild Week highlight panels">
+              <p class="obw-hero__story-title">THE WEEK IN MOTION</p>
+              <div class="obw-hero__story-track">
+                <article class="obw-strip-panel obw-strip-panel--photo obw-strip-panel--builders" aria-label="Panel 01 real builders">
+                  <img src="/images/gallery-optimized/2SP00513.jpg" alt="OpenBuild Week participants building and sharing ideas together" loading="lazy" decoding="async" />
+                  <div class="obw-strip-panel__copy">
+                    <p class="obw-strip-panel__kicker">PANEL 01</p>
+                    <p class="obw-strip-panel__label">REAL BUILDERS <span class="obw-strip-panel__arrow" data-lucide="arrow-up-right" aria-hidden="true"></span></p>
+                    <p class="obw-strip-panel__text">Real people. Real ideas.<br />Real impact.</p>
+                  </div>
+                </article>
+
+                <article class="obw-strip-panel obw-strip-panel--payments" aria-label="Panel 02 open payments visual">
+                  <img src="../Images/gallery/interledger-cover-img.jpg" alt="Open Payments and Interledger connected infrastructure visual" loading="lazy" decoding="async" />
+                  <div class="obw-strip-panel__infra" aria-hidden="true"></div>
+                  <div class="obw-strip-panel__copy">
+                    <p class="obw-strip-panel__kicker">PANEL 02</p>
+                    <p class="obw-strip-panel__label">OPEN PAYMENTS <span class="obw-strip-panel__arrow" data-lucide="arrow-up-right" aria-hidden="true"></span></p>
+                    <p class="obw-strip-panel__text">Open infrastructure for<br />the next generation of builders.</p>
+                  </div>
+                </article>
+
+                <article class="obw-strip-panel obw-strip-panel--photo obw-strip-panel--collaborate" aria-label="Panel 03 collaborate">
+                  <img src="/images/gallery-optimized/2SP00621.jpg" alt="OpenBuild Week participants collaborating and building together in a workshop" loading="lazy" decoding="async" />
+                  <div class="obw-strip-panel__copy">
+                    <p class="obw-strip-panel__kicker">PANEL 03</p>
+                    <p class="obw-strip-panel__label">COLLABORATE <span class="obw-strip-panel__arrow" data-lucide="arrow-up-right" aria-hidden="true"></span></p>
+                    <p class="obw-strip-panel__text">Connect. Collaborate.<br />Create together.</p>
+                  </div>
+                </article>
+
+                <article class="obw-strip-panel obw-strip-panel--brand" aria-label="Panel 04 OpenBuild Week 2026">
+                  <div class="obw-strip-panel__copy">
+                    <p class="obw-strip-panel__kicker">PANEL 04</p>
+                    <p class="obw-strip-panel__label">OPENBUILD WEEK 2026</p>
+                    <p class="obw-strip-panel__text">A community-powered week<br />of building and shipping.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
         </section>
 
-        <section
-          class="photo-marquee obw-photo-marquee section section--compact"
-          aria-label="OpenBuild Week photo stream"
-          data-photo-marquee
-          data-gallery-base-path="../Images/gallery/"
-          data-gallery-alt-prefix="OpenBuild Week gallery moment"
-        >
-          <div class="photo-marquee__viewport" data-animate>
-            <div class="photo-marquee__lane">
-              <div class="photo-marquee__track"></div>
+        <section id="about-obw" class="section obw-idea" aria-labelledby="obw-idea-title">
+          <div class="container container--wide">
+            <div class="obw-idea__main">
+              <div class="obw-idea__content stack--md">
+                <p class="obw-idea__eyebrow">THE IDEA</p>
+                <h2 id="obw-idea-title" class="obw-idea__title">Why OpenBuild Week exists.</h2>
+                <p class="obw-idea__text">Technology communities should be more than places to attend events.</p>
+                <p class="obw-idea__text">OpenBuild Week was created by HackUnion to bring builders into the same space to learn, experiment, collaborate and actually create &mdash; across campuses and communities.</p>
+                <p class="obw-idea__highlight">BUILDERS SHOULD LEAVE WITH SOMETHING THEY DID.</p>
+                <p class="obw-idea__meta">One week. Multiple campuses. One builder-first experience.</p>
+
+                <div class="obw-idea__edition">
+                  <div class="obw-idea__edition-main">
+                    <p class="obw-idea__edition-kicker">THIS EDITION</p>
+                    <h3 class="obw-idea__edition-title">Open Payments &times; Open Building</h3>
+                    <p class="obw-idea__edition-text">OpenBuild Week 2026 explores Open Payments &mdash; open, interoperable payment infrastructure and the possibilities it creates for builders.</p>
+                  </div>
+                  <div class="obw-idea__edition-support" aria-label="Supported by Interledger Foundation">
+                    <p>WITH SUPPORT FROM</p>
+                    <a href="https://interledger.org/" target="_blank" rel="noreferrer" aria-label="Visit Interledger Foundation website">
+                      <img src="../Images/Logos/com-ilf.svg" alt="Interledger Foundation logo" loading="lazy" decoding="async" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="obw-idea__visual" aria-label="OpenBuild Week visual story panel">
+                <div class="obw-idea-canvas" role="img" aria-label="OpenBuild Week visual showing real builders learning and creating together">
+                  <div class="obw-idea-canvas__photos" aria-hidden="true">
+                    <img src="/images/gallery-optimized/2SP00513.jpg" alt="" loading="eager" decoding="async" />
+                    <img src="/images/gallery-optimized/2SP00479.jpg" alt="" loading="eager" decoding="async" />
+                  </div>
+
+                  <div class="obw-idea-canvas__identity">
+                    <p class="obw-idea-canvas__core-title">OPENBUILD WEEK</p>
+                    <p class="obw-idea-canvas__core-subtitle">A WEEK BUILT AROUND DOING.</p>
+                  </div>
+
+                  <div class="obw-idea-canvas__tags" aria-label="OpenBuild Week builder values">
+                    <p class="obw-idea-canvas__tag">LEARN TOGETHER</p>
+                    <p class="obw-idea-canvas__tag">BUILD TOGETHER</p>
+                  </div>
+                </div>
+              </aside>
             </div>
-            <div class="photo-marquee__lane">
-              <div class="photo-marquee__track photo-marquee__track--reverse"></div>
-            </div>
+
           </div>
         </section>
 
-        <section id="about-obw" class="section obw-about" aria-labelledby="about-obw-title">
+        <section id="obw-agenda" class="section obw-agenda" aria-labelledby="obw-agenda-title">
           <div class="container container--wide">
-            <div class="section-header" data-animate>
-              <p class="section-header__eyebrow">What is OpenBuild Week?</p>
-              <h2 id="about-obw-title" class="section-header__title">HackUnion's flagship builder experience for students.</h2>
-              <p class="section-header__text">OpenBuild Week is HackUnion's flagship builder experience where students learn, build, collaborate, and showcase real-world projects while connecting with mentors, industry professionals, and fellow builders.</p>
+            <div class="section-header obw-agenda__header" data-animate>
+              <p class="section-header__eyebrow">THE AGENDA</p>
+              <h2 id="obw-agenda-title" class="section-header__title">One week. Six ways to build.</h2>
             </div>
 
-            <div class="obw-about__grid" data-stagger>
-              <article class="card obw-about__panel">
-                <h3>🚀 Build Real Projects</h3>
-                <p>Turn ideas into real-world projects, strengthen your portfolio, and gain practical experience by building with other passionate creators.</p>
+            <div class="obw-agenda__timeline" data-stagger aria-label="OpenBuild Week six-stage agenda">
+              <article class="obw-agenda-step obw-agenda-step--open" aria-label="01 Open stage">
+                <p class="obw-agenda-step__index">01</p>
+                <h3 class="obw-agenda-step__title">OPEN</h3>
+                <p class="obw-agenda-step__text">Open the week to new ideas, people and possibilities.</p>
               </article>
-              <article class="card obw-about__panel">
-                <h3>🏆 Win &amp; Get Recognized</h3>
-                <p>Compete for a <strong>₹30,000 Prize Pool</strong>, earn certificates, exclusive goodies, and showcase your work to the community.</p>
+
+              <article class="obw-agenda-step obw-agenda-step--learn" aria-label="02 Learn stage">
+                <p class="obw-agenda-step__index">02</p>
+                <h3 class="obw-agenda-step__title">LEARN</h3>
+                <p class="obw-agenda-step__text">Learn through talks, workshops and hands-on sessions.</p>
               </article>
-              <article class="card obw-about__panel">
-                <h3>💼 Internship &amp; Placement Opportunities</h3>
-                <p>Top-performing builders get an opportunity to connect with our hiring partners for internships and career opportunities.</p>
+
+              <article class="obw-agenda-step obw-agenda-step--explore" aria-label="03 Explore stage">
+                <p class="obw-agenda-step__index">03</p>
+                <h3 class="obw-agenda-step__title">EXPLORE</h3>
+                <p class="obw-agenda-step__text">Discover Open Payments and what open infrastructure makes possible.</p>
               </article>
-              <article class="card obw-about__panel">
-                <h3>🤝 Build Together</h3>
-                <p>Collaborate with developers, designers, AI enthusiasts, founders, and builders who love creating and solving real problems.</p>
+
+              <article class="obw-agenda-step obw-agenda-step--build" aria-label="04 Build stage">
+                <p class="obw-agenda-step__index">04</p>
+                <h3 class="obw-agenda-step__title">BUILD</h3>
+                <p class="obw-agenda-step__text">Turn ideas into working projects with other builders.</p>
               </article>
-              <article class="card obw-about__panel">
-                <h3>🎓 Learn from Experts</h3>
-                <p>Gain insights through expert talks, mentorship sessions, hands-on workshops, and live demonstrations from industry professionals.</p>
+
+              <article class="obw-agenda-step obw-agenda-step--mentor" aria-label="05 Mentor stage">
+                <p class="obw-agenda-step__index">05</p>
+                <h3 class="obw-agenda-step__title">MENTOR</h3>
+                <p class="obw-agenda-step__text">Get feedback, guidance and support from experienced builders.</p>
               </article>
-              <article class="card obw-about__panel">
-                <h3>❤️ Builder Spirit</h3>
-                <p>
-                  Build in public.<br />
-                  Learn by doing.<br />
-                  Share your knowledge.<br />
-                  Support fellow builders.<br />
-                  Grow together.<br />
-                  Because the best products are built by communities, not individuals.
-                </p>
-              </article>
-              <article class="card obw-about__panel">
-                <h3>👥 Who Should Attend</h3>
-                <ul class="obw-audience" aria-label="Who should attend OpenBuild Week">
-                  <li>Developers</li>
-                  <li>AI Engineers</li>
-                  <li>Designers</li>
-                  <li>Students</li>
-                  <li>Founders</li>
-                  <li>Open Source Contributors</li>
-                  <li>Community Builders</li>
-                  <li>Anyone passionate about building and learning.</li>
-                </ul>
+
+              <article class="obw-agenda-step obw-agenda-step--ship" aria-label="06 Ship stage">
+                <p class="obw-agenda-step__index">06</p>
+                <h3 class="obw-agenda-step__title">SHIP</h3>
+                <p class="obw-agenda-step__text">Show what you built, share it with the community and take it further.</p>
               </article>
             </div>
           </div>
@@ -281,110 +343,135 @@
         <section id="experience-timeline" class="section obw-timeline" aria-labelledby="timeline-title">
           <div class="container container--wide">
             <div class="section-header" data-animate>
-              <p class="section-header__eyebrow">Campus Roadshow</p>
-              <h2 id="timeline-title" class="section-header__title">OpenBuild Week is a multi-campus roadshow across colleges.</h2>
-              <p class="section-header__text">Each stop includes a builder workshop, team sprint, and project showcase. Click any college stop to view event details and participation updates.</p>
+              <p class="section-header__eyebrow">THE ROADSHOW</p>
+              <h2 id="timeline-title" class="section-header__title">One week. Multiple campuses. One builder-first experience.</h2>
             </div>
 
             <div class="obw-roadmap" data-stagger aria-label="OpenBuild Week campus roadmap">
-              <div class="obw-roadmap__line" aria-hidden="true"></div>
-
               <a
                 class="card obw-roadstop"
                 href="#obw-stop1-modal"
                 aria-label="View details for Lords Skill Academy venue stop"
+                data-obw-date="18 Jul 2026"
+                data-obw-time="09:30 AM"
                 data-modal-open="#obw-stop1-modal"
                 aria-haspopup="dialog"
                 aria-controls="obw-stop1-modal"
               >
-                <p class="obw-roadstop__meta" style="color: #5b3cc4;">Stop 01 • 18 Jul 2026 • Lords Skill Academy</p>
-                <h3>Lords Skill Academy</h3>
-                <p>Kickoff workshop + AI prototyping sprint + campus project demo circle.</p>
-                <span class="obw-roadstop__cta">Event Ended • View Event Gallery <span data-lucide="arrow-right"></span></span>
+                <p class="obw-roadstop__meta">Campus 01</p>
+                <h3 class="sr-only">Lords Skill Academy</h3>
+                <p class="obw-roadstop__date">18 Jul 2026</p>
+                <p class="obw-roadstop__name">Lords Skill Academy</p>
+                <p class="obw-roadstop__status">COMPLETED</p>
+                <span class="obw-roadstop__avatar" aria-hidden="true"><img src="/images/gallery-optimized/2SP00513.jpg" alt="" loading="lazy" decoding="async" /></span>
               </a>
 
               <a
                 class="card obw-roadstop"
                 href="#obw-stop2-modal"
                 aria-label="View details for Vidya Jyothi Institute of Technology (VJIT) campus stop"
+                data-obw-date="25 Jul 2026"
+                data-obw-time="10:00 AM"
                 data-modal-open="#obw-stop2-modal"
                 aria-haspopup="dialog"
                 aria-controls="obw-stop2-modal"
               >
-                <p class="obw-roadstop__meta" style="color: #5b3cc4;">Stop 02 • 25 Jul 2026 • 10:00 AM - 3:30 PM</p>
-                <h3>Vidya Jyothi Institute of Technology (VJIT)</h3>
-                <p>Developer tools track + AI workflow clinic + peer review and shipping sprint.</p>
-                <span class="obw-roadstop__cta">Event Ended • View Event Gallery <span data-lucide="arrow-right"></span></span>
+                <p class="obw-roadstop__meta">Campus 02</p>
+                <h3 class="sr-only">Vidya Jyothi Institute of Technology (VJIT)</h3>
+                <p class="obw-roadstop__date">25 Jul 2026</p>
+                <p class="obw-roadstop__name">VJIT</p>
+                <p class="obw-roadstop__status">COMPLETED</p>
+                <span class="obw-roadstop__avatar" aria-hidden="true"><img src="/images/gallery-optimized/2SP00621.jpg" alt="" loading="lazy" decoding="async" /></span>
               </a>
 
               <a
                 class="card obw-roadstop"
                 href="#obw-stop3-modal"
                 aria-label="View details for CMR Institute of Technology (CMRIT) campus stop"
+                data-obw-date="25 Jul 2026"
+                data-obw-time="04:00 PM"
                 data-modal-open="#obw-stop3-modal"
                 aria-haspopup="dialog"
                 aria-controls="obw-stop3-modal"
               >
-                <p class="obw-roadstop__meta" style="color: #5b3cc4;">Stop 03 • 25 Jul 2026 • 4:00 PM</p>
-                <h3>CMR Institute of Technology (CMRIT)</h3>
-                <p>Invite-only campus session with focused mentor interactions and builder roundtables.</p>
-                <span class="obw-roadstop__cta">Event Ended • View Event Gallery <span data-lucide="arrow-right"></span></span>
+                <p class="obw-roadstop__meta">Campus 03</p>
+                <h3 class="sr-only">CMR Institute of Technology (CMRIT)</h3>
+                <p class="obw-roadstop__date">25 Jul 2026</p>
+                <p class="obw-roadstop__name">CMRIT</p>
+                <p class="obw-roadstop__status">COMPLETED</p>
+                <span class="obw-roadstop__avatar" aria-hidden="true"><img src="/images/gallery-optimized/2SP00479.jpg" alt="" loading="lazy" decoding="async" /></span>
               </a>
 
               <a
                 class="card obw-roadstop"
                 href="#obw-stop4-modal"
                 aria-label="View details for Sreenidhi Institute of Science &amp; Technology campus stop"
+                data-obw-date="03 Aug 2026"
+                data-obw-time="09:30 AM"
                 data-modal-open="#obw-stop4-modal"
                 aria-haspopup="dialog"
                 aria-controls="obw-stop4-modal"
               >
-                <p class="obw-roadstop__meta" style="color: #5b3cc4;">Stop 04 • 03 Aug 2026</p>
-                <h3>Sreenidhi Institute of Science &amp; Technology</h3>
-                <p>Campus workshop + builder sprint + student project showcase.</p>
-                <span class="obw-roadstop__cta">Event Ended • View Event Gallery <span data-lucide="arrow-right"></span></span>
+                <p class="obw-roadstop__meta">Campus 04</p>
+                <h3 class="sr-only">Sreenidhi Institute of Science &amp; Technology</h3>
+                <p class="obw-roadstop__date">03 Aug 2026</p>
+                <p class="obw-roadstop__name">Sreenidhi</p>
+                <p class="obw-roadstop__status">COMPLETED</p>
+                <span class="obw-roadstop__avatar" aria-hidden="true"><img src="/images/gallery-optimized/2SP00610.jpg" alt="" loading="lazy" decoding="async" /></span>
               </a>
 
               <a
                 class="card obw-roadstop"
                 href="#obw-stop5-modal"
                 aria-label="View details for Vardhaman College of Engineering campus stop"
+                data-obw-date="21 Aug 2026"
+                data-obw-time="09:30 AM"
                 data-modal-open="#obw-stop5-modal"
                 aria-haspopup="dialog"
                 aria-controls="obw-stop5-modal"
               >
-                <p class="obw-roadstop__meta" style="color: #5b3cc4;">Stop 05 • 21 Aug 2026 • 09:30 AM - 4:30 PM</p>
-                <h3>Vardhaman College of Engineering</h3>
-                <p>Community-led mini hackathon + founder panel + campus partner networking.</p>
-                <span class="obw-roadstop__cta">Event Ended • View Event Gallery <span data-lucide="arrow-right"></span></span>
+                <p class="obw-roadstop__meta">Campus 05</p>
+                <h3 class="sr-only">Vardhaman College of Engineering</h3>
+                <p class="obw-roadstop__date">21 Aug 2026</p>
+                <p class="obw-roadstop__name">Vardhaman</p>
+                <p class="obw-roadstop__status">COMPLETED</p>
+                <span class="obw-roadstop__avatar" aria-hidden="true"><img src="/images/gallery-optimized/2SP00716.jpg" alt="" loading="lazy" decoding="async" /></span>
               </a>
 
               <a
-                class="card obw-roadstop"
+                class="card obw-roadstop obw-roadstop--upcoming"
                 href="#obw-stop6-modal"
                 aria-label="View details for Lords Institute of Engineering &amp; Technology campus stop"
+                data-obw-date="03 Sep 2026"
+                data-obw-time="09:30 AM"
                 data-modal-open="#obw-stop6-modal"
                 aria-haspopup="dialog"
                 aria-controls="obw-stop6-modal"
               >
-                <p class="obw-roadstop__meta" style="color: #5b3cc4;">Stop 06 • 03 Sep 2026 • 09:30 AM - 4:30 PM</p>
-                <h3>Lords Institute of Engineering &amp; Technology</h3>
-                <p>Campus workshop + builder sprint + student innovation showcase.</p>
-                <span class="obw-roadstop__cta">Registration Open <span data-lucide="arrow-right"></span></span>
+                <p class="obw-roadstop__meta">Campus 06</p>
+                <h3 class="sr-only">Lords Institute of Engineering &amp; Technology</h3>
+                <p class="obw-roadstop__date">03 Sep 2026</p>
+                <p class="obw-roadstop__name">Lords IET</p>
+                <p class="obw-roadstop__status">UPCOMING</p>
+                <span class="obw-roadstop__avatar" aria-hidden="true"><img src="/images/gallery-optimized/2SP01508.jpg" alt="" loading="lazy" decoding="async" /></span>
               </a>
 
               <a
-                class="card obw-roadstop"
+                class="card obw-roadstop obw-roadstop--finale"
                 href="#obw-stop7-modal"
                 aria-label="View details for Grand Finale Hackathon stop"
+                data-obw-date="12 Sep 2026"
+                data-obw-time="09:30 AM"
                 data-modal-open="#obw-stop7-modal"
                 aria-haspopup="dialog"
                 aria-controls="obw-stop7-modal"
               >
-                <p class="obw-roadstop__meta" style="color: #5b3cc4;">Stop 07 • 12 Sep 2026 • Grand Finale Hackathon</p>
-                <h3>Grand Finale Hackathon</h3>
-                <p>The final and biggest OpenBuild Week hackathon with major demos, jury reviews, and closing awards.</p>
-                <span class="obw-roadstop__cta">Register on Devfolio <span data-lucide="arrow-right"></span></span>
+                <p class="obw-roadstop__meta">FINALE</p>
+                <h3 class="sr-only">Grand Finale Hackathon</h3>
+                <p class="obw-roadstop__date">12 Sep 2026</p>
+                <p class="obw-roadstop__name">Grand Finale Hackathon</p>
+                <p class="obw-roadstop__status">DESTINATION</p>
+                <span class="obw-roadstop__avatar" aria-hidden="true"><img src="/images/gallery-optimized/SPC02777.jpg" alt="" loading="lazy" decoding="async" /></span>
               </a>
             </div>
           </div>
@@ -575,79 +662,97 @@
 
         <section id="student-projects" class="section obw-student-projects" aria-labelledby="student-projects-title">
           <div class="container container--wide">
-            <div class="manifesto__projects-header" data-animate>
-              <p class="manifesto__projects-eyebrow">Student Projects</p>
-              <h2 id="student-projects-title" class="manifesto__projects-heading">Projects built by students during OpenBuild Week.</h2>
-              <p class="section-header__text">A live snapshot of projects teams are designing, validating, and shipping at every campus stop.</p>
+            <div class="manifesto__projects-header obw-projects-header" data-animate>
+              <p class="manifesto__projects-eyebrow obw-projects-header__eyebrow">BUILT DURING OPENBUILD WEEK</p>
+              <h2 id="student-projects-title" class="manifesto__projects-heading obw-projects-header__title">Projects built by students <br />during OpenBuild Week.</h2>
+              <p class="section-header__text obw-projects-header__text">A collection of projects, experiments and ideas that came out of the campus build experience.</p>
             </div>
 
-            <div class="manifesto__features" aria-label="Student projects built during OpenBuild Week">
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="../Images/gallery/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="../Images/gallery/2SP00446.jpg" alt="" loading="lazy" decoding="async" />
+            <div class="manifesto__features obw-projects-grid" aria-label="Student projects built during OpenBuild Week">
+              <article class="card obw-project-card obw-project-card--featured" data-animate>
+                <div class="obw-project-card__media" aria-hidden="true">
+                  <img class="obw-project-card__image" src="../Images/gallery/2SP00516.jpg" alt="Campus Event Navigator project build moment" loading="lazy" decoding="async" />
+                  <span class="obw-project-card__campus">Built at Campus 01</span>
                 </div>
-                <h3>Campus Event Navigator</h3>
-                <p>An AI-assisted campus event and workshop discovery app with team formation support and live updates.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Team BuildPulse</span>
-                  <time datetime="2026-07-18">Built on Jul 18, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Campus Event Navigator">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn for Team BuildPulse">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
-                </div>
-              </article>
-
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="../Images/gallery/2SP00496.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="../Images/gallery/2SP00479.jpg" alt="" loading="lazy" decoding="async" />
-                </div>
-                <h3>SkillSwap Network</h3>
-                <p>A peer-to-peer platform where students exchange tech skills through focused practice sessions.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Team NodeMates</span>
-                  <time datetime="2026-07-21">Built on Jul 21, 2026</time>
-                </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for SkillSwap Network">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn for Team NodeMates">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
+                <div class="obw-project-card__body">
+                  <h3>Campus Event Navigator</h3>
+                  <p>An AI-assisted campus event and workshop discovery app with team formation support and live updates.</p>
+                  <div class="obw-project-card__meta" aria-label="Project metadata">
+                    <p class="obw-project-card__team">TEAM BUILD PULSE</p>
+                    <p class="obw-project-card__build">
+                      <span>Campus 01</span>
+                      <span aria-hidden="true">&middot;</span>
+                      <time datetime="2026-07-18">18 Jul 2026</time>
+                    </p>
+                  </div>
+                  <div class="obw-project-card__links" aria-label="Project links">
+                    <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Campus Event Navigator">
+                      <span data-lucide="github" aria-hidden="true"></span>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn for Team BuildPulse">
+                      <span data-lucide="linkedin" aria-hidden="true"></span>
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
                 </div>
               </article>
 
-              <article class="card manifesto-feature" data-animate>
-                <div class="manifesto-feature__media" aria-hidden="true">
-                  <img class="manifesto-feature__project-image" src="../Images/gallery/2SP00513.jpg" alt="" loading="lazy" decoding="async" />
-                  <img class="manifesto-feature__builder-photo" src="../Images/gallery/2SP00516.jpg" alt="" loading="lazy" decoding="async" />
+              <article class="card obw-project-card" data-animate>
+                <div class="obw-project-card__media" aria-hidden="true">
+                  <img class="obw-project-card__image" src="../Images/gallery/2SP00496.jpg" alt="SkillSwap Network student demo" loading="lazy" decoding="async" />
+                  <span class="obw-project-card__campus">Built at Campus 02</span>
                 </div>
-                <h3>Open Source Launchpad</h3>
-                <p>A contribution onboarding board that helps first-time contributors discover issues and mentors.</p>
-                <div class="manifesto-feature__meta">
-                  <span class="manifesto-feature__builder">By Team MergeFirst</span>
-                  <time datetime="2026-07-24">Built on Jul 24, 2026</time>
+                <div class="obw-project-card__body">
+                  <h3>SkillSwap Network</h3>
+                  <p>A peer-to-peer platform where students exchange tech skills through focused practice sessions.</p>
+                  <div class="obw-project-card__meta" aria-label="Project metadata">
+                    <p class="obw-project-card__team">TEAM NODE MATES</p>
+                    <p class="obw-project-card__build">
+                      <span>Campus 02</span>
+                      <span aria-hidden="true">&middot;</span>
+                      <time datetime="2026-07-21">21 Jul 2026</time>
+                    </p>
+                  </div>
+                  <div class="obw-project-card__links" aria-label="Project links">
+                    <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for SkillSwap Network">
+                      <span data-lucide="github" aria-hidden="true"></span>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn for Team NodeMates">
+                      <span data-lucide="linkedin" aria-hidden="true"></span>
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
                 </div>
-                <div class="manifesto-feature__links" aria-label="Project links">
-                  <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Open Source Launchpad">
-                    <span data-lucide="github" aria-hidden="true"></span>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn for Team MergeFirst">
-                    <span data-lucide="linkedin" aria-hidden="true"></span>
-                    <span>LinkedIn</span>
-                  </a>
+              </article>
+
+              <article class="card obw-project-card" data-animate>
+                <div class="obw-project-card__media" aria-hidden="true">
+                  <img class="obw-project-card__image" src="../Images/gallery/2SP00513.jpg" alt="Open Source Launchpad team collaboration" loading="lazy" decoding="async" />
+                  <span class="obw-project-card__campus">Built at Campus 03</span>
+                </div>
+                <div class="obw-project-card__body">
+                  <h3>Open Source Launchpad</h3>
+                  <p>A contribution onboarding board that helps first-time contributors discover issues and mentors.</p>
+                  <div class="obw-project-card__meta" aria-label="Project metadata">
+                    <p class="obw-project-card__team">TEAM MERGE FIRST</p>
+                    <p class="obw-project-card__build">
+                      <span>Campus 03</span>
+                      <span aria-hidden="true">&middot;</span>
+                      <time datetime="2026-07-24">24 Jul 2026</time>
+                    </p>
+                  </div>
+                  <div class="obw-project-card__links" aria-label="Project links">
+                    <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Open Source Launchpad">
+                      <span data-lucide="github" aria-hidden="true"></span>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn for Team MergeFirst">
+                      <span data-lucide="linkedin" aria-hidden="true"></span>
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
                 </div>
               </article>
             </div>

@@ -83,7 +83,9 @@ const resolveSocialLinks = (socials = {}) => {
   const mapped = [];
 
   if (socials.github) mapped.push({ label: 'GitHub', href: socials.github, icon: 'github' });
+  if (socials.instagram) mapped.push({ label: 'Instagram', href: socials.instagram, icon: 'instagram' });
   if (socials.linkedin) mapped.push({ label: 'LinkedIn', href: socials.linkedin, icon: 'linkedin' });
+  if (socials.youtube) mapped.push({ label: 'YouTube', href: socials.youtube, icon: 'youtube' });
   if (socials.x) mapped.push({ label: 'X', href: socials.x, icon: 'twitter' });
   if (socials.website) mapped.push({ label: 'Website', href: socials.website, icon: 'globe' });
 

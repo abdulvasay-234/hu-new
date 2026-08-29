@@ -38,10 +38,12 @@
     "team-hackunion": {
       "name": "Team HackUnion",
       "type": "Organization",
-      "image": "Images/champions/sarma-vjit.png",
+      "image": "images/hackunion-logo.png",
       "bio": "Core organizing team coordinating chapters, partnerships, and builder programs across HackUnion.",
       "socials": {
-        "linkedin": "https://www.linkedin.com/company/hackunion-in/"
+        "instagram": "https://www.instagram.com/hackunion.in/",
+        "linkedin": "https://www.linkedin.com/company/hackunion-in/",
+        "youtube": "https://www.youtube.com/@hackunion"
       }
     },
     "rayeesa-mahmood": {

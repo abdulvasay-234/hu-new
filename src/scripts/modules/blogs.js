@@ -1,5 +1,20 @@
 import { renderLucideIcons } from '../services/icons.js';
 
+const normalizeBlogAssetPath = (assetPath) => {
+  const normalized = String(assetPath)
+    .replace(/\\/g, '/')
+    .replace(/^\.\//, '')
+    .replace(/^\//, '');
+
+  const withPublicImagesRoot = normalized.replace(/^Images\//, 'images/');
+
+  if (/^images\/(champions|organizers)\//i.test(withPublicImagesRoot)) {
+    return withPublicImagesRoot.replace(/^images\/(champions|organizers)\//i, 'images/people-optimized/');
+  }
+
+  return withPublicImagesRoot;
+};
+
 const buildAssetUrl = (rootPath, assetPath) => {
   if (!assetPath) {
     return '';
@@ -9,7 +24,7 @@ const buildAssetUrl = (rootPath, assetPath) => {
     return assetPath;
   }
 
-  const cleaned = assetPath.replace(/^\.\//, '').replace(/^\//, '');
+  const cleaned = normalizeBlogAssetPath(assetPath);
   return `${rootPath}${cleaned}`;
 };
 
@@ -109,7 +124,7 @@ const renderFeatured = (post, rootPath) => {
 
   return `
 <article class="card blog-featured-card">
-  <a class="blog-featured-card__media blog-image-holder" style="--blog-image-ratio: 16 / 10; --blog-image-position: ${escapeHtml(post.coverImagePosition || 'center')};" href="./${post.slug}/" aria-label="Read featured article: ${escapeHtml(post.title)}">
+  <a class="blog-featured-card__media blog-image-holder" style="--blog-image-ratio: 16 / 9; --blog-image-position: ${escapeHtml(post.coverImagePosition || 'center')};" href="./${post.slug}/" aria-label="Read featured article: ${escapeHtml(post.title)}">
     <img src="${buildAssetUrl(rootPath, post.coverImage)}" alt="${escapeHtml(post.coverImageAlt)}" loading="eager" decoding="async" />
   </a>
   <div class="blog-featured-card__body">
@@ -131,7 +146,7 @@ const renderFeatured = (post, rootPath) => {
 
 const renderGridCard = (post, rootPath) => `
 <article class="card blog-grid-card" data-hover="card">
-  <a class="blog-grid-card__media blog-image-holder" style="--blog-image-ratio: 16 / 10; --blog-image-position: ${escapeHtml(post.coverImagePosition || 'center')};" href="./${post.slug}/" aria-label="Read article: ${escapeHtml(post.title)}">
+  <a class="blog-grid-card__media blog-image-holder" style="--blog-image-ratio: 16 / 9; --blog-image-position: ${escapeHtml(post.coverImagePosition || 'center')};" href="./${post.slug}/" aria-label="Read article: ${escapeHtml(post.title)}">
     <img src="${buildAssetUrl(rootPath, post.coverImage)}" alt="${escapeHtml(post.coverImageAlt)}" loading="lazy" decoding="async" />
   </a>
   <div class="blog-grid-card__body">
@@ -231,11 +246,6 @@ const initBlogsIndex = async () => {
 
     if (activeTag) {
       posts = posts.filter((post) => post.tags.some((tag) => tag.toLowerCase() === activeTag.toLowerCase()));
-    }
-
-    const hasActiveFilters = Boolean(activeQuery || activeCategory || activeTag);
-    if (!hasActiveFilters) {
-      posts = posts.filter((post) => post.slug !== FEATURED_POST_SLUG);
     }
 
     return posts;

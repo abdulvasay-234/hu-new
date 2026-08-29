@@ -498,7 +498,9 @@ html[data-theme='dark'] .obw-page .site-main {
 
 html[data-theme='dark'] :is(
   .obw-hero__visual,
-  .obw-hero__media,
+  .obw-network,
+  .obw-node,
+  .obw-strip-panel,
   .obw-highlight,
   .obw-about__panel,
   .obw-roadstop,
@@ -513,6 +515,68 @@ html[data-theme='dark'] :is(
   border-color: rgba(53, 70, 92, 0.92);
   background: linear-gradient(180deg, rgba(15, 24, 37, 0.96), rgba(10, 17, 27, 0.95));
   color: var(--color-text);
+}
+
+html[data-theme='dark'] .obw-network__core {
+  border-color: rgba(88, 117, 158, 0.8);
+  background:
+    radial-gradient(circle at 30% 28%, rgba(35, 54, 82, 0.92), rgba(20, 34, 53, 0.7) 52%, rgba(23, 33, 50, 0.84)),
+    linear-gradient(135deg, rgba(33, 58, 91, 0.92), rgba(68, 42, 28, 0.72));
+}
+
+html[data-theme='dark'] .obw-network__core-title,
+html[data-theme='dark'] .obw-network__core-subtitle,
+html[data-theme='dark'] .obw-node__title,
+html[data-theme='dark'] .obw-node__text,
+html[data-theme='dark'] .obw-strip-panel--payments .obw-strip-panel__label,
+html[data-theme='dark'] .obw-strip-panel--brand .obw-strip-panel__label,
+html[data-theme='dark'] .obw-strip-panel--payments .obw-strip-panel__text,
+html[data-theme='dark'] .obw-strip-panel--brand .obw-strip-panel__text,
+html[data-theme='dark'] .obw-network__meta {
+  color: #c8d8eb;
+}
+
+html[data-theme='dark'] .obw-network__connector {
+  border-top-color: rgba(122, 157, 206, 0.62);
+}
+
+html[data-theme='dark'] .obw-idea__title,
+html[data-theme='dark'] .obw-idea-canvas__core-title,
+html[data-theme='dark'] .obw-idea__edition-title {
+  color: #d6e6fb;
+}
+
+html[data-theme='dark'] .obw-idea__text,
+html[data-theme='dark'] .obw-idea-canvas__core-subtitle,
+html[data-theme='dark'] .obw-idea__edition-text,
+html[data-theme='dark'] .obw-idea-canvas__tag,
+html[data-theme='dark'] .obw-idea__edition-support p {
+  color: #b8cbe3;
+}
+
+html[data-theme='dark'] .obw-idea__highlight,
+html[data-theme='dark'] .obw-idea-canvas,
+html[data-theme='dark'] .obw-idea-canvas__identity,
+html[data-theme='dark'] .obw-idea__edition,
+html[data-theme='dark'] .obw-idea-canvas__tag,
+html[data-theme='dark'] .obw-idea__edition-support a {
+  border-color: rgba(74, 95, 123, 0.92);
+  background: linear-gradient(180deg, rgba(15, 24, 37, 0.96), rgba(10, 17, 27, 0.95));
+}
+
+html[data-theme='dark'] .obw-idea-canvas::before {
+  background-image:
+    linear-gradient(rgba(122, 157, 206, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122, 157, 206, 0.14) 1px, transparent 1px);
+}
+
+html[data-theme='dark'] .obw-idea__highlight {
+  color: #d3c8ff;
+}
+
+html[data-theme='dark'] .obw-node__icon,
+html[data-theme='dark'] .obw-network__core-icon {
+  color: #9cc4ff;
 }
 
 html[data-theme='dark'] .obw-highlight::before {
