@@ -291,6 +291,29 @@ html[data-theme='dark'] .manifesto-feature__meta {
   color: #b9c8dc;
 }
 
+html[data-theme='dark'] .manifesto__panel-state {
+  color: #d5e5ff;
+  background: rgba(33, 73, 150, 0.46);
+  border-color: rgba(99, 137, 218, 0.48);
+}
+
+html[data-theme='dark'] .manifesto__panel-state span {
+  background: #8eb3ff;
+}
+
+html[data-theme='dark'] .manifesto__principle-mode {
+  color: #9ebcf2;
+}
+
+html[data-theme='dark'] .manifesto__principle:hover .manifesto__principle-mode,
+html[data-theme='dark'] .manifesto__principle:focus-visible .manifesto__principle-mode {
+  color: #ffc090;
+}
+
+html[data-theme='dark'] .manifesto__principle-signal span {
+  box-shadow: 0 0 0.45rem rgba(120, 157, 255, 0.38);
+}
+
 html[data-theme='dark'] .manifesto-feature__builder {
   color: #e8eff8;
 }

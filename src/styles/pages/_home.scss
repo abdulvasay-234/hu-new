@@ -834,6 +834,40 @@ body:not(.obw-page) .final-cta {
 	color: var(--color-primary-500);
 }
 
+.manifesto__panel-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.7rem;
+	padding-right: 1.4rem;
+}
+
+.manifesto__panel-state {
+	margin: 0;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	padding: 0.2rem 0.44rem;
+	border-radius: var(--radius-pill);
+	font-size: 0.6rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgba(47, 99, 228, 0.86);
+	background: rgba(47, 99, 228, 0.08);
+	border: 1px solid rgba(47, 99, 228, 0.18);
+	white-space: nowrap;
+}
+
+.manifesto__panel-state span {
+	width: 0.34rem;
+	height: 0.34rem;
+	border-radius: 999px;
+	background: rgba(47, 99, 228, 0.9);
+	box-shadow: 0 0 0.44rem rgba(47, 99, 228, 0.56);
+	animation: manifesto-status-blink 1.65s ease-in-out infinite;
+}
+
 .manifesto__panel-meta {
 	display: none;
 }
@@ -862,7 +896,7 @@ body:not(.obw-page) .final-cta {
 .manifesto__principle {
 	position: relative;
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: auto minmax(0, 1fr) auto;
 	align-items: center;
 	gap: 0.75rem;
 	padding: 0.56rem 0.44rem 0.56rem 0;
@@ -916,6 +950,55 @@ body:not(.obw-page) .final-cta {
 	transition: color var(--motion-base) ease, letter-spacing var(--motion-base) ease;
 }
 
+.manifesto__principle-body {
+	display: grid;
+	gap: 0.18rem;
+	min-width: 0;
+}
+
+.manifesto__principle-mode {
+	font-family: "IBM Plex Mono", "JetBrains Mono", monospace;
+	font-size: 0.64rem;
+	letter-spacing: 0.05em;
+	text-transform: lowercase;
+	color: rgba(47, 99, 228, 0.78);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.manifesto__principle-signal {
+	display: inline-flex;
+	align-items: flex-end;
+	gap: 0.16rem;
+	min-width: 0.64rem;
+	height: 1rem;
+	padding-right: 0.05rem;
+}
+
+.manifesto__principle-signal span {
+	width: 0.13rem;
+	border-radius: 999px;
+	background: linear-gradient(180deg, rgba(47, 99, 228, 0.92), rgba(245, 108, 0, 0.8));
+	box-shadow: 0 0 0.4rem rgba(47, 99, 228, 0.24);
+	animation: manifesto-signal-wave 1.5s ease-in-out infinite;
+}
+
+.manifesto__principle-signal span:nth-child(1) {
+	height: 0.42rem;
+	animation-delay: 0ms;
+}
+
+.manifesto__principle-signal span:nth-child(2) {
+	height: 0.7rem;
+	animation-delay: 80ms;
+}
+
+.manifesto__principle-signal span:nth-child(3) {
+	height: 0.52rem;
+	animation-delay: 160ms;
+}
+
 .manifesto__principle:hover .manifesto__principle-index,
 .manifesto__principle:focus-visible .manifesto__principle-index {
 	transform: scale(1.05);
@@ -932,6 +1015,11 @@ body:not(.obw-page) .final-cta {
 .manifesto__principle:focus-visible .manifesto__principle-text {
 	color: var(--color-neutral-950);
 	letter-spacing: 0.005em;
+}
+
+.manifesto__principle:hover .manifesto__principle-mode,
+.manifesto__principle:focus-visible .manifesto__principle-mode {
+	color: rgba(245, 108, 0, 0.94);
 }
 
 .manifesto__projects-header {
@@ -1498,6 +1586,10 @@ body:not(.obw-page) .final-cta {
 		font-size: 0.64rem;
 	}
 
+	.manifesto__panel-head {
+		padding-right: 1.15rem;
+	}
+
 	.manifesto__features {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -1550,6 +1642,14 @@ body:not(.obw-page) .final-cta {
 		padding: 0.5rem 0.3rem 0.5rem 0;
 	}
 
+	.manifesto__principle {
+		grid-template-columns: auto minmax(0, 1fr);
+	}
+
+	.manifesto__principle-signal {
+		display: none;
+	}
+
 	.manifesto__principles::before {
 		left: 0.77rem;
 	}
@@ -1561,6 +1661,14 @@ body:not(.obw-page) .final-cta {
 
 	.manifesto__principle-text {
 		font-size: 0.94rem;
+	}
+
+	.manifesto__panel-head {
+		padding-right: 1.02rem;
+	}
+
+	.manifesto__panel-state {
+		font-size: 0.56rem;
 	}
 
 	.manifesto__meta {
@@ -1692,6 +1800,32 @@ body:not(.obw-page) .final-cta {
 	}
 }
 
+@keyframes manifesto-status-blink {
+	0%,
+	100% {
+		opacity: 0.6;
+		transform: scale(0.95);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.08);
+	}
+}
+
+@keyframes manifesto-signal-wave {
+	0%,
+	100% {
+		transform: scaleY(0.72);
+		opacity: 0.72;
+	}
+
+	50% {
+		transform: scaleY(1.08);
+		opacity: 1;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.projects-moments__rail {
 		animation: none;
@@ -1700,6 +1834,11 @@ body:not(.obw-page) .final-cta {
 	.manifesto__workflow-stage,
 	.manifesto.is-visible .manifesto__workflow-stage,
 	.manifesto.is-visible .manifesto__principle {
+		animation: none;
+	}
+
+	.manifesto__panel-state span,
+	.manifesto__principle-signal span {
 		animation: none;
 	}
 
