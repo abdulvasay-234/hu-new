@@ -4,30 +4,12 @@ import { initTabs } from './modules/tabs.js';
 import { initToasts } from './modules/toasts.js';
 import { initBackToTop } from './modules/back-to-top.js';
 import { initScrollIndicator } from './modules/scroll-indicator.js';
-import { initScroll } from './modules/scroll.js';
 import { initAnimations } from './modules/animations.js';
 import { initTheme } from './modules/theme.js';
 import { initLazyLoading } from './modules/image-lazy-loading.js';
 import { initAccordion } from './modules/accordion.js';
 import { initModal } from './modules/modal.js';
-import { initGallery } from './modules/gallery.js';
-import { initCounter } from './modules/counter.js';
-import { initManifesto } from './modules/manifesto.js';
-import { initWhyHackUnion } from './modules/why-hackunion.js';
-import { initProjects } from './modules/projects.js';
-import { initExperiences } from './modules/experiences.js';
-import { initCommunityInAction } from './modules/community-in-action.js';
-import { initCommunityVideos } from './modules/community-videos.js';
-import { initPartnersEcosystem } from './modules/partners-ecosystem.js';
-import { initFinalCta } from './modules/final-cta.js';
-import { initHero } from './modules/hero.js';
-import { initOpenBuildWeek } from './modules/open-build-week.js';
-import { initBrandKit } from './modules/brand-kit.js';
-import { initOrganizers } from './modules/organizers.js';
-import { initCertificates } from './modules/certificates.js';
-import { initBlogs } from './modules/blogs.js';
-import { initCopilotDevDays } from './modules/copilot-dev-days.js';
-import { createIcons, icons } from '../../node_modules/lucide/dist/esm/lucide.js';
+import { renderLucideIcons } from './services/icons.js';
 import { setPageMetadata } from './services/seo.js';
 import { siteConfig } from './data/site-config.js';
 
@@ -46,18 +28,135 @@ const getPageMetadata = () => {
 };
 
 let isSmoothScrollReady = false;
+let smoothScrollInitPromise;
+
+const loadOnce = (loader) => {
+  if (!loader.promise) {
+    loader.promise = loader.importer().then((module) => {
+      module[loader.exportName]?.();
+    });
+  }
+
+  return loader.promise;
+};
+
+const featureLoaders = [
+  {
+    selector: '[data-photo-marquee], [data-gallery]',
+    importer: () => import('./modules/gallery.js'),
+    exportName: 'initGallery'
+  },
+  {
+    selector: '[data-counter], [data-counter-target]',
+    importer: () => import('./modules/counter.js'),
+    exportName: 'initCounter'
+  },
+  {
+    selector: '[data-manifesto-section]',
+    importer: () => import('./modules/manifesto.js'),
+    exportName: 'initManifesto'
+  },
+  {
+    selector: '[data-why-hackunion]',
+    importer: () => import('./modules/why-hackunion.js'),
+    exportName: 'initWhyHackUnion'
+  },
+  {
+    selector: '[data-projects-section], [data-project-detail]',
+    importer: () => import('./modules/projects.js'),
+    exportName: 'initProjects'
+  },
+  {
+    selector: '[data-experiences-section]',
+    importer: () => import('./modules/experiences.js'),
+    exportName: 'initExperiences'
+  },
+  {
+    selector: '[data-community-action-section]',
+    importer: () => import('./modules/community-in-action.js'),
+    exportName: 'initCommunityInAction'
+  },
+  {
+    selector: '[data-community-videos-section]',
+    importer: () => import('./modules/community-videos.js'),
+    exportName: 'initCommunityVideos'
+  },
+  {
+    selector: '[data-partners-section]',
+    importer: () => import('./modules/partners-ecosystem.js'),
+    exportName: 'initPartnersEcosystem'
+  },
+  {
+    selector: '[data-final-cta-section]',
+    importer: () => import('./modules/final-cta.js'),
+    exportName: 'initFinalCta'
+  },
+  {
+    selector: '.hero',
+    importer: () => import('./modules/hero.js'),
+    exportName: 'initHero'
+  },
+  {
+    selector: '[data-obw-countdown]',
+    importer: () => import('./modules/open-build-week.js'),
+    exportName: 'initOpenBuildWeek'
+  },
+  {
+    selector: '[data-copy-hex]',
+    importer: () => import('./modules/brand-kit.js'),
+    exportName: 'initBrandKit'
+  },
+  {
+    selector: '[data-organizer-grid], [data-organizer-responsibilities], [data-organizer-modals]',
+    importer: () => import('./modules/organizers.js'),
+    exportName: 'initOrganizers'
+  },
+  {
+    selector: '[data-certificates-portal]',
+    importer: () => import('./modules/certificates.js'),
+    exportName: 'initCertificates'
+  },
+  {
+    selector: '[data-blog-grid], [data-share]',
+    importer: () => import('./modules/blogs.js'),
+    exportName: 'initBlogs'
+  },
+  {
+    selector: '[data-copilot-dev-days-app]',
+    importer: () => import('./modules/copilot-dev-days.js'),
+    exportName: 'initCopilotDevDays'
+  }
+];
+
+const initPageFeatures = async () => {
+  const pending = featureLoaders
+    .filter((loader) => document.querySelector(loader.selector))
+    .map((loader) => loadOnce(loader));
+
+  if (!pending.length) {
+    return;
+  }
+
+  await Promise.all(pending);
+};
 
 const ensureSmoothScroll = () => {
   if (isSmoothScrollReady) {
-    return;
+    return Promise.resolve();
   }
 
   if (initialHash && initialHash !== '#') {
-    return;
+    return Promise.resolve();
   }
 
-  initScroll();
-  isSmoothScrollReady = true;
+  if (!smoothScrollInitPromise) {
+    smoothScrollInitPromise = import('./modules/scroll.js').then((module) => {
+      module.initScroll();
+      isSmoothScrollReady = true;
+    });
+  }
+
+  return smoothScrollInitPromise;
 };
 
 const scrollToHashTarget = () => {
@@ -76,7 +175,7 @@ const scrollToHashTarget = () => {
   target.scrollIntoView({ behavior: 'auto', block: 'start' });
 };
 
-const bootstrap = () => {
+const bootstrap = async () => {
   document.documentElement.classList.add('has-js');
 
   setPageMetadata(getPageMetadata());
@@ -88,31 +187,17 @@ const bootstrap = () => {
   initBackToTop();
   initScrollIndicator();
   initAccordion();
-  initOrganizers();
   initModal();
-  initWhyHackUnion();
-  initManifesto();
-  initProjects();
-  initExperiences();
-  initCommunityInAction();
-  initCommunityVideos();
-  initPartnersEcosystem();
-  initFinalCta();
-  createIcons({ icons });
-  initGallery();
-  initLazyLoading();
-  initCounter();
-  initAnimations(page);
-  initHero();
-  initOpenBuildWeek();
-  initBrandKit();
-  initCertificates();
-  initBlogs();
-  initCopilotDevDays();
 
-  const settleInitialPosition = () => {
+  void initPageFeatures();
+  void renderLucideIcons();
+
+  initLazyLoading();
+  initAnimations(page);
+
+  const settleInitialPosition = async () => {
     scrollToHashTarget();
-    ensureSmoothScroll();
+    await ensureSmoothScroll();
   };
 
   // Re-apply hash scroll after dynamic sections mount so anchors land correctly.

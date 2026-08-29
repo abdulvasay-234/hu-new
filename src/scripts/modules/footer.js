@@ -1,7 +1,9 @@
 import { footerNavigation } from '../data/footer-data.js';
+import { getSiteRootPath, toSiteHref } from '../utils/site-path.js';
 
 export const initFooter = () => {
   const footer = document.querySelector('[data-site-footer]');
+  const rootPath = getSiteRootPath();
 
   if (!footer) {
     return;
@@ -15,7 +17,7 @@ export const initFooter = () => {
 
   if (footerList) {
     footerList.innerHTML = footerNavigation
-      .map((item) => `<li><a href="${item.href}">${item.label}</a></li>`)
+      .map((item) => `<li><a href="${toSiteHref(item.href, { rootPath })}">${item.label}</a></li>`)
       .join('');
   }
 

@@ -1,6 +1,7 @@
 import { createObserver } from './intersection-observer.js';
 import { prefersReducedMotion } from '../utils/media-query.js';
 import { partnerCategories, partnerLogos } from '../data/partners-ecosystem-data.js';
+import { getSiteRootPath, toSiteHref } from '../utils/site-path.js';
 
 const ALL_LOGOS_FILTER = 'all';
 
@@ -31,8 +32,9 @@ const renderCategory = (category, index, isActive = false) => `
   </button>
 `;
 
-const renderPartnerCard = (logo) => {
+const renderPartnerCard = (logo, rootPath) => {
   const logoUrl = typeof logo.url === 'string' ? logo.url.trim() : '';
+  const logoPath = toSiteHref(logo.logoPath, { rootPath });
   const cardTag = logoUrl ? 'a' : 'article';
   const cardAttributes = logoUrl
     ? `class="partners__logo-card partners__logo-card-link" href="${logoUrl}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${logo.name}"`
@@ -42,7 +44,7 @@ const renderPartnerCard = (logo) => {
     <li class="partners__logo-item">
       <${cardTag} ${cardAttributes}>
         <div class="partners__logo-visual" aria-hidden="true">
-          <img class="partners__logo-mark" src="${logo.logoPath}" alt="${logo.alt || `${logo.name} logo`}" loading="lazy" decoding="async" />
+          <img class="partners__logo-mark" src="${logoPath}" alt="${logo.alt || `${logo.name} logo`}" loading="lazy" decoding="async" />
         </div>
         <strong class="partners__logo-name">${logo.name}</strong>
       </${cardTag}>
@@ -50,7 +52,7 @@ const renderPartnerCard = (logo) => {
   `;
 };
 
-const renderCategoryGroup = (category, logos, index) => {
+const renderCategoryGroup = (category, logos, index, rootPath) => {
   const railId = `partners-rail-${category.toLowerCase().replace(/\s+/g, '-')}`;
 
   return `
@@ -67,7 +69,7 @@ const renderCategoryGroup = (category, logos, index) => {
         </button>
         <div class="partners__rail-viewport" data-partner-rail-viewport tabindex="0" aria-label="${category} partner rail">
           <ul id="${railId}" class="partners__rail-track" aria-label="${category}">
-            ${logos.map((logo) => renderPartnerCard(logo)).join('')}
+            ${logos.map((logo) => renderPartnerCard(logo, rootPath)).join('')}
           </ul>
         </div>
         <button
@@ -106,6 +108,7 @@ const getGroupedLogos = (logos) => {
 
 export const initPartnersEcosystem = () => {
   const section = document.querySelector('[data-partners-section]');
+  const rootPath = getSiteRootPath();
 
   if (!section) {
     return;
@@ -130,7 +133,7 @@ export const initPartnersEcosystem = () => {
 
   if (logoGridTarget) {
     logoGridTarget.innerHTML = partnerCategories
-      .map((category, index) => renderCategoryGroup(category, groupedLogos.get(category) || [], index))
+      .map((category, index) => renderCategoryGroup(category, groupedLogos.get(category) || [], index, rootPath))
       .join('');
   }
 

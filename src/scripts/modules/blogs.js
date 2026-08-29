@@ -1,4 +1,4 @@
-import { createIcons, icons } from '../../../node_modules/lucide/dist/esm/lucide.js';
+import { renderLucideIcons } from '../services/icons.js';
 
 const buildAssetUrl = (rootPath, assetPath) => {
   if (!assetPath) {
@@ -23,7 +23,7 @@ const escapeHtml = (value) => String(value)
   .replace(/'/g, '&#39;');
 
 const renderIcons = () => {
-  createIcons({ icons });
+  void renderLucideIcons();
 };
 
 const FEATURED_POST_SLUG = 'interledger-technology-rethinking-the-future-of-global-payments';

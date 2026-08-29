@@ -1,6 +1,7 @@
 import { createObserver } from './intersection-observer.js';
 import { prefersReducedMotion } from '../utils/media-query.js';
 import { experiencesData } from '../data/experiences-data.js';
+import { getSiteRootPath, toSiteHref } from '../utils/site-path.js';
 
 const escapeHtml = (value) => String(value ?? '')
   .replace(/&/g, '&amp;')
@@ -16,10 +17,10 @@ const toneClassMap = {
   green: 'experience-card--green'
 };
 
-const renderExperienceCard = (experience, index) => `
+const renderExperienceCard = (experience, index, rootPath) => `
   <article class="card experience-card ${toneClassMap[experience.tone] ?? ''} ${experience.isFlagship ? 'experience-card--flagship' : ''}" style="--experience-delay: ${index * 80}ms" aria-labelledby="${escapeHtml(experience.slug)}-title">
     <div class="experience-card__media">
-      <img class="experience-card__media-image" data-src="${escapeHtml(experience.image)}" src="${escapeHtml(experience.image)}" alt="${escapeHtml(experience.imageAlt || `${experience.title} visual`)}" loading="lazy" decoding="async" />
+      <img class="experience-card__media-image" data-src="${escapeHtml(toSiteHref(experience.image, { rootPath }))}" src="${escapeHtml(toSiteHref(experience.image, { rootPath }))}" alt="${escapeHtml(experience.imageAlt || `${experience.title} visual`)}" loading="lazy" decoding="async" />
       <div class="experience-card__media-fill"></div>
       <div class="experience-card__media-copy">
         <span class="experience-card__media-label">${escapeHtml(experience.visualLabel)}</span>
@@ -35,7 +36,7 @@ const renderExperienceCard = (experience, index) => `
       <h3 id="${escapeHtml(experience.slug)}-title">${escapeHtml(experience.title)}</h3>
       <p class="experience-card__description">${escapeHtml(experience.description)}</p>
 
-      <a class="button button--secondary experience-card__cta" href="${escapeHtml(experience.href)}" aria-label="${escapeHtml(experience.ctaLabel)} for ${escapeHtml(experience.title)}">
+      <a class="button button--secondary experience-card__cta" href="${escapeHtml(toSiteHref(experience.href, { rootPath }))}" aria-label="${escapeHtml(experience.ctaLabel)} for ${escapeHtml(experience.title)}">
         <span>${escapeHtml(experience.ctaLabel)}</span>
         <span class="experience-card__cta-icon" aria-hidden="true" data-lucide="arrow-right"></span>
       </a>
@@ -45,6 +46,7 @@ const renderExperienceCard = (experience, index) => `
 
 export const initExperiences = () => {
   const section = document.querySelector('[data-experiences-section]');
+  const rootPath = getSiteRootPath();
 
   if (!section) {
     return;
@@ -55,7 +57,7 @@ export const initExperiences = () => {
 
   if (gridTarget) {
     gridTarget.innerHTML = visibleExperiences
-      .map((experience, index) => renderExperienceCard(experience, index))
+      .map((experience, index) => renderExperienceCard(experience, index, rootPath))
       .join('');
   }
 

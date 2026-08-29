@@ -1,4 +1,5 @@
 import { organizers, organizerResponsibilities } from '../data/organizers-data.js';
+import { getSiteRootPath, toSiteHref } from '../utils/site-path.js';
 
 const SOCIAL_ICON_MAP = {
   linkedin: 'linkedin',
@@ -53,7 +54,7 @@ const renderResponsibilities = () => {
   `).join('');
 };
 
-const renderOrganizerCards = () => {
+const renderOrganizerCards = (rootPath) => {
   const root = document.querySelector('[data-organizer-grid]');
 
   if (!root) {
@@ -64,7 +65,7 @@ const renderOrganizerCards = () => {
     <article class="card organizer-card" data-animate>
       <button class="organizer-card__button" type="button" data-modal-open="#organizer-modal-${organizer.id}" aria-controls="organizer-modal-${organizer.id}">
         <div class="organizer-card__photo-wrap">
-          <img class="organizer-card__photo" src="${organizer.image}" alt="${organizer.imageAlt}" loading="lazy" decoding="async" />
+          <img class="organizer-card__photo" src="${toSiteHref(organizer.image, { rootPath })}" alt="${organizer.imageAlt}" loading="lazy" decoding="async" />
           <span class="organizer-card__verified badge badge--open-source"><span data-lucide="badge-check"></span>Verified</span>
         </div>
         <div class="organizer-card__body">
@@ -89,7 +90,7 @@ const renderOrganizerCards = () => {
   `).join('');
 };
 
-const renderOrganizerModals = () => {
+const renderOrganizerModals = (rootPath) => {
   const root = document.querySelector('[data-organizer-modals]');
 
   if (!root) {
@@ -107,7 +108,7 @@ const renderOrganizerModals = () => {
           </button>
         </div>
         <div class="modal__body organizer-modal__body">
-          <img class="organizer-modal__photo" src="${organizer.image}" alt="${organizer.imageAlt}" loading="lazy" decoding="async" />
+          <img class="organizer-modal__photo" src="${toSiteHref(organizer.image, { rootPath })}" alt="${organizer.imageAlt}" loading="lazy" decoding="async" />
           <div class="organizer-modal__content">
             <p class="organizer-modal__role">${organizer.role}</p>
             <p>${organizer.fullBio}</p>
@@ -155,7 +156,9 @@ const renderOrganizerModals = () => {
 };
 
 export const initOrganizers = () => {
+  const rootPath = getSiteRootPath();
+
   renderResponsibilities();
-  renderOrganizerCards();
-  renderOrganizerModals();
+  renderOrganizerCards(rootPath);
+  renderOrganizerModals(rootPath);
 };

@@ -1,4 +1,4 @@
-import { createIcons, icons } from '../../../node_modules/lucide/dist/esm/lucide.js';
+import { renderLucideIcons } from '../services/icons.js';
 import { initAnimations } from './animations.js';
 import { setPageMetadata } from '../services/seo.js';
 
@@ -821,7 +821,7 @@ export const initCopilotDevDays = async () => {
         setupMediaModals(container, media, rootPath);
       }
 
-      createIcons({ icons });
+      await renderLucideIcons();
       initAnimations(document.body.dataset.page || 'shared');
       return;
     }
@@ -832,7 +832,7 @@ export const initCopilotDevDays = async () => {
 
     if (!selectedEdition) {
       container.innerHTML = renderNotFound(rootPath);
-      createIcons({ icons });
+      await renderLucideIcons();
       initAnimations(document.body.dataset.page || 'shared');
       return;
     }
@@ -869,7 +869,7 @@ export const initCopilotDevDays = async () => {
       setupMediaModals(container, media, rootPath);
     }
 
-    createIcons({ icons });
+    await renderLucideIcons();
     initAnimations(document.body.dataset.page || 'shared');
   } catch (error) {
     container.innerHTML = `

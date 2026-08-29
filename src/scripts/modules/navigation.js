@@ -1,4 +1,5 @@
 import { primaryNavigation } from '../data/navigation-data.js';
+import { getSiteRootPath, toSiteHref } from '../utils/site-path.js';
 
 const MOBILE_BREAKPOINT = '(max-width: 1023px)';
 const FOCUSABLE_SELECTOR = [
@@ -36,6 +37,7 @@ export const initNavigation = () => {
   const navToggle = document.querySelector('[data-nav-toggle]');
   const siteNav = document.querySelector('[data-site-nav]');
   const mobileMedia = window.matchMedia(MOBILE_BREAKPOINT);
+  const rootPath = getSiteRootPath();
 
   let lastScrollY = window.scrollY;
 
@@ -201,7 +203,7 @@ export const initNavigation = () => {
           linkClasses.push('site-nav__link--highlight');
         }
 
-        return `<li><a class="${linkClasses.join(' ')}" href="${item.href}">${item.label}</a></li>`;
+        return `<li><a class="${linkClasses.join(' ')}" href="${toSiteHref(item.href, { rootPath })}">${item.label}</a></li>`;
       })
       .join('');
   }
