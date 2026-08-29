@@ -156,6 +156,10 @@ const initBlogsIndex = async () => {
   const searchInput = document.querySelector('[data-blog-search]');
   const categoriesWrap = document.querySelector('[data-blog-categories]');
   const resultText = document.querySelector('[data-blog-result-text]');
+  const heroLatestLink = document.querySelector('[data-blog-hero-latest]');
+  const heroLatestCategory = document.querySelector('[data-blog-hero-category]');
+  const heroLatestTitle = document.querySelector('[data-blog-hero-title]');
+  const heroLatestExcerpt = document.querySelector('[data-blog-hero-excerpt]');
 
   if (!dataPath || !featuredSlot || !grid || !searchInput || !categoriesWrap || !resultText) {
     return;
@@ -244,6 +248,15 @@ const initBlogsIndex = async () => {
     const featuredPost = payload.posts.find((post) => post.slug === FEATURED_POST_SLUG)
       || payload.posts.find((post) => post.slug === payload.featuredSlug)
       || payload.posts[0];
+
+    if (featuredPost && heroLatestLink && heroLatestCategory && heroLatestTitle && heroLatestExcerpt) {
+      heroLatestLink.setAttribute('href', `./${featuredPost.slug}/`);
+      heroLatestLink.setAttribute('aria-label', `Read latest article: ${featuredPost.title}`);
+      heroLatestCategory.textContent = featuredPost.category;
+      heroLatestTitle.textContent = featuredPost.title;
+      heroLatestExcerpt.textContent = featuredPost.excerpt;
+    }
+
     featuredSlot.innerHTML = renderFeatured(featuredPost, rootPath);
 
     const filteredPosts = applyFilters();
