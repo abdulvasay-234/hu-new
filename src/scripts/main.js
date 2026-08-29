@@ -17,6 +17,7 @@ import { initWhyHackUnion } from './modules/why-hackunion.js';
 import { initProjects } from './modules/projects.js';
 import { initExperiences } from './modules/experiences.js';
 import { initCommunityInAction } from './modules/community-in-action.js';
+import { initCommunityVideos } from './modules/community-videos.js';
 import { initPartnersEcosystem } from './modules/partners-ecosystem.js';
 import { initFinalCta } from './modules/final-cta.js';
 import { initHero } from './modules/hero.js';
@@ -94,6 +95,7 @@ const bootstrap = () => {
   initProjects();
   initExperiences();
   initCommunityInAction();
+  initCommunityVideos();
   initPartnersEcosystem();
   initFinalCta();
   createIcons({ icons });

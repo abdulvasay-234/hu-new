@@ -53,6 +53,7 @@ html[data-theme='dark'] .hero,
 html[data-theme='dark'] .manifesto,
 html[data-theme='dark'] .experiences,
 html[data-theme='dark'] .community-action,
+html[data-theme='dark'] .community-videos,
 html[data-theme='dark'] .partners,
 html[data-theme='dark'] .final-cta,
 html[data-theme='dark'] .proof-band,
@@ -73,6 +74,7 @@ html[data-theme='dark'] :is(
   .manifesto-feature,
   .experience-feature,
   .experience-card,
+  .community-video-card,
   .community-action__cta,
   .community-impact,
   .community-stories__featured,
@@ -88,6 +90,7 @@ html[data-theme='dark'] :is(
 html[data-theme='dark'] .hero__backdrop,
 html[data-theme='dark'] .manifesto::before,
 html[data-theme='dark'] .community-action::before,
+html[data-theme='dark'] .community-videos::before,
 html[data-theme='dark'] .final-cta__panel::before {
   opacity: 0.12;
 }
@@ -390,6 +393,30 @@ html[data-theme='dark'] .community-impact-report__link:focus-visible {
 
 html[data-theme='dark'] .community-impact-report__footnote {
   border-top-color: rgba(65, 86, 113, 0.72);
+}
+
+html[data-theme='dark'] .community-video-card__media {
+  border-bottom-color: rgba(65, 86, 113, 0.72);
+}
+
+html[data-theme='dark'] .community-video-card__category,
+html[data-theme='dark'] .community-video-card__watch,
+html[data-theme='dark'] .community-videos__explore {
+  color: #ffb779;
+  border-bottom-color: rgba(255, 149, 77, 0.62);
+}
+
+html[data-theme='dark'] .community-video-card__watch:hover,
+html[data-theme='dark'] .community-video-card__watch:focus-visible,
+html[data-theme='dark'] .community-videos__explore:hover,
+html[data-theme='dark'] .community-videos__explore:focus-visible {
+  color: #ffb779;
+  border-bottom-color: rgba(255, 149, 77, 0.82);
+}
+
+html[data-theme='dark'] .community-video-modal__frame {
+  border-color: rgba(65, 86, 113, 0.85);
+  background: radial-gradient(circle at 20% 18%, rgba(47, 99, 228, 0.2), transparent 38%), linear-gradient(135deg, rgba(10, 18, 29, 0.94), rgba(10, 18, 29, 0.9));
 }
 
 html[data-theme='dark'] .partners__logo-name {

@@ -264,6 +264,24 @@
           </div>
         </section>
 
+        <section id="community-videos" class="section community-videos" aria-labelledby="community-videos-title" data-community-videos-section>
+          <div class="container container--wide community-videos__inner">
+            <header class="section-header community-videos__header" data-animate>
+              <p class="section-header__eyebrow">BUILT TOGETHER</p>
+              <h2 id="community-videos-title" class="section-header__title">See the community in action.</h2>
+              <p class="section-header__text">Workshops, hackathons, build sessions, conversations, and moments from the HackUnion community.</p>
+            </header>
+
+            <div class="community-videos__grid" data-community-videos-grid aria-label="Featured HackUnion community videos"></div>
+
+            <div class="community-videos__actions" data-animate>
+              <a class="community-videos__explore" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener" aria-label="Explore HackUnion on YouTube">
+                Explore YouTube <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section id="partners" class="section partners" aria-labelledby="partners-title" aria-describedby="partners-intro" data-partners-section>
           <div class="container container--wide partners__inner">
             <div class="section-header partners__header" data-animate>
@@ -309,6 +327,21 @@
                 <span>Instagram</span>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal modal--video" id="community-video-modal" data-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="community-video-modal-title">
+        <div class="modal__overlay" data-modal-overlay></div>
+        <div class="modal__dialog community-video-modal__dialog">
+          <div class="modal__header">
+            <h2 id="community-video-modal-title" data-community-video-modal-title>Community Video</h2>
+            <button class="button button--ghost modal__close" type="button" data-modal-close aria-label="Close community video">
+              <span data-lucide="x"></span>
+            </button>
+          </div>
+          <div class="modal__body community-video-modal__body">
+            <div class="community-video-modal__frame" data-community-video-modal-frame aria-live="polite"></div>
           </div>
         </div>
       </div>
