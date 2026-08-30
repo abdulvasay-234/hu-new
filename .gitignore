@@ -6,6 +6,11 @@ dist/
 dist-ssr/
 coverage/
 
+# Tool caches
+.sass-cache/
+.vite/
+.cache/
+
 # Environment variables
 .env
 .env.*

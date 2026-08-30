@@ -98,7 +98,6 @@
             <ul class="site-nav__list">
               <li><a class="site-nav__link" href="../">Home</a></li>
               <li><a class="site-nav__link site-nav__link--highlight" href="./"><span class="obw-brand-word">Open<span class="obw-brand-word__build">Build</span> Week</span></a></li>
-              <li><a class="site-nav__link" href="#faq">FAQ</a></li>
               <li><a class="site-nav__link" href="#experience-timeline">Register</a></li>
             </ul>
             <div class="site-nav__mobile-actions">
@@ -141,7 +140,9 @@
           <div class="container container--wide hero__inner">
             <div class="hero__content stack stack--lg">
               <p class="eyebrow hero__eyebrow">HACKUNION FLAGSHIP INITIATIVE</p>
-              <h1 id="hero-title" class="hero__title"><span class="obw-brand-word">Open<span class="obw-brand-word__build">Build</span> Week</span></h1>
+              <h1 id="hero-title" class="hero__title obw-hero__title-logo">
+                <img class="obw-hero__logo" src="../public/brand-kit/obw-logo-trimmed.png?v=2" alt="OpenBuild Week" width="960" height="340" loading="eager" decoding="async" />
+              </h1>
               <p class="obw-hero__positioning">Build. Learn. Explore. Ship.</p>
               <p class="hero__text">A multi-campus builder experience by HackUnion where students, developers and creators come together to learn, experiment and ship.</p>
               <p class="obw-hero__open-payments">This edition explores Open Payments &mdash; open, interoperable payment infrastructure and what builders can create with it.</p>
@@ -671,7 +672,17 @@
             <div class="manifesto__features obw-projects-grid" aria-label="Student projects built during OpenBuild Week">
               <article class="card obw-project-card" data-animate>
                 <div class="obw-project-card__media" aria-hidden="true">
-                  <img class="obw-project-card__image" src="../Images/gallery/2SP00516.jpg" alt="Campus Event Navigator project build moment" loading="lazy" decoding="async" />
+                  <div
+                    class="project-card__image-fallback"
+                    role="img"
+                    aria-label="Campus Event Navigator project visual"
+                    style="--project-visual-glow: hsla(228, 78%, 68%, 0.26); --project-visual-deep: hsla(247, 34%, 16%, 0.92); --project-visual-grid: hsla(228, 70%, 84%, 0.17); --project-visual-text-soft: hsla(206, 100%, 94%, 0.92);"
+                  >
+                    <span class="project-card__fallback-grid project-card__fallback-grid--image" aria-hidden="true"></span>
+                    <span class="project-card__fallback-initials">CE</span>
+                    <span class="project-card__fallback-category">Campus Project</span>
+                    <span class="project-card__fallback-meta">Active &middot; Jul 18, 2026</span>
+                  </div>
                   <span class="obw-project-card__campus">BUILT AT CAMPUS 01</span>
                 </div>
                 <div class="obw-project-card__body">
@@ -700,7 +711,17 @@
 
               <article class="card obw-project-card" data-animate>
                 <div class="obw-project-card__media" aria-hidden="true">
-                  <img class="obw-project-card__image" src="../Images/gallery/2SP00496.jpg" alt="SkillSwap Network student demo" loading="lazy" decoding="async" />
+                  <div
+                    class="project-card__image-fallback"
+                    role="img"
+                    aria-label="SkillSwap Network project visual"
+                    style="--project-visual-glow: hsla(174, 74%, 62%, 0.24); --project-visual-deep: hsla(215, 40%, 14%, 0.92); --project-visual-grid: hsla(174, 65%, 80%, 0.16); --project-visual-text-soft: hsla(188, 100%, 94%, 0.9);"
+                  >
+                    <span class="project-card__fallback-grid project-card__fallback-grid--image" aria-hidden="true"></span>
+                    <span class="project-card__fallback-initials">SN</span>
+                    <span class="project-card__fallback-category">Developer Tool</span>
+                    <span class="project-card__fallback-meta">Active &middot; Jul 21, 2026</span>
+                  </div>
                   <span class="obw-project-card__campus">BUILT AT CAMPUS 02</span>
                 </div>
                 <div class="obw-project-card__body">
@@ -729,7 +750,17 @@
 
               <article class="card obw-project-card" data-animate>
                 <div class="obw-project-card__media" aria-hidden="true">
-                  <img class="obw-project-card__image" src="../Images/gallery/2SP00513.jpg" alt="Open Source Launchpad team collaboration" loading="lazy" decoding="async" />
+                  <div
+                    class="project-card__image-fallback"
+                    role="img"
+                    aria-label="Open Source Launchpad project visual"
+                    style="--project-visual-glow: hsla(34, 88%, 70%, 0.25); --project-visual-deep: hsla(252, 36%, 15%, 0.92); --project-visual-grid: hsla(34, 72%, 82%, 0.17); --project-visual-text-soft: hsla(44, 100%, 94%, 0.92);"
+                  >
+                    <span class="project-card__fallback-grid project-card__fallback-grid--image" aria-hidden="true"></span>
+                    <span class="project-card__fallback-initials">OS</span>
+                    <span class="project-card__fallback-category">Open Source</span>
+                    <span class="project-card__fallback-meta">Active &middot; Jul 24, 2026</span>
+                  </div>
                   <span class="obw-project-card__campus">BUILT AT CAMPUS 03</span>
                 </div>
                 <div class="obw-project-card__body">
@@ -759,542 +790,1822 @@
           </div>
         </section>
 
-        <section id="mentors-speakers" class="section obw-experts" aria-labelledby="experts-title">
+        <section id="ground-recaps" class="section obw-ground-recaps" aria-labelledby="ground-recaps-title">
           <div class="container container--wide">
-            <div class="section-header" data-animate>
-              <p class="section-header__eyebrow">Mentors &amp; Speakers</p>
-              <h2 id="experts-title" class="section-header__title">Mentors and speakers shaping every roadshow stop.</h2>
-              <p class="section-header__text">Meet the people guiding build sprints, sharing practical playbooks, and helping teams ship stronger outcomes during OpenBuild Week.</p>
+            <div class="section-header obw-ground-recaps__header" data-animate>
+              <p class="section-header__eyebrow">ON THE GROUND</p>
+              <h2 id="ground-recaps-title" class="section-header__title">Campus recap videos</h2>
+              <p class="section-header__text">See what happened when builders came together on the ground.</p>
             </div>
 
-            <div class="tabs obw-experts__tabs" data-tabs>
-              <div class="tabs__list" role="tablist" aria-label="Mentors and speakers filter">
-                <button class="tabs__button" type="button" id="experts-tab-all" role="tab" aria-controls="experts-panel-all" aria-selected="true">All</button>
-                <button class="tabs__button" type="button" id="experts-tab-mentors" role="tab" aria-controls="experts-panel-mentors" aria-selected="false" tabindex="-1">Mentors</button>
-                <button class="tabs__button" type="button" id="experts-tab-speakers" role="tab" aria-controls="experts-panel-speakers" aria-selected="false" tabindex="-1">Speakers</button>
-              </div>
-
-              <div class="tabs__panel obw-experts__panel" id="experts-panel-all" role="tabpanel" aria-labelledby="experts-tab-all">
-                <div class="obw-experts__grid" data-stagger>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/mujahid.png" alt="Mujahid" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Mujahid Ahmed</h3>
-                    <p class="obw-expert-card__profession">Product Leader @ Microsoft & Startup Advisor</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-18">18 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Mujahid Ahmed socials">
-                      <a href="https://www.linkedin.com/in/mujahidahmed/" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/sathpal.png" alt="Satpal Singh" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Satpal Singh</h3>
-                    <p class="obw-expert-card__profession">Director of Technology, Optum Global Solution</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-18">18 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Satpal Singh socials">
-                      <a href="https://www.linkedin.com/in/sathpalsingh/" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/khaja.png" alt="Khaja" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Khaja Moinuddin Mohammed</h3>
-                    <p class="obw-expert-card__profession">Senior Solutions and Platform Architect</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Khaja Moinuddin Mohammed socials">
-                      <a href="https://www.linkedin.com/in/khaja143/" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/vineel.png" alt="Vineel Reddy Pindi" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Vineel Reddy Pindi</h3>
-                    <p class="obw-expert-card__profession">Community Manager at Interledger Foundation</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Vineel Reddy Pindi socials">
-                      <a href="https://www.linkedin.com/in/vineelreddypindi/" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/krishna-tangirala.png" alt="Krishna Tangirala" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Krishna Tangirala</h3>
-                    <p class="obw-expert-card__profession">Executive Director, Software Engineering at Wells Frago</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Krishna Tangirala socials">
-                      <a href="https://www.linkedin.com/in/tangirala/" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Abdul-Vasay.png" alt="Afnan Abdul Vasay" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Afnan Abdul Vasay</h3>
-                    <p class="obw-expert-card__profession">GitHub Campus Expert</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Afnan Abdul Vasay socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Satish-Reddy.png" alt="Satish Reddy" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Satish Reddy</h3>
-                    <p class="obw-expert-card__profession">Founder &amp; CEO - Xbattery</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Satish Reddy socials">
-                      <a href="https://www.linkedin.com/in/satishreddyv/" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Titus-Thomas.png" alt="Titus Thomas" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Titus Thomas</h3>
-                    <p class="obw-expert-card__profession">CTO - Nexigence AI</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Titus Thomas socials">
-                      <a href="https://www.linkedin.com/in/titustom/" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Vadranam-Manikanth.png" alt="Vadranam Manikanth" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Vadranam Manikanth</h3>
-                    <p class="obw-expert-card__profession">Data Scientist (BI) - Paypal</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Vadranam Manikanth socials">
-                      <a href="https://www.linkedin.com/in/vadranam-manikanth-797982158/" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--alina">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/alina.png" alt="Alina Abreeq" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Alina Abreeq</h3>
-                    <p class="obw-expert-card__profession">Product Mentor</p>
-                    <p class="obw-expert-card__bio">Engineering mentor focused on architecture reviews, code quality, and delivery speed.</p>
-                    <div class="obw-expert-card__socials" aria-label="Alina Abreeq socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/arfina.png" alt="Arfina Javeed" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Arfina Javeed</h3>
-                    <p class="obw-expert-card__profession">Engineering Mentor</p>
-                    <p class="obw-expert-card__bio">Engineering mentor focused on architecture reviews, code quality, and delivery speed.</p>
-                    <div class="obw-expert-card__socials" aria-label="Arfina Javeed socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/champions/ashish-sreenidhi.png" alt="Ashish Malla" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Ashish Malla</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Ashish Malla socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/dawood.png" alt="Dawood" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Dawood</h3>
-                    <p class="obw-expert-card__profession">AI Mentor</p>
-                    <p class="obw-expert-card__bio">AI mentor guiding teams on model selection, prompt workflows, and evaluation loops.</p>
-                    <div class="obw-expert-card__socials" aria-label="Dawood socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Dawood on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Dawood on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Dawood on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/kafia.png" alt="Kafia Kauser" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Kafia Kauser</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Kafia Kauser socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/danish.png" alt="Mohammad Danish" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Mohammad Danish</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Mohammad Danish socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/mudith.png" alt="MUDIT KHATER" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>MUDIT KHATER</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="MUDIT KHATER socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/Rayeesa Mahmood.png" alt="Rayeesa Mahmood" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Rayeesa Mahmood</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Rayeesa Mahmood socials">
-                      <a href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/Reda-Kaleem.png" alt="Reda Kaleem" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Reda Kaleem</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Reda Kaleem socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/imaaz.png" alt="Syed Imaaz Ali" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Syed Imaaz Ali</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Syed Imaaz Ali socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/yousha.png" alt="Yousha Khan" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Yousha Khan</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Yousha Khan socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
+            <div class="obw-ground-recaps__grid" data-stagger aria-label="OpenBuild Week campus recap videos">
+              <article class="card obw-recap-card obw-recap-card--primary obw-recap-card--upcoming" data-animate>
+                <div class="obw-recap-card__media">
+                  <img src="../public/images/gallery-optimized/2SP01669.jpg" alt="Builders collaborating during OpenBuild Week at Lords Institute" loading="lazy" decoding="async" />
+                  <span class="obw-recap-card__badge">Upcoming</span>
                 </div>
-              </div>
-
-              <div class="tabs__panel obw-experts__panel" id="experts-panel-mentors" role="tabpanel" aria-labelledby="experts-tab-mentors" hidden>
-                <div class="obw-experts__grid" data-stagger>
-                  <article class="card obw-expert-card obw-expert-card--alina">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/alina.png" alt="Alina Abreeq" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Alina Abreeq</h3>
-                    <p class="obw-expert-card__profession">Product Mentor</p>
-                    <p class="obw-expert-card__bio">Product mentor helping teams scope MVPs and ship milestone-ready demos.</p>
-                    <div class="obw-expert-card__socials" aria-label="Alina Abreeq socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/arfina.png" alt="Arfina Javeed" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Arfina Javeed</h3>
-                    <p class="obw-expert-card__profession">Engineering Mentor</p>
-                    <p class="obw-expert-card__bio">Engineering mentor focused on architecture reviews, code quality, and delivery speed.</p>
-                    <div class="obw-expert-card__socials" aria-label="Arfina Javeed socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/champions/ashish-sreenidhi.png" alt="Ashish Malla" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Ashish Malla</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Ashish Malla socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/dawood.png" alt="Dawood" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Dawood</h3>
-                    <p class="obw-expert-card__profession">AI Mentor</p>
-                    <p class="obw-expert-card__bio">AI mentor guiding teams on model selection, prompt workflows, and evaluation loops.</p>
-                    <div class="obw-expert-card__socials" aria-label="Dawood socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Dawood on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Dawood on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Dawood on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/kafia.png" alt="Kafia Kauser" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Kafia Kauser</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Kafia Kauser socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/danish.png" alt="Mohammad Danish" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Mohammad Danish</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Mohammad Danish socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/mudith.png" alt="MUDIT KHATER" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>MUDIT KHATER</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="MUDIT KHATER socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/Rayeesa Mahmood.png" alt="Rayeesa Mahmood" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Rayeesa Mahmood</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Rayeesa Mahmood socials">
-                      <a href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/Reda-Kaleem.png" alt="Reda Kaleem" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Reda Kaleem</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Reda Kaleem socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/imaaz.png" alt="Syed Imaaz Ali" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Syed Imaaz Ali</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Syed Imaaz Ali socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/Mentors/yousha.png" alt="Yousha Khan" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Mentor</p>
-                    <h3>Yousha Khan</h3>
-                    <p class="obw-expert-card__profession">Mentor</p>
-                    <p class="obw-expert-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
-                    <div class="obw-expert-card__socials" aria-label="Yousha Khan socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
+                <div class="obw-recap-card__body">
+                  <p class="obw-recap-card__campus-index">Campus 06</p>
+                  <h3 class="obw-recap-card__campus-name">Lords IET</h3>
+                  <p class="obw-recap-card__date">03 Sep 2026</p>
+                  <p class="obw-recap-card__description">Final roadshow stop focused on live demos, collaboration, and shipping momentum.</p>
+                  <p class="obw-recap-card__cta is-coming-soon">Recap coming soon</p>
                 </div>
-              </div>
+              </article>
 
-              <div class="tabs__panel obw-experts__panel" id="experts-panel-speakers" role="tabpanel" aria-labelledby="experts-tab-speakers" hidden>
-                <div class="obw-experts__grid" data-stagger>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Abdul-Vasay.png" alt="Afnan Abdul Vasay" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Afnan Abdul Vasay</h3>
-                    <p class="obw-expert-card__profession">GitHub Campus Expert</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Afnan Abdul Vasay socials">
-                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/khaja.png" alt="Khaja" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Khaja Moinuddin Mohammed</h3>
-                    <p class="obw-expert-card__profession">Senior Solutions and Platform Architect</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Khaja Moinuddin Mohammed socials">
-                      <a href="https://www.linkedin.com/in/khaja143/" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/krishna-tangirala.png" alt="Krishna Tangirala" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Krishna Tangirala</h3>
-                    <p class="obw-expert-card__profession">Executive Director, Software Engineering at Wells Frago</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Krishna Tangirala socials">
-                      <a href="https://www.linkedin.com/in/tangirala/" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/mujahid.png" alt="Mujahid" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Mujahid Ahmed</h3>
-                    <p class="obw-expert-card__profession">Product Leader @ Microsoft & Startup Advisor</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-18">18 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Mujahid Ahmed socials">
-                      <a href="https://www.linkedin.com/in/mujahidahmed/" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Satish-Reddy.png" alt="Satish Reddy" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Satish Reddy</h3>
-                    <p class="obw-expert-card__profession">Founder &amp; CEO - Xbattery</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Satish Reddy socials">
-                      <a href="https://www.linkedin.com/in/satishreddyv/" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/sathpal.png" alt="Satpal Singh" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Satpal Singh</h3>
-                    <p class="obw-expert-card__profession">Director of Technology, Optum Global Solution</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-18">18 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Satpal Singh socials">
-                      <a href="https://www.linkedin.com/in/sathpalsingh/" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Titus-Thomas.png" alt="Titus Thomas" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Titus Thomas</h3>
-                    <p class="obw-expert-card__profession">CTO - Nexigence AI</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Titus Thomas socials">
-                      <a href="https://www.linkedin.com/in/titustom/" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/Vadranam-Manikanth.png" alt="Vadranam Manikanth" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Vadranam Manikanth</h3>
-                    <p class="obw-expert-card__profession">Data Scientist (BI) - Paypal</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Vadranam Manikanth socials">
-                      <a href="https://www.linkedin.com/in/vadranam-manikanth-797982158/" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
-                  <article class="card obw-expert-card obw-expert-card--featured-speaker">
-                    <img class="obw-expert-card__photo" src="../Images/Speaker/vineel.png" alt="Vineel Reddy Pindi" loading="lazy" decoding="async" />
-                    <p class="obw-expert-card__badge">Speaker</p>
-                    <h3>Vineel Reddy Pindi</h3>
-                    <p class="obw-expert-card__profession">Community Manager at Interledger Foundation</p>
-                    <p class="obw-expert-card__talk-date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
-                    <p class="obw-expert-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
-                    <div class="obw-expert-card__socials" aria-label="Vineel Reddy Pindi socials">
-                      <a href="https://www.linkedin.com/in/vineelreddypindi/" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
-                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
-                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
-                    </div>
-                  </article>
+              <article class="card obw-recap-card obw-recap-card--completed" data-animate>
+                <a class="obw-recap-card__media" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener" aria-label="Watch Campus 01 recap on YouTube">
+                  <img src="../public/images/gallery-optimized/2SP00516.jpg" alt="OpenBuild Week campus participants collaborating at Lords Skill Academy" loading="lazy" decoding="async" />
+                  <span class="obw-recap-card__badge">Campus Recap</span>
+                  <span class="obw-recap-card__play" aria-hidden="true"><span></span></span>
+                </a>
+                <div class="obw-recap-card__body">
+                  <p class="obw-recap-card__campus-index">Campus 01</p>
+                  <h3 class="obw-recap-card__campus-name">Lords Skill Academy</h3>
+                  <p class="obw-recap-card__date">18 Jul 2026</p>
+                  <p class="obw-recap-card__description">Kickoff build sprint with team formation, workshops, and first project demos.</p>
+                  <a class="obw-recap-card__cta" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener">Campus recap &rarr;</a>
                 </div>
-              </div>
+              </article>
+
+              <article class="card obw-recap-card obw-recap-card--completed" data-animate>
+                <a class="obw-recap-card__media" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener" aria-label="Watch Campus 02 recap on YouTube">
+                  <img src="../public/images/gallery-optimized/2SP00496.jpg" alt="Student developers during OpenBuild Week at VJIT" loading="lazy" decoding="async" />
+                  <span class="obw-recap-card__badge">Campus Recap</span>
+                  <span class="obw-recap-card__play" aria-hidden="true"><span></span></span>
+                </a>
+                <div class="obw-recap-card__body">
+                  <p class="obw-recap-card__campus-index">Campus 02</p>
+                  <h3 class="obw-recap-card__campus-name">VJIT</h3>
+                  <p class="obw-recap-card__date">25 Jul 2026</p>
+                  <p class="obw-recap-card__description">Hands-on sessions with rapid prototyping and peer feedback across teams.</p>
+                  <a class="obw-recap-card__cta" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener">Campus recap &rarr;</a>
+                </div>
+              </article>
+
+              <article class="card obw-recap-card obw-recap-card--completed" data-animate>
+                <a class="obw-recap-card__media" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener" aria-label="Watch Campus 03 recap on YouTube">
+                  <img src="../public/images/gallery-optimized/2SP00513.jpg" alt="Campus build activity from OpenBuild Week at CMRIT" loading="lazy" decoding="async" />
+                  <span class="obw-recap-card__badge">Campus Recap</span>
+                  <span class="obw-recap-card__play" aria-hidden="true"><span></span></span>
+                </a>
+                <div class="obw-recap-card__body">
+                  <p class="obw-recap-card__campus-index">Campus 03</p>
+                  <h3 class="obw-recap-card__campus-name">CMRIT</h3>
+                  <p class="obw-recap-card__date">25 Jul 2026</p>
+                  <p class="obw-recap-card__description">Focused builder conversations and practical execution check-ins.</p>
+                  <a class="obw-recap-card__cta" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener">Campus recap &rarr;</a>
+                </div>
+              </article>
+
+              <article class="card obw-recap-card obw-recap-card--completed" data-animate>
+                <a class="obw-recap-card__media" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener" aria-label="Watch Campus 04 recap on YouTube">
+                  <img src="../public/images/gallery-optimized/2SP00610.jpg" alt="OpenBuild Week crowd and workshop moments at Sreenidhi" loading="lazy" decoding="async" />
+                  <span class="obw-recap-card__badge">Campus Recap</span>
+                  <span class="obw-recap-card__play" aria-hidden="true"><span></span></span>
+                </a>
+                <div class="obw-recap-card__body">
+                  <p class="obw-recap-card__campus-index">Campus 04</p>
+                  <h3 class="obw-recap-card__campus-name">Sreenidhi</h3>
+                  <p class="obw-recap-card__date">03 Aug 2026</p>
+                  <p class="obw-recap-card__description">Deep work sessions, mentor loops, and project clarity milestones.</p>
+                  <a class="obw-recap-card__cta" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener">Campus recap &rarr;</a>
+                </div>
+              </article>
+
+              <article class="card obw-recap-card obw-recap-card--completed" data-animate>
+                <a class="obw-recap-card__media" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener" aria-label="Watch Campus 05 recap on YouTube">
+                  <img src="../public/images/gallery-optimized/2SP00716.jpg" alt="OpenBuild Week participants presenting and building at Vardhaman" loading="lazy" decoding="async" />
+                  <span class="obw-recap-card__badge">Campus Recap</span>
+                  <span class="obw-recap-card__play" aria-hidden="true"><span></span></span>
+                </a>
+                <div class="obw-recap-card__body">
+                  <p class="obw-recap-card__campus-index">Campus 05</p>
+                  <h3 class="obw-recap-card__campus-name">Vardhaman</h3>
+                  <p class="obw-recap-card__date">21 Aug 2026</p>
+                  <p class="obw-recap-card__description">Community build energy, demo walkthroughs, and shipping progress.</p>
+                  <a class="obw-recap-card__cta" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener">Campus recap &rarr;</a>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section id="partners-section" class="section obw-partner-hub" aria-labelledby="partners-hub-title">
+        <section id="week-moments" class="section obw-moments" aria-labelledby="week-moments-title">
+          <div class="container container--wide obw-moments__inner">
+            <header class="section-header obw-moments__header" data-animate>
+              <p class="section-header__eyebrow">THE WEEK IN MOMENTS</p>
+              <h2 id="week-moments-title" class="section-header__title">A week worth remembering.</h2>
+              <p class="section-header__text">Moments from campuses, builders, workshops and everything that happened along the way.</p>
+            </header>
+
+            <div class="obw-polaroid-wall" data-stagger aria-label="OpenBuild Week moments photo wall">
+              <figure class="obw-polaroid obw-polaroid--lg" data-animate>
+                <span class="obw-polaroid__pin" aria-hidden="true"></span>
+                <div class="obw-polaroid__photo">
+                  <img src="../public/images/gallery-optimized/2SP00516.jpg" alt="Builders collaborating during OpenBuild Week campus sessions" loading="lazy" decoding="async" />
+                </div>
+                <figcaption class="obw-polaroid__caption">BUILD TOGETHER</figcaption>
+              </figure>
+
+              <figure class="obw-polaroid obw-polaroid--md" data-animate>
+                <span class="obw-polaroid__pin" aria-hidden="true"></span>
+                <div class="obw-polaroid__photo">
+                  <img src="../public/images/gallery-optimized/2SP00496.jpg" alt="Students presenting and reviewing progress during build day" loading="lazy" decoding="async" />
+                </div>
+                <figcaption class="obw-polaroid__caption">LEARN TOGETHER</figcaption>
+              </figure>
+
+              <figure class="obw-polaroid obw-polaroid--md" data-animate>
+                <span class="obw-polaroid__pin" aria-hidden="true"></span>
+                <div class="obw-polaroid__photo">
+                  <img src="../public/images/gallery-optimized/2SP00513.jpg" alt="Campus participants engaging in hands-on sessions" loading="lazy" decoding="async" />
+                </div>
+                <figcaption class="obw-polaroid__caption">BUILDERS IN ACTION</figcaption>
+              </figure>
+
+              <figure class="obw-polaroid obw-polaroid--sm" data-animate>
+                <span class="obw-polaroid__pin" aria-hidden="true"></span>
+                <div class="obw-polaroid__photo">
+                  <img src="../public/images/gallery-optimized/2SP00610.jpg" alt="Workshop moment with teams discussing product direction" loading="lazy" decoding="async" />
+                </div>
+                <figcaption class="obw-polaroid__caption">COMMUNITY IN MOTION</figcaption>
+              </figure>
+
+              <figure class="obw-polaroid obw-polaroid--sm" data-animate>
+                <span class="obw-polaroid__pin" aria-hidden="true"></span>
+                <div class="obw-polaroid__photo">
+                  <img src="../public/images/gallery-optimized/2SP00716.jpg" alt="Builders and mentors in a packed OpenBuild Week session" loading="lazy" decoding="async" />
+                </div>
+                <figcaption class="obw-polaroid__caption">SHIPPING TOGETHER</figcaption>
+              </figure>
+
+              <figure class="obw-polaroid obw-polaroid--md" data-animate>
+                <span class="obw-polaroid__pin" aria-hidden="true"></span>
+                <div class="obw-polaroid__photo">
+                  <img src="../public/images/gallery-optimized/2SP01669.jpg" alt="OpenBuild Week crowd and builders during a campus event" loading="lazy" decoding="async" />
+                </div>
+                <figcaption class="obw-polaroid__caption">OPEN PAYMENTS</figcaption>
+              </figure>
+            </div>
+
+            <p class="obw-moments__meta" aria-label="OpenBuild Week highlights summary">06 CAMPUSES <span aria-hidden="true">•</span> 01 WEEK <span aria-hidden="true">•</span> COUNTLESS BUILDERS</p>
+          </div>
+        </section>
+
+        <section id="mentors-speakers" class="section obw-experts" aria-labelledby="experts-title" data-expert-wall-section>
+          <style>
+            #mentors-speakers {
+              --obw-ink: #13193b;
+              --obw-purple: #6658d3;
+              --obw-purple-soft: #f3f0ff;
+              --obw-orange: #ff8a3d;
+              --obw-border: hsla(249, 50%, 58%, 0.34);
+              --obw-shadow: 0 18px 40px -28px hsla(239, 49%, 21%, 0.48);
+            }
+
+            #mentors-speakers .section-header__eyebrow {
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              color: var(--obw-purple);
+            }
+
+            #mentors-speakers .section-header__title,
+            #mentors-speakers .section-header__text {
+              color: var(--obw-ink);
+            }
+
+            #mentors-speakers .section-header__title {
+              max-width: 14ch;
+              line-height: 1.05;
+              letter-spacing: -0.02em;
+              margin-bottom: 0.95rem;
+            }
+
+            #mentors-speakers .section-header__text {
+              max-width: 64ch;
+            }
+
+            .obw-people-filter {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.65rem;
+              margin: 2rem 0 2.1rem;
+            }
+
+            .obw-people-filter__btn {
+              appearance: none;
+              border: 1px solid var(--obw-border);
+              border-radius: 999px;
+              padding: 0.56rem 1.1rem;
+              background: #fff;
+              color: var(--obw-ink);
+              font: inherit;
+              font-weight: 600;
+              letter-spacing: 0.01em;
+              transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+            }
+
+            .obw-people-filter__btn:hover,
+            .obw-people-filter__btn:focus-visible {
+              transform: translateY(-2px);
+              border-color: hsla(249, 56%, 52%, 0.56);
+              outline: none;
+            }
+
+            .obw-people-filter__btn.is-active {
+              background: linear-gradient(130deg, hsla(249, 80%, 96%, 1), hsla(32, 100%, 95%, 0.9));
+              border-color: hsla(249, 56%, 52%, 0.66);
+              color: var(--obw-purple);
+            }
+
+            .obw-people-divider {
+              font-size: 0.76rem;
+              letter-spacing: 0.18em;
+              font-weight: 700;
+              text-transform: uppercase;
+              color: hsla(232, 45%, 32%, 0.78);
+              margin: 0.4rem 0 1rem;
+              padding-top: 0.65rem;
+              border-top: 1px solid hsla(248, 42%, 68%, 0.3);
+              transition: opacity 0.3s ease, transform 0.35s ease, max-height 0.35s ease;
+              transform-origin: top;
+              max-height: 2.2rem;
+            }
+
+            .obw-people-group {
+              transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.42s ease, margin 0.35s ease;
+              transform-origin: top;
+              max-height: 240rem;
+              opacity: 1;
+              transform: translateY(0);
+            }
+
+            .obw-people-group.is-collapsed,
+            .obw-people-divider.is-collapsed {
+              opacity: 0;
+              transform: translateY(12px);
+              max-height: 0;
+              overflow: hidden;
+              margin: 0;
+              pointer-events: none;
+            }
+
+            .obw-people-grid {
+              display: grid;
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+              gap: 1.45rem;
+            }
+
+            .obw-people-grid--speakers .obw-person-card {
+              min-height: 23rem;
+            }
+
+            .obw-people-grid--mentors .obw-person-card {
+              min-height: 21.2rem;
+            }
+
+            .obw-person-card {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              border: 1px solid var(--obw-border);
+              background: linear-gradient(180deg, #ffffff 0%, #f9f7ff 100%);
+              border-radius: 1.05rem;
+              box-shadow: var(--obw-shadow);
+              overflow: hidden;
+              transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+              isolation: isolate;
+            }
+
+            .obw-person-card::before {
+              content: "";
+              position: absolute;
+              inset: -35% -35% auto;
+              height: 52%;
+              background: radial-gradient(65% 90% at 30% 20%, hsla(266, 100%, 95%, 0.58) 0%, transparent 70%), radial-gradient(65% 90% at 80% 20%, hsla(28, 100%, 88%, 0.4) 0%, transparent 70%);
+              transform: translateY(0);
+              opacity: 0.72;
+              transition: transform 0.65s ease, opacity 0.4s ease;
+              pointer-events: none;
+              z-index: 1;
+            }
+
+            .obw-person-card::after {
+              content: "";
+              position: absolute;
+              inset: -30% auto -30% -50%;
+              width: 45%;
+              background: linear-gradient(110deg, transparent 10%, hsla(0, 0%, 100%, 0.46) 50%, transparent 90%);
+              transform: translateX(-145%) rotate(16deg);
+              transition: transform 0.65s ease;
+              pointer-events: none;
+              z-index: 2;
+            }
+
+            .obw-person-card:hover,
+            .obw-person-card:focus-within {
+              transform: translateY(-5px);
+              box-shadow: 0 24px 46px -30px hsla(242, 48%, 18%, 0.55);
+              border-color: hsla(252, 66%, 56%, 0.56);
+            }
+
+            .obw-person-card:hover::before,
+            .obw-person-card:focus-within::before {
+              transform: translateY(8px);
+              opacity: 0.96;
+            }
+
+            .obw-person-card:hover::after,
+            .obw-person-card:focus-within::after {
+              transform: translateX(320%) rotate(16deg);
+            }
+
+            .obw-person-card--speaker {
+              border-color: hsla(252, 62%, 58%, 0.44);
+              background:
+                radial-gradient(130% 60% at 100% 0%, hsla(27, 100%, 84%, 0.34) 0%, transparent 58%),
+                linear-gradient(180deg, #ffffff 0%, #f5f1ff 100%);
+            }
+
+            .obw-person-card__media {
+              position: relative;
+              aspect-ratio: 4 / 4.15;
+              overflow: hidden;
+              background: linear-gradient(160deg, hsla(241, 36%, 91%, 0.45), hsla(252, 56%, 86%, 0.22));
+            }
+
+            .obw-person-card__photo {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.34s ease;
+            }
+
+            .obw-person-card:hover .obw-person-card__photo,
+            .obw-person-card:focus-within .obw-person-card__photo {
+              transform: scale(1.035);
+            }
+
+            .obw-person-card__badge {
+              position: absolute;
+              left: 0.85rem;
+              top: 0.85rem;
+              margin: 0;
+              font-size: 0.62rem;
+              line-height: 1;
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              font-weight: 700;
+              padding: 0.42rem 0.58rem;
+              border-radius: 999px;
+              color: #fff;
+              background: linear-gradient(135deg, #5d54d8, #7a63e6 72%, #ff9c5b 100%);
+              z-index: 3;
+            }
+
+            .obw-person-card__body {
+              display: flex;
+              flex: 1;
+              flex-direction: column;
+              gap: 0.46rem;
+              padding: 0.82rem 0.9rem 0.9rem;
+            }
+
+            .obw-person-card__name {
+              margin: 0;
+              color: var(--obw-ink);
+              font-size: 0.98rem;
+              line-height: 1.24;
+            }
+
+            .obw-person-card__role {
+              margin: 0;
+              color: hsla(231, 39%, 27%, 0.92);
+              font-size: 0.79rem;
+              line-height: 1.35;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+              overflow: hidden;
+            }
+
+            .obw-person-card__date {
+              margin: 0;
+              color: var(--obw-purple);
+              font-size: 0.7rem;
+              letter-spacing: 0.04em;
+              text-transform: uppercase;
+              font-weight: 700;
+            }
+
+            .obw-person-card--speaker .obw-person-card__date {
+              color: var(--obw-orange);
+            }
+
+            .obw-person-card__bio {
+              margin: 0;
+              color: hsla(232, 34%, 28%, 0.86);
+              font-size: 0.75rem;
+              line-height: 1.4;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+              line-clamp: 1;
+              overflow: hidden;
+            }
+
+            .obw-people-grid--mentors .obw-person-card__bio {
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+            }
+
+            .obw-people-grid--mentors .obw-person-card__role {
+              color: var(--obw-orange);
+            }
+
+            .obw-person-card__socials {
+              margin-top: auto;
+              display: flex;
+              gap: 0.52rem;
+              padding-top: 0.18rem;
+            }
+
+            .obw-person-card__socials a {
+              width: 1.88rem;
+              height: 1.88rem;
+              border-radius: 50%;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid hsla(249, 46%, 64%, 0.34);
+              background: hsla(249, 78%, 98%, 0.84);
+              color: var(--obw-purple);
+              transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+            }
+
+            .obw-person-card__socials a:hover,
+            .obw-person-card__socials a:focus-visible {
+              transform: translateY(-2px);
+              border-color: hsla(28, 95%, 63%, 0.64);
+              color: #e16f1c;
+              outline: none;
+            }
+
+            @media (max-width: 1023px) {
+              .obw-people-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+              }
+            }
+
+            @media (max-width: 699px) {
+              .obw-people-grid {
+                grid-template-columns: 1fr;
+              }
+
+              #mentors-speakers .section-header__title {
+                max-width: none;
+              }
+            }
+          </style>
+
           <div class="container container--wide">
             <div class="section-header" data-animate>
-              <p class="section-header__eyebrow">Partners</p>
-              <h2 id="partners-hub-title" class="section-header__title">Partners powering each OpenBuild Week roadshow stop.</h2>
+              <p class="section-header__eyebrow">MENTORS &amp; SPEAKERS</p>
+              <h2 id="experts-title" class="section-header__title">Mentors and speakers<br />shaping every<br />roadshow stop.</h2>
+              <p class="section-header__text">Meet the people guiding build sprints, sharing practical playbooks, and helping teams ship stronger outcomes during OpenBuild Week.</p>
+            </div>
+
+            <div class="obw-people-filter" role="group" aria-label="Mentors and speakers filter">
+              <button class="obw-people-filter__btn is-active" type="button" data-expert-filter="all" aria-pressed="true">All</button>
+              <button class="obw-people-filter__btn" type="button" data-expert-filter="mentors" aria-pressed="false">Mentors</button>
+              <button class="obw-people-filter__btn" type="button" data-expert-filter="speakers" aria-pressed="false">Speakers</button>
+            </div>
+
+            <p class="obw-people-divider" data-expert-divider-speakers>FEATURED SPEAKERS</p>
+
+            <div class="obw-people-group" data-expert-group="speakers">
+              <div class="obw-people-grid obw-people-grid--speakers" data-stagger>
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/mujahid.png" alt="Mujahid" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Mujahid Ahmed</h3>
+                    <p class="obw-person-card__role">Product Leader @ Microsoft &amp; Startup Advisor</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-07-18">18 July, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Mujahid Ahmed socials">
+                      <a href="https://www.linkedin.com/in/mujahidahmed/" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Mujahid Ahmed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/sathpal.png" alt="Satpal Singh" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Satpal Singh</h3>
+                    <p class="obw-person-card__role">Director of Technology, Optum Global Solution</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-07-18">18 July, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Satpal Singh socials">
+                      <a href="https://www.linkedin.com/in/sathpalsingh/" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Satpal Singh on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/khaja.png" alt="Khaja" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Khaja Moinuddin Mohammed</h3>
+                    <p class="obw-person-card__role">Senior Solutions and Platform Architect</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Khaja Moinuddin Mohammed socials">
+                      <a href="https://www.linkedin.com/in/khaja143/" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Khaja Moinuddin Mohammed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/vineel.png" alt="Vineel Reddy Pindi" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Vineel Reddy Pindi</h3>
+                    <p class="obw-person-card__role">Community Manager at Interledger Foundation</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Vineel Reddy Pindi socials">
+                      <a href="https://www.linkedin.com/in/vineelreddypindi/" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Vineel Reddy Pindi on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/krishna-tangirala.png" alt="Krishna Tangirala" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Krishna Tangirala</h3>
+                    <p class="obw-person-card__role">Executive Director, Software Engineering at Wells Frago</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-07-25">25 July, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Krishna Tangirala socials">
+                      <a href="https://www.linkedin.com/in/tangirala/" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Krishna Tangirala on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/Abdul-Vasay.png" alt="Afnan Abdul Vasay" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Afnan Abdul Vasay</h3>
+                    <p class="obw-person-card__role">GitHub Campus Expert</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Afnan Abdul Vasay socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Afnan Abdul Vasay on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/Satish-Reddy.png" alt="Satish Reddy" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Satish Reddy</h3>
+                    <p class="obw-person-card__role">Founder &amp; CEO - Xbattery</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Satish Reddy socials">
+                      <a href="https://www.linkedin.com/in/satishreddyv/" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Satish Reddy on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/Titus-Thomas.png" alt="Titus Thomas" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Titus Thomas</h3>
+                    <p class="obw-person-card__role">CTO - Nexigence AI</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Titus Thomas socials">
+                      <a href="https://www.linkedin.com/in/titustom/" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Titus Thomas on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card obw-person-card--speaker" data-person-role="speakers">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Speaker/Vadranam-Manikanth.png" alt="Vadranam Manikanth" loading="lazy" decoding="async" />
+                    <p class="obw-person-card__badge">FEATURED SPEAKER</p>
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Vadranam Manikanth</h3>
+                    <p class="obw-person-card__role">Data Scientist (BI) - Paypal</p>
+                    <p class="obw-person-card__date">Date: <time datetime="2026-08-21">21 August, 2026</time></p>
+                    <p class="obw-person-card__bio">Speaker sharing practical insights and real-world playbooks for builders.</p>
+                    <div class="obw-person-card__socials" aria-label="Vadranam Manikanth socials">
+                      <a href="https://www.linkedin.com/in/vadranam-manikanth-797982158/" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Vadranam Manikanth on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <p class="obw-people-divider" data-expert-divider>MENTORS</p>
+
+            <div class="obw-people-group" data-expert-group="mentors">
+              <div class="obw-people-grid obw-people-grid--mentors" data-stagger>
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/alina.png" alt="Alina Abreeq" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Alina Abreeq</h3>
+                    <p class="obw-person-card__role">Product Mentor</p>
+                    <p class="obw-person-card__bio">Engineering mentor focused on architecture reviews, code quality, and delivery speed.</p>
+                    <div class="obw-person-card__socials" aria-label="Alina Abreeq socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Alina Abreeq on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/arfina.png" alt="Arfina Javeed" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Arfina Javeed</h3>
+                    <p class="obw-person-card__role">Engineering Mentor</p>
+                    <p class="obw-person-card__bio">Engineering mentor focused on architecture reviews, code quality, and delivery speed.</p>
+                    <div class="obw-person-card__socials" aria-label="Arfina Javeed socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Arfina Javeed on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/champions/ashish-sreenidhi.png" alt="Ashish Malla" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Ashish Malla</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="Ashish Malla socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Ashish Malla on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/dawood.png" alt="Dawood" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Dawood</h3>
+                    <p class="obw-person-card__role">AI Mentor</p>
+                    <p class="obw-person-card__bio">AI mentor guiding teams on model selection, prompt workflows, and evaluation loops.</p>
+                    <div class="obw-person-card__socials" aria-label="Dawood socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Dawood on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Dawood on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Dawood on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/kafia.png" alt="Kafia Kauser" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Kafia Kauser</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="Kafia Kauser socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Kafia Kauser on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/danish.png" alt="Mohammad Danish" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Mohammad Danish</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="Mohammad Danish socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Mohammad Danish on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/mudith.png" alt="MUDIT KHATER" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">MUDIT KHATER</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="MUDIT KHATER socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="MUDIT KHATER on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/Rayeesa Mahmood.png" alt="Rayeesa Mahmood" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Rayeesa Mahmood</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="Rayeesa Mahmood socials">
+                      <a href="https://www.linkedin.com/in/rayeesa-mahmood/" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Rayeesa Mahmood on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/Reda-Kaleem.png" alt="Reda Kaleem" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Reda Kaleem</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="Reda Kaleem socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Reda Kaleem on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/imaaz.png" alt="Syed Imaaz Ali" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Syed Imaaz Ali</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="Syed Imaaz Ali socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Syed Imaaz Ali on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="obw-person-card" data-person-role="mentors">
+                  <div class="obw-person-card__media">
+                    <img class="obw-person-card__photo" src="../Images/Mentors/yousha.png" alt="Yousha Khan" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="obw-person-card__body">
+                    <h3 class="obw-person-card__name">Yousha Khan</h3>
+                    <p class="obw-person-card__role">Mentor</p>
+                    <p class="obw-person-card__bio">Mentor supporting teams with practical guidance through build and demo milestones.</p>
+                    <div class="obw-person-card__socials" aria-label="Yousha Khan socials">
+                      <a href="https://www.linkedin.com/in/afnanabdulvasay/" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on LinkedIn"><span data-lucide="linkedin" aria-hidden="true"></span></a>
+                      <a href="https://github.com/vasay/HU-New" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on GitHub"><span data-lucide="github" aria-hidden="true"></span></a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Yousha Khan on X"><span data-lucide="twitter" aria-hidden="true"></span></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              var section = document.querySelector('#mentors-speakers');
+              if (!section) return;
+
+              var buttons = Array.from(section.querySelectorAll('[data-expert-filter]'));
+              var speakersGroup = section.querySelector('[data-expert-group="speakers"]');
+              var mentorsGroup = section.querySelector('[data-expert-group="mentors"]');
+              var speakersDivider = section.querySelector('[data-expert-divider-speakers]');
+              var mentorDivider = section.querySelector('[data-expert-divider]');
+              var cards = Array.from(section.querySelectorAll('.obw-person-card'));
+
+              cards.forEach(function (card) {
+                var name = card.querySelector('.obw-person-card__name');
+                var photo = card.querySelector('.obw-person-card__photo');
+                var hasName = !!(name && name.textContent && name.textContent.trim());
+                var hasPhoto = !!(photo && photo.getAttribute('src') && photo.getAttribute('src').trim());
+                if (!hasName || !hasPhoto) card.remove();
+              });
+
+              var setFilter = function (filter) {
+                var showSpeakers = filter !== 'mentors';
+                var showMentors = filter !== 'speakers';
+
+                buttons.forEach(function (button) {
+                  var isActive = button.getAttribute('data-expert-filter') === filter;
+                  button.classList.toggle('is-active', isActive);
+                  button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                });
+
+                if (speakersGroup) speakersGroup.classList.toggle('is-collapsed', !showSpeakers);
+                if (mentorsGroup) mentorsGroup.classList.toggle('is-collapsed', !showMentors);
+                if (speakersDivider) speakersDivider.classList.toggle('is-collapsed', !showSpeakers || filter === 'mentors');
+                if (mentorDivider) mentorDivider.classList.toggle('is-collapsed', !showMentors || filter === 'speakers');
+              };
+
+              buttons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                  setFilter(button.getAttribute('data-expert-filter'));
+                });
+              });
+
+              setFilter('all');
+            })();
+          </script>
+        </section>
+
+        <section id="open-payments-resource-hub" class="section obw-resource-hub" aria-labelledby="resource-hub-title">
+          <style>
+            #open-payments-resource-hub {
+              --hub-ink: #13193b;
+              --hub-purple: #6658d3;
+              --hub-orange: #ff8a3d;
+              --hub-border: hsla(250, 48%, 58%, 0.3);
+              --hub-shadow: 0 22px 46px -34px hsla(238, 42%, 21%, 0.46);
+              --hub-bg: linear-gradient(180deg, #ffffff 0%, #f8f6ff 100%);
+            }
+
+            #open-payments-resource-hub .section-header__eyebrow {
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              color: var(--hub-purple);
+            }
+
+            #open-payments-resource-hub .section-header__title,
+            #open-payments-resource-hub .section-header__text {
+              color: var(--hub-ink);
+            }
+
+            #open-payments-resource-hub .section-header__title {
+              max-width: 15ch;
+              line-height: 1.05;
+              margin-bottom: 0.9rem;
+            }
+
+            #open-payments-resource-hub .section-header__text {
+              max-width: 70ch;
+            }
+
+            .obw-resource-wall {
+              position: relative;
+              display: grid;
+              grid-template-columns: repeat(12, minmax(0, 1fr));
+              gap: 1.05rem;
+              margin-top: 1.9rem;
+              z-index: 1;
+            }
+
+            .obw-resource-wall-wrap {
+              position: relative;
+              isolation: isolate;
+            }
+
+            .obw-resource-wall-wrap::before,
+            .obw-resource-wall-wrap::after {
+              content: "";
+              position: absolute;
+              inset: auto;
+              pointer-events: none;
+              z-index: 0;
+              filter: blur(26px);
+              opacity: 0.5;
+            }
+
+            .obw-resource-wall-wrap::before {
+              left: -4%;
+              top: 8%;
+              width: 36%;
+              height: 62%;
+              background: radial-gradient(circle at 35% 30%, hsla(262, 100%, 93%, 0.55), transparent 72%);
+            }
+
+            .obw-resource-wall-wrap::after {
+              right: -3%;
+              bottom: 4%;
+              width: 28%;
+              height: 52%;
+              background: radial-gradient(circle at 60% 65%, hsla(28, 100%, 90%, 0.48), transparent 74%);
+            }
+
+            .obw-resource-card {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              gap: 0.62rem;
+              min-height: 12.25rem;
+              padding: 1.02rem 1.02rem 1.05rem;
+              border-radius: 1rem;
+              border: 1px solid var(--hub-border);
+              background: var(--hub-bg);
+              box-shadow: var(--hub-shadow);
+              color: var(--hub-ink);
+              text-decoration: none;
+              overflow: hidden;
+              transition: transform 0.38s ease, box-shadow 0.42s ease, border-color 0.38s ease;
+              isolation: isolate;
+              --resource-accent: hsla(251, 75%, 58%, 0.5);
+            }
+
+            .obw-resource-card::before {
+              content: "";
+              position: absolute;
+              inset: -28% -32% auto;
+              height: 60%;
+              background:
+                radial-gradient(65% 90% at 24% 16%, hsla(262, 100%, 95%, 0.55) 0%, transparent 72%),
+                radial-gradient(68% 86% at 82% 16%, hsla(28, 100%, 88%, 0.26) 0%, transparent 70%),
+                linear-gradient(140deg, var(--resource-accent), transparent 55%);
+              pointer-events: none;
+              z-index: 1;
+            }
+
+            .obw-resource-card::after {
+              content: "";
+              position: absolute;
+              inset: -30% auto -30% -55%;
+              width: 45%;
+              background: linear-gradient(110deg, transparent 10%, hsla(265, 100%, 98%, 0.32) 42%, hsla(31, 100%, 95%, 0.24) 58%, transparent 90%);
+              transform: translateX(-160%) rotate(14deg);
+              transition: transform 0.48s ease;
+              pointer-events: none;
+              z-index: 2;
+            }
+
+            .obw-resource-card:not([aria-disabled="true"]):hover,
+            .obw-resource-card:not([aria-disabled="true"]):focus-visible {
+              transform: translateY(-3px);
+              border-color: hsla(252, 62%, 56%, 0.5);
+              box-shadow: 0 26px 50px -36px hsla(237, 40%, 18%, 0.52);
+              outline: none;
+            }
+
+            .obw-resource-card:not([aria-disabled="true"]):hover::after,
+            .obw-resource-card:not([aria-disabled="true"]):focus-visible::after {
+              transform: translateX(320%) rotate(14deg);
+            }
+
+            .obw-resource-card__meta,
+            .obw-resource-card__icon,
+            .obw-resource-card h3,
+            .obw-resource-card p,
+            .obw-resource-card__cta {
+              position: relative;
+              z-index: 3;
+            }
+
+            .obw-resource-card__meta {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 0.5rem;
+              margin-bottom: 0.06rem;
+            }
+
+            .obw-resource-card__index {
+              font-size: 0.72rem;
+              font-weight: 700;
+              letter-spacing: 0.16em;
+              text-transform: uppercase;
+              color: var(--hub-purple);
+            }
+
+            .obw-resource-card__type {
+              font-size: 0.63rem;
+              font-weight: 700;
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              color: hsla(24, 88%, 46%, 0.9);
+              padding: 0.28rem 0.48rem;
+              border-radius: 999px;
+              border: 1px solid hsla(28, 86%, 64%, 0.35);
+              background: hsla(30, 100%, 97%, 0.9);
+            }
+
+            .obw-resource-card__icon {
+              width: 1.95rem;
+              height: 1.95rem;
+              border-radius: 0.62rem;
+              border: 1px solid hsla(250, 44%, 62%, 0.28);
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              color: var(--hub-purple);
+              background: hsla(247, 78%, 98%, 0.9);
+              transition: transform 0.25s ease, border-color 0.25s ease;
+            }
+
+            .obw-resource-card__icon svg {
+              width: 1rem;
+              height: 1rem;
+              stroke: currentColor;
+              fill: none;
+              stroke-width: 1.8;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+            }
+
+            .obw-resource-card:not([aria-disabled="true"]):hover .obw-resource-card__icon,
+            .obw-resource-card:not([aria-disabled="true"]):focus-visible .obw-resource-card__icon {
+              transform: translateY(-1px) scale(1.03);
+              border-color: hsla(252, 60%, 54%, 0.42);
+            }
+
+            .obw-resource-card h3 {
+              margin: 0;
+              font-size: 1.03rem;
+              font-weight: 700;
+              line-height: 1.24;
+              color: var(--hub-ink);
+            }
+
+            .obw-resource-card p {
+              margin: 0;
+              color: hsla(232, 33%, 27%, 0.87);
+              font-size: 0.81rem;
+              line-height: 1.44;
+              max-width: 40ch;
+            }
+
+            .obw-resource-card__cta {
+              margin-top: auto;
+              display: inline-flex;
+              align-items: center;
+              gap: 0.35rem;
+              font-size: 0.78rem;
+              font-weight: 700;
+              color: var(--hub-purple);
+              letter-spacing: 0.02em;
+            }
+
+            .obw-resource-card__cta.is-muted {
+              color: hsla(234, 26%, 38%, 0.74);
+            }
+
+            .obw-resource-card__cta-arrow {
+              transition: transform 0.34s ease;
+            }
+
+            .obw-resource-card:not([aria-disabled="true"]):hover .obw-resource-card__cta-arrow,
+            .obw-resource-card:not([aria-disabled="true"]):focus-visible .obw-resource-card__cta-arrow {
+              transform: translateX(4px);
+            }
+
+            .obw-resource-card--docs {
+              grid-column: 1 / span 6;
+              grid-row: 1 / span 2;
+              min-height: 100%;
+              padding: 1.35rem 1.35rem 1.4rem;
+              --resource-accent: hsla(254, 88%, 66%, 0.24);
+              background:
+                radial-gradient(128% 78% at 100% 0%, hsla(26, 100%, 86%, 0.38) 0%, transparent 58%),
+                linear-gradient(180deg, #ffffff 0%, #f5f1ff 100%);
+            }
+
+            .obw-resource-card--docs h3 {
+              font-size: 1.24rem;
+            }
+
+            .obw-resource-card__infra {
+              position: relative;
+              margin-top: 0.2rem;
+              height: 6.4rem;
+              border-radius: 0.8rem;
+              border: 1px solid hsla(252, 45%, 66%, 0.22);
+              background:
+                linear-gradient(160deg, hsla(250, 86%, 98%, 0.9), hsla(251, 62%, 96%, 0.6)),
+                repeating-linear-gradient(90deg, transparent 0 15%, hsla(250, 43%, 70%, 0.07) 15% 16%),
+                repeating-linear-gradient(0deg, transparent 0 23%, hsla(28, 82%, 72%, 0.05) 23% 24%);
+              overflow: hidden;
+            }
+
+            .obw-resource-card__infra::before,
+            .obw-resource-card__infra::after {
+              content: "";
+              position: absolute;
+              border-radius: 999px;
+            }
+
+            .obw-resource-card__infra::before {
+              left: 12%;
+              top: 52%;
+              width: 68%;
+              height: 1px;
+              background: linear-gradient(90deg, hsla(251, 48%, 58%, 0.16), hsla(28, 88%, 66%, 0.2));
+              box-shadow: 0 -22px 0 hsla(251, 52%, 62%, 0.11), 0 22px 0 hsla(251, 52%, 62%, 0.11);
+            }
+
+            .obw-resource-card__infra::after {
+              right: 10%;
+              top: 22%;
+              width: 0.42rem;
+              height: 0.42rem;
+              background: hsla(253, 79%, 61%, 0.5);
+              box-shadow: -58px 20px 0 hsla(27, 92%, 67%, 0.34), -112px -2px 0 hsla(253, 79%, 61%, 0.31), -18px 40px 0 hsla(27, 92%, 67%, 0.28);
+            }
+
+            .obw-resource-card--tutorials {
+              grid-column: 7 / span 3;
+              grid-row: 1;
+              --resource-accent: hsla(251, 76%, 62%, 0.18);
+            }
+
+            .obw-resource-card--github {
+              grid-column: 10 / span 3;
+              grid-row: 1;
+              --resource-accent: hsla(223, 74%, 58%, 0.16);
+            }
+
+            .obw-resource-card--recordings {
+              grid-column: 7 / span 4;
+              grid-row: 2;
+              --resource-accent: hsla(28, 92%, 66%, 0.16);
+            }
+
+            .obw-resource-card--slides {
+              grid-column: 11 / span 2;
+              grid-row: 2;
+              --resource-accent: hsla(270, 70%, 72%, 0.14);
+            }
+
+            .obw-resource-card.is-coming-soon {
+              background: linear-gradient(180deg, #fffdfd 0%, #faf8ff 100%);
+            }
+
+            .obw-resource-card__soon {
+              font-size: 0.66rem;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+              color: hsla(24, 88%, 46%, 0.9);
+              font-weight: 700;
+              margin-top: auto;
+            }
+
+            .obw-resource-card[aria-disabled="true"] {
+              cursor: default;
+              opacity: 0.9;
+            }
+
+            .obw-resource-card[aria-disabled="true"]:hover,
+            .obw-resource-card[aria-disabled="true"]:focus-visible {
+              transform: none;
+              box-shadow: var(--hub-shadow);
+              border-color: var(--hub-border);
+            }
+
+            .obw-resource-card[aria-disabled="true"] .obw-resource-card__type,
+            .obw-resource-card[aria-disabled="true"] .obw-resource-card__icon,
+            .obw-resource-card[aria-disabled="true"] .obw-resource-card__index {
+              opacity: 0.72;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .obw-resource-card,
+              .obw-resource-card::after,
+              .obw-resource-card__icon,
+              .obw-resource-card__cta-arrow {
+                transition: none;
+              }
+
+              .obw-resource-card:not([aria-disabled="true"]):hover,
+              .obw-resource-card:not([aria-disabled="true"]):focus-visible {
+                transform: none;
+              }
+
+              .obw-resource-card:not([aria-disabled="true"]):hover::after,
+              .obw-resource-card:not([aria-disabled="true"]):focus-visible::after {
+                transform: translateX(-160%) rotate(14deg);
+              }
+            }
+
+            .obw-resource-card[aria-disabled="true"] .obw-resource-card__cta-arrow {
+              display: none;
+            }
+
+            @media (max-width: 1023px) {
+              .obw-resource-wall {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+              }
+
+              .obw-resource-card,
+              .obw-resource-card--docs,
+              .obw-resource-card--tutorials,
+              .obw-resource-card--github,
+              .obw-resource-card--recordings,
+              .obw-resource-card--slides {
+                grid-column: auto;
+                grid-row: auto;
+                min-height: 12.5rem;
+              }
+
+              .obw-resource-card--docs {
+                min-height: 14rem;
+              }
+
+              .obw-resource-wall-wrap::before,
+              .obw-resource-wall-wrap::after {
+                width: 40%;
+                height: 44%;
+                opacity: 0.38;
+              }
+            }
+
+            @media (max-width: 699px) {
+              .obw-resource-wall {
+                grid-template-columns: 1fr;
+              }
+
+              #open-payments-resource-hub .section-header__title {
+                max-width: none;
+              }
+
+              .obw-resource-card__infra {
+                height: 5.4rem;
+              }
+            }
+          </style>
+
+          <div class="container container--wide">
+            <div class="section-header" data-animate>
+              <p class="section-header__eyebrow">OPEN PAYMENTS RESOURCE HUB</p>
+              <h2 id="resource-hub-title" class="section-header__title">Everything you need to keep building.</h2>
+              <p class="section-header__text">Explore the resources behind OpenBuild Week — from Open Payments documentation and tutorials to GitHub repositories, session recordings and presentation slides.</p>
+            </div>
+
+            <div class="obw-resource-wall-wrap">
+              <div class="obw-resource-wall" data-stagger aria-label="Open Payments resource hub">
+              <a class="obw-resource-card obw-resource-card--docs" href="https://interledger.org/" target="_blank" rel="noreferrer noopener" aria-label="Read Open Payments documentation">
+                <div class="obw-resource-card__meta">
+                  <span class="obw-resource-card__index">01 — DOCS</span>
+                  <span class="obw-resource-card__type">Foundation</span>
+                </div>
+                <span class="obw-resource-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"></path>
+                    <path d="M8 7h8"></path>
+                    <path d="M8 11h8"></path>
+                    <path d="M8 15h5"></path>
+                  </svg>
+                </span>
+                <h3>Open Payments Documentation</h3>
+                <p>Understand the concepts, protocols and building blocks behind open payment infrastructure.</p>
+                <span class="obw-resource-card__infra" aria-hidden="true"></span>
+                <span class="obw-resource-card__cta">Read Docs <span class="obw-resource-card__cta-arrow" aria-hidden="true">&rarr;</span></span>
+              </a>
+
+              <a class="obw-resource-card obw-resource-card--tutorials" href="../blogs/interledger-technology-rethinking-the-future-of-global-payments/" aria-label="Explore Open Payments tutorials and guides">
+                <div class="obw-resource-card__meta">
+                  <span class="obw-resource-card__index">02 — TUTORIALS</span>
+                  <span class="obw-resource-card__type">Practice</span>
+                </div>
+                <span class="obw-resource-card__icon" aria-hidden="true"><span data-lucide="graduation-cap"></span></span>
+                <h3>Build with Open Payments</h3>
+                <p>Step-by-step guides and practical tutorials to help you start building.</p>
+                <span class="obw-resource-card__cta">Explore Tutorials <span class="obw-resource-card__cta-arrow" aria-hidden="true">&rarr;</span></span>
+              </a>
+
+              <a class="obw-resource-card obw-resource-card--github" href="https://github.com/vasay/HU-New" target="_blank" rel="noreferrer noopener" aria-label="View OpenBuild Week GitHub resources">
+                <div class="obw-resource-card__meta">
+                  <span class="obw-resource-card__index">03 — GITHUB</span>
+                  <span class="obw-resource-card__type">Code</span>
+                </div>
+                <span class="obw-resource-card__icon" aria-hidden="true"><span data-lucide="github"></span></span>
+                <h3>Build on GitHub</h3>
+                <p>Explore repositories, examples and projects from the OpenBuild Week ecosystem.</p>
+                <span class="obw-resource-card__cta">View GitHub <span class="obw-resource-card__cta-arrow" aria-hidden="true">&rarr;</span></span>
+              </a>
+
+              <a class="obw-resource-card obw-resource-card--recordings" href="https://www.youtube.com/@HackUnion_in" target="_blank" rel="noreferrer noopener" aria-label="Watch OpenBuild Week recordings">
+                <div class="obw-resource-card__meta">
+                  <span class="obw-resource-card__index">04 — RECORDINGS</span>
+                  <span class="obw-resource-card__type">Replay</span>
+                </div>
+                <span class="obw-resource-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                    <rect x="3" y="6" width="14" height="12" rx="2"></rect>
+                    <path d="M17 10l4-2v8l-4-2z"></path>
+                    <path d="M9 10l4 2-4 2z"></path>
+                  </svg>
+                </span>
+                <h3>Watch the Sessions</h3>
+                <p>Revisit talks, workshops, demos and conversations from OpenBuild Week.</p>
+                <span class="obw-resource-card__cta">Watch Recordings <span class="obw-resource-card__cta-arrow" aria-hidden="true">&rarr;</span></span>
+              </a>
+
+              <a class="obw-resource-card obw-resource-card--slides is-coming-soon" data-resource-url="" aria-label="Session slides coming soon" aria-disabled="true">
+                <div class="obw-resource-card__meta">
+                  <span class="obw-resource-card__index">05 — SLIDES</span>
+                  <span class="obw-resource-card__type">References</span>
+                </div>
+                <span class="obw-resource-card__icon" aria-hidden="true"><span data-lucide="presentation"></span></span>
+                <h3>Session Slides</h3>
+                <p>Browse the presentations, resources and references shared by our speakers and mentors.</p>
+                <span class="obw-resource-card__cta is-muted" data-soon-cta>COMING SOON</span>
+                <span class="obw-resource-card__soon">SLIDES LINK WILL BE PUBLISHED SOON.</span>
+              </a>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              var section = document.querySelector('#open-payments-resource-hub');
+              if (!section) return;
+
+              var cards = section.querySelectorAll('[data-resource-url]');
+              cards.forEach(function (card) {
+                var url = (card.getAttribute('data-resource-url') || '').trim();
+                var cta = card.querySelector('[data-soon-cta]');
+                var status = card.querySelector('.obw-resource-card__soon');
+
+                if (url) {
+                  card.setAttribute('href', url);
+                  card.removeAttribute('aria-disabled');
+                  card.classList.remove('is-coming-soon');
+                  if (cta) {
+                    cta.classList.remove('is-muted');
+                    cta.textContent = 'View Slides';
+                    cta.insertAdjacentHTML('beforeend', ' <span class="obw-resource-card__cta-arrow" aria-hidden="true">&rarr;</span>');
+                    cta.removeAttribute('data-soon-cta');
+                  }
+                  if (status) status.remove();
+                  return;
+                }
+
+                card.removeAttribute('href');
+                card.setAttribute('aria-disabled', 'true');
+                card.classList.add('is-coming-soon');
+              });
+            })();
+          </script>
+        </section>
+
+        <section id="partners-section" class="section obw-partner-hub" aria-labelledby="partners-hub-title">
+          <style>
+            #partners-section {
+              --partner-ink: #13193b;
+              --partner-purple: #6459cf;
+              --partner-orange: #ff8a3d;
+              --partner-border: hsla(249, 46%, 62%, 0.3);
+              --partner-border-strong: hsla(249, 56%, 54%, 0.48);
+              --partner-shadow: 0 16px 30px -26px hsla(237, 34%, 20%, 0.3);
+            }
+
+            #partners-section .section-header {
+              max-width: 70ch;
+              margin-bottom: 2.1rem;
+            }
+
+            #partners-section .section-header__eyebrow {
+              text-transform: uppercase;
+              letter-spacing: 0.14em;
+              color: var(--partner-purple);
+            }
+
+            #partners-section .section-header__title,
+            #partners-section .section-header__text {
+              color: var(--partner-ink);
+            }
+
+            #partners-section .section-header__title {
+              max-width: 16ch;
+              line-height: 1.04;
+            }
+
+            #partners-section .section-header__text {
+              max-width: 68ch;
+            }
+
+            #partners-section .tabs__list {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.58rem;
+              margin-bottom: 1.35rem;
+            }
+
+            #partners-section .tabs__button {
+              border: 1px solid var(--partner-border);
+              background: hsla(0, 0%, 100%, 0.88);
+              color: var(--partner-ink);
+              border-radius: 999px;
+              padding: 0.5rem 0.9rem;
+              font-weight: 500;
+              transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            #partners-section .tabs__button:hover,
+            #partners-section .tabs__button:focus-visible {
+              transform: translateY(-1px);
+              border-color: hsla(252, 56%, 56%, 0.54);
+              outline: none;
+            }
+
+            #partners-section .tabs__button[aria-selected="true"] {
+              color: #ffffff;
+              border-color: var(--partner-border-strong);
+              background: linear-gradient(132deg, hsla(252, 64%, 56%, 1), hsla(252, 61%, 50%, 0.98) 75%, hsla(26, 96%, 63%, 0.96) 100%);
+              box-shadow: 0 9px 20px -16px hsla(252, 62%, 46%, 0.62);
+              font-weight: 700;
+            }
+
+            #partners-section .obw-partner-hub__panel {
+              position: relative;
+              padding: 0.7rem;
+              border-radius: 1.1rem;
+              border: 1px solid hsla(250, 44%, 64%, 0.24);
+              background:
+                radial-gradient(120% 90% at 4% 8%, hsla(262, 100%, 96%, 0.72) 0%, transparent 55%),
+                radial-gradient(95% 80% at 98% 92%, hsla(27, 100%, 94%, 0.62) 0%, transparent 58%),
+                linear-gradient(180deg, hsla(0, 0%, 100%, 0.92), hsla(251, 86%, 99%, 0.82));
+              box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.86);
+              animation: partnerPanelFade 0.34s ease both;
+            }
+
+            #partners-section .obw-partner-hub__panel::before,
+            #partners-section .obw-partner-hub__panel::after {
+              content: "";
+              position: absolute;
+              pointer-events: none;
+              z-index: 0;
+              filter: blur(24px);
+              opacity: 0.24;
+            }
+
+            #partners-section .obw-partner-hub__panel::before {
+              width: 34%;
+              height: 56%;
+              left: -2%;
+              top: 8%;
+              background: radial-gradient(circle at 35% 30%, hsla(264, 100%, 93%, 0.5), transparent 72%);
+            }
+
+            #partners-section .obw-partner-hub__panel::after {
+              width: 30%;
+              height: 48%;
+              right: -2%;
+              bottom: 4%;
+              background: radial-gradient(circle at 64% 62%, hsla(28, 100%, 90%, 0.42), transparent 73%);
+            }
+
+            #partners-section .obw-partner-hub__grid {
+              position: relative;
+              z-index: 1;
+              display: grid;
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+              gap: 0.9rem;
+            }
+
+            #partners-section .obw-partner-card {
+              position: relative;
+              display: grid;
+              grid-template-rows: auto auto auto;
+              min-height: 9.7rem;
+              padding: 0.86rem;
+              border-radius: 0.78rem;
+              border: 1px solid var(--partner-border);
+              background: linear-gradient(180deg, #ffffff 0%, #fbfaff 100%);
+              box-shadow: var(--partner-shadow);
+              overflow: hidden;
+              transition: transform 0.36s ease, border-color 0.36s ease, box-shadow 0.36s ease;
+            }
+
+            #partners-section .obw-partner-card::after {
+              content: "";
+              position: absolute;
+              inset: -28% auto -28% -48%;
+              width: 44%;
+              background: linear-gradient(110deg, transparent 8%, hsla(267, 100%, 98%, 0.24) 44%, hsla(28, 100%, 94%, 0.18) 56%, transparent 90%);
+              transform: translateX(-155%) rotate(13deg);
+              transition: transform 0.42s ease;
+              pointer-events: none;
+            }
+
+            #partners-section .obw-partner-card:hover,
+            #partners-section .obw-partner-card:focus-within {
+              transform: translateY(-2px);
+              border-color: hsla(252, 56%, 56%, 0.42);
+              box-shadow: 0 18px 34px -28px hsla(236, 42%, 20%, 0.38);
+            }
+
+            #partners-section .obw-partner-card:hover::after,
+            #partners-section .obw-partner-card:focus-within::after {
+              transform: translateX(315%) rotate(13deg);
+            }
+
+            #partners-section .obw-partner-card__logo {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 5.2rem;
+              padding: 0.72rem;
+              border-radius: 0.62rem;
+              border: 1px solid hsla(250, 46%, 62%, 0.2);
+              background: linear-gradient(165deg, hsla(249, 86%, 98%, 0.92), hsla(0, 0%, 100%, 0.88));
+              margin-bottom: 0.74rem;
+            }
+
+            #partners-section .obw-partner-card__logo img {
+              width: 100%;
+              height: 3.3rem;
+              object-fit: contain;
+              object-position: center;
+            }
+
+            #partners-section .obw-partner-card h3 {
+              margin: 0;
+              color: var(--partner-ink);
+              font-size: 0.9rem;
+              line-height: 1.28;
+            }
+
+            #partners-section .obw-partner-card__type {
+              margin: 0.32rem 0 0;
+              color: hsla(232, 33%, 32%, 0.8);
+              font-size: 0.64rem;
+              text-transform: uppercase;
+              letter-spacing: 0.12em;
+              font-weight: 700;
+            }
+
+            #partner-panel-all .obw-partner-card:first-child,
+            #partner-panel-all .obw-partner-card:nth-child(2) {
+              grid-column: span 2;
+              min-height: 10.3rem;
+              grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+              grid-template-rows: auto auto;
+              align-items: center;
+              gap: 0.46rem 0.95rem;
+              padding: 0.9rem 1rem;
+            }
+
+            #partner-panel-all .obw-partner-card:first-child {
+              border-color: hsla(252, 52%, 57%, 0.36);
+              background:
+                radial-gradient(120% 100% at 90% 8%, hsla(29, 100%, 92%, 0.3) 0%, transparent 62%),
+                linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
+              box-shadow: 0 14px 34px hsla(252, 52%, 54%, 0.2);
+              filter: drop-shadow(0 0 12px hsla(262, 84%, 66%, 0.22));
+            }
+
+            #partner-panel-all .obw-partner-card:nth-child(2) {
+              border-color: hsla(226, 56%, 56%, 0.32);
+              background:
+                radial-gradient(120% 100% at 90% 8%, hsla(221, 88%, 92%, 0.3) 0%, transparent 62%),
+                linear-gradient(180deg, #ffffff 0%, #f7f9ff 100%);
+              box-shadow: 0 14px 34px hsla(226, 56%, 54%, 0.18);
+              filter: drop-shadow(0 0 12px hsla(214, 88%, 66%, 0.2));
+            }
+
+            #partner-panel-all .obw-partner-card:first-child::before,
+            #partner-panel-all .obw-partner-card:nth-child(2)::before {
+              opacity: 1;
+              transform: translateX(0);
+            }
+
+            #partner-panel-all .obw-partner-card:first-child:hover,
+            #partner-panel-all .obw-partner-card:nth-child(2):hover {
+              transform: translateY(-4px);
+            }
+
+            #partner-panel-all .obw-partner-card:first-child:hover {
+              filter: drop-shadow(0 0 18px hsla(262, 84%, 66%, 0.32));
+            }
+
+            #partner-panel-all .obw-partner-card:nth-child(2):hover {
+              filter: drop-shadow(0 0 18px hsla(214, 88%, 66%, 0.28));
+            }
+
+            #partner-panel-all .obw-partner-card:first-child .obw-partner-card__logo,
+            #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__logo {
+              grid-row: 1 / span 2;
+              margin-bottom: 0;
+              min-height: 7.4rem;
+              padding: 0.64rem;
+            }
+
+            #partner-panel-all .obw-partner-card:first-child .obw-partner-card__logo img,
+            #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__logo img {
+              height: 4.9rem;
+            }
+
+            #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__logo img {
+              height: 5.25rem;
+            }
+
+            #partner-panel-all .obw-partner-card:first-child h3,
+            #partner-panel-all .obw-partner-card:nth-child(2) h3 {
+              font-size: 1.16rem;
+              line-height: 1.2;
+            }
+
+            #partner-panel-all .obw-partner-card:first-child .obw-partner-card__type,
+            #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__type {
+              margin-top: 0.2rem;
+              font-size: 0.72rem;
+              letter-spacing: 0.13em;
+            }
+
+            #partners-section .obw-partner-card:first-child .obw-partner-card__logo,
+            #partner-panel-ecosystem .obw-partner-card .obw-partner-card__logo {
+              border-color: hsla(252, 56%, 56%, 0.4);
+              background:
+                radial-gradient(120% 120% at 90% 8%, hsla(28, 100%, 90%, 0.2) 0%, transparent 55%),
+                linear-gradient(165deg, hsla(251, 88%, 98%, 0.96), hsla(0, 0%, 100%, 0.94));
+            }
+
+            #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__logo,
+            #partner-panel-technology .obw-partner-card .obw-partner-card__logo {
+              border-color: hsla(226, 56%, 56%, 0.34);
+              background:
+                radial-gradient(120% 120% at 90% 8%, hsla(221, 92%, 92%, 0.24) 0%, transparent 55%),
+                linear-gradient(165deg, hsla(224, 88%, 98%, 0.96), hsla(0, 0%, 100%, 0.94));
+            }
+
+            @keyframes partnerPanelFade {
+              from {
+                opacity: 0;
+                transform: translateY(8px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+
+            @media (max-width: 1023px) {
+              #partners-section .obw-partner-hub__grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+              }
+
+              #partner-panel-all .obw-partner-card:first-child {
+                grid-column: span 2;
+              }
+
+              #partner-panel-all .obw-partner-card:nth-child(2) {
+                grid-column: span 2;
+              }
+            }
+
+            @media (max-width: 860px) {
+              #partners-section .obw-partner-hub__grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+              }
+
+              #partner-panel-all .obw-partner-card:first-child {
+                grid-column: span 2;
+              }
+
+              #partner-panel-all .obw-partner-card:nth-child(2) {
+                grid-column: span 2;
+              }
+            }
+
+            @media (max-width: 560px) {
+              #partners-section .obw-partner-hub__grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+              }
+
+              #partners-section .obw-partner-card {
+                min-height: 8.9rem;
+              }
+
+              #partners-section .obw-partner-card__logo {
+                min-height: 4.7rem;
+              }
+
+              #partners-section .obw-partner-card__logo img {
+                height: 2.95rem;
+              }
+
+              #partner-panel-all .obw-partner-card:first-child {
+                grid-column: span 2;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                gap: 0.36rem;
+              }
+
+              #partner-panel-all .obw-partner-card:nth-child(2) {
+                grid-column: span 2;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                gap: 0.36rem;
+              }
+
+              #partner-panel-all .obw-partner-card:first-child .obw-partner-card__logo {
+                grid-row: auto;
+                min-height: 6.25rem;
+                margin-bottom: 0.35rem;
+              }
+
+              #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__logo {
+                grid-row: auto;
+                min-height: 6.25rem;
+                margin-bottom: 0.35rem;
+              }
+
+              #partner-panel-all .obw-partner-card:first-child .obw-partner-card__logo img,
+              #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__logo img {
+                height: 3.9rem;
+              }
+
+              #partner-panel-all .obw-partner-card:nth-child(2) .obw-partner-card__logo img {
+                height: 4.2rem;
+              }
+            }
+
+            @media (max-width: 430px) {
+              #partners-section .obw-partner-hub__grid {
+                grid-template-columns: 1fr;
+              }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              #partners-section .obw-partner-hub__panel,
+              #partners-section .obw-partner-card,
+              #partners-section .obw-partner-card::after,
+              #partners-section .tabs__button {
+                animation: none;
+                transition: none;
+              }
+
+              #partners-section .obw-partner-card:hover,
+              #partners-section .obw-partner-card:focus-within,
+              #partners-section .tabs__button:hover,
+              #partners-section .tabs__button:focus-visible {
+                transform: none;
+              }
+            }
+          </style>
+          <div class="container container--wide">
+            <div class="section-header" data-animate>
+              <p class="section-header__eyebrow">PARTNERS</p>
+              <h2 id="partners-hub-title" class="section-header__title">Partners powering<br />each OpenBuild Week<br />roadshow stop.</h2>
               <p class="section-header__text">Explore ecosystem partners, technology partners, hiring partners, community partners, and campus partners supporting builders across every stop.</p>
             </div>
 
@@ -1481,14 +2792,206 @@
           </div>
         </section>
 
+        <style>
+          #community-champions {
+            position: relative;
+            overflow: clip;
+            padding-block: clamp(4.4rem, 7vw, 5.8rem);
+          }
+
+          #community-champions::before,
+          #community-champions::after {
+            content: "";
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(30px);
+            pointer-events: none;
+            z-index: 0;
+          }
+
+          #community-champions::before {
+            width: 18rem;
+            height: 18rem;
+            top: 0.75rem;
+            left: -4.5rem;
+            background: radial-gradient(circle at 36% 30%, hsla(270, 95%, 90%, 0.46), transparent 72%);
+          }
+
+          #community-champions::after {
+            width: 16rem;
+            height: 16rem;
+            right: -3.25rem;
+            bottom: 1rem;
+            background: radial-gradient(circle at 62% 62%, hsla(26, 100%, 88%, 0.38), transparent 74%);
+          }
+
+          #community-champions .container {
+            position: relative;
+            z-index: 1;
+          }
+
+          #community-champions .section-header {
+            gap: 0.62rem;
+            margin-bottom: clamp(1.9rem, 3.8vw, 2.8rem);
+          }
+
+          #community-champions .section-header__title {
+            max-width: 20ch;
+          }
+
+          #community-champions .obw-community-champions__label {
+            margin: 0.24rem 0 0;
+            font-size: clamp(1.12rem, 1.6vw, 1.35rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+            color: hsla(232, 46%, 20%, 0.95);
+          }
+
+          #community-champions .obw-experts__grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.15rem;
+          }
+
+          #community-champions .obw-expert-card {
+            position: relative;
+            grid-template-rows: auto auto auto;
+            gap: 0.58rem;
+            min-height: 21.1rem;
+            padding: 0.7rem 0.7rem 0.92rem;
+            border-radius: 0.98rem;
+            border: 1px solid hsla(248, 36%, 74%, 0.32);
+            background:
+              radial-gradient(128% 126% at 10% 2%, hsla(268, 100%, 97%, 0.72) 0%, transparent 52%),
+              radial-gradient(128% 148% at 100% 100%, hsla(28, 100%, 94%, 0.42) 0%, transparent 50%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(253, 252, 255, 0.96) 100%);
+            box-shadow: 0 12px 24px -22px hsla(234, 34%, 24%, 0.38);
+            transition: transform 360ms ease, box-shadow 360ms ease, border-color 360ms ease, background 360ms ease;
+          }
+
+          #community-champions .obw-expert-card::after {
+            content: "";
+            position: absolute;
+            inset: -20% auto -20% -45%;
+            width: 42%;
+            background: linear-gradient(110deg, transparent 12%, hsla(269, 100%, 97%, 0.3) 47%, hsla(28, 100%, 93%, 0.24) 59%, transparent 88%);
+            transform: translateX(-160%) rotate(11deg);
+            transition: transform 360ms ease;
+            pointer-events: none;
+          }
+
+          #community-champions .obw-expert-card:hover,
+          #community-champions .obw-expert-card:focus-within {
+            transform: translateY(-3px);
+            border-color: hsla(252, 60%, 58%, 0.48);
+            box-shadow: 0 16px 30px -22px hsla(238, 42%, 22%, 0.44);
+          }
+
+          #community-champions .obw-expert-card:hover::after,
+          #community-champions .obw-expert-card:focus-within::after {
+            transform: translateX(315%) rotate(11deg);
+          }
+
+          #community-champions .obw-expert-card__photo {
+            width: 100%;
+            aspect-ratio: 1.04 / 1;
+            object-fit: cover;
+            border-radius: 0.78rem;
+            border: 1px solid hsla(248, 34%, 74%, 0.24);
+            box-shadow: 0 9px 18px -14px hsla(249, 46%, 36%, 0.36), 0 8px 20px -18px hsla(28, 88%, 52%, 0.28);
+            transform-origin: center;
+            transition: transform 360ms ease, box-shadow 360ms ease;
+          }
+
+          #community-champions .obw-expert-card:hover .obw-expert-card__photo,
+          #community-champions .obw-expert-card:focus-within .obw-expert-card__photo {
+            transform: scale(1.02);
+            box-shadow: 0 14px 24px -16px hsla(249, 46%, 36%, 0.42), 0 10px 22px -18px hsla(28, 88%, 52%, 0.3);
+          }
+
+          #community-champions .obw-expert-card h3 {
+            margin: 0.1rem 0 0;
+            font-size: 1.04rem;
+            font-weight: 800;
+            line-height: 1.24;
+          }
+
+          #community-champions .obw-expert-card__profession {
+            margin: 0;
+            font-size: 0.72rem;
+            line-height: 1.5;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: hsla(232, 28%, 32%, 0.84);
+          }
+
+          #community-champions .obw-community-card {
+            max-width: 60rem;
+            margin-inline: auto;
+            padding: clamp(1.4rem, 2.7vw, 1.9rem) clamp(1.2rem, 2.6vw, 2.1rem);
+            border: 1px solid hsla(253, 36%, 74%, 0.28);
+            border-radius: 1.18rem;
+            background:
+              radial-gradient(140% 170% at 0% 0%, hsla(270, 100%, 97%, 0.74) 0%, transparent 46%),
+              radial-gradient(120% 150% at 100% 100%, hsla(28, 100%, 93%, 0.42) 0%, transparent 52%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(253, 251, 255, 0.95));
+            box-shadow: 0 12px 24px -24px hsla(240, 28%, 24%, 0.34);
+          }
+
+          #community-champions .obw-community-card p {
+            margin: 0;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 1.74;
+            color: hsla(232, 34%, 22%, 0.92);
+          }
+
+          @media (max-width: 1023px) {
+            #community-champions .obw-experts__grid {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+          }
+
+          @media (max-width: 640px) {
+            #community-champions .obw-experts__grid {
+              grid-template-columns: 1fr;
+            }
+
+            #community-champions .obw-expert-card {
+              min-height: 0;
+              padding: 0.58rem 0.58rem 0.82rem;
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            #community-champions .obw-expert-card,
+            #community-champions .obw-expert-card::after,
+            #community-champions .obw-expert-card__photo {
+              transition: none;
+            }
+
+            #community-champions .obw-expert-card:hover,
+            #community-champions .obw-expert-card:focus-within {
+              transform: none;
+            }
+
+            #community-champions .obw-expert-card:hover .obw-expert-card__photo,
+            #community-champions .obw-expert-card:focus-within .obw-expert-card__photo,
+            #community-champions .obw-expert-card:hover::after,
+            #community-champions .obw-expert-card:focus-within::after {
+              transform: none;
+            }
+          }
+        </style>
+
         <section id="community-champions" class="section obw-experts" aria-labelledby="community-champions-title">
           <div class="container container--wide">
             <div class="section-header" data-animate>
-              <p class="section-header__eyebrow">&#10084; Community Appreciation</p>
-              <h2 id="community-champions-title" class="section-header__title">Community Champions</h2>
-              <p class="section-header__text">OpenBuild Week is powered by the incredible people who sponsored us and helped us with campus partnerships.</p>
-              <p class="section-header__text">We extend our heartfelt gratitude to these community champions for their support and contribution to builder experiences.</p>
-              <p class="section-header__text">Thank you for believing in our mission and helping us grow a stronger ecosystem.</p>
+              <p class="section-header__eyebrow">&#10084; COMMUNITY APPRECIATION</p>
+              <h2 id="community-champions-title" class="section-header__title">The People Behind the Week</h2>
+              <p class="obw-community-champions__label">Community Champions</p>
+              <p class="section-header__text">The people from the community who helped make OpenBuild Week happen.</p>
             </div>
 
             <div class="stack stack--lg">
@@ -1503,11 +3006,6 @@
                     <img class="obw-expert-card__photo" src="../Images/champions/ashish-sreenidhi.png" alt="Ashish" loading="lazy" decoding="async" />
                     <h3>Ashish</h3>
                     <p class="obw-expert-card__profession">Student &amp; GitHub Campus Expert</p>
-                  </article>
-                  <article class="card obw-expert-card">
-                    <img class="obw-expert-card__photo" src="../Images/champions/tanvir-js-liet.png" alt="Syed Tanvir Ahmed" loading="lazy" decoding="async" />
-                    <h3>CA Syed Tanvir Ahmed</h3>
-                    <p class="obw-expert-card__profession">Joint Secretary Lords Institute, Director LSA</p>
                   </article>
                   <article class="card obw-expert-card">
                     <img class="obw-expert-card__photo" src="../Images/champions/hafsa-liet.png" alt="Hafsa" loading="lazy" decoding="async" />
@@ -1529,54 +3027,6 @@
 
               <article class="card obw-community-card" data-animate>
                 <p>"Every successful OpenBuild Week is a reflection of the people who work behind the scenes. Your support, dedication, and belief in our community have made a lasting impact. Thank you for building with us."</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="faq" class="section obw-faq" aria-labelledby="faq-title">
-          <div class="container container--wide">
-            <div class="section-header" data-animate>
-              <p class="section-header__eyebrow">FAQ</p>
-              <h2 id="faq-title" class="section-header__title">Questions builders ask before joining.</h2>
-            </div>
-
-            <div class="accordion obw-faq__accordion" data-accordion data-accordion-single>
-              <article class="accordion__item">
-                <button class="accordion__trigger" type="button" id="obw-faq-trigger-1" aria-expanded="true" aria-controls="obw-faq-panel-1" data-accordion-button>
-                  Who can register for OpenBuild Week?
-                  <span class="accordion__icon" aria-hidden="true"></span>
-                </button>
-                <div class="accordion__panel" id="obw-faq-panel-1" role="region" aria-labelledby="obw-faq-trigger-1">
-                  Anyone aligned with building and learning in public: developers, AI engineers, designers, founders, students, open source contributors, and technology communities.
-                </div>
-              </article>
-              <article class="accordion__item">
-                <button class="accordion__trigger" type="button" id="obw-faq-trigger-2" aria-expanded="false" aria-controls="obw-faq-panel-2" data-accordion-button>
-                  Do I need to be part of a team?
-                  <span class="accordion__icon" aria-hidden="true"></span>
-                </button>
-                <div class="accordion__panel" id="obw-faq-panel-2" role="region" aria-labelledby="obw-faq-trigger-2" hidden>
-                  No. Solo builders are welcome. Team formation activities and partner-matching spaces run during kickoff.
-                </div>
-              </article>
-              <article class="accordion__item">
-                <button class="accordion__trigger" type="button" id="obw-faq-trigger-3" aria-expanded="false" aria-controls="obw-faq-panel-3" data-accordion-button>
-                  Is OpenBuild Week online, offline, or hybrid?
-                  <span class="accordion__icon" aria-hidden="true"></span>
-                </button>
-                <div class="accordion__panel" id="obw-faq-panel-3" role="region" aria-labelledby="obw-faq-trigger-3" hidden>
-                  OpenBuild Week is designed as a hybrid experience with online collaboration and selected in-person community hubs.
-                </div>
-              </article>
-              <article class="accordion__item">
-                <button class="accordion__trigger" type="button" id="obw-faq-trigger-4" aria-expanded="false" aria-controls="obw-faq-panel-4" data-accordion-button>
-                  What do participants receive after the week?
-                  <span class="accordion__icon" aria-hidden="true"></span>
-                </button>
-                <div class="accordion__panel" id="obw-faq-panel-4" role="region" aria-labelledby="obw-faq-trigger-4" hidden>
-                  Participants receive showcase opportunities, community continuation pathways, and clear options to keep building with HackUnion programs.
-                </div>
               </article>
             </div>
           </div>
@@ -1857,6 +3307,67 @@
             var current = root.dataset.theme === 'dark' ? 'dark' : 'light';
             setTheme(current === 'dark' ? 'light' : 'dark');
           });
+        });
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var section = document.querySelector('#week-moments');
+        if (!section || !window.matchMedia) return;
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+
+        var cards = section.querySelectorAll('.obw-polaroid');
+        if (!cards.length) return;
+
+        var clamp = function (value, min, max) {
+          return Math.max(min, Math.min(max, value));
+        };
+
+        cards.forEach(function (card) {
+          var rafId = 0;
+          var nextX = 0;
+          var nextY = 0;
+
+          var applyShift = function () {
+            rafId = 0;
+            card.style.setProperty('--air-shift-x', (nextX * 4.8).toFixed(2) + '%');
+            card.style.setProperty('--air-shift-y', (nextY * 3).toFixed(2) + '%');
+            card.style.setProperty('--paper-shift-x', (nextX * 2.6).toFixed(2) + 'px');
+            card.style.setProperty('--paper-shift-y', (nextY * 2).toFixed(2) + 'px');
+          };
+
+          var queueShift = function (x, y) {
+            nextX = x;
+            nextY = y;
+            if (rafId) return;
+            rafId = window.requestAnimationFrame(applyShift);
+          };
+
+          card.addEventListener('pointermove', function (event) {
+            var rect = card.getBoundingClientRect();
+            if (!rect.width || !rect.height) return;
+
+            var nx = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            var ny = ((event.clientY - rect.top) / rect.height) * 2 - 1;
+
+            nx = clamp(nx, -1, 1);
+            ny = clamp(ny, -1, 1);
+
+            // Move opposite to pointer direction for an air-resistance feel.
+            queueShift(-nx, -ny);
+          });
+
+          card.addEventListener('pointerleave', function () {
+            queueShift(0, 0);
+          });
+
+          card.addEventListener('blur', function () {
+            queueShift(0, 0);
+          }, true);
         });
       })();
     </script>
