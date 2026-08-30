@@ -13463,7 +13463,6 @@ html[data-theme=dark] .obw-page .obw-partner-card__type {
 .obw-projects-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-flow: row dense;
   gap: clamp(0.95rem, 2.2vw, 1.3rem);
   align-items: stretch;
 }
@@ -13641,22 +13640,6 @@ html[data-theme=dark] .obw-page .obw-partner-card__type {
 .obw-project-card:focus-within .obw-project-card__links a:first-child {
   border-color: rgba(255, 95, 31, 0.42);
   background: rgba(255, 95, 31, 0.12);
-}
-
-.obw-project-card--featured {
-  grid-column: span 2;
-}
-
-.obw-project-card--featured .obw-project-card__media {
-  aspect-ratio: 16/9;
-}
-
-.obw-project-card--featured .obw-project-card__body {
-  padding: 1rem 1.05rem 1.08rem;
-}
-
-.obw-project-card--featured h3 {
-  font-size: clamp(1.22rem, 1.7vw, 1.55rem);
 }
 
 html[data-theme=dark] .obw-page .obw-projects-header__eyebrow {
@@ -13925,12 +13908,9 @@ html[data-theme=dark] .obw-page .obw-project-card:focus-within .obw-project-card
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .obw-projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .obw-project-card--featured {
-    grid-column: 1/-1;
   }
   .obw-roadmap {
     --obw-road-line-y: 3.45rem;
@@ -14434,11 +14414,8 @@ html[data-theme=dark] .obw-page .obw-project-card:focus-within .obw-project-card
   .obw-projects-grid {
     grid-template-columns: 1fr;
   }
-  .obw-project-card--featured {
-    grid-column: auto;
-  }
 }
-.cdd-page .site-main {
+@media (max-width: 640px) {
   .obw-projects-header {
     margin-bottom: 0.95rem;
   }
@@ -14454,7 +14431,6 @@ html[data-theme=dark] .obw-page .obw-project-card:focus-within .obw-project-card
     left: 0.58rem;
     top: 0.58rem;
   }
-  background: radial-gradient(circle at 8% 9%, rgba(11, 108, 240, 0.14), transparent 31%), radial-gradient(circle at 92% 5%, rgba(255, 122, 24, 0.12), transparent 30%), linear-gradient(180deg, #f8fbff 0%, #f8fafe 35%, #f5f8ff 100%);
 }
 
 .cdd-page .section {
