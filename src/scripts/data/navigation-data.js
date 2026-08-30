@@ -3,7 +3,7 @@ export const primaryNavigation = [
   { label: 'Blogs', href: './blogs/' },
   { label: 'Events', href: './#experiences' },
   { label: 'OpenBuild Week', href: './openbuildweek/', featured: true },
-  { label: 'Certificates', href: './certificates/' }
+  { label: 'About', href: './about/' }
 ];
 
 export const footerNavigation = [

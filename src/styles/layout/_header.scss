@@ -22,7 +22,7 @@ body.is-nav-locked {
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .site-header::before {
