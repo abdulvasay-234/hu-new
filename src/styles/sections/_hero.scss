@@ -128,6 +128,12 @@
   justify-self: center;
 }
 
+body[data-page='shared'] #hero-title.hero__title {
+  font-family: 'Scubik', var(--font-display);
+  letter-spacing: 0.01em;
+  font-weight: 300;
+}
+
 .hero__text {
   margin: 1rem 0 0;
   max-width: 65ch;

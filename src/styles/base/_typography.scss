@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Scubik';
+  src: url('/assets/fonts/scubik/scubik.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-text);

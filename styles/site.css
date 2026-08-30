@@ -91,6 +91,13 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "Scubik";
+  src: url("/assets/fonts/scubik/scubik.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 body {
   font-family: var(--font-body);
   color: var(--color-text);
@@ -2680,6 +2687,12 @@ html[data-theme=dark] .theme-toggle__moon {
 .hero--landscape .hero__title {
   color: rgba(255, 255, 255, 0.98);
   justify-self: center;
+}
+
+body[data-page=shared] #hero-title.hero__title {
+  font-family: "Scubik", var(--font-display);
+  letter-spacing: 0.01em;
+  font-weight: 300;
 }
 
 .hero__text {
