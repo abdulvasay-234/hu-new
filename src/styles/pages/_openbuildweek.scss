@@ -1881,6 +1881,12 @@ html[data-theme='dark'] .obw-page .obw-partner-card__type {
 }
 
 @media (max-width: 767px) {
+  /* Mobile safety: keep OBW content visible even if reveal observers miss. */
+  html.has-js .obw-page [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .obw-hero .hero__inner {
     grid-template-columns: minmax(0, 1fr);
   }
