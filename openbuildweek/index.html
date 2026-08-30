@@ -1025,13 +1025,21 @@
               font-weight: 700;
               text-transform: uppercase;
               color: hsla(232, 45%, 32%, 0.78);
-              margin: 0.4rem 0 1rem;
+              margin: 1.1rem 0 1.1rem;
               padding-top: 0.65rem;
               border-top: 1px solid hsla(248, 42%, 68%, 0.3);
+              position: relative;
+              z-index: 3;
             }
 
             .obw-people-group {
               display: block;
+              position: relative;
+              z-index: 1;
+            }
+
+            .obw-people-group + .obw-people-divider {
+              margin-top: 1.4rem;
             }
 
             .obw-people-group.is-collapsed,
@@ -1251,6 +1259,12 @@
             @media (max-width: 699px) {
               .obw-people-grid {
                 grid-template-columns: 1fr;
+                gap: 1.2rem;
+              }
+
+              .obw-people-divider {
+                margin: 1.35rem 0 1rem;
+                padding-top: 0.72rem;
               }
 
               #mentors-speakers .section-header__title {
