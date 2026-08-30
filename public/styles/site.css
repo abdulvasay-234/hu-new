@@ -11896,9 +11896,9 @@ html[data-theme=dark] body[data-blog-visual-theme=editorial] .blogs-empty {
 }
 
 .obw-hero__story-wrap {
-  width: 100vw;
-  max-width: none;
-  margin-inline: calc(50% - 50vw);
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
   padding-inline: 0;
 }
 
@@ -12463,6 +12463,7 @@ html[data-theme=dark] body[data-blog-visual-theme=editorial] .blogs-empty {
   position: relative;
   display: grid;
   display: grid;
+  min-width: 0;
   gap: 0.45rem;
   padding: 1rem 1rem 1rem 1.15rem;
   border: 1px solid rgba(148, 163, 184, 0.26);
@@ -14866,11 +14867,46 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
   .obw-experts__grid {
     grid-template-columns: 1fr;
   }
-  .obw-roadmap {
-    padding-left: 1.75rem;
+  .obw-projects-grid {
+    grid-template-columns: 1fr;
   }
-  .obw-roadmap__line {
-    left: 0.7rem;
+  .obw-projects-header {
+    gap: 0.52rem;
+    margin-bottom: 1rem;
+  }
+  .obw-student-projects .manifesto__projects-eyebrow.obw-projects-header__eyebrow {
+    font-size: clamp(0.64rem, 2.9vw, 0.76rem);
+    letter-spacing: 0.11em;
+    line-height: 1.35;
+  }
+  .obw-student-projects .manifesto__projects-heading.obw-projects-header__title {
+    max-width: none;
+    font-size: clamp(1.85rem, 9.2vw, 2.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.016em;
+  }
+  .obw-projects-header__text {
+    max-width: none;
+    font-size: 0.93rem;
+  }
+  .obw-roadmap {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 1rem 0.85rem 1rem;
+  }
+  .obw-roadmap::before,
+  .obw-roadmap::after {
+    content: none;
+  }
+  .obw-roadstop {
+    min-height: 0;
+    margin-top: 0;
+    padding: 1rem 0.85rem 0.9rem;
+    overflow: hidden;
+  }
+  .obw-roadstop::before,
+  .obw-roadstop__avatar {
+    display: none;
   }
   .obw-register__meta {
     justify-content: flex-start;
@@ -14923,6 +14959,16 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
   }
   .obw-network__core-subtitle {
     font-size: 0.56rem;
+  }
+  .obw-student-projects .manifesto__projects-heading.obw-projects-header__title br {
+    display: none;
+  }
+  .obw-student-projects .manifesto__projects-heading.obw-projects-header__title {
+    font-size: clamp(1.7rem, 10.2vw, 2.05rem);
+    line-height: 1.06;
+  }
+  .obw-student-projects .manifesto__projects-eyebrow.obw-projects-header__eyebrow {
+    letter-spacing: 0.09em;
   }
   .obw-node {
     width: clamp(6.1rem, 42vw, 7.6rem);
