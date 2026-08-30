@@ -84,6 +84,16 @@
   line-height: 0.95;
 }
 
+.obw-hero__title-logo {
+  max-width: none;
+}
+
+.obw-hero__logo {
+  display: block;
+  width: min(100%, clamp(13.5rem, 34vw, 27rem));
+  height: auto;
+}
+
 .obw-page .obw-brand-word__build {
   color: var(--obw-orange);
 }
@@ -3396,6 +3406,25 @@ html[data-theme='dark'] .obw-page .obw-moments__meta {
   html.has-js .obw-page [data-animate] {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  html.has-js .obw-page [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Prevent transform-driven visual overlap between adjacent sections on touch layouts. */
+  .obw-page .section {
+    position: relative;
+    overflow: clip;
+  }
+
+  .obw-page .section [data-hover='lift']:hover,
+  .obw-page .section [data-hover='card']:hover,
+  .obw-page .section .card:hover,
+  .obw-page .section .obw-polaroid:hover,
+  .obw-page .section .obw-recap-card:hover {
+    transform: none;
   }
 
   .obw-hero .hero__inner {
