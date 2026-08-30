@@ -11512,6 +11512,7 @@ html[data-theme=dark] body[data-blog-visual-theme=editorial] .blogs-empty {
 .obw-hero .hero__content {
   max-width: 41rem;
   min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .obw-hero .hero__content.stack--lg {
@@ -14725,6 +14726,60 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
     font-size: 0.96rem;
     line-height: 1.55;
   }
+  .obw-hero .hero__actions .button {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .obw-agenda__header {
+    margin-bottom: 0.9rem;
+  }
+  .obw-agenda__header .section-header__eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 0.11em;
+  }
+  .obw-agenda__header .section-header__title {
+    max-width: none;
+    font-size: clamp(1.72rem, 8.4vw, 2.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+  }
+  .obw-agenda__timeline {
+    grid-template-columns: 1fr;
+    gap: 0.66rem;
+    padding: 0.85rem;
+  }
+  .obw-agenda__timeline::after {
+    display: none;
+  }
+  .obw-agenda-step {
+    transform: none;
+    padding: 0.78rem 0.8rem 0.82rem;
+    gap: 0.36rem;
+  }
+  .obw-agenda-step:nth-child(odd),
+  .obw-agenda-step:nth-child(even),
+  .obw-agenda__timeline.is-revealed .obw-agenda-step,
+  .obw-agenda__timeline.is-revealed .obw-agenda-step--build,
+  .obw-agenda__timeline.is-revealed .obw-agenda-step--ship {
+    transform: none;
+  }
+  .obw-agenda-step::before,
+  .obw-agenda-step::after {
+    display: none;
+  }
+  .obw-agenda-step__index {
+    font-size: clamp(1.36rem, 7.2vw, 1.72rem);
+  }
+  .obw-agenda-step__title {
+    font-size: 0.78rem;
+    letter-spacing: 0.11em;
+  }
+  .obw-agenda-step__text {
+    margin-top: 0.1rem;
+    font-size: 0.82rem;
+    line-height: 1.46;
+  }
   .obw-ground-recaps__grid {
     grid-template-columns: 1fr;
   }
@@ -14878,7 +14933,7 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
     padding: 0.4rem;
     justify-content: center;
   }
-  .obw-student-projects .obw-project-card__links a:has(svg) span:last-child {
+  .obw-student-projects .obw-project-card__links a span:last-child {
     display: none;
   }
   .obw-projects-header {
@@ -14970,6 +15025,9 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
   }
   .obw-network__core-subtitle {
     font-size: 0.56rem;
+  }
+  .obw-agenda__header .section-header__title {
+    font-size: clamp(1.56rem, 9.1vw, 1.92rem);
   }
   .obw-student-projects .manifesto__projects-heading.obw-projects-header__title br {
     display: none;
