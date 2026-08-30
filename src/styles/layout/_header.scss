@@ -14,49 +14,89 @@ body.is-nav-locked {
   z-index: 60;
   transform: translateY(0);
   transition: transform var(--motion-base) ease, background-color var(--motion-base) ease, border-color var(--motion-base) ease, box-shadow var(--motion-base) ease;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-  background: #f7f9fd;
-  background-image: none;
-  backdrop-filter: none;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+  background:
+    radial-gradient(circle at 12% -40%, rgba(245, 108, 0, 0.2), transparent 42%),
+    radial-gradient(circle at 86% -60%, rgba(34, 211, 238, 0.16), transparent 48%),
+    linear-gradient(180deg, rgba(248, 250, 255, 0.9), rgba(245, 249, 255, 0.8));
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.34;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 108, 0, 0.52) 18%, rgba(34, 211, 238, 0.44) 52%, rgba(245, 108, 0, 0.46) 78%, transparent 100%);
 }
 
 .site-header.is-scrolled,
 .site-header.is-menu-open {
-  border-bottom-color: rgba(148, 163, 184, 0.18);
-  background: #f7f9fd;
-  background-image: none;
-  backdrop-filter: none;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border-bottom-color: rgba(99, 122, 159, 0.3);
+  background:
+    radial-gradient(circle at 12% -45%, rgba(245, 108, 0, 0.24), transparent 45%),
+    radial-gradient(circle at 88% -70%, rgba(34, 211, 238, 0.2), transparent 52%),
+    linear-gradient(180deg, rgba(248, 250, 255, 0.95), rgba(245, 249, 255, 0.9));
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
 }
 
 .site-header.is-menu-open {
   z-index: 120;
   transform: none !important;
-  background: #f7f9fd !important;
-  background-image: none !important;
-  backdrop-filter: none !important;
+  background:
+    radial-gradient(circle at 12% -45%, rgba(245, 108, 0, 0.24), transparent 45%),
+    radial-gradient(circle at 88% -70%, rgba(34, 211, 238, 0.2), transparent 52%),
+    linear-gradient(180deg, rgba(248, 250, 255, 0.95), rgba(245, 249, 255, 0.9)) !important;
 }
 
 html[data-theme='dark'] .site-header {
-  background: #0b111b;
-  background-image: none;
-  border-bottom-color: rgba(37, 48, 64, 0.8);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  border-bottom-color: rgba(83, 103, 132, 0.5);
+  background:
+    radial-gradient(circle at 16% -40%, rgba(245, 108, 0, 0.24), transparent 46%),
+    radial-gradient(circle at 90% -64%, rgba(34, 211, 238, 0.18), transparent 52%),
+    linear-gradient(180deg, rgba(10, 16, 27, 0.9), rgba(8, 13, 23, 0.9));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
 }
 
 html[data-theme='dark'] .site-header.is-scrolled,
 html[data-theme='dark'] .site-header.is-menu-open {
-  background: #0b111b;
-  background-image: none;
-  border-bottom-color: rgba(37, 48, 64, 0.8);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  border-bottom-color: rgba(83, 103, 132, 0.5);
+  background:
+    radial-gradient(circle at 16% -40%, rgba(245, 108, 0, 0.24), transparent 46%),
+    radial-gradient(circle at 90% -64%, rgba(34, 211, 238, 0.18), transparent 52%),
+    linear-gradient(180deg, rgba(10, 16, 27, 0.9), rgba(8, 13, 23, 0.9));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
 }
 
 html[data-theme='dark'] .site-header.is-menu-open {
-  background: #0b111b !important;
-  background-image: none !important;
-  backdrop-filter: none !important;
+  background:
+    radial-gradient(circle at 16% -40%, rgba(245, 108, 0, 0.24), transparent 46%),
+    radial-gradient(circle at 90% -64%, rgba(34, 211, 238, 0.18), transparent 52%),
+    linear-gradient(180deg, rgba(10, 16, 27, 0.9), rgba(8, 13, 23, 0.9)) !important;
+}
+
+html[data-theme='dark'] .site-header::before {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+  opacity: 0.26;
 }
 
 .site-header.is-hidden {
@@ -69,7 +109,7 @@ html[data-theme='dark'] .site-header.is-menu-open {
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 1rem;
-  min-height: 5rem;
+  min-height: 5.35rem;
   padding-block: 0.35rem;
 }
 
@@ -111,8 +151,9 @@ html[data-theme='dark'] .site-header.is-menu-open {
   object-fit: contain;
   padding: 0.25rem 0.38rem;
   border-radius: 0.75rem;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 10px 24px rgba(47, 99, 228, 0.14);
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(241, 247, 255, 0.9));
+  box-shadow: 0 10px 24px rgba(47, 99, 228, 0.18);
   transition: transform var(--motion-base) ease, box-shadow var(--motion-base) ease;
 }
 
@@ -155,9 +196,12 @@ html[data-theme='dark'] .site-header.is-menu-open {
   display: grid;
   align-content: start;
   padding: 6rem 1rem 1.5rem;
-  background-color: #f7f9fd;
-  background-image: none;
-  backdrop-filter: none;
+  background:
+    radial-gradient(circle at 10% -15%, rgba(245, 108, 0, 0.2), transparent 44%),
+    radial-gradient(circle at 90% -30%, rgba(34, 211, 238, 0.16), transparent 52%),
+    linear-gradient(180deg, #f6f9ff 0%, #f1f6ff 100%);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -166,14 +210,17 @@ html[data-theme='dark'] .site-header.is-menu-open {
 }
 
 html[data-theme='dark'] .site-nav {
-  background-color: #0b111b;
-  background-image: none;
+  background:
+    radial-gradient(circle at 12% -20%, rgba(245, 108, 0, 0.24), transparent 46%),
+    radial-gradient(circle at 90% -35%, rgba(34, 211, 238, 0.18), transparent 56%),
+    linear-gradient(180deg, #0b1220 0%, #0a101b 100%);
 }
 
 .site-nav[data-open] {
-  background-color: #f7f9fd !important;
-  background-image: none !important;
-  backdrop-filter: none !important;
+  background:
+    radial-gradient(circle at 10% -15%, rgba(245, 108, 0, 0.2), transparent 44%),
+    radial-gradient(circle at 90% -30%, rgba(34, 211, 238, 0.16), transparent 52%),
+    linear-gradient(180deg, #f6f9ff 0%, #f1f6ff 100%) !important;
   z-index: 110;
   opacity: 1;
   visibility: visible;
@@ -183,27 +230,30 @@ html[data-theme='dark'] .site-nav {
 }
 
 html[data-theme='dark'] .site-nav[data-open] {
-  background-color: #0b111b !important;
-  background-image: none !important;
-  backdrop-filter: none !important;
+  background:
+    radial-gradient(circle at 12% -20%, rgba(245, 108, 0, 0.24), transparent 46%),
+    radial-gradient(circle at 90% -35%, rgba(34, 211, 238, 0.18), transparent 56%),
+    linear-gradient(180deg, #0b1220 0%, #0a101b 100%) !important;
 }
 
 @media (max-width: 1023px) {
   .site-header,
   .site-header.is-scrolled,
   .site-header.is-menu-open {
-    background: #f7f9fd !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
+    background:
+      radial-gradient(circle at 12% -40%, rgba(245, 108, 0, 0.2), transparent 42%),
+      radial-gradient(circle at 86% -60%, rgba(34, 211, 238, 0.16), transparent 48%),
+      linear-gradient(180deg, rgba(248, 250, 255, 0.95), rgba(245, 249, 255, 0.9)) !important;
   }
 
   .site-nav,
   .site-nav[data-open],
   .site-header.is-menu-open .site-nav,
   .site-header.is-menu-open .site-nav[data-open] {
-    background-color: #f7f9fd !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
+    background:
+      radial-gradient(circle at 10% -15%, rgba(245, 108, 0, 0.2), transparent 44%),
+      radial-gradient(circle at 90% -30%, rgba(34, 211, 238, 0.16), transparent 52%),
+      linear-gradient(180deg, #f6f9ff 0%, #f1f6ff 100%) !important;
     width: 100vw !important;
     min-height: 100vh !important;
     min-height: 100dvh !important;
@@ -226,25 +276,30 @@ html[data-theme='dark'] .site-nav[data-open] {
   .nav-toggle:hover,
   .nav-toggle:focus-visible,
   .site-header.is-menu-open .nav-toggle {
-    background: #f7f9fd !important;
-    backdrop-filter: none !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(244, 248, 255, 0.78)) !important;
+    border-color: rgba(94, 120, 160, 0.34);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   html[data-theme='dark'] .site-header,
   html[data-theme='dark'] .site-header.is-scrolled,
   html[data-theme='dark'] .site-header.is-menu-open {
-    background: #0b111b !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
+    background:
+      radial-gradient(circle at 16% -40%, rgba(245, 108, 0, 0.24), transparent 46%),
+      radial-gradient(circle at 90% -64%, rgba(34, 211, 238, 0.18), transparent 52%),
+      linear-gradient(180deg, rgba(10, 16, 27, 0.92), rgba(8, 13, 23, 0.92)) !important;
   }
 
   html[data-theme='dark'] .site-nav,
   html[data-theme='dark'] .site-nav[data-open],
   html[data-theme='dark'] .site-header.is-menu-open .site-nav,
   html[data-theme='dark'] .site-header.is-menu-open .site-nav[data-open] {
-    background-color: #0b111b !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
+    background:
+      radial-gradient(circle at 12% -20%, rgba(245, 108, 0, 0.24), transparent 46%),
+      radial-gradient(circle at 90% -35%, rgba(34, 211, 238, 0.18), transparent 56%),
+      linear-gradient(180deg, #0b1220 0%, #0a101b 100%) !important;
     width: 100vw !important;
     min-height: 100vh !important;
     min-height: 100dvh !important;
@@ -257,8 +312,11 @@ html[data-theme='dark'] .site-nav[data-open] {
   html[data-theme='dark'] .nav-toggle:hover,
   html[data-theme='dark'] .nav-toggle:focus-visible,
   html[data-theme='dark'] .site-header.is-menu-open .nav-toggle {
-    background: #0b111b !important;
-    backdrop-filter: none !important;
+    color: #e7ecf8;
+    border-color: rgba(98, 116, 146, 0.64);
+    background: linear-gradient(180deg, rgba(11, 19, 33, 0.84), rgba(10, 16, 28, 0.8)) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 }
 
@@ -342,7 +400,7 @@ html[data-theme='dark'] .site-nav[data-open] {
 
 @media (max-width: 430px) {
   .site-header__inner {
-    min-height: 4.5rem;
+    min-height: 4.65rem;
     gap: 0.55rem;
   }
 

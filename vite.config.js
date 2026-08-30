@@ -88,6 +88,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about/index.html'),
         openbuildweek: resolve(__dirname, 'openbuildweek/index.html'),
         copilotDevDays: resolve(__dirname, 'copilot-dev-days/index.html'),
         copilotDevDays1: resolve(__dirname, 'copilot-dev-days/1.0/index.html'),

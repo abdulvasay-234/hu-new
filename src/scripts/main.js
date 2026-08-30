@@ -107,6 +107,11 @@ const featureLoaders = [
     exportName: 'initBrandKit'
   },
   {
+    selector: '[data-about-team-grid]',
+    importer: () => import('./modules/about.js'),
+    exportName: 'initAbout'
+  },
+  {
     selector: '[data-organizer-grid], [data-organizer-responsibilities], [data-organizer-modals]',
     importer: () => import('./modules/organizers.js'),
     exportName: 'initOrganizers'

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T00:23:05.671Z",
+  "generatedAt": "2026-08-30T21:01:19.578Z",
   "featuredSlug": "interledger-technology-rethinking-the-future-of-global-payments",
   "categories": [
     "Builder Stories",
@@ -24,7 +24,7 @@
         "Student Builders",
         "Community Building"
       ],
-      "coverImage": "Images/gallery/2SP00516.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00516.jpg",
       "coverImageAlt": "HackUnion builders collaborating during a community build session",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -53,7 +53,7 @@
         "hackathons",
         "developer community"
       ],
-      "coverImage": "Images/gallery/2SP00496.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00496.jpg",
       "coverImageAlt": "HackUnion members collaborating and reviewing project demos",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -82,7 +82,7 @@
         "Hackathons",
         "GitHub"
       ],
-      "coverImage": "Images/gallery/2SP00446.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00446.jpg",
       "coverImageAlt": "Students sketching project architecture and system flows",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -111,7 +111,7 @@
         "developer community",
         "proof of work"
       ],
-      "coverImage": "Images/gallery/2SP00513.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00513.jpg",
       "coverImageAlt": "HackUnion team facilitating a hands-on builder meetup",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -140,7 +140,7 @@
         "Technology Events",
         "Leadership"
       ],
-      "coverImage": "Images/gallery/2SP00587.jpg",
+      "coverImage": "public/images/hero-section-optimized.jpg",
       "coverImageAlt": "Organizers coordinating logistics during a HackUnion technology event",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -169,7 +169,7 @@
         "open source",
         "project building"
       ],
-      "coverImage": "Images/gallery/2SP00610.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00610.jpg",
       "coverImageAlt": "Hackathon participants planning and building an MVP together",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -198,7 +198,7 @@
         "Open Source",
         "Portfolio Building"
       ],
-      "coverImage": "Images/gallery/2SP00621.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00621.jpg",
       "coverImageAlt": "Developer workstation showing repositories and contribution history",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -227,7 +227,7 @@
         "Community Building",
         "Learning in Public"
       ],
-      "coverImage": "Images/gallery/2SP00716.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00716.jpg",
       "coverImageAlt": "Community builders presenting project progress in public",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -257,7 +257,7 @@
         "GitHub",
         "Contributing"
       ],
-      "coverImage": "Images/gallery/2SP00731.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP00731.jpg",
       "coverImageAlt": "Contributors reviewing open source issues and pull requests",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -286,7 +286,7 @@
         "student builders",
         "open source"
       ],
-      "coverImage": "Images/gallery/2SP01624.jpg",
+      "coverImage": "public/images/gallery-optimized/2SP01624.jpg",
       "coverImageAlt": "OpenBuild Week participants collaborating with mentors across campus teams",
       "coverImagePosition": "center",
       "coverImageFit": "cover",
@@ -316,7 +316,7 @@
         "Cross-Border Payments",
         "Fintech"
       ],
-      "coverImage": "Images/gallery/interledger-cover-img.jpg",
+      "coverImage": "Images/blogs/blog-1/cover-img.jpg",
       "coverImageAlt": "Interledger concept visual for cross-border connected payments",
       "coverImagePosition": "center",
       "coverImageFit": "contain",
