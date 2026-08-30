@@ -23,6 +23,22 @@ const toRootUrl = (rootPath, value) => {
   return `${cleanedRoot}${cleanedValue}`;
 };
 
+const normalizeCddAssetPath = (value) => {
+  const input = String(value ?? '').trim();
+
+  if (!input) {
+    return '';
+  }
+
+  const legacyGalleryWebp = input.match(/^Images\/gallery\/(.+)\.webp$/i);
+
+  if (legacyGalleryWebp?.[1]) {
+    return `images/gallery-optimized/${legacyGalleryWebp[1]}.jpg`;
+  }
+
+  return input;
+};
+
 const toAbsoluteUrl = (value) => {
   if (!value) {
     return '';
@@ -123,10 +139,16 @@ const renderAbout = (series) => {
   return `
 <section class="section cdd-about" aria-labelledby="cdd-about-title">
   <div class="container container--wide">
-    <div class="section-header" data-animate="fade-up">
-      <p class="section-header__eyebrow">Flagship Overview</p>
-      <h2 id="cdd-about-title" class="section-header__title">${escapeHtml(series?.about?.title || 'What is GitHub Copilot Dev Days?')}</h2>
-      <p class="section-header__text">${escapeHtml(series?.about?.description || '')}</p>
+    <div class="cdd-about__layout" data-animate="fade-up">
+      <div class="section-header cdd-about__intro">
+        <p class="section-header__eyebrow">Flagship Overview</p>
+        <h2 id="cdd-about-title" class="section-header__title">${escapeHtml(series?.about?.title || 'What is GitHub Copilot Dev Days?')}</h2>
+        <p class="section-header__text">${escapeHtml(series?.about?.description || '')}</p>
+      </div>
+      <div class="cdd-about__summary card" aria-label="Dev Days core outcomes">
+        <p class="cdd-about__summary-label">Core Outcomes</p>
+        <p class="cdd-about__summary-text">Learn modern workflows, experiment quickly, ship practical outputs, and collaborate with builders in public.</p>
+      </div>
     </div>
     <ul class="cdd-pillars" aria-label="Dev Days pillars" data-stagger>
       ${pillars.map((pillar) => `<li class="card cdd-pillars__item">${escapeHtml(pillar)}</li>`).join('')}
@@ -147,10 +169,12 @@ const renderJourney = (series) => {
     </div>
     <ol class="cdd-timeline" data-stagger>
       ${steps.map((step) => `
-      <li class="card cdd-timeline__step">
+      <li class="cdd-timeline__step">
         <p class="cdd-timeline__index">${escapeHtml(step.id)}</p>
-        <h3>${escapeHtml(step.title)}</h3>
-        <p>${escapeHtml(step.description)}</p>
+        <article class="card cdd-timeline__panel">
+          <h3>${escapeHtml(step.title)}</h3>
+          <p>${escapeHtml(step.description)}</p>
+        </article>
       </li>`).join('')}
     </ol>
   </div>
@@ -164,7 +188,7 @@ const renderEditionSpotlight = (edition, rootPath) => {
 
   const registrationUrl = toRootUrl(rootPath, edition.registrationUrl || edition.eventUrl);
   const eventUrl = toRootUrl(rootPath, edition.eventUrl);
-  const coverImage = toRootUrl(rootPath, edition.coverImage);
+  const coverImage = toRootUrl(rootPath, normalizeCddAssetPath(edition.coverImage));
 
   return `
 <section class="section cdd-current" id="current-edition" aria-labelledby="cdd-current-title">
@@ -177,6 +201,7 @@ const renderEditionSpotlight = (edition, rootPath) => {
         <p class="cdd-label">CURRENT EDITION</p>
         <h2 id="cdd-current-title">${escapeHtml(edition.title || 'GitHub Copilot Dev Days 2.0')}</h2>
         <p>${escapeHtml(edition.description || '')}</p>
+        <p class="cdd-current__info-title">Event Information</p>
         <dl class="cdd-meta" aria-label="Current edition details">
           <div><dt>Date</dt><dd>${escapeHtml(edition.dateLabel || edition.date || 'TBA')}</dd></div>
           <div><dt>Venue</dt><dd>${escapeHtml(edition.venue || 'TBA')}</dd></div>
@@ -199,12 +224,12 @@ const renderInside = (items) => {
   return `
 <section class="section cdd-inside" aria-labelledby="cdd-inside-title">
   <div class="container container--wide">
-    <div class="section-header" data-animate="fade-up">
+    <div class="section-header cdd-inside__header" data-animate="fade-up">
       <p class="section-header__eyebrow">What's Inside</p>
       <h2 id="cdd-inside-title" class="section-header__title">Hands-on components built for developers.</h2>
     </div>
     <div class="cdd-inside__grid" data-stagger>
-      ${normalized.map((item) => `<article class="card cdd-inside__item"><h3>${escapeHtml(item)}</h3></article>`).join('')}
+      ${normalized.map((item) => `<article class="cdd-inside__item"><h3>${escapeHtml(item)}</h3></article>`).join('')}
     </div>
   </div>
 </section>`;
@@ -216,7 +241,7 @@ const renderPreviousEdition = (edition, rootPath) => {
   }
 
   const eventUrl = toRootUrl(rootPath, edition.eventUrl);
-  const coverImage = toRootUrl(rootPath, edition.coverImage);
+  const coverImage = toRootUrl(rootPath, normalizeCddAssetPath(edition.coverImage));
   const highlights = Array.isArray(edition.highlights) ? edition.highlights : [];
 
   return `
@@ -231,6 +256,7 @@ const renderPreviousEdition = (edition, rootPath) => {
         <h2 id="cdd-previous-title">Dev Days ${escapeHtml(edition.edition || '1.0')}</h2>
         <p class="cdd-previous__meta">${escapeHtml(edition.dateLabel || edition.date || 'TBA')} · ${escapeHtml(edition.venue || 'TBA')}</p>
         <p>${escapeHtml(edition.description || '')}</p>
+        <p class="cdd-previous__highlights-title">Edition highlights</p>
         <ul class="cdd-highlights" aria-label="Dev Days 1.0 highlights">
           ${highlights.map((highlight) => `<li>${escapeHtml(highlight)}</li>`).join('')}
         </ul>
@@ -281,7 +307,7 @@ const renderSpeakers = (speakers, rootPath) => {
     </div>
     <div class="cdd-speakers__grid" data-stagger>
       ${speakers.map((speaker) => {
-        const image = toRootUrl(rootPath, speaker.photo);
+        const image = toRootUrl(rootPath, normalizeCddAssetPath(speaker.photo));
         const socials = Array.isArray(speaker.socials) ? speaker.socials : [];
 
         return `
@@ -290,7 +316,7 @@ const renderSpeakers = (speakers, rootPath) => {
           <div class="cdd-speaker__body">
             <h3>${escapeHtml(speaker.name || '')}</h3>
             <p class="cdd-speaker__role">${escapeHtml(speaker.role || '')}${speaker.organization ? ` · ${escapeHtml(speaker.organization)}` : ''}</p>
-            <p>${escapeHtml(speaker.description || '')}</p>
+            ${speaker.description ? `<p>${escapeHtml(speaker.description)}</p>` : ''}
             <div class="cdd-speaker__links">
               ${socials.map((social) => `<a href="${escapeHtml(social.url)}" target="_blank" rel="noreferrer noopener">${escapeHtml(social.label)}</a>`).join('')}
             </div>
@@ -344,7 +370,7 @@ const renderMedia = (media, rootPath) => {
     </div>
     <div class="cdd-media__grid" data-stagger>
       ${normalized.map((item, index) => {
-        const thumbnail = toRootUrl(rootPath, item.thumbnail || item.src);
+        const thumbnail = toRootUrl(rootPath, normalizeCddAssetPath(item.thumbnail || item.src));
         const label = item.type === 'video' ? 'Play highlight video' : 'Open full image';
 
         return `
@@ -401,7 +427,7 @@ const renderTestimonials = (testimonials, rootPath) => {
     <div class="cdd-testimonials__grid" data-stagger>
       ${testimonials.map((item) => `
       <article class="card cdd-testimonial">
-        ${item.photo ? `<img src="${escapeHtml(toRootUrl(rootPath, item.photo))}" alt="${escapeHtml(item.name || 'Testimonial profile')}" loading="lazy" decoding="async" />` : ''}
+        ${item.photo ? `<img src="${escapeHtml(toRootUrl(rootPath, normalizeCddAssetPath(item.photo)))}" alt="${escapeHtml(item.name || 'Testimonial profile')}" loading="lazy" decoding="async" />` : ''}
         <blockquote>“${escapeHtml(item.quote || '')}”</blockquote>
         <p>${escapeHtml(item.name || '')}</p>
         <p class="cdd-testimonial__meta">${escapeHtml(item.role || '')}${item.organization ? ` · ${escapeHtml(item.organization)}` : ''}${item.edition ? ` · Dev Days ${escapeHtml(item.edition)}` : ''}</p>
@@ -445,7 +471,7 @@ const renderBlogs = (posts, rootPath) => {
       ${posts.map((post) => `
       <article class="card cdd-blog-card">
         <a class="cdd-blog-card__media" href="${escapeHtml(toRootUrl(rootPath, `blogs/${post.slug}/`))}" aria-label="Read article: ${escapeHtml(post.title)}">
-          <img src="${escapeHtml(toRootUrl(rootPath, post.coverImage))}" alt="${escapeHtml(post.coverImageAlt || post.title)}" loading="lazy" decoding="async" />
+          <img src="${escapeHtml(toRootUrl(rootPath, normalizeCddAssetPath(post.coverImage)))}" alt="${escapeHtml(post.coverImageAlt || post.title)}" loading="lazy" decoding="async" />
         </a>
         <div class="cdd-blog-card__body">
           <p class="cdd-blog-card__chip">${escapeHtml(post.category || 'Blog')}</p>
@@ -522,7 +548,7 @@ const updateSchema = ({ mode, rootPath, series, edition }) => {
         : 'https://schema.org/EventCompleted',
       startDate: edition.date,
       description: edition.description,
-      image: [toAbsoluteUrl(toRootUrl(rootPath, edition.coverImage))],
+      image: [toAbsoluteUrl(toRootUrl(rootPath, normalizeCddAssetPath(edition.coverImage)))],
       location: {
         '@type': 'Place',
         name: edition.venue || 'HackUnion Venue',
@@ -655,7 +681,7 @@ const setupMediaModals = (container, media, rootPath) => {
         return;
       }
 
-      imageNode.setAttribute('src', toRootUrl(rootPath, item.src || item.thumbnail));
+      imageNode.setAttribute('src', toRootUrl(rootPath, normalizeCddAssetPath(item.src || item.thumbnail)));
       imageNode.setAttribute('alt', item.alt || 'Dev Days media image');
       openModal(imageModal);
     });
@@ -707,7 +733,7 @@ const applyMetadata = (mode, series, edition, rootPath) => {
     setPageMetadata({
       title: `${edition.title} | HackUnion`,
       description: edition.description,
-      image: toAbsoluteUrl(toRootUrl(rootPath, edition.coverImage)),
+      image: toAbsoluteUrl(toRootUrl(rootPath, normalizeCddAssetPath(edition.coverImage))),
       url: toAbsoluteUrl(url)
     });
 
