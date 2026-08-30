@@ -5,7 +5,7 @@ title: "Your GitHub Is More Than a Repository"
 excerpt: Most students treat GitHub as storage. It's actually the closest thing you have to proof of work - if you use it like one.
 seoTitle: "Your GitHub Is More Than a Repository - How to Use It as Proof of Work"
 metaDescription: Your GitHub can show how you think, build, and collaborate - not just where your code lives. A practical guide to making your profile actually useful.
-coverImage: Images/gallery/2SP00621.jpg
+coverImage: public/images/gallery-optimized/2SP00621.jpg
 coverImageAlt: Developer workstation showing repositories and contribution history
 authorId: abdul-vasay
 publishedDate: 2026-08-16

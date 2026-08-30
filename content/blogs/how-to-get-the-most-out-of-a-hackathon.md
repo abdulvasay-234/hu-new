@@ -5,7 +5,7 @@ title: "How to Get the Most Out of a Hackathon"
 excerpt: Winning is one possible outcome of a hackathon. A working project, new skills, and a stronger sense of how you build under pressure are outcomes you can control. Here's how to actually get them.
 seoTitle: "How to Get the Most Out of a Hackathon: A Practical Guide for Builders"
 metaDescription: A practical, no-fluff guide to preparing for, surviving, and getting real value out of a hackathon - from picking teammates to what to do with your project after the event ends.
-coverImage: Images/gallery/2SP00610.jpg
+coverImage: public/images/gallery-optimized/2SP00610.jpg
 coverImageAlt: Hackathon participants planning and building an MVP together
 authorId: team-hackunion
 publishedDate: 2026-08-18

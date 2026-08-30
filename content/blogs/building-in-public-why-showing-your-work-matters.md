@@ -5,7 +5,7 @@ title: "Building in Public: Why Showing Your Work Matters"
 excerpt: Building in public isn't about posting your progress for attention. It's about letting the unfinished, uncertain parts of building be visible, because that's where the actual learning happens.
 seoTitle: "Building in Public: Why Showing Your Work Matters - Abdul Vasay"
 metaDescription: Abdul Vasay on why sharing unfinished work, not polished outcomes, is what actually makes building and communities better over time.
-coverImage: Images/gallery/2SP00716.jpg
+coverImage: public/images/gallery-optimized/2SP00716.jpg
 coverImageAlt: Community builders presenting project progress in public
 authorId: abdul-vasay
 publishedDate: 2026-08-14

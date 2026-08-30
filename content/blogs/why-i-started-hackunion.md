@@ -5,7 +5,7 @@ title: "Why I Started HackUnion"
 excerpt: This isn't a story about a single moment of inspiration. It's about a gap I kept running into, between people curious about technology and people who had somewhere to actually build with it.
 seoTitle: "Why I Started HackUnion - The Real Story Behind the Community"
 metaDescription: Abdul Vasay on the gap he kept seeing between people interested in technology and people who had somewhere to actually build with it, and why that gap became HackUnion.
-coverImage: Images/gallery/2SP00516.jpg
+coverImage: public/images/gallery-optimized/2SP00516.jpg
 coverImageAlt: HackUnion builders collaborating during a community build session
 authorId: abdul-vasay
 publishedDate: 2026-08-28

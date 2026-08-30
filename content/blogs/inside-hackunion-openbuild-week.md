@@ -5,7 +5,7 @@ title: "OpenBuild Week: A Week Dedicated to Building"
 excerpt: There's a specific gap between wanting to learn something and actually building with it. OpenBuild Week exists to close that gap - by giving people a week, not an hour, to move from intention to something real.
 seoTitle: "OpenBuild Week: A Week Dedicated to Actually Building"
 metaDescription: OpenBuild Week is HackUnion's initiative to give students and builders time, space, and community to stop planning to build something - and start building it.
-coverImage: Images/gallery/2SP01624.jpg
+coverImage: public/images/gallery-optimized/2SP01624.jpg
 coverImageAlt: OpenBuild Week participants collaborating with mentors across campus teams
 authorId: team-hackunion
 publishedDate: 2026-08-10

@@ -5,7 +5,7 @@ title: "What Nobody Tells You About Organizing Technology Events"
 excerpt: An attendee experiences a few hours, talks, workshops, networking, demos. An organizer experiences everything that had to happen for those hours to exist.
 seoTitle: "What Nobody Tells You About Organizing Technology Events - Abdul Vasay"
 metaDescription: An attendee sees a few hours. An organizer sees everything before it. Abdul Vasay on what actually goes into running technology events and communities.
-coverImage: Images/gallery/2SP00587.jpg
+coverImage: public/images/hero-section-optimized.jpg
 coverImageAlt: Organizers coordinating logistics during a HackUnion technology event
 authorId: abdul-vasay
 publishedDate: 2026-08-20

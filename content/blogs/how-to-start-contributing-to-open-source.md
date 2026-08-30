@@ -5,7 +5,7 @@ title: "How to Start Contributing to Open Source"
 excerpt: You don't need to be an expert to contribute to open source. You need one small, honest fix and the willingness to submit it. Here's an actual starting path.
 seoTitle: "How to Start Contributing to Open Source (A Real Beginner's Guide)"
 metaDescription: A genuinely beginner-friendly guide to your first open source contribution, what it actually involves, where to start, and how to do it without fear.
-coverImage: Images/gallery/2SP00731.jpg
+coverImage: public/images/gallery-optimized/2SP00731.jpg
 coverImageAlt: Contributors reviewing open source issues and pull requests
 authorId: abdul-vasay
 publishedDate: 2026-08-12

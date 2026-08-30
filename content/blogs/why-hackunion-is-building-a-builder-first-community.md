@@ -5,7 +5,7 @@ title: "Why HackUnion Is Building a Builder-First Community"
 excerpt: Information about technology has never been more available. Hands-on experience with it hasn't kept pace. This is the gap a builder-first community is meant to sit in.
 seoTitle: "Why Builder-First Communities Matter: Moving From Attending to Actually Building"
 metaDescription: There's a difference between attending a tech event and building something because of it. Here's why HackUnion is structured around the second, and what builder-first actually means in practice.
-coverImage: Images/gallery/2SP00513.jpg
+coverImage: public/images/gallery-optimized/2SP00513.jpg
 coverImageAlt: HackUnion team facilitating a hands-on builder meetup
 authorId: team-hackunion
 publishedDate: 2026-08-22

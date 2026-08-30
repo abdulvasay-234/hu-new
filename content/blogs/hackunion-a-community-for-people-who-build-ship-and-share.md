@@ -5,7 +5,7 @@ title: "HackUnion: A Community for People Who Build, Ship, and Share"
 excerpt: There's a difference between a community where people watch technology happen and one where people make it happen. HackUnion is trying to be the second kind. Here's what that means in practice.
 seoTitle: "What Is HackUnion? A Community Built Around Building, Not Just Attending"
 metaDescription: HackUnion is a builder-first technology community for anyone making something - students, developers, designers, and open-source contributors alike. Here's what that actually means.
-coverImage: Images/gallery/2SP00496.jpg
+coverImage: public/images/gallery-optimized/2SP00496.jpg
 coverImageAlt: HackUnion members collaborating and reviewing project demos
 authorId: team-hackunion
 publishedDate: 2026-08-26

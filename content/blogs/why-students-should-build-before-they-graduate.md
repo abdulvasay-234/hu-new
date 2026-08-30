@@ -5,7 +5,7 @@ title: "Why Students Should Build Before They Graduate"
 excerpt: Knowing something and being able to build with it are two different skills. Most students only discover the gap between them after graduation.
 seoTitle: "Why Students Should Start Building Before They Graduate - Abdul Vasay"
 metaDescription: Knowing a technology and being able to build with it are different skills. Abdul Vasay on why students should not wait for graduation to find that out.
-coverImage: Images/gallery/2SP00446.jpg
+coverImage: public/images/gallery-optimized/2SP00446.jpg
 coverImageAlt: Students sketching project architecture and system flows
 authorId: abdul-vasay
 publishedDate: 2026-08-24

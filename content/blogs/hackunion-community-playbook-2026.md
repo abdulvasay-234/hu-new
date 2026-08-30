@@ -2,7 +2,7 @@
 slug: interledger-technology-rethinking-the-future-of-global-payments
 title: "Interledger Technology: Rethinking the Future of Global Payments"
 excerpt: Interledger and Open Payments can connect fragmented systems to make cross-border money movement interoperable, secure, and borderless.
-coverImage: Images/gallery/interledger-cover-img.jpg
+coverImage: Images/blogs/blog-1/cover-img.jpg
 coverImageAlt: Interledger concept visual for cross-border connected payments
 coverImageFit: contain
 authorId: rayeesa-mahmood
@@ -30,7 +30,7 @@ Interledger Technology offers a promising way forward. Instead of replacing exis
 
 Combined with Open Payments, it can enable new possibilities for digital wallets, international transfers, online businesses, and micropayments.
 
-![Interledger Foundation and Open Payments ecosystem for cross-border payments at HackUnion](../../Images/gallery/interledger-content-img.jpg "Interledger, Open Payments, Interledger Foundation, and HackUnion in a connected global payment flow")
+![Interledger Foundation and Open Payments ecosystem for cross-border payments at HackUnion](../../Images/blogs/blog-1/content.jpg "Interledger, Open Payments, Interledger Foundation, and HackUnion in a connected global payment flow")
 
 ## Why security and digital forensics matter
 
