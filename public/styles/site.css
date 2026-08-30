@@ -14870,6 +14870,17 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
   .obw-projects-grid {
     grid-template-columns: 1fr;
   }
+  .obw-student-projects .obw-project-card__links {
+    gap: 0.42rem;
+  }
+  .obw-student-projects .obw-project-card__links a {
+    min-width: 2rem;
+    padding: 0.4rem;
+    justify-content: center;
+  }
+  .obw-student-projects .obw-project-card__links a:has(svg) span:last-child {
+    display: none;
+  }
   .obw-projects-header {
     gap: 0.52rem;
     margin-bottom: 1rem;
