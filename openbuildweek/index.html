@@ -1028,26 +1028,15 @@
               margin: 0.4rem 0 1rem;
               padding-top: 0.65rem;
               border-top: 1px solid hsla(248, 42%, 68%, 0.3);
-              transition: opacity 0.3s ease, transform 0.35s ease, max-height 0.35s ease;
-              transform-origin: top;
-              max-height: 2.2rem;
             }
 
             .obw-people-group {
-              transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.42s ease, margin 0.35s ease;
-              transform-origin: top;
-              max-height: 240rem;
-              opacity: 1;
-              transform: translateY(0);
+              display: block;
             }
 
             .obw-people-group.is-collapsed,
             .obw-people-divider.is-collapsed {
-              opacity: 0;
-              transform: translateY(12px);
-              max-height: 0;
-              overflow: hidden;
-              margin: 0;
+              display: none;
               pointer-events: none;
             }
 
