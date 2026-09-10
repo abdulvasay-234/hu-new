@@ -1454,7 +1454,7 @@ html[data-theme=dark] .site-nav[data-open] {
 }
 
 .theme-toggle {
-  display: inline-flex;
+  display: none !important;
   align-items: center;
   gap: 0.65rem;
   min-height: 2.75rem;
@@ -13790,6 +13790,7 @@ html[data-theme=dark] .obw-page .obw-partner-card__type {
 .obw-ground-recaps__grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: minmax(24rem, auto);
   gap: clamp(0.8rem, 1.8vw, 1.05rem);
   align-items: start;
 }
@@ -13807,20 +13808,9 @@ html[data-theme=dark] .obw-page .obw-partner-card__type {
   transition: transform var(--motion-base) ease, box-shadow var(--motion-base) ease, border-color var(--motion-base) ease;
 }
 
-.obw-recap-card--primary {
+.obw-recap-card {
   grid-column: span 4;
-}
-
-.obw-recap-card:nth-child(2) {
-  grid-column: span 4;
-}
-
-.obw-recap-card:nth-child(n+3):nth-child(-n+5) {
-  grid-column: span 4;
-}
-
-.obw-recap-card:nth-child(6) {
-  grid-column: span 4;
+  height: 100%;
 }
 
 .obw-recap-card__media {
@@ -14734,14 +14724,10 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
 @media (max-width: 900px) {
   .obw-ground-recaps__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(24rem, auto);
     gap: 0.9rem;
   }
-  .obw-recap-card--primary {
-    grid-column: span 1;
-  }
-  .obw-recap-card:nth-child(2),
-  .obw-recap-card:nth-child(n+3):nth-child(-n+5),
-  .obw-recap-card:nth-child(6) {
+  .obw-recap-card {
     grid-column: span 1;
   }
   .obw-recap-card--upcoming {
@@ -14914,12 +14900,7 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
   .obw-ground-recaps__grid {
     grid-template-columns: 1fr;
   }
-  .obw-recap-card--primary {
-    grid-column: span 1;
-  }
-  .obw-recap-card:nth-child(2),
-  .obw-recap-card:nth-child(n+3):nth-child(-n+5),
-  .obw-recap-card:nth-child(6) {
+  .obw-recap-card {
     grid-column: span 1;
   }
   .obw-recap-card__play {
@@ -15116,6 +15097,7 @@ html[data-theme=dark] .obw-page .obw-moments__meta {
 @media (max-width: 700px) {
   .obw-polaroid-wall {
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
     gap: 0.7rem;
   }
   .obw-polaroid {

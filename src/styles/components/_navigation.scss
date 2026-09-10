@@ -191,7 +191,7 @@
 }
 
 .theme-toggle {
-  display: inline-flex;
+  display: none !important;
   align-items: center;
   gap: 0.65rem;
   min-height: 2.75rem;
